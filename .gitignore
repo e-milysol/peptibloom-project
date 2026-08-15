@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+.pytest_cache/
+.mypy_cache/
+
+# Django / env
+.env
+.env.*
+!.env.example
+staticfiles/
+media/
+
+# Node
+node_modules/
+dist/
+.angular/
+.astro/
+.ionic/
+www/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

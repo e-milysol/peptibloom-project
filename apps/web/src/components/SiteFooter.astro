@@ -1,0 +1,35 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-frame site-footer__grid">
+    <div>
+      <a class="brand brand--footer" href="/" aria-label="PeptiBloom home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" focusable="false">
+            <circle cx="20" cy="20" r="14" pathLength="100"></circle>
+            <circle cx="20" cy="20" r="8" pathLength="100"></circle>
+            <circle class="brand-mark__node" cx="29" cy="10" r="2"></circle>
+          </svg>
+        </span>
+        <span class="brand__name">PeptiBloom</span>
+      </a>
+      <p class="site-footer__statement">
+        A scientific research library built around evidence, transparency and traceability.
+      </p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="/library/">Scientific Library</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About &amp; transparency</a>
+    </nav>
+
+    <div class="site-footer__meta">
+      <p>The Scientific Library is a PeptiBloom initiative.</p>
+      <p>Evidence · Transparency · Traceability</p>
+      <p>© {year} PeptiBloom</p>
+    </div>
+  </div>
+</footer>

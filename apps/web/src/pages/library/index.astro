@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Scientific Library"
+  description="The PeptiBloom Scientific Library is a public research resource built to make evidence, uncertainty, provenance and unanswered questions inspectable."
+>
+  <section class="page-hero section">
+    <div class="site-frame page-hero__grid">
+      <div>
+        <p class="eyebrow">Scientific Library</p>
+        <h1>Research should be easier to inspect than marketing.</h1>
+      </div>
+      <p class="page-hero__lead">
+        This library is being built around evidence, transparency and traceability. Scientific entries will
+        appear only after they complete the approved review path; the web will not invent content to make the
+        library look fuller than it is.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="library-principles-title">
+    <div class="site-frame">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Library principles</p>
+        <h2 id="library-principles-title">What a PeptiBloom scientific entry is expected to make visible.</h2>
+      </div>
+
+      <div class="library-principles">
+        <div class="library-principle">
+          <span>Evidence</span>
+          <p>What the available research can support — without extending beyond it.</p>
+        </div>
+        <div class="library-principle">
+          <span>Uncertainty</span>
+          <p>What remains theoretical, disputed, incomplete or unknown.</p>
+        </div>
+        <div class="library-principle">
+          <span>Provenance</span>
+          <p>Where information comes from and how a reader can trace it back.</p>
+        </div>
+        <div class="library-principle">
+          <span>Contradictions</span>
+          <p>Where sources or findings do not align cleanly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="current-library-title">
+    <div class="site-frame feature-layout">
+      <div>
+        <p class="eyebrow">Current publication state</p>
+        <h2 id="current-library-title">No placeholder compounds. No fabricated evidence.</h2>
+        <p class="section-lead">
+          PeptiBloom will publish compound-level scientific pages only when an approved Evidence contract and
+          production-ready scientific content are available. Until then, this page explains the publication
+          standard rather than pretending finished entries already exist.
+        </p>
+      </div>
+
+      <aside class="editorial-surface" aria-labelledby="why-this-matters-title">
+        <p class="surface-kicker">Why this matters</p>
+        <h3 id="why-this-matters-title">A gap is better than invented certainty.</h3>
+        <p>
+          Missing content is visible by design. The library does not use mock studies, unsupported claims or
+          supplier copy as a substitute for reviewed scientific material.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--soft" aria-labelledby="next-title">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">How to read PeptiBloom</p>
+      <h2 id="next-title">Start with the method, then follow the sources.</h2>
+      <p>
+        The methodology explains how PeptiBloom approaches provenance, interpretation, contradictions and the
+        boundary between scientific information and commercial information.
+      </p>
+      <a class="button button--primary" href="/methodology/">Read the methodology</a>
+    </div>
+  </section>
+</BaseLayout>

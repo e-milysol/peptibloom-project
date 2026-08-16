@@ -18,7 +18,7 @@ milestones:
     m0: COMPLETE
     m1_architecture_launch_plan: APPROVED
     m1_visual_foundation: APPROVED
-    m1_implementation: APPROVED
+    m1_implementation: COMPLETE
     m2: BLOCKED
   operative_core:
     current: v1

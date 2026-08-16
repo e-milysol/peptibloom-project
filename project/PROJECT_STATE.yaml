@@ -23,7 +23,7 @@ milestones:
   operative_core:
     current: v1
     migration_contract: APPROVED
-    implementation: IN_PROGRESS
+    implementation: COMPLETE
   evidence:
     current: reconciliation
     public_web_contract: BLOCKED

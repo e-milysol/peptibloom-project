@@ -17,8 +17,8 @@ milestones:
     current: M1
     m0: COMPLETE
     m1_architecture_launch_plan: APPROVED
-    m1_visual_foundation: PROPOSED
-    m1_implementation: BLOCKED
+    m1_visual_foundation: APPROVED
+    m1_implementation: APPROVED
     m2: BLOCKED
   operative_core:
     current: v1
@@ -32,8 +32,7 @@ milestones:
     evidence_handoff: IN_PROGRESS
 
 dependencies:
-  web_m1:
-    - technical_direction_visual_foundation_approval
+  web_m1: []
   web_m2:
     - evidence_public_contract
     - production_ready_scientific_content

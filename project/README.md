@@ -42,12 +42,16 @@ Use `PB-XD-NNN` for cross-domain requests. Never recycle an ID.
 
 ## Status vocabulary
 
-- `PROPOSED`
-- `APPROVED`
-- `IN_PROGRESS`
-- `BLOCKED`
-- `COMPLETE`
-- `SUPERSEDED`
+Use only these values for project, milestone and decision state:
+
+- `PROPOSED` — submitted or identified, but not approved.
+- `APPROVED` — explicitly approved by the responsible authority.
+- `IN_PROGRESS` — approved work is actively being executed.
+- `BLOCKED` — cannot proceed until a named dependency or approval is resolved.
+- `COMPLETE` — finished and validated for its defined scope.
+- `SUPERSEDED` — replaced by a later recorded state or decision.
+
+Cross-domain request lifecycle uses `OPEN` and `RESOLVED` only inside `REQUESTS/`; those values do not describe project, milestone or decision approval.
 
 ## Current workstreams
 

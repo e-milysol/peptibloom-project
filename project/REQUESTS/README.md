@@ -7,6 +7,8 @@ Requests replace manual chat-to-chat relaying.
 - `open/` — unresolved requests.
 - `resolved/` — answered/closed requests retained for traceability.
 
+Request lifecycle values `OPEN` and `RESOLVED` are local to `REQUESTS/`; they are not project approval states.
+
 ## File naming
 
 `PB-XD-NNN-short-subject.md`
@@ -47,8 +49,11 @@ RESOLVED: YYYY-MM-DD
 
 ## Rules
 
+- `PB-XD request ≠ approval ≠ shared canon`.
+- Creating, answering or resolving a request does not by itself approve its output, make it shared canon or authorize changes to another domain's canon.
+- Decisions affecting shared or cross-domain canon require explicit Technical Direction approval and must then be recorded in `CANON.md` or `DECISIONS.md`.
 - One request should represent one coherent dependency.
 - Do not use requests for ordinary within-domain implementation notes.
-- Receiving domains may answer with a decision, contract reference or explicit HOLD.
+- Receiving domains may answer with a proposed decision, contract reference or explicit HOLD.
 - If Technical Direction approval is required, state it in the response and keep the request open until approved.
 - On resolution, move the file to `resolved/` without destroying its history.

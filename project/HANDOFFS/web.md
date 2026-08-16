@@ -5,7 +5,8 @@ Owner: WEB workstream
 ## Current milestone
 
 WEB M0: COMPLETE.
-WEB M1: READY FOR IMPLEMENTATION.
+WEB M1 architecture and launch plan: APPROVED.
+WEB M1 visual foundation: PROPOSED; implementation is pending Technical Direction approval.
 
 ## M1 approved direction
 
@@ -17,7 +18,7 @@ Planned routes:
 - `/methodology/`
 - `/about/`
 
-Expected shared frontend structure may include a base layout, header, footer and global styles. Visual tokens in M1 remain PROVISIONAL until a Design System is canonically approved.
+Expected shared frontend structure may include a base layout, header, footer and global styles. Visual tokens in M1 remain PROPOSED until a Design System is canonically approved.
 
 ## M1 must communicate
 

@@ -1,0 +1,53 @@
+# PeptiBloom Shared Canon
+
+## Project identity
+
+PeptiBloom is being built as a scientific research library and research-oriented ecosystem. Scientific credibility, transparency and traceability take precedence over commercial persuasion.
+
+## Scientific publication principles
+
+- Clearly distinguish what is known, unknown, theoretical, contradictory and anecdotal.
+- Do not present opinion as fact.
+- Do not create scientific claims, studies, compounds or evidence to fill UI.
+- Evidence provenance must remain inspectable.
+- Scientific content intended for production must pass the approved Evidence/Scientific Inventory process.
+
+## Architecture boundaries
+
+### Public web
+- Location: `apps/web/`
+- Stack: Astro + TypeScript strict.
+- The web is a presentation/consumption surface, not the scientific source of truth.
+- WEB M1 may launch institutional/editorial pages without Evidence API integration.
+- Compound pages require an approved Evidence public contract and production-ready scientific content.
+
+### API
+- Location: `apps/api/`
+- Stack: Django + Django REST Framework.
+- PostgreSQL is the intended database.
+
+### Operative Core
+- `products`, `inventory` and `documents` are operational domains.
+- No relationship with `evidence` may be invented without cross-domain approval.
+- Stock is derived from `Movement` history; `StockUnit.available_quantity` is not persisted in Operative Core v1.
+
+### Evidence
+- Evidence remains independent from operational inventory unless an explicit cross-domain contract is approved.
+- UI requirements must not dictate the scientific schema.
+
+## Web positioning
+
+PeptiBloom's public scientific experience should make Evidence, Transparency and Traceability observable behaviours.
+
+Reference editorial promise:
+
+> Know what we know. Know what we don't.
+
+The Scientific Library is the central knowledge destination. Science and commerce must remain structurally distinguishable.
+
+## Governance
+
+- GitHub repository state beats chat recollection for implementation facts.
+- Approved decisions recorded here or in `DECISIONS.md` beat proposals in chat transcripts.
+- Missing canon creates a decision request; it is not permission to infer.
+- Cross-domain changes require a `PB-XD-NNN` request.

@@ -1,28 +1,29 @@
 # PeptiBloom Blocker Registry
 
-## Active launch/architecture decisions
+This file contains only dependencies that currently prevent defined work from proceeding. Unapproved choices that do not stop current work are tracked as open decisions in `PROJECT_STATE.yaml`.
 
-### PB-DEC-001 — Technical protection for `main`
-Status: OPEN
+## Active blockers
 
-The project policy treats `main` as protected, but GitHub reported branch protection disabled at the protocol baseline. This is repository hardening, not a blocker for domain development.
+### WEB M1 visual foundation approval
 
-### PB-DEC-002 — Public launch primary language
-Status: OPEN
+Status: BLOCKED
 
-Required before final public copy/SEO decisions. Not a blocker for WEB M1 structural implementation.
+WEB M1 implementation must not begin until Technical Direction approves or corrects the proposed Visual Foundation. The M1 architecture and launch plan remain APPROVED.
 
-### PB-DEC-003 — Production domain and hosting
-Status: OPEN
+### WEB M2 Evidence gate
 
-Required before production deployment. Not a blocker for WEB M1 local/branch implementation.
-
-## Evidence gate for WEB M2
-
-Status: BLOCKED BY DESIGN
+Status: BLOCKED
 
 Compound Index/Detail backed by scientific data requires:
 1. approved Evidence public read contract;
 2. production-ready scientific content.
 
 Frontend must not bypass this gate with invented data or manual scientific pages.
+
+## Open decisions tracked elsewhere
+
+The following are PROPOSED decisions in `PROJECT_STATE.yaml`, not current development blockers:
+
+- PB-DEC-001 — technical protection for `main`;
+- PB-DEC-002 — public launch primary language;
+- PB-DEC-003 — production domain and hosting.

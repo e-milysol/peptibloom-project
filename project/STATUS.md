@@ -5,7 +5,7 @@ Last coordination baseline: 2026-08-16.
 | Workstream | Current state | Next gate |
 |---|---|---|
 | Web | M0 complete; M1 architecture/launch plan, visual foundation and implementation complete | launch hardening/open launch decisions; WEB M2 remains blocked |
-| Operative Core | v1 final migration contract approved; implementation started on feature branch | models + migrations + validation + review |
+| Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
 | Evidence | architecture/reconciliation in progress | approved public read contract before WEB M2 |
 | Scientific Inventory | source/review workflow in progress | production-ready handoff to Evidence Layer |
 
@@ -29,7 +29,20 @@ Launch hardening/open decisions still include primary public language, productio
 
 ## Operative Core
 
-Final migration contract includes Product, SKU, Supplier, Manufacturer, Reception, Batch, StockUnit, Movement and Document, subject to the approved contract. Implementation work was reported as started on `feat/operative-core-v1`; repository state must be re-read before acting on it.
+Operative Core v1 data-layer implementation was validated and merged to `main` as commit `05aff5f7e558d2f29fecf7551f76045e7a397c55`.
+
+Delivered canonical model set:
+- Product and SKU;
+- Supplier, Manufacturer, Reception, Batch, StockUnit and Movement;
+- Document;
+- initial migrations for products, inventory and documents;
+- model tests covering the approved v1 rules.
+
+Validation before merge included Django system check, migration drift check, migration plan review, 7/7 model tests and full diff review. The available validation environment did not provide PostgreSQL; database-dependent checks used an untracked SQLite in-memory settings override. PostgreSQL runtime smoke remains non-blocking deployment hardening.
+
+The merged implementation preserves the approved rules: `PROTECT` on the nine closed FKs, no persisted `StockUnit.available_quantity`, stock represented through `Movement`, no Batch uniqueness constraint, no invented choices for `Reception.status` or `StockUnit.status`, no extra indexes and no Evidence relationship.
+
+No serializer/viewset/admin/QR or other follow-on operational surface is implied by completion of this v1 data-layer gate; such work requires a new authorized scope.
 
 ## Evidence / Scientific Inventory
 

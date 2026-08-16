@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How PeptiBloom approaches scientific evidence, uncertainty, provenance, contradictions and the separation between scientific and commercial information."
+>
+  <section class="page-hero section">
+    <div class="site-frame page-hero__grid">
+      <div>
+        <p class="eyebrow">Methodology</p>
+        <h1>Evidence is useful only when its limits remain visible.</h1>
+      </div>
+      <p class="page-hero__lead">
+        PeptiBloom does not treat all information as equivalent. The public library is designed to preserve
+        provenance, distinguish evidence from interpretation and keep uncertainty visible.
+      </p>
+    </div>
+  </section>
+
+  <article class="section methodology-article">
+    <div class="site-frame">
+      <div class="reading-column prose">
+        <section aria-labelledby="principles-title">
+          <p class="eyebrow">Publication principles</p>
+          <h2 id="principles-title">What the library is trying to protect.</h2>
+          <ul class="statement-list">
+            <li>Clearly distinguish what is known, unknown, theoretical, contradictory and anecdotal.</li>
+            <li>Do not present opinion as fact.</li>
+            <li>Do not create scientific claims, studies, compounds or evidence to fill UI.</li>
+            <li>Keep evidence provenance inspectable.</li>
+            <li>Publish production scientific content only after it completes the approved review process.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="process-title">
+          <p class="eyebrow">Editorial process</p>
+          <h2 id="process-title">Source → review → interpretation → traceability.</h2>
+          <p>
+            The sequence is deliberately simple at the public-web level. It describes an editorial expectation,
+            not the scientific data model: begin with inspectable sources, review what they actually support,
+            interpret without manufacturing certainty, and preserve a route back to provenance and limitations.
+          </p>
+        </section>
+
+        <section aria-labelledby="uncertainty-method-title">
+          <p class="eyebrow">Uncertainty</p>
+          <h2 id="uncertainty-method-title">Contradictions and evidence gaps are not editorial failures.</h2>
+          <p>
+            When evidence is incomplete, inconsistent or unresolved, the library should say so. PeptiBloom’s
+            goal is not to force every question into a confident answer, but to make the current state of
+            knowledge legible.
+          </p>
+        </section>
+
+        <section aria-labelledby="provenance-title">
+          <p class="eyebrow">Provenance</p>
+          <h2 id="provenance-title">The path back to the source should remain inspectable.</h2>
+          <p>
+            Scientific statements should not become detached from the material that supports them. As the
+            Evidence Layer matures, the public interface will expose production-safe source and review context
+            through an approved contract rather than through hand-maintained scientific pages.
+          </p>
+        </section>
+
+        <section aria-labelledby="boundary-title">
+          <p class="eyebrow">Science &amp; commerce</p>
+          <h2 id="boundary-title">Scientific evidence and commercial information remain structurally distinct.</h2>
+          <p>
+            Product, inventory, supplier and batch concepts belong to operational domains. The scientific
+            library does not use those concepts as substitutes for evidence, and the web does not create
+            relationships between scientific and commercial data unless an explicit cross-domain contract is approved.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <section class="section section--soft">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">Transparency</p>
+      <h2>This method applies to a PeptiBloom-owned scientific resource.</h2>
+      <p>
+        The Scientific Library is part of PeptiBloom. Its ownership should remain visible alongside the methods
+        used to review and present scientific information.
+      </p>
+      <a class="editorial-link" href="/about/">About PeptiBloom and ownership <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</BaseLayout>

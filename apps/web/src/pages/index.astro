@@ -1,19 +1,163 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>PeptiBloom Web — Development Bootstrap</title>
-	</head>
-	<body>
-		<main>
-			<h1>PeptiBloom Web — Development Bootstrap</h1>
-			<p>Astro foundation ready.</p>
-		</main>
-	</body>
-</html>
+<BaseLayout
+  title="PeptiBloom"
+  description="PeptiBloom is building a public scientific research library designed around evidence, transparency, traceability and visible uncertainty."
+>
+  <section class="section section--hero">
+    <div class="site-frame hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Scientific Research Library</p>
+        <h1>Know what we know.<br />Know what we don’t.</h1>
+        <p class="hero__lead">
+          PeptiBloom is building a public scientific research library designed to make evidence,
+          uncertainty, provenance and open questions easier to inspect.
+        </p>
+        <div class="hero__actions" aria-label="Primary actions">
+          <a class="button button--primary" href="/library/">Explore the library</a>
+          <a class="editorial-link" href="/methodology/">Read our methodology <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="evidence-halo">
+          <span class="evidence-halo__ring evidence-halo__ring--outer"></span>
+          <span class="evidence-halo__ring evidence-halo__ring--middle"></span>
+          <span class="evidence-halo__ring evidence-halo__ring--inner"></span>
+          <span class="evidence-halo__node evidence-halo__node--one"></span>
+          <span class="evidence-halo__node evidence-halo__node--two"></span>
+          <span class="evidence-halo__node evidence-halo__node--three"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="purpose-title">
+    <div class="site-frame">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Purpose</p>
+        <h2 id="purpose-title">Scientific information should show its limits as clearly as its conclusions.</h2>
+      </div>
+
+      <div class="principle-grid">
+        <article class="principle">
+          <p class="principle__index">01</p>
+          <h3>Evidence</h3>
+          <p>Separate what is supported from what is theoretical, contradictory or anecdotal.</p>
+        </article>
+        <article class="principle">
+          <p class="principle__index">02</p>
+          <h3>Transparency</h3>
+          <p>Make ownership, limitations and unresolved questions visible rather than hiding them behind certainty.</p>
+        </article>
+        <article class="principle">
+          <p class="principle__index">03</p>
+          <h3>Traceability</h3>
+          <p>Keep the path back to sources and provenance inspectable.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="library-title">
+    <div class="site-frame feature-layout">
+      <div>
+        <p class="eyebrow">Scientific Library</p>
+        <h2 id="library-title">A library before a catalogue.</h2>
+        <p class="section-lead">
+          Scientific entries are published to inform research, not to fill a product grid. PeptiBloom’s
+          public library is structured around what the evidence can support, where it conflicts and what
+          still remains unanswered.
+        </p>
+        <a class="editorial-link" href="/library/">Enter the Scientific Library <span aria-hidden="true">→</span></a>
+      </div>
+
+      <aside class="editorial-surface" aria-labelledby="publication-standard-title">
+        <p class="surface-kicker">Publication standard</p>
+        <h3 id="publication-standard-title">No scientific content just to fill space.</h3>
+        <p>
+          Production scientific content must complete the approved review path before it appears as a
+          library entry. Until then, the web does not invent studies, claims, evidence levels or compounds.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--soft" aria-labelledby="method-title">
+    <div class="site-frame">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Methodology</p>
+        <h2 id="method-title">A visible path from source to interpretation.</h2>
+      </div>
+
+      <ol class="method-steps" aria-label="Editorial research process">
+        <li>
+          <span>01</span>
+          <h3>Source</h3>
+          <p>Start with inspectable provenance rather than unsupported summaries.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Review</h3>
+          <p>Separate evidence from hypothesis, contradiction and anecdotal experience.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Interpretation</h3>
+          <p>Describe what the available evidence supports without manufacturing certainty.</p>
+        </li>
+        <li>
+          <span>04</span>
+          <h3>Traceability</h3>
+          <p>Preserve a clear route back to the underlying sources and limitations.</p>
+        </li>
+      </ol>
+
+      <a class="editorial-link" href="/methodology/">How PeptiBloom handles evidence <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="uncertainty-title">
+    <div class="site-frame uncertainty-layout">
+      <div class="section-heading">
+        <p class="eyebrow">Designed uncertainty</p>
+        <h2 id="uncertainty-title">The unknown belongs on the page.</h2>
+        <p>
+          A useful scientific library should make it easy to see both the support for a conclusion and the
+          limits around it.
+        </p>
+      </div>
+
+      <div class="uncertainty-pair">
+        <article class="uncertainty-panel">
+          <p class="surface-kicker">What the evidence supports</p>
+          <h3>Conclusions with visible provenance.</h3>
+          <p>Supported findings should be understandable in context and traceable to their sources.</p>
+        </article>
+        <article class="uncertainty-panel uncertainty-panel--open">
+          <p class="surface-kicker">What remains uncertain</p>
+          <h3>Contradictions and gaps are findings too.</h3>
+          <p>Missing evidence, disagreement and unanswered questions should remain visible rather than being normalised into certainty.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--transparency" aria-labelledby="transparency-title">
+    <div class="site-frame transparency-band">
+      <div>
+        <p class="eyebrow">Transparency</p>
+        <h2 id="transparency-title">Ownership should be visible.</h2>
+      </div>
+      <div class="reading-column">
+        <p>
+          The Scientific Library is a PeptiBloom initiative, and that ownership is shown explicitly.
+          Scientific information remains structurally distinguishable from commercial information.
+        </p>
+        <a class="editorial-link" href="/about/">About PeptiBloom and this library <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

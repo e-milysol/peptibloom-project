@@ -21,7 +21,9 @@ Only approved decisions belong here. Proposals remain in domain handoffs or open
 | PB-DEC-114 | WEB M1 does not map colors, badges or components to Evidence taxonomy; scientific status semantics wait for approved Evidence canon | APPROVED |
 | PB-DEC-115 | WEB M1 implementation is authorized inside `apps/web/` after normal repository/branch verification; scope remains the approved M1 public foundation and excludes Evidence/API, ecommerce and scientific mock data | APPROVED |
 | PB-DEC-116 | PeptiBloom public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`) | APPROVED |
-| PB-DEC-117 | New public-web work must remain localization-ready; the primary/default locale and URL-prefix/fallback policy must not be inferred while PB-DEC-002 remains open | APPROVED |
+| PB-DEC-117 | New public-web work must remain localization-ready; before PB-DEC-002 approval, the primary/default locale and URL-prefix/fallback policy could not be inferred | APPROVED |
+| PB-DEC-002 | Spanish (`es`) is the public web default language; minimum locale support is `es`, `en` and `fr`; no automatic browser-language redirect; the visible accessible language selector identifies languages with text and may display `🇪🇸 ES · 🇺🇸 EN · 🇫🇷 FR` | APPROVED |
+| PB-DEC-003 | Public production is hosted on Cloudflare Workers at canonical `https://peptibloomproject.com`; `www` redirects 301 to the root hostname preserving path/query; HTTPS is active; nameservers are delegated to Cloudflare; IONOS domain protection is active | APPROVED |
 | PB-DEC-200 | Operative Core stock is derived from Movement history | APPROVED |
 | PB-DEC-201 | `StockUnit.available_quantity` is excluded from Operative Core v1 persistence | APPROVED |
 | PB-DEC-202 | Operative Core v1 FK deletion policy uses PROTECT where closed in the final migration contract | APPROVED |
@@ -40,8 +42,6 @@ The following remain outside this approval and must not be inferred as global ca
 - definitive Compound detail layout;
 - final scientific dense-data/table patterns;
 - OpenGraph art and final brand asset set;
-- public launch primary language;
-- production domain and hosting.
 
 ## Open decisions
 

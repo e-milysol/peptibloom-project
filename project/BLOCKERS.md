@@ -26,6 +26,6 @@ Technical Direction approved the WEB M1 Visual Foundation on 2026-08-16. WEB M1 
 
 The following are PROPOSED decisions in `PROJECT_STATE.yaml`, not current development blockers:
 
-- PB-DEC-001 — technical protection for `main`;
-- PB-DEC-002 — public launch primary language;
-- PB-DEC-003 — production domain and hosting.
+- PB-DEC-001 — technical protection for `main`.
+
+PB-DEC-002 and PB-DEC-003 were approved on 2026-08-17 and are recorded in `DECISIONS.md`; they are no longer open decisions.

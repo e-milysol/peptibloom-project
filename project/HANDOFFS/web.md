@@ -8,7 +8,7 @@ WEB M0: COMPLETE.
 WEB M1 architecture and launch plan: APPROVED.
 WEB M1 visual foundation: APPROVED.
 WEB M1 implementation: COMPLETE and merged to `main` as `a4f0609083b2bb81af4e43bdec6e906d4ff6ffa4`.
-A temporary Cloudflare Workers deployment from `main` is active and validates the static Astro deployment path.
+A production Cloudflare Workers deployment from `main` is active at canonical `https://peptibloomproject.com`.
 
 ## M1 delivered scope
 
@@ -75,13 +75,7 @@ The public web must support at minimum:
 - Spanish: `es`
 - French: `fr`
 
-This requirement is approved canon. It does **not** close PB-DEC-002: the primary/default locale for launch remains open.
-
-Until PB-DEC-002 is approved, WEB must not silently choose:
-- the default locale;
-- whether the default locale is URL-prefixed;
-- browser-language redirect behavior;
-- fallback relationships between locales.
+PB-DEC-002 is approved. Spanish (`es`) is the default locale. The site must not redirect automatically based on browser language. The visible, keyboard-accessible language selector must identify languages with text and may display `🇪🇸 ES · 🇺🇸 EN · 🇫🇷 FR`; flags must not be the sole indicator. URL-prefix and fallback policy remain to be defined in the technical i18n gate.
 
 All new public-web work must remain localization-ready. In practice:
 - do not introduce new shared navigation/UI copy in a way that requires duplicating component markup per language;
@@ -95,9 +89,9 @@ All new public-web work must remain localization-ready. In practice:
 - source titles/citations should preserve source provenance; translation of presentation text must not alter the underlying citation identity;
 - once localized routes exist, QA/build review must cover all supported locales and broken cross-locale links.
 
-Recommended implementation sequence after PB-DEC-002 closes:
+Recommended implementation sequence for the next technical PR:
 1. configure Astro `i18n` with `locales: ["en", "es", "fr"]` and the approved `defaultLocale`;
-2. explicitly choose `prefixDefaultLocale`/fallback behavior according to the approved URL policy;
+2. propose and obtain approval for `prefixDefaultLocale` and fallback behavior before encoding that policy;
 3. centralize shared UI strings and locale metadata;
 4. introduce locale-aware internal-link helpers and a language selector;
 5. add localized routes/content progressively without duplicating scientific entities;
@@ -113,7 +107,7 @@ Current deployment model:
 - deploy command: `npx wrangler@latest deploy`;
 - static output: `./dist` via `apps/web/wrangler.jsonc`.
 
-During preview/hardening, `workers_dev` and versioned preview URLs are intentionally enabled. Production domain/hosting remains an open decision and the temporary Workers deployment does not close PB-DEC-003.
+PB-DEC-003 is approved. Production is public on Cloudflare Workers at canonical `https://peptibloomproject.com`. `www.peptibloomproject.com` redirects with HTTP 301 to the root hostname while preserving path and query. HTTPS is active. Nameservers are delegated to Cloudflare, and IONOS domain protection was reactivated after delegation.
 
 ## M1 boundaries retained
 
@@ -144,15 +138,14 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - complete icon system;
 - final Compound-page layout;
 - final scientific dense-data/table patterns;
-- primary public/default language;
 - default-locale URL-prefix/fallback behavior;
-- production domain and hosting.
 
 ## Launch hardening
 
-Before production launch, resolve/review:
-- primary/default public language and i18n URL policy;
-- production domain and hosting;
+Next action:
+- obtain the remaining URL-prefix/fallback decision, then open a separate technical PR for i18n routing, localized shared UI/copy, the visible accessible selector, canonical/hreflang metadata and QA across `es`, `en` and `fr`;
+
+Remaining launch hardening:
 - final brand/favicons;
 - CI for `npm run check` + `npm run build`;
 - current Google Fonts loading versus self-hosting for privacy/performance;

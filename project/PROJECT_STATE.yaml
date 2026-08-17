@@ -19,11 +19,13 @@ milestones:
     m1_architecture_launch_plan: APPROVED
     m1_visual_foundation: APPROVED
     m1_implementation: COMPLETE
-    temporary_cloudflare_workers_deployment: COMPLETE
+    production_cloudflare_workers_deployment: COMPLETE
+    canonical_production_url: https://peptibloomproject.com
     multilingual_public_web: APPROVED
+    default_locale: es
     minimum_locales:
-      - en
       - es
+      - en
       - fr
     m2: BLOCKED
   operative_core:
@@ -55,12 +57,4 @@ open_decisions:
   - id: PB-DEC-001
     domain: repository
     subject: technical_branch_protection_for_main
-    status: PROPOSED
-  - id: PB-DEC-002
-    domain: web
-    subject: primary_language_for_public_launch
-    status: PROPOSED
-  - id: PB-DEC-003
-    domain: web
-    subject: production_domain_and_hosting
     status: PROPOSED

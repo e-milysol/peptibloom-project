@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-16
+state_updated: 2026-08-17
 
 source_of_truth:
   implementation: github
@@ -19,6 +19,12 @@ milestones:
     m1_architecture_launch_plan: APPROVED
     m1_visual_foundation: APPROVED
     m1_implementation: COMPLETE
+    temporary_cloudflare_workers_deployment: COMPLETE
+    multilingual_public_web: APPROVED
+    minimum_locales:
+      - en
+      - es
+      - fr
     m2: BLOCKED
   operative_core:
     current: v1

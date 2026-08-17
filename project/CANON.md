@@ -20,6 +20,9 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - The web is a presentation/consumption surface, not the scientific source of truth.
 - WEB M1 may launch institutional/editorial pages without Evidence API integration.
 - Compound pages require an approved Evidence public contract and production-ready scientific content.
+- The public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`).
+- New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
+- The primary/default locale, URL-prefix policy and fallback behavior remain open until explicitly approved; they must not be inferred from the current English M1 copy.
 
 ### API
 - Location: `apps/api/`

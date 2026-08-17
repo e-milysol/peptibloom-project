@@ -8,6 +8,7 @@ WEB M0: COMPLETE.
 WEB M1 architecture and launch plan: APPROVED.
 WEB M1 visual foundation: APPROVED.
 WEB M1 implementation: COMPLETE and merged to `main` as `a4f0609083b2bb81af4e43bdec6e906d4ff6ffa4`.
+A temporary Cloudflare Workers deployment from `main` is active and validates the static Astro deployment path.
 
 ## M1 delivered scope
 
@@ -67,6 +68,53 @@ Visual/component language:
 Home hierarchy:
 `Hero -> Purpose -> Scientific Library -> Methodology -> Uncertainty / what we show -> Transparency -> Footer`
 
+## Multilingual public web requirement
+
+The public web must support at minimum:
+- English: `en`
+- Spanish: `es`
+- French: `fr`
+
+This requirement is approved canon. It does **not** close PB-DEC-002: the primary/default locale for launch remains open.
+
+Until PB-DEC-002 is approved, WEB must not silently choose:
+- the default locale;
+- whether the default locale is URL-prefixed;
+- browser-language redirect behavior;
+- fallback relationships between locales.
+
+All new public-web work must remain localization-ready. In practice:
+- do not introduce new shared navigation/UI copy in a way that requires duplicating component markup per language;
+- keep locale-dependent copy separable from structural/layout code;
+- do not hardcode internal URLs when locale-aware URL helpers become available;
+- when Astro i18n routing is enabled, use its locale-aware routing helpers rather than manual string concatenation where practical;
+- every localized page must emit the correct HTML `lang` value;
+- language switching must remain keyboard accessible and must not rely on flags alone to communicate language;
+- localized equivalents of a scientific page must preserve the same scientific identity/provenance rather than becoming independent scientific records;
+- translations must not invent or strengthen scientific claims; scientific meaning, uncertainty and evidence qualifiers must remain equivalent across locales;
+- source titles/citations should preserve source provenance; translation of presentation text must not alter the underlying citation identity;
+- once localized routes exist, QA/build review must cover all supported locales and broken cross-locale links.
+
+Recommended implementation sequence after PB-DEC-002 closes:
+1. configure Astro `i18n` with `locales: ["en", "es", "fr"]` and the approved `defaultLocale`;
+2. explicitly choose `prefixDefaultLocale`/fallback behavior according to the approved URL policy;
+3. centralize shared UI strings and locale metadata;
+4. introduce locale-aware internal-link helpers and a language selector;
+5. add localized routes/content progressively without duplicating scientific entities;
+6. add canonical/hreflang metadata and per-locale QA before production launch.
+
+## Cloudflare deployment
+
+Current deployment model:
+- Cloudflare Workers Builds connected to GitHub;
+- repository: `e-milysol/peptibloom-project`;
+- root directory: `apps/web`;
+- build command: `npm run build`;
+- deploy command: `npx wrangler@latest deploy`;
+- static output: `./dist` via `apps/web/wrangler.jsonc`.
+
+During preview/hardening, `workers_dev` and versioned preview URLs are intentionally enabled. Production domain/hosting remains an open decision and the temporary Workers deployment does not close PB-DEC-003.
+
 ## M1 boundaries retained
 
 M1 must not include:
@@ -96,15 +144,17 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - complete icon system;
 - final Compound-page layout;
 - final scientific dense-data/table patterns;
-- primary public language;
+- primary public/default language;
+- default-locale URL-prefix/fallback behavior;
 - production domain and hosting.
 
 ## Launch hardening
 
 Before production launch, resolve/review:
-- primary public language;
+- primary/default public language and i18n URL policy;
 - production domain and hosting;
 - final brand/favicons;
 - CI for `npm run check` + `npm run build`;
 - current Google Fonts loading versus self-hosting for privacy/performance;
+- canonical/hreflang metadata once localized routes exist;
 - legal/privacy review appropriate to the final production setup.

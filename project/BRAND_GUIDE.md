@@ -26,7 +26,9 @@ When a format requires a derivative asset (transparent background, compact mark,
 
 - `apps/web/public/brand/logo.png` — **OFFICIAL / MASTER / DO NOT REGENERATE**.
 - Existing `favicon.ico` and `favicon.svg` remain technical legacy assets until approved derivatives are created from the master logo.
-- The current compact header/footer mark may remain temporarily where the master artwork would be illegible at small UI sizes. It is not a replacement brand identity and should be retired once an approved compact/transparent derivative exists.
+- The master logo must not be used directly as a favicon; favicon adoption requires an approved compact derivative.
+- Header, footer and social-preview surfaces may use the master logo where it remains visually legible. Web UI should render it through the shared `apps/web/src/components/BrandLogo.astro` component.
+- The former provisional SVG header/footer isotopes are not approved derivatives and must not be reintroduced. If the master is unsuitable for a future UI context, use or request an approved derivative documented here.
 
 ## Brand continuity
 

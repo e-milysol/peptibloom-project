@@ -47,4 +47,10 @@ WEB M1 intentionally contains no compound pages, scientific mock data, ecommerce
 
 The M1 visual foundation is `Editorial Evidence / Warm Scientific`. It is an approved implementation foundation for WEB M1, not the complete/global PeptiBloom Design System.
 
+## Brand logo
+
+The canonical logo asset is `public/brand/logo.png`. Shared interface surfaces must render it through
+`src/components/BrandLogo.astro` so intrinsic dimensions, accessibility behavior and responsive treatment
+remain consistent. Do not recreate or substitute the logo in individual components.
+
 The current implementation copy is in English for this working branch. The primary public-launch language remains an open project decision and is not closed by WEB M1 implementation.

@@ -4,6 +4,16 @@
 
 PeptiBloom is being built as a scientific research library and research-oriented ecosystem. Scientific credibility, transparency and traceability take precedence over commercial persuasion.
 
+## Brand identity
+
+- The canonical PeptiBloom master logo is `apps/web/public/brand/logo.png`.
+- This logo is the approved visual source of truth and must not be regenerated, silently replaced or substituted by ad-hoc AI variants.
+- All new PDFs, catalogues, price lists, email/signature assets, social assets, presentations and web branding work must reuse the canonical logo or an approved derivative documented in `project/BRAND_GUIDE.md`.
+- If a technical context requires a compact, transparent, monochrome or favicon variant, derive it from the canonical logo and record the approved derivative rather than redesigning the identity.
+- The master logo must not be used directly as a favicon. Existing `apps/web/public/favicon.ico` and `apps/web/public/favicon.svg` remain temporary technical legacy assets until an approved compact derivative replaces them.
+- Header, footer and social previews may use the master where it is visually suitable; the public web must reuse its shared brand component rather than implementing independent copies.
+- Former provisional header/footer isotopes are not approved derivatives and must not be reintroduced.
+
 ## Scientific publication principles
 
 - Clearly distinguish what is known, unknown, theoretical, contradictory and anecdotal.

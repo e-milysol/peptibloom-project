@@ -14,9 +14,10 @@ Conversation history is context, not canon. A chat must not require another chat
 2. Read `CANON.md`.
 3. Read `STATUS.md`.
 4. Read the relevant file in `HANDOFFS/`.
-5. Read unresolved items in `REQUESTS/open/` addressed to the workstream.
-6. Verify the current repository branch/HEAD before implementation.
-7. Do not infer missing canonical decisions.
+5. Read `HANDOFFS/orchestrator.md` for asynchronous instructions or pending review items.
+6. Read unresolved items in `REQUESTS/open/` addressed to the workstream.
+7. Verify the current repository branch/HEAD before implementation.
+8. Do not infer missing canonical decisions.
 
 ## Required end-of-task protocol
 
@@ -25,8 +26,19 @@ Conversation history is context, not canon. A chat must not require another chat
 3. Record approved canonical decisions in `DECISIONS.md`.
 4. Record unresolved blockers in `BLOCKERS.md`.
 5. Create a cross-domain request when another workstream must decide or provide something.
-6. Move resolved requests from `REQUESTS/open/` to `REQUESTS/resolved/`.
-7. Update `PROJECT_STATE.yaml` only for factual milestone/status changes.
+6. If Technical Direction/review is needed, add a concise `WORK -> ORCHESTRATOR` item to `HANDOFFS/orchestrator.md` referencing the request/PR/commit.
+7. Move resolved requests from `REQUESTS/open/` to `REQUESTS/resolved/`.
+8. Update `PROJECT_STATE.yaml` only for factual milestone/status changes.
+
+## Asynchronous coordination
+
+PeptiBloom workstreams should not depend on a human relaying messages between chats. `HANDOFFS/orchestrator.md` is the shared asynchronous mailbox between execution Work and Technical Direction.
+
+- Work may continue autonomously inside already-approved scope.
+- Missing decisions must be recorded through the control plane instead of guessed.
+- The orchestrator periodically reviews GitHub/project state and leaves actionable `ORCHESTRATOR -> WORK` instructions.
+- Escalate to `OWNER_REQUIRED` only when Product Owner authority is genuinely necessary.
+- Do not merge, publish or perform irreversible actions when the applicable authority has not approved them.
 
 ## Authority model
 
@@ -59,5 +71,6 @@ Cross-domain request lifecycle uses `OPEN` and `RESOLVED` only inside `REQUESTS/
 - `evidence`
 - `web`
 - `scientific-inventory`
+- `orchestrator` (coordination only; not an implementation domain)
 
 The coordination layer should stay small, factual and reviewable. Do not turn it into a duplicate of the codebase or a dump of chat transcripts.

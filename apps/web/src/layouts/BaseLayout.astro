@@ -10,6 +10,7 @@ interface Props {
 
 const { title = 'PeptiBloom', description } = Astro.props;
 const pageTitle = title === 'PeptiBloom' ? title : `${title} — PeptiBloom`;
+const brandLogoUrl = 'https://peptibloomproject.com/brand/logo.png';
 ---
 
 <!doctype html>
@@ -23,6 +24,13 @@ const pageTitle = title === 'PeptiBloom' ? title : `${title} — PeptiBloom`;
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={brandLogoUrl} />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="PeptiBloom — Science, Longevity, Wellness" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={brandLogoUrl} />
+    <meta name="twitter:image:alt" content="PeptiBloom — Science, Longevity, Wellness" />
     <title>{pageTitle}</title>
   </head>
   <body>

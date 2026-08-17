@@ -1,6 +1,8 @@
 {
-  "name": "peptibloom-web",
+  "name": "peptibloom-project",
   "compatibility_date": "2026-08-17",
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist"
   }

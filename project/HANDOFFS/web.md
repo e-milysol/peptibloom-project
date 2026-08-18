@@ -10,7 +10,7 @@ WEB M1 visual foundation: APPROVED.
 WEB M1 implementation: COMPLETE and merged to `main` as `a4f0609083b2bb81af4e43bdec6e906d4ff6ffa4`.
 Public calculator and calculator visual/comparison enhancement: COMPLETE through merged PRs #20 and #21.
 Approved Home/Scientific Library visual enrichment: COMPLETE through merged PR #23 as `b0f4c45c1450541b812e2d96676683b9b2bab6df`.
-A temporary Cloudflare Workers deployment from `main` is active and validates the Astro deployment path.
+Cloudflare Workers is the approved production hosting; deployment from `main` is active.
 
 ## M1 delivered scope
 
@@ -36,7 +36,7 @@ Initial M1 validation completed before the `a4f0609083b2bb81af4e43bdec6e906d4ff6
 
 - PR #20 added the public deterministic concentration calculator at `/calculator/`.
 - PR #21 added the syringe-scale visualization and final-volume comparisons through calculator-only JavaScript/CSS.
-- PR #22 added the evidence-first organic-growth/SEO foundation; its canonical-origin implementation does not close PB-DEC-003.
+- PR #22 added the evidence-first organic-growth/SEO foundation; its canonical-origin implementation matches the later Owner-approved PB-DEC-003.
 - PR #23 enriched the Home and Scientific Library presentation within the approved M1 visual foundation. Post-merge `npm run check`, `npm run build` and responsive/browser QA passed for the five public routes.
 - These additions do not authorize compound-specific dosing, routes, frequencies, regimens, reconstitution recommendations, invented scientific content, Evidence schema, ecommerce or inventory coupling.
 
@@ -124,7 +124,7 @@ Current deployment model:
 - deploy command: `npx wrangler@latest deploy`;
 - static output: `./dist` via `apps/web/wrangler.jsonc`.
 
-During preview/hardening, `workers_dev` and versioned preview URLs are intentionally enabled. The current Web/SEO implementation emits `https://peptibloomproject.com` as its canonical origin, but production domain/hosting remains open and PB-DEC-003 remains `OWNER_REQUIRED`. This observed implementation state does not close the decision.
+PB-DEC-003 was Owner approved on 2026-08-18. `https://peptibloomproject.com` is the permanent production canonical domain and Cloudflare Workers is the approved production hosting. Web, SEO, sitemap, canonicals, metadata and other public references may treat that URL as the production origin. `workers_dev` and versioned preview URLs remain enabled for preview/hardening; they do not change the canonical origin. Any material future domain or hosting change requires a new Owner decision.
 
 ## M1 boundaries retained
 
@@ -157,13 +157,11 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - final scientific dense-data/table patterns;
 - primary public/default language;
 - default-locale URL-prefix/fallback behavior;
-- production domain and hosting.
 
 ## Launch hardening
 
 Before production launch, resolve/review:
 - primary/default public language and i18n URL policy;
-- production domain and hosting;
 - final brand/favicons;
 - CI for `npm run check` + `npm run build`;
 - current Google Fonts loading versus self-hosting for privacy/performance;

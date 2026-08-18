@@ -14,6 +14,33 @@ Compound Index/Detail backed by scientific data requires:
 
 Frontend must not bypass this gate with invented data or manual scientific pages.
 
+### App Core production implementation gate — WORK 6
+
+Status: BLOCKED
+
+The contract/wireflow phase is approved, but production implementation is not authorized.
+
+Production implementation requires explicit Owner production authorization before it may begin.
+
+Real health/wellness data additionally requires:
+1. Legal/Privacy approval;
+2. Security approval;
+3. Owner production authorization.
+
+Synthetic fixtures, contracts, wireflows, model/constraint refinement, OpenAPI work, recurrence/timezone design, threat modelling and privacy/data-inventory handoffs may continue inside the approved non-production scope.
+
+### App Core Product Analytics expansion gate — WORK 6
+
+Status: BLOCKED
+
+Product Analytics expansion may not enter production until all canonical gates are satisfied:
+1. `ANALYTICS_CONTRACT_APPROVED`;
+2. `WEB_TECHNICAL_VALIDATION_APPROVED`;
+3. `LEGAL_PRIVACY_REVIEW_APPROVED`;
+4. `OWNER_PRODUCTION_AUTHORIZATION`.
+
+No health/wellness values, inventory content, routine content, notes or persistent user identifiers may be sent to Product Analytics.
+
 ## Cleared blockers
 
 ### WEB M1 visual foundation approval

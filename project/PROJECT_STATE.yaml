@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-17
+state_updated: 2026-08-18
 
 source_of_truth:
   implementation: github
@@ -12,6 +12,10 @@ repository:
   verified_main_sha_at_protocol_start: 5fded280cb587a054b87583ec4ee3e381171b93a
   main_policy: treat_as_protected
 
+work_ownership:
+  WORK_6: app_core
+  WORK_7: private_master
+
 milestones:
   web:
     current: M1
@@ -19,6 +23,7 @@ milestones:
     m1_architecture_launch_plan: APPROVED
     m1_visual_foundation: APPROVED
     m1_implementation: COMPLETE
+    m1_visual_enrichment: COMPLETE
     temporary_cloudflare_workers_deployment: COMPLETE
     multilingual_public_web: APPROVED
     minimum_locales:
@@ -26,6 +31,23 @@ milestones:
       - es
       - fr
     m2: BLOCKED
+  app_core:
+    owner_work: WORK_6
+    current: contract_wireflow
+    product_design_v0_1: APPROVED
+    technical_design_ux_ia_v0_1: APPROVED
+    mvp_architecture: APPROVED
+    contract_wireflow_phase: APPROVED
+    production_implementation: BLOCKED
+    real_health_wellness_data: BLOCKED
+    product_analytics_expansion: BLOCKED
+    payments_subscriptions_authorized: false
+    external_integrations_authorized: false
+  private_master:
+    owner_work: WORK_7
+    repository: e-milysol/peptibloom-private-master
+    repository_visibility: private
+    app_core_boundary: SEPARATE
   operative_core:
     current: v1
     migration_contract: APPROVED
@@ -42,6 +64,17 @@ dependencies:
   web_m2:
     - evidence_public_contract
     - production_ready_scientific_content
+  app_core_production_implementation:
+    - owner_production_authorization
+  app_core_real_health_wellness_data:
+    - legal_privacy_approval
+    - security_approval
+    - owner_production_authorization
+  app_core_product_analytics_expansion:
+    - analytics_contract_approved
+    - web_technical_validation_approved
+    - legal_privacy_review_approved
+    - owner_production_authorization
 
 cross_domain_rules:
   infer_missing_canon: false
@@ -50,6 +83,7 @@ cross_domain_rules:
   web_as_scientific_source_of_truth: false
   evidence_required_for_web_m1: false
   evidence_required_for_compound_pages: true
+  app_core_private_master_implicit_linkage: false
 
 open_decisions:
   - id: PB-DEC-001

@@ -25,7 +25,7 @@ PeptiBloom is being built as a scientific research library and research-oriented
 ## Architecture boundaries
 
 ### Public web
-- Location: `apps/web/`
+- Location: `apps/web/`.
 - Stack: Astro + TypeScript strict.
 - The web is a presentation/consumption surface, not the scientific source of truth.
 - WEB M1 may launch institutional/editorial pages without Evidence API integration.
@@ -34,8 +34,25 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
 - The primary/default locale, URL-prefix policy and fallback behavior remain open until explicitly approved; they must not be inferred from the current English M1 copy.
 
+### App Core / WORK 6
+- WORK 6 owns the authenticated PeptiBloom application / site app.
+- App Core is distinct from the public Astro editorial web and distinct from the private operational master.
+- Product Design v0.1 and Technical Design / UX IA v0.1 are Owner approved; the MVP architecture is approved for the contract/wireflow phase only.
+- Production implementation is not authorized yet.
+- Real health/wellness data must not be collected until the applicable Legal/Privacy, Security and Owner production gates are approved.
+- Payments/subscriptions and external integrations are not authorized in the current MVP scope.
+- Product Analytics expansion remains blocked until its canonical production gates are satisfied.
+- Compound pages inside any App Core navigation or future experience remain `FUTURE / EVIDENCE-GATED`; no scientific placeholders may be used to bypass the Evidence gate.
+
+### Private Master / WORK 7
+- WORK 7 owns the private Inventory / Procurement / Landed Cost application.
+- Its implementation repository is the private repository `e-milysol/peptibloom-private-master`.
+- The Private Master is not the App Core Personal Inventory.
+- App Core and Private Master must not share a database, document storage, credentials, health identity, implicit synchronization or cross-domain foreign keys unless a future explicit cross-domain contract approves a specific interface.
+- Restricted supplier, purchasing, logistics, cost, document and related operational data must not be copied into the public repository. The public Control Plane receives sanitized status only.
+
 ### API
-- Location: `apps/api/`
+- Location: `apps/api/` for the existing public-project API surface unless a later approved domain design specifies otherwise.
 - Stack: Django + Django REST Framework.
 - PostgreSQL is the intended database.
 

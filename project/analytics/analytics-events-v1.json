@@ -209,7 +209,10 @@
       "trigger": "controlled_reserved_form_error",
       "activation": "reserved_requires_analytics_error_code_allowlist",
       "properties": {
-        "form_id": ["newsletter", "catalogue_request"]
+        "form_id": ["newsletter", "catalogue_request"],
+        "error_code": {
+          "type": "analytics_allowlisted_controlled_code"
+        }
       }
     },
     "client_error": {

@@ -8,7 +8,9 @@ WEB M0: COMPLETE.
 WEB M1 architecture and launch plan: APPROVED.
 WEB M1 visual foundation: APPROVED.
 WEB M1 implementation: COMPLETE and merged to `main` as `a4f0609083b2bb81af4e43bdec6e906d4ff6ffa4`.
-A temporary Cloudflare Workers deployment from `main` is active and validates the static Astro deployment path.
+Public calculator and calculator visual/comparison enhancement: COMPLETE through merged PRs #20 and #21.
+Approved Home/Scientific Library visual enrichment: COMPLETE through merged PR #23 as `b0f4c45c1450541b812e2d96676683b9b2bab6df`.
+A temporary Cloudflare Workers deployment from `main` is active and validates the Astro deployment path.
 
 ## M1 delivered scope
 
@@ -17,17 +19,26 @@ Public/editorial routes:
 - `/library/`
 - `/methodology/`
 - `/about/`
+- `/calculator/`
 
-Shared frontend structure includes a base layout, header, footer and global styles.
+Shared frontend structure includes a base layout, header, footer and global styles. The calculator uses calculator-only progressive enhancement for its interactive mathematical visualization and comparisons.
 
-Validation completed before merge:
+Initial M1 validation completed before the `a4f0609083b2bb81af4e43bdec6e906d4ff6ffa4` merge:
 - `npm ci` passed with 0 vulnerabilities;
 - `npm run check` passed with 0 errors, 0 warnings and 0 hints;
 - `npm run build` passed with four static routes;
 - responsive review passed at 375 px, 768 px and 1440 px;
 - semantic landmarks, one H1 per page, skip link and visible keyboard focus were reviewed;
-- production output contained HTML/CSS only and no client-side JavaScript;
+- at that milestone, production output contained HTML/CSS only and no client-side JavaScript;
 - full diff remained inside `apps/web/`.
+
+## Current merged Web additions
+
+- PR #20 added the public deterministic concentration calculator at `/calculator/`.
+- PR #21 added the syringe-scale visualization and final-volume comparisons through calculator-only JavaScript/CSS.
+- PR #22 added the evidence-first organic-growth/SEO foundation; its canonical-origin implementation does not close PB-DEC-003.
+- PR #23 enriched the Home and Scientific Library presentation within the approved M1 visual foundation. Post-merge `npm run check`, `npm run build` and responsive/browser QA passed for the five public routes.
+- These additions do not authorize compound-specific dosing, routes, frequencies, regimens, reconstitution recommendations, invented scientific content, Evidence schema, ecommerce or inventory coupling.
 
 ## Approved M1 visual foundation
 
@@ -113,7 +124,7 @@ Current deployment model:
 - deploy command: `npx wrangler@latest deploy`;
 - static output: `./dist` via `apps/web/wrangler.jsonc`.
 
-During preview/hardening, `workers_dev` and versioned preview URLs are intentionally enabled. Production domain/hosting remains an open decision and the temporary Workers deployment does not close PB-DEC-003.
+During preview/hardening, `workers_dev` and versioned preview URLs are intentionally enabled. The current Web/SEO implementation emits `https://peptibloomproject.com` as its canonical origin, but production domain/hosting remains open and PB-DEC-003 remains `OWNER_REQUIRED`. This observed implementation state does not close the decision.
 
 ## M1 boundaries retained
 

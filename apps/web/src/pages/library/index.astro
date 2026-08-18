@@ -7,16 +7,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="The PeptiBloom Scientific Library is a public research resource built to make evidence, uncertainty, provenance and unanswered questions inspectable."
 >
   <section class="page-hero section">
-    <div class="site-frame page-hero__grid">
-      <div>
+    <div class="site-frame page-hero__grid page-hero__grid--library">
+      <div class="page-hero__copy">
         <p class="eyebrow">Scientific Library</p>
         <h1>Research should be easier to inspect than marketing.</h1>
+        <p class="page-hero__lead">
+          This library is being built around evidence, transparency and traceability. Scientific entries will
+          appear only after they complete the approved review path; the web will not invent content to make the
+          library look fuller than it is.
+        </p>
+        <div class="hero__actions" aria-label="Library actions">
+          <a class="button button--primary" href="#publication-state">See the publication standard</a>
+          <a class="editorial-link" href="/methodology/">Read the methodology <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <p class="page-hero__lead">
-        This library is being built around evidence, transparency and traceability. Scientific entries will
-        appear only after they complete the approved review path; the web will not invent content to make the
-        library look fuller than it is.
-      </p>
+
+      <aside class="library-cover" aria-labelledby="library-cover-title">
+        <div class="library-cover__topline">
+          <span>PeptiBloom Scientific Library</span>
+          <span aria-hidden="true">01</span>
+        </div>
+        <div class="library-cover__halo" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="surface-kicker">Reading standard</p>
+        <h2 id="library-cover-title">What is known. What is not. Where it comes from.</h2>
+        <div class="library-cover__footer">
+          <span>Evidence</span><span>Uncertainty</span><span>Provenance</span>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -27,30 +46,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 id="library-principles-title">What a PeptiBloom scientific entry is expected to make visible.</h2>
       </div>
 
-      <div class="library-principles">
-        <div class="library-principle">
-          <span>Evidence</span>
+      <div class="library-principles library-principles--cards">
+        <article class="library-principle">
+          <span><small>01</small>Evidence</span>
           <p>What the available research can support — without extending beyond it.</p>
-        </div>
-        <div class="library-principle">
-          <span>Uncertainty</span>
+        </article>
+        <article class="library-principle">
+          <span><small>02</small>Uncertainty</span>
           <p>What remains theoretical, disputed, incomplete or unknown.</p>
-        </div>
-        <div class="library-principle">
-          <span>Provenance</span>
+        </article>
+        <article class="library-principle">
+          <span><small>03</small>Provenance</span>
           <p>Where information comes from and how a reader can trace it back.</p>
-        </div>
-        <div class="library-principle">
-          <span>Contradictions</span>
+        </article>
+        <article class="library-principle">
+          <span><small>04</small>Contradictions</span>
           <p>Where sources or findings do not align cleanly.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="current-library-title">
-    <div class="site-frame feature-layout">
-      <div>
+  <section class="section" id="publication-state" aria-labelledby="current-library-title">
+    <div class="site-frame feature-layout feature-layout--publication">
+      <div class="feature-copy">
         <p class="eyebrow">Current publication state</p>
         <h2 id="current-library-title">No placeholder compounds. No fabricated evidence.</h2>
         <p class="section-lead">
@@ -60,9 +79,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
       </div>
 
-      <aside class="editorial-surface" aria-labelledby="why-this-matters-title">
-        <p class="surface-kicker">Why this matters</p>
+      <aside class="publication-ledger" aria-labelledby="why-this-matters-title">
+        <div class="publication-ledger__heading">
+          <p class="surface-kicker">Why this matters</p>
+          <span>Review gate</span>
+        </div>
         <h3 id="why-this-matters-title">A gap is better than invented certainty.</h3>
+        <ul>
+          <li><span>Scientific Inventory</span><strong>Source and review workflow</strong></li>
+          <li><span>Evidence</span><strong>Public contract required</strong></li>
+          <li><span>Library entry</span><strong>Published only when ready</strong></li>
+        </ul>
         <p>
           Missing content is visible by design. The library does not use mock studies, unsupported claims or
           unreviewed copy as a substitute for production-ready scientific material.
@@ -72,20 +99,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <section class="section section--soft" aria-labelledby="next-title">
-    <div class="site-frame reading-column">
-      <p class="eyebrow">How to read PeptiBloom</p>
-      <h2 id="next-title">Start with the method, then follow the sources.</h2>
-      <p>
-        The methodology explains how PeptiBloom approaches provenance, interpretation, contradictions and the
-        boundary between scientific information and commercial information.
-      </p>
-      <a class="button button--primary" href="/methodology/">Read the methodology</a>
+    <div class="site-frame method-callout">
+      <div class="method-callout__marker" aria-hidden="true"><span>01</span><span>04</span></div>
+      <div class="reading-column">
+        <p class="eyebrow">How to read PeptiBloom</p>
+        <h2 id="next-title">Start with the method, then follow the sources.</h2>
+        <p>
+          The methodology explains how PeptiBloom approaches provenance, interpretation, contradictions and the
+          boundary between scientific information and commercial information.
+        </p>
+        <a class="button button--primary" href="/methodology/">Read the methodology</a>
+      </div>
     </div>
   </section>
 
   <section class="section" aria-labelledby="research-tools-title">
-    <div class="site-frame feature-layout">
-      <div>
+    <div class="site-frame feature-layout research-tools-band">
+      <div class="feature-copy">
         <p class="eyebrow">Research tools</p>
         <h2 id="research-tools-title">Useful now, without pretending the scientific catalogue is finished.</h2>
         <p class="section-lead">
@@ -93,7 +123,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           formulas, limits and worked example are visible on the page.
         </p>
       </div>
-      <div class="reading-column">
+      <div class="research-tools-band__action">
+        <p class="surface-kicker">Transparent arithmetic</p>
+        <div class="research-tools-band__units" aria-hidden="true"><span>mg/mL</span><span>µg/mL</span><span>mL</span></div>
         <a class="button button--primary" href="/calculator/">Use the calculator</a>
       </div>
     </div>

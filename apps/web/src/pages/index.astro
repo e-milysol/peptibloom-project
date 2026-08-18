@@ -19,18 +19,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a class="button button--primary" href="/library/">Explore the library</a>
           <a class="editorial-link" href="/methodology/">Read our methodology <span aria-hidden="true">→</span></a>
         </div>
+
+        <ul class="hero__standards" aria-label="PeptiBloom editorial principles">
+          <li><span>Evidence</span><small>Support without overstatement</small></li>
+          <li><span>Uncertainty</span><small>Gaps kept visible</small></li>
+          <li><span>Traceability</span><small>A route back to sources</small></li>
+        </ul>
       </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="evidence-halo">
-          <span class="evidence-halo__ring evidence-halo__ring--outer"></span>
-          <span class="evidence-halo__ring evidence-halo__ring--middle"></span>
-          <span class="evidence-halo__ring evidence-halo__ring--inner"></span>
-          <span class="evidence-halo__node evidence-halo__node--one"></span>
-          <span class="evidence-halo__node evidence-halo__node--two"></span>
-          <span class="evidence-halo__node evidence-halo__node--three"></span>
+      <aside class="hero-edition" aria-labelledby="hero-edition-title">
+        <div class="hero-edition__masthead">
+          <span>PeptiBloom</span>
+          <span>Public research resource</span>
         </div>
-      </div>
+        <div class="hero-edition__visual" aria-hidden="true">
+          <div class="evidence-halo">
+            <span class="evidence-halo__ring evidence-halo__ring--outer"></span>
+            <span class="evidence-halo__ring evidence-halo__ring--middle"></span>
+            <span class="evidence-halo__ring evidence-halo__ring--inner"></span>
+            <span class="evidence-halo__node evidence-halo__node--one"></span>
+            <span class="evidence-halo__node evidence-halo__node--two"></span>
+            <span class="evidence-halo__node evidence-halo__node--three"></span>
+          </div>
+        </div>
+        <p class="surface-kicker">Editorial standard</p>
+        <h2 id="hero-edition-title">Evidence belongs beside its limits.</h2>
+        <p>Support, contradiction and unanswered questions are part of the same scientific record.</p>
+        <div class="hero-edition__footer">
+          <span>Library notes · 01</span>
+          <a href="/about/">Why PeptiBloom exists <span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -41,7 +60,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2 id="purpose-title">Scientific information should show its limits as clearly as its conclusions.</h2>
       </div>
 
-      <div class="principle-grid">
+      <div class="principle-grid principle-grid--featured">
         <article class="principle">
           <p class="principle__index">01</p>
           <h3>Evidence</h3>
@@ -62,8 +81,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <section class="section" aria-labelledby="library-title">
-    <div class="site-frame feature-layout">
-      <div>
+    <div class="site-frame feature-layout feature-layout--library">
+      <div class="feature-copy">
         <p class="eyebrow">Scientific Library</p>
         <h2 id="library-title">A library before a catalogue.</h2>
         <p class="section-lead">
@@ -74,20 +93,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a class="editorial-link" href="/library/">Enter the Scientific Library <span aria-hidden="true">→</span></a>
       </div>
 
-      <aside class="editorial-surface" aria-labelledby="publication-standard-title">
-        <p class="surface-kicker">Publication standard</p>
+      <aside class="library-dossier" aria-labelledby="publication-standard-title">
+        <div class="library-dossier__header">
+          <p class="surface-kicker">Publication standard</p>
+          <span aria-hidden="true">PB · LIB</span>
+        </div>
         <h3 id="publication-standard-title">No scientific content just to fill space.</h3>
-        <p>
-          Production scientific content must complete the approved review path before it appears as a
-          library entry. Until then, the web does not invent studies, claims, evidence levels or compounds.
+        <ol class="library-dossier__path" aria-label="Scientific publication path">
+          <li><span>01</span><div><strong>Scientific Inventory</strong><small>Sources and review</small></div></li>
+          <li><span>02</span><div><strong>Evidence</strong><small>Representation and provenance</small></div></li>
+          <li><span>03</span><div><strong>Public Library</strong><small>Production-ready content only</small></div></li>
+        </ol>
+        <p class="library-dossier__note">
+          Until the review path is complete, the web does not invent studies, claims, evidence levels or compounds.
         </p>
       </aside>
     </div>
   </section>
 
   <section class="section section--quiet" aria-labelledby="tool-title">
-    <div class="site-frame feature-layout">
-      <div>
+    <div class="site-frame feature-layout tool-feature">
+      <div class="feature-copy">
         <p class="eyebrow">Open research tool</p>
         <h2 id="tool-title">Check concentration arithmetic without hiding the formula.</h2>
         <p class="section-lead">
@@ -96,13 +122,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
         <a class="button button--primary" href="/calculator/">Open the concentration calculator</a>
       </div>
-      <aside class="editorial-surface" aria-labelledby="tool-boundary-title">
-        <p class="surface-kicker">Visible boundary</p>
-        <h3 id="tool-boundary-title">Arithmetic is not a recommendation.</h3>
-        <p>
-          The tool can expose unit conversions and calculation errors. It cannot determine safety, suitability,
-          purity, sterility or an appropriate amount for any compound or person.
-        </p>
+      <aside class="tool-card" aria-labelledby="tool-boundary-title">
+        <div class="tool-card__units" aria-hidden="true">
+          <span>mg/mL</span><span>µg/mL</span><span>mL</span><span>U-100</span>
+        </div>
+        <div>
+          <p class="surface-kicker">Visible boundary</p>
+          <h3 id="tool-boundary-title">Arithmetic is not a recommendation.</h3>
+          <p>
+            The tool can expose unit conversions and calculation errors. It cannot determine safety, suitability,
+            purity, sterility or an appropriate amount for any compound or person.
+          </p>
+        </div>
       </aside>
     </div>
   </section>

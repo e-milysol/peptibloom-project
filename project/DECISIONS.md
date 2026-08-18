@@ -4,6 +4,7 @@ Only approved decisions belong here. Proposals remain in domain handoffs or open
 
 | ID | Decision | Status |
 |---|---|---|
+| PB-DEC-003 | Web / Infrastructure: PeptiBloom's permanent production canonical domain is `https://peptibloomproject.com` and Cloudflare Workers is the approved production hosting. Public Web/SEO references may treat this URL as the production origin. Any material future domain or hosting change requires a new Owner decision. Owner approval date: 2026-08-18. | APPROVED |
 | PB-DEC-100 | Public web uses Astro + TypeScript strict | APPROVED |
 | PB-DEC-101 | API uses Django + DRF; PostgreSQL intended | APPROVED |
 | PB-DEC-102 | Public web is not the scientific source of truth | APPROVED |
@@ -46,7 +47,6 @@ The following remain outside this approval and must not be inferred as global ca
 - final scientific dense-data/table patterns;
 - OpenGraph art and final brand asset set;
 - public launch primary language;
-- production domain and hosting.
 
 ## Open decisions
 

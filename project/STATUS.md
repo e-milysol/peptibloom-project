@@ -4,7 +4,7 @@ Last coordination baseline: 2026-08-18.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
-| Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete | launch hardening/open launch decisions; multilingual routing implementation after default-locale decision; WEB M2 remains blocked |
+| Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete | launch hardening; multilingual routing implementation after default-locale decision; WEB M2 remains blocked |
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
@@ -30,7 +30,9 @@ The M1 visual direction remains `Editorial Evidence / Warm Scientific`, using th
 
 M1 intentionally excludes production compound pages, scientific mocks, ecommerce and Evidence API integration. Evidence taxonomy semantics remain out of scope.
 
-The public web is deployed through Cloudflare Workers from `main`. The public web is approved as multilingual with minimum supported locales English (`en`), Spanish (`es`) and French (`fr`). PB-DEC-002 remains open, so primary/default locale, URL-prefix strategy and fallback behavior must not be inferred.
+PB-DEC-003 was Owner approved on 2026-08-18: `https://peptibloomproject.com` is the permanent production canonical domain and Cloudflare Workers is the approved production hosting. Web, SEO, sitemap, canonicals, metadata and other public references may treat that URL as the production origin. Any material future domain or hosting change requires a new Owner decision.
+
+The public web is deployed through Cloudflare Workers from `main`. It is approved as multilingual with minimum supported locales English (`en`), Spanish (`es`) and French (`fr`). PB-DEC-002 remains open, so primary/default locale, URL-prefix strategy and fallback behavior must not be inferred.
 
 ## App Core / WORK 6
 

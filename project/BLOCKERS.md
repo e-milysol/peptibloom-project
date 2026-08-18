@@ -55,4 +55,3 @@ The following are PROPOSED decisions in `PROJECT_STATE.yaml`, not current develo
 
 - PB-DEC-001 — technical protection for `main`;
 - PB-DEC-002 — public launch primary language;
-- PB-DEC-003 — production domain and hosting.

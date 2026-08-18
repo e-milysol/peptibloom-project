@@ -25,6 +25,13 @@ milestones:
     m1_implementation: COMPLETE
     m1_visual_enrichment: COMPLETE
     temporary_cloudflare_workers_deployment: COMPLETE
+    production_canonical_domain:
+      value: "https://peptibloomproject.com"
+      status: APPROVED
+    production_hosting:
+      value: Cloudflare Workers
+      status: APPROVED
+    infrastructure_owner_approval_date: 2026-08-18
     multilingual_public_web: APPROVED
     minimum_locales:
       - en
@@ -93,8 +100,4 @@ open_decisions:
   - id: PB-DEC-002
     domain: web
     subject: primary_language_for_public_launch
-    status: PROPOSED
-  - id: PB-DEC-003
-    domain: web
-    subject: production_domain_and_hosting
     status: PROPOSED

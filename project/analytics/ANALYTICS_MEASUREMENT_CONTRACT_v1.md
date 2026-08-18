@@ -174,7 +174,7 @@ Warning code semantics are UI/product semantics only. They must never be interpr
 | Event | Trigger | Allowed properties |
 |---|---|---|
 | `navigation_click` | Explicit internal navigation click | `destination_area`: `home`, `calculator`, `library`, `methodology`, `about`, `catalogue`, `newsletter`; `placement`: `header`, `hero`, `body`, `footer`, `calculator_result`; calculator page may add `calculator_state` |
-| `content_engaged` | Once after 10 active seconds + 50% scroll | `engagement_rule=active_10s_scroll_50`; `content_type` |
+| `content_engaged` | Once after 10 active seconds + 50% scroll | `engagement_rule=active_10s_scroll_50` |
 | `reference_click` | Future click from an Evidence entry to a cited source | `reference_type`: `doi`, `pubmed`, `trial_registry`, `patent`, `other`; `destination_domain` allowlist only |
 | `form_view` | Reserved form becomes visible | `form_id`: `newsletter`, `catalogue_request` |
 | `form_start` | First interaction with reserved form | `form_id` |

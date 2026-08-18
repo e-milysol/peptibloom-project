@@ -1,0 +1,53 @@
+{
+  "registry_version": 1,
+  "status": "APPROVED",
+  "classification": "RESTORATION OF PREVIOUSLY APPROVED DOMAIN CONTRACT",
+  "canonical_reset_event": "reset",
+  "production_instrumentation": "BLOCKED",
+  "currently_applicable": [
+    "calculator_view",
+    "calculator_start",
+    "calculate",
+    "reset",
+    "compare_volumes",
+    "validation_warning",
+    "syringe_scale_selected",
+    "syringe_capacity_selected",
+    "calculation_details_open",
+    "calculator_abandon",
+    "navigation_click",
+    "content_engaged",
+    "client_error"
+  ],
+  "future_reserved": [
+    "reference_click",
+    "form_view",
+    "form_start",
+    "form_submit_attempt",
+    "form_submit_success",
+    "form_submit_error"
+  ],
+  "retired_terminology": [
+    {
+      "retired": "calculator_complete",
+      "replacement": "calculate"
+    },
+    {
+      "retired": "comparison_complete",
+      "replacement": "compare_volumes"
+    },
+    {
+      "retired": "formula_expand",
+      "replacement": "calculation_details_open"
+    },
+    {
+      "retired": "warning_shown",
+      "replacement": "validation_warning"
+    }
+  ],
+  "aliases": [],
+  "notes": {
+    "calculator_reset": "NON_CANONICAL_NOT_ALIAS",
+    "calculator_abandon": "best-effort / inferred within page session; never an individual fact"
+  }
+}

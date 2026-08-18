@@ -1,53 +1,234 @@
 {
-  "registry_version": 1,
-  "status": "APPROVED",
-  "classification": "RESTORATION OF PREVIOUSLY APPROVED DOMAIN CONTRACT",
-  "canonical_reset_event": "reset",
-  "production_instrumentation": "BLOCKED",
-  "currently_applicable": [
-    "calculator_view",
-    "calculator_start",
-    "calculate",
-    "reset",
-    "compare_volumes",
-    "validation_warning",
-    "syringe_scale_selected",
-    "syringe_capacity_selected",
-    "calculation_details_open",
-    "calculator_abandon",
-    "navigation_click",
-    "content_engaged",
-    "client_error"
-  ],
-  "future_reserved": [
-    "reference_click",
-    "form_view",
-    "form_start",
-    "form_submit_attempt",
-    "form_submit_success",
-    "form_submit_error"
-  ],
-  "retired_terminology": [
-    {
-      "retired": "calculator_complete",
-      "replacement": "calculate"
-    },
-    {
-      "retired": "comparison_complete",
-      "replacement": "compare_volumes"
-    },
-    {
-      "retired": "formula_expand",
-      "replacement": "calculation_details_open"
-    },
-    {
-      "retired": "warning_shown",
-      "replacement": "validation_warning"
+  "contract": "peptibloom_measurement_contract_v1_0",
+  "schema_version": 1,
+  "owner": "analytics",
+  "status": "analytics_contract_approved",
+  "production_instrumentation": "blocked",
+  "gate": {
+    "required": [
+      "ANALYTICS_CONTRACT_APPROVED",
+      "WEB_TECHNICAL_VALIDATION_APPROVED",
+      "LEGAL_PRIVACY_REVIEW_APPROVED",
+      "OWNER_PRODUCTION_AUTHORIZATION"
+    ],
+    "rule": "all_required_states_must_be_approved",
+    "current": {
+      "ANALYTICS_CONTRACT_APPROVED": "approved",
+      "WEB_TECHNICAL_VALIDATION_APPROVED": "pending",
+      "LEGAL_PRIVACY_REVIEW_APPROVED": "pending",
+      "OWNER_PRODUCTION_AUTHORIZATION": "pending"
     }
+  },
+  "permanent_rules": {
+    "cookieless": true,
+    "advertising": "prohibited",
+    "retargeting": "prohibited",
+    "profiling": "prohibited",
+    "browser_language": "prohibited",
+    "page_language": "allowed",
+    "calculator_abandon_reliability": "best_effort_inferred_within_page_session",
+    "geographic_small_cell_threshold": 5,
+    "suppress_before_aggregate_persistence": true
+  },
+  "forbidden_fields": [
+    "calculator_input_values",
+    "calculator_results",
+    "compound",
+    "quantity",
+    "concentration",
+    "volume",
+    "protocol",
+    "health_information",
+    "persistent_identifier",
+    "session_identifier",
+    "raw_query_string",
+    "raw_referrer_url",
+    "raw_ip_address",
+    "raw_user_agent"
   ],
-  "aliases": [],
-  "notes": {
-    "calculator_reset": "NON_CANONICAL_NOT_ALIAS",
-    "calculator_abandon": "best-effort / inferred within page session; never an individual fact"
+  "retired_event_names": [
+    "calculator_complete",
+    "comparison_complete",
+    "formula_expand",
+    "warning_shown"
+  ],
+  "common_properties": {
+    "page_path": {
+      "type": "normalized_allowlisted_path",
+      "query_string": "prohibited",
+      "fragment": "prohibited"
+    },
+    "event_schema_version": [1],
+    "page_type": ["home", "calculator", "library_index", "library_entry", "methodology", "about", "other_public"],
+    "content_language": ["en", "es", "other"],
+    "device_class": ["mobile", "tablet", "desktop", "unknown"],
+    "source_group": ["direct", "internal", "organic_search", "social", "referral", "approved_campaign", "unknown"],
+    "referrer_domain": {
+      "type": "approved_etld_plus_one_or_other",
+      "path": "prohibited",
+      "query_string": "prohibited",
+      "fragment": "prohibited"
+    },
+    "campaign_id": {
+      "type": "server_allowlisted_code",
+      "raw_utm": "prohibited"
+    },
+    "release_id": {
+      "type": "approved_deployment_identifier"
+    },
+    "country_code": {
+      "type": "server_derived_iso2_other_or_unknown",
+      "client_supplied": "prohibited"
+    }
+  },
+  "events": {
+    "calculator_view": {
+      "trigger": "calculator_ui_ready_once",
+      "properties": {}
+    },
+    "calculator_start": {
+      "trigger": "first_real_user_change_once",
+      "properties": {
+        "first_control_group": ["vial", "final_volume", "target", "syringe", "comparison", "unknown"]
+      }
+    },
+    "calculate": {
+      "trigger": "every_submit_after_validation",
+      "properties": {
+        "outcome": ["success", "success_with_warning", "blocked"],
+        "calculation_phase": ["first", "repeat"],
+        "warning_count_bucket": ["0", "1", "2_plus"]
+      }
+    },
+    "reset": {
+      "trigger": "reset_activated",
+      "properties": {
+        "state_before_reset": ["not_started", "started", "completed", "warning_present"]
+      }
+    },
+    "compare_volumes": {
+      "trigger": "every_compare_after_validation",
+      "properties": {
+        "outcome": ["success", "blocked"],
+        "comparison_phase": ["first", "repeat"],
+        "scenario_count_bucket": ["1", "2_3", "4_5", "6_8", "unknown"]
+      }
+    },
+    "validation_warning": {
+      "trigger": "distinct_warning_per_context_action",
+      "properties": {
+        "warning_code": [
+          "required_value_missing_or_nonpositive",
+          "target_exceeds_vial_content",
+          "calculated_volume_exceeds_capacity",
+          "comparison_prerequisite_missing",
+          "comparison_volume_list_invalid",
+          "comparison_target_exceeds_vial_content",
+          "unknown_validation_warning"
+        ],
+        "context": ["calculate", "comparison"],
+        "occurrence": ["first", "repeat"]
+      }
+    },
+    "syringe_scale_selected": {
+      "trigger": "user_changes_scale_not_default_render",
+      "properties": {
+        "scale_type": ["u_100", "u_40", "custom"]
+      }
+    },
+    "syringe_capacity_selected": {
+      "trigger": "user_changes_capacity",
+      "properties": {
+        "capacity_class": ["small", "medium", "standard", "large", "custom", "unknown"]
+      }
+    },
+    "calculation_details_open": {
+      "trigger": "calculation_details_opened_once_per_page",
+      "properties": {
+        "calculator_state": ["not_started", "started", "completed"]
+      }
+    },
+    "calculator_abandon": {
+      "trigger": "best_effort_page_exit_after_start_without_success",
+      "properties": {
+        "last_stage": ["started", "warning_present", "comparison_started"]
+      }
+    },
+    "navigation_click": {
+      "trigger": "explicit_internal_navigation_click",
+      "properties": {
+        "destination_area": ["home", "calculator", "library", "methodology", "about", "catalogue", "newsletter"],
+        "placement": ["header", "hero", "body", "footer", "calculator_result"],
+        "calculator_state": ["not_applicable", "not_started", "started", "completed", "warning_present"]
+      }
+    },
+    "content_engaged": {
+      "trigger": "active_foreground_10_seconds_and_scroll_50_percent_once",
+      "properties": {
+        "engagement_rule": ["active_10s_scroll_50"]
+      }
+    },
+    "reference_click": {
+      "trigger": "evidence_reference_click",
+      "properties": {
+        "reference_type": ["doi", "pubmed", "trial_registry", "patent", "other"],
+        "destination_domain": {
+          "type": "approved_domain_only"
+        }
+      }
+    },
+    "form_view": {
+      "trigger": "reserved_form_visible",
+      "activation": "reserved_not_active",
+      "properties": {
+        "form_id": ["newsletter", "catalogue_request"]
+      }
+    },
+    "form_start": {
+      "trigger": "first_reserved_form_interaction",
+      "activation": "reserved_not_active",
+      "properties": {
+        "form_id": ["newsletter", "catalogue_request"]
+      }
+    },
+    "form_submit_attempt": {
+      "trigger": "reserved_form_submit_requested",
+      "activation": "reserved_not_active",
+      "properties": {
+        "form_id": ["newsletter", "catalogue_request"]
+      }
+    },
+    "form_submit_success": {
+      "trigger": "backend_confirms_reserved_form_submission",
+      "activation": "reserved_not_active",
+      "properties": {
+        "form_id": ["newsletter", "catalogue_request"]
+      }
+    },
+    "form_submit_error": {
+      "trigger": "controlled_reserved_form_error",
+      "activation": "reserved_requires_analytics_error_code_allowlist",
+      "properties": {
+        "form_id": ["newsletter", "catalogue_request"]
+      }
+    },
+    "client_error": {
+      "trigger": "controlled_sanitised_client_error",
+      "properties": {
+        "component": ["calculator", "navigation", "form", "other"],
+        "error_code": {
+          "type": "analytics_allowlisted_controlled_code"
+        },
+        "release_id": {
+          "type": "approved_deployment_identifier"
+        }
+      }
+    }
+  },
+  "aggregate_store": {
+    "logical_name": "pb_analytics_daily_v1",
+    "create": "prohibited_pending_approval",
+    "retention_25_months": "not_approved",
+    "retention_13_months": "proposed_legal_review"
   }
 }

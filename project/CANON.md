@@ -33,6 +33,10 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - The public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`).
 - New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
 - The primary/default locale, URL-prefix policy and fallback behavior remain open until explicitly approved; they must not be inferred from the current English M1 copy.
+- The permanent production canonical domain is `https://peptibloomproject.com`.
+- Cloudflare Workers is the approved production hosting for PeptiBloom Web.
+- Web, SEO, sitemap, canonicals, metadata and other public references may treat `https://peptibloomproject.com` as the production origin.
+- This approval does not automatically authorize new providers, infrastructure, redirects, DNS changes, hosting platforms, Analytics changes or Privacy changes. Any material future domain or hosting change requires a new Owner decision.
 
 ### App Core / WORK 6
 - WORK 6 owns the authenticated PeptiBloom application / site app.

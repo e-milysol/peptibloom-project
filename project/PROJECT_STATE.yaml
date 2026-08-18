@@ -65,6 +65,14 @@ milestones:
   scientific_inventory:
     current: active
     evidence_handoff: IN_PROGRESS
+  scientific_content_production:
+    current: coordination_editorial_transformation
+    evidence_internal_contract: PROPOSED / PARTIAL / PENDING FORMALIZATION
+    scientific_assessment_authority: false
+    approval_authority: false
+    publication_authority: false
+    generation_when_required_evidence_missing: PAUSED
+    publication_gate: BLOCKED
 
 dependencies:
   web_m1: []

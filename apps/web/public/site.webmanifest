@@ -1,0 +1,21 @@
+{
+  "name": "PeptiBloom Scientific Research Library",
+  "short_name": "PeptiBloom",
+  "description": "An evidence-first scientific research library for peptides and research compounds.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCFAFB",
+  "theme_color": "#FCFAFB",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

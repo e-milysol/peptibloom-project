@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="PeptiBloom"
-  description="PeptiBloom is building a public scientific research library designed around evidence, transparency, traceability and visible uncertainty."
+  title="Evidence-First Peptide Research Library"
+  description="PeptiBloom is a public peptide research library and calculation toolkit built around evidence, transparent uncertainty and traceable sources."
 >
   <section class="section section--hero">
     <div class="site-frame hero">
@@ -80,6 +80,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p>
           Production scientific content must complete the approved review path before it appears as a
           library entry. Until then, the web does not invent studies, claims, evidence levels or compounds.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="tool-title">
+    <div class="site-frame feature-layout">
+      <div>
+        <p class="eyebrow">Open research tool</p>
+        <h2 id="tool-title">Check concentration arithmetic without hiding the formula.</h2>
+        <p class="section-lead">
+          The free calculator converts stated vial content, final solution volume, mass units and syringe-scale
+          positions. It shows every step and never supplies a dose or regimen.
+        </p>
+        <a class="button button--primary" href="/calculator/">Open the concentration calculator</a>
+      </div>
+      <aside class="editorial-surface" aria-labelledby="tool-boundary-title">
+        <p class="surface-kicker">Visible boundary</p>
+        <h3 id="tool-boundary-title">Arithmetic is not a recommendation.</h3>
+        <p>
+          The tool can expose unit conversions and calculation errors. It cannot determine safety, suitability,
+          purity, sterility or an appropriate amount for any compound or person.
         </p>
       </aside>
     </div>

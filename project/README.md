@@ -4,20 +4,24 @@ This directory is the shared coordination layer for PeptiBloom agents, chats and
 
 ## Principle
 
-GitHub is the implementation source of truth. This directory is the coordination source of truth for project state, approved decisions, blockers, handoffs and cross-domain requests.
+GitHub is the implementation source of truth. This directory is the durable coordination source of truth for project state, approved decisions, blockers, handoffs and cross-domain requests.
 
 Conversation history is context, not canon. A chat must not require another chat's transcript in order to continue project work.
 
+Issue #13 (`PeptiBloom Async Orchestrator Queue`) is the live asynchronous mailbox for routine coordination. `project/HANDOFFS/orchestrator.md` is durable protocol/documentation, not the routine message log.
+
 ## Required start-of-task protocol
 
-1. Read `PROJECT_STATE.yaml`.
-2. Read `CANON.md`.
-3. Read `STATUS.md`.
-4. Read the relevant file in `HANDOFFS/`.
-5. Read `HANDOFFS/orchestrator.md` for asynchronous instructions or pending review items.
+1. Verify the current repository branch/HEAD and relevant PR state.
+2. Read `PROJECT_STATE.yaml`.
+3. Read `CANON.md`.
+4. Read `STATUS.md`.
+5. Read the relevant file in `HANDOFFS/`.
 6. Read unresolved items in `REQUESTS/open/` addressed to the workstream.
-7. Verify the current repository branch/HEAD before implementation.
-8. Do not infer missing canonical decisions.
+7. Read `BLOCKERS.md`.
+8. Read all new Issue #13 comments since the last processed coordination message.
+9. Process applicable `ORCHESTRATOR -> WORK` instructions before discretionary work.
+10. Do not infer missing canonical decisions.
 
 ## Required end-of-task protocol
 
@@ -26,17 +30,18 @@ Conversation history is context, not canon. A chat must not require another chat
 3. Record approved canonical decisions in `DECISIONS.md`.
 4. Record unresolved blockers in `BLOCKERS.md`.
 5. Create a cross-domain request when another workstream must decide or provide something.
-6. If Technical Direction/review is needed, add a concise `WORK -> ORCHESTRATOR` item to `HANDOFFS/orchestrator.md` referencing the request/PR/commit.
+6. If Technical Direction/review is needed, add a concise `WORK -> ORCHESTRATOR` comment to Issue #13 referencing the request/PR/commit.
 7. Move resolved requests from `REQUESTS/open/` to `REQUESTS/resolved/`.
 8. Update `PROJECT_STATE.yaml` only for factual milestone/status changes.
 
 ## Asynchronous coordination
 
-PeptiBloom workstreams should not depend on a human relaying messages between chats. `HANDOFFS/orchestrator.md` is the shared asynchronous mailbox between execution Work and Technical Direction.
+PeptiBloom workstreams should not depend on a human relaying messages between chats.
 
 - Work may continue autonomously inside already-approved scope.
-- Missing decisions must be recorded through the control plane instead of guessed.
-- The orchestrator periodically reviews GitHub/project state and leaves actionable `ORCHESTRATOR -> WORK` instructions.
+- Missing decisions must be recorded through the Control Plane instead of guessed.
+- Issue #13 carries routine `WORK -> ORCHESTRATOR` and `ORCHESTRATOR -> WORK` messages.
+- Durable domain facts belong in the relevant `project/HANDOFFS/` file.
 - Escalate to `OWNER_REQUIRED` only when Product Owner authority is genuinely necessary.
 - Do not merge, publish or perform irreversible actions when the applicable authority has not approved them.
 
@@ -47,6 +52,7 @@ PeptiBloom workstreams should not depend on a human relaying messages between ch
 - No workstream may silently create canon for another domain.
 - Evidence/scientific content is never invented to unblock frontend work.
 - Public web content must not become the scientific source of truth.
+- Private operational data must not be copied into the public repository merely for coordination convenience.
 
 ## Request IDs
 
@@ -67,10 +73,12 @@ Cross-domain request lifecycle uses `OPEN` and `RESOLVED` only inside `REQUESTS/
 
 ## Current workstreams
 
-- `operative-core`
-- `evidence`
-- `web`
-- `scientific-inventory`
-- `orchestrator` (coordination only; not an implementation domain)
+- `web` — public Astro editorial web.
+- `app-core` — WORK 6; authenticated PeptiBloom site/app.
+- `private-master` — WORK 7; private Inventory / Procurement / Landed Cost application in `e-milysol/peptibloom-private-master`.
+- `operative-core`.
+- `evidence`.
+- `scientific-inventory`.
+- `orchestrator` — coordination only; not an implementation domain.
 
 The coordination layer should stay small, factual and reviewable. Do not turn it into a duplicate of the codebase or a dump of chat transcripts.

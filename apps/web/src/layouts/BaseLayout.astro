@@ -11,6 +11,7 @@ interface Props {
 const { title = 'PeptiBloom', description } = Astro.props;
 const pageTitle = title === 'PeptiBloom' ? title : `${title} — PeptiBloom`;
 const brandLogoUrl = 'https://peptibloomproject.com/brand/logo.png';
+const isCalculatorPage = Astro.url.pathname.startsWith('/calculator/');
 ---
 
 <!doctype html>
@@ -31,6 +32,7 @@ const brandLogoUrl = 'https://peptibloomproject.com/brand/logo.png';
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={brandLogoUrl} />
     <meta name="twitter:image:alt" content="PeptiBloom — Science, Longevity, Wellness" />
+    {isCalculatorPage && <link rel="stylesheet" href="/calculator-enhancements.css" />}
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -40,5 +42,6 @@ const brandLogoUrl = 'https://peptibloomproject.com/brand/logo.png';
       <slot />
     </main>
     <SiteFooter />
+    {isCalculatorPage && <script is:inline type="module" src="/calculator-enhancements.js"></script>}
   </body>
 </html>

@@ -27,6 +27,11 @@ Only approved decisions belong here. Proposals remain in domain handoffs or open
 | PB-DEC-202 | Operative Core v1 FK deletion policy uses PROTECT where closed in the final migration contract | APPROVED |
 | PB-DEC-300 | Missing cross-domain canon must not be inferred | APPROVED |
 | PB-DEC-301 | Cross-domain dependencies use `PB-XD-NNN` requests | APPROVED |
+| PB-DEC-400 | WORK 6 owns App Core, the authenticated PeptiBloom site/app domain. Product Design v0.1 and Technical Design / UX IA v0.1 are Owner approved; MVP Architecture is approved for contract/wireflow work, not production implementation | APPROVED |
+| PB-DEC-401 | App Core architectural direction is a modular monolith with Django/DRF/PostgreSQL and Angular/Ionic for the authenticated application; microservices are not required for the MVP | APPROVED |
+| PB-DEC-402 | App Core Personal Inventory uses immutable `INVENTORY_MOVEMENT` history as source of truth; any persisted `current_quantity` is a materialized transactional balance, not an independently editable source | APPROVED |
+| PB-DEC-403 | Compound pages in App Core remain `FUTURE / EVIDENCE-GATED`; no placeholder scientific content may bypass the Evidence/publication gate | APPROVED |
+| PB-DEC-500 | WORK 7 owns the Private Master in `e-milysol/peptibloom-private-master`; it is separate from App Core and must use separate database, deployment, storage and credentials, with only sanitized coordination state entering the public Control Plane | APPROVED |
 
 ## Explicitly not closed by WEB M1 visual approval
 

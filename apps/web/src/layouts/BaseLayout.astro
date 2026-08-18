@@ -6,12 +6,45 @@ import SiteFooter from '../components/SiteFooter.astro';
 interface Props {
   title?: string;
   description: string;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { title = 'PeptiBloom', description } = Astro.props;
+const { title = 'PeptiBloom', description, structuredData } = Astro.props;
 const pageTitle = title === 'PeptiBloom' ? title : `${title} — PeptiBloom`;
-const brandLogoUrl = 'https://peptibloomproject.com/brand/logo.png';
+const siteUrl = Astro.site ?? new URL('https://peptibloomproject.com');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const brandLogoUrl = new URL('/brand/logo.png', siteUrl).href;
 const isCalculatorPage = Astro.url.pathname.startsWith('/calculator/');
+const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
+const cloudflareAnalyticsToken = import.meta.env.PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
+
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': `${siteUrl.href}#website`,
+  url: siteUrl.href,
+  name: 'PeptiBloom',
+  description: 'An evidence-first scientific research library for peptides and research compounds.',
+  inLanguage: 'en',
+};
+
+const webpageSchema = {
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl.href}#webpage`,
+  url: canonicalUrl.href,
+  name: pageTitle,
+  description,
+  isPartOf: { '@id': `${siteUrl.href}#website` },
+  inLanguage: 'en',
+};
+
+const extraSchema = structuredData
+  ? (Array.isArray(structuredData) ? structuredData : [structuredData])
+  : [];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [websiteSchema, webpageSchema, ...extraSchema],
+};
 ---
 
 <!doctype html>
@@ -22,7 +55,17 @@ const isCalculatorPage = Astro.url.pathname.startsWith('/calculator/');
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#FCFAFB" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    {googleVerification && <meta name="google-site-verification" content={googleVerification} />}
+    {bingVerification && <meta name="msvalidate.01" content={bingVerification} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href={new URL('/sitemap.xml', siteUrl)} />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PeptiBloom" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={brandLogoUrl} />
@@ -30,8 +73,11 @@ const isCalculatorPage = Astro.url.pathname.startsWith('/calculator/');
     <meta property="og:image:height" content="1024" />
     <meta property="og:image:alt" content="PeptiBloom — Science, Longevity, Wellness" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={brandLogoUrl} />
     <meta name="twitter:image:alt" content="PeptiBloom — Science, Longevity, Wellness" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     {isCalculatorPage && <link rel="stylesheet" href="/calculator-enhancements.css" />}
     <title>{pageTitle}</title>
   </head>
@@ -43,5 +89,13 @@ const isCalculatorPage = Astro.url.pathname.startsWith('/calculator/');
     </main>
     <SiteFooter />
     {isCalculatorPage && <script is:inline type="module" src="/calculator-enhancements.js"></script>}
+    {cloudflareAnalyticsToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: cloudflareAnalyticsToken })}
+      ></script>
+    )}
   </body>
 </html>

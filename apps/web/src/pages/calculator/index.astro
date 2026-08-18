@@ -1,21 +1,36 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const calculatorSchema = {
+  '@type': 'WebApplication',
+  '@id': 'https://peptibloomproject.com/calculator/#application',
+  name: 'PeptiBloom Peptide Concentration & Reconstitution Calculator',
+  url: 'https://peptibloomproject.com/calculator/',
+  description:
+    'A free research arithmetic tool for concentration, mg-to-microgram conversion, volume and syringe-scale calculations.',
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Any',
+  browserRequirements: 'Requires JavaScript',
+  isAccessibleForFree: true,
+  inLanguage: 'en',
+};
 ---
 
 <BaseLayout
-  title="Concentration Calculator"
-  description="A transparent PeptiBloom calculator for concentration, volume and syringe-scale arithmetic. It performs math only and does not recommend doses or regimens."
+  title="Peptide Concentration & Reconstitution Calculator"
+  description="Free peptide concentration and reconstitution math calculator for mg, micrograms, mL and U-100 or U-40 syringe-scale conversions. Formulas remain visible; no doses are recommended."
+  structuredData={calculatorSchema}
 >
   <section class="page-hero calculator-hero">
     <div class="site-frame page-hero__grid">
       <div>
         <p class="eyebrow">Research tool</p>
-        <h1>Concentration &amp; volume calculator.</h1>
+        <h1>Peptide concentration &amp; reconstitution calculator.</h1>
       </div>
       <div class="page-hero__lead">
         <p>
-          Convert vial content and final volume into concentration, then calculate the volume and syringe-scale
-          position for an amount you enter. The formulas stay visible so the result is inspectable.
+          Convert stated vial content and final solution volume into concentration, then calculate the volume and
+          syringe-scale position for an amount you enter. Every formula stays visible and inspectable.
         </p>
       </div>
     </div>
@@ -183,14 +198,108 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
-</BaseLayout>
 
-<script>
+  <section class="section" aria-labelledby="formula-guide-title">
+    <div class="site-frame formula-guide">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Formula guide</p>
+        <h2 id="formula-guide-title">What the calculator is actually calculating.</h2>
+        <p>
+          The tool uses only the values entered. It does not verify vial contents, purity, sterility, displacement,
+          recovery losses or whether a preparation is suitable for any route or person.
+        </p>
+      </div>
+
+      <div class="formula-grid">
+        <article class="formula-step">
+          <p class="formula-step__number">01</p>
+          <h3>Concentration</h3>
+          <p><strong>Total content (mg) ÷ final solution volume (mL) = mg/mL</strong></p>
+          <p>One milligram equals 1,000 micrograms (µg).</p>
+        </article>
+        <article class="formula-step">
+          <p class="formula-step__number">02</p>
+          <h3>Volume</h3>
+          <p><strong>Entered amount (mg) ÷ concentration (mg/mL) = volume (mL)</strong></p>
+          <p>The units must be converted to the same mass unit before division.</p>
+        </article>
+        <article class="formula-step">
+          <p class="formula-step__number">03</p>
+          <h3>Syringe-scale position</h3>
+          <p><strong>Volume (mL) × scale units per mL = displayed units</strong></p>
+          <p>U-100 means 100 scale units per mL; U-40 means 40 scale units per mL.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="worked-example-title">
+    <div class="site-frame worked-example">
+      <div>
+        <p class="eyebrow">Worked arithmetic example</p>
+        <h2 id="worked-example-title">A calculation you can verify line by line.</h2>
+        <p>
+          Example inputs: 10 mg total content, 2.5 mL final solution volume, 300 µg entered amount and a U-100
+          scale. These numbers illustrate the arithmetic only; they are not a protocol or recommendation.
+        </p>
+      </div>
+      <ol class="calculation-trace">
+        <li><span>10 mg ÷ 2.5 mL</span><strong>= 4 mg/mL</strong></li>
+        <li><span>300 µg ÷ 1,000</span><strong>= 0.3 mg</strong></li>
+        <li><span>0.3 mg ÷ 4 mg/mL</span><strong>= 0.075 mL</strong></li>
+        <li><span>0.075 mL × 100 units/mL</span><strong>= 7.5 units</strong></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="calculator-questions-title">
+    <div class="site-frame faq-layout">
+      <div class="section-heading">
+        <p class="eyebrow">Questions &amp; limits</p>
+        <h2 id="calculator-questions-title">What this tool can—and cannot—tell you.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Does changing the final volume change the total amount?</summary>
+          <p>
+            No. In the arithmetic model, it changes concentration, not the stated total mass. The calculator cannot
+            confirm the true amount present or account for preparation losses.
+          </p>
+        </details>
+        <details>
+          <summary>Are “syringe units” the same as milligrams or micrograms?</summary>
+          <p>
+            No. Here, “units” are positions on a selected volume scale. Mass depends on concentration; the same scale
+            position can represent different masses in different solutions.
+          </p>
+        </details>
+        <details>
+          <summary>Should I enter diluent added or final solution volume?</summary>
+          <p>
+            Enter the final solution volume used for the concentration calculation. This tool does not assume that
+            the measured final volume always equals the volume of liquid added.
+          </p>
+        </details>
+        <details>
+          <summary>Does the calculator recommend an amount, route or schedule?</summary>
+          <p>
+            No. It only converts user-entered numbers. It does not establish safety, appropriateness, sterility,
+            compatibility or a research or clinical protocol.
+          </p>
+        </details>
+      </div>
+    </div>
+    <div class="site-frame review-note">
+      <p><strong>Arithmetic review:</strong> formulas and the worked example were checked on 18 August 2026.</p>
+    </div>
+  </section>
+
+  <script>
   const form = document.querySelector('#concentration-calculator');
   const syringeScale = document.querySelector('#syringe-scale');
   const customScaleRow = document.querySelector('#custom-scale-row');
 
-  const getInput = (id) => document.querySelector(id);
+  const getInput = (id: string): Element | null => document.querySelector(id);
 
   const vialAmountInput = getInput('#vial-amount');
   const vialUnitInput = getInput('#vial-unit');
@@ -216,17 +325,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   const numberFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 });
   const compactFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
 
-  const readNumber = (element) => {
+  const readNumber = (element: Element | null): number => {
     if (!(element instanceof HTMLInputElement) && !(element instanceof HTMLSelectElement)) return Number.NaN;
     return Number.parseFloat(element.value);
   };
 
-  const readValue = (element) => {
+  const readValue = (element: Element | null): string => {
     if (!(element instanceof HTMLInputElement) && !(element instanceof HTMLSelectElement)) return '';
     return element.value;
   };
 
-  const toMg = (value, unit) => unit === 'mcg' ? value / 1000 : value;
+  const toMg = (value: number, unit: string): number => unit === 'mcg' ? value / 1000 : value;
 
   const clearResults = () => {
     [resultMgMl, resultMcgMl, resultVolume, resultUnits, resultPortions].forEach((element) => {
@@ -319,7 +428,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       formulaUnits.textContent = `${numberFormat.format(targetVolumeMl)} mL × ${numberFormat.format(unitsPerMl)} units/mL = ${numberFormat.format(syringeUnits)} units.`;
     }
   });
-</script>
+  </script>
+</BaseLayout>
 
 <style>
   .calculator-hero h1 {
@@ -567,13 +677,121 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: 0.95rem;
   }
 
+  .formula-guide,
+  .faq-layout {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .formula-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-medium);
+    background: var(--color-hairline);
+  }
+
+  .formula-step {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: var(--color-paper);
+  }
+
+  .formula-step__number {
+    margin: 0 0 1.5rem;
+    color: var(--color-mulberry);
+    font: 600 0.78rem/1 var(--font-system);
+    letter-spacing: 0.12em;
+  }
+
+  .formula-step h3 {
+    margin-bottom: 0.65rem;
+  }
+
+  .formula-step p {
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.94rem;
+  }
+
+  .formula-step strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  .worked-example {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
+    gap: clamp(2.5rem, 7vw, 6rem);
+    align-items: start;
+  }
+
+  .calculation-trace {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--color-hairline);
+    list-style: none;
+  }
+
+  .calculation-trace li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--color-hairline);
+    font-family: var(--font-system);
+  }
+
+  .calculation-trace span {
+    color: var(--color-muted-ink);
+  }
+
+  .faq-layout {
+    grid-template-columns: minmax(16rem, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2.5rem, 7vw, 6rem);
+  }
+
+  .faq-list details {
+    border-top: 1px solid var(--color-hairline);
+    padding-block: 1rem;
+  }
+
+  .faq-list details:last-child {
+    border-bottom: 1px solid var(--color-hairline);
+  }
+
+  .faq-list summary {
+    cursor: pointer;
+    color: var(--color-ink);
+    font-family: var(--font-system);
+    font-weight: 600;
+  }
+
+  .faq-list p {
+    margin-bottom: 0;
+    color: var(--color-muted-ink);
+  }
+
+  .review-note {
+    margin-top: 2.5rem;
+    color: var(--color-muted-ink);
+    font: 0.88rem/1.5 var(--font-system);
+  }
+
   @media (max-width: 860px) {
-    .calculator-layout {
+    .calculator-layout,
+    .worked-example,
+    .faq-layout {
       grid-template-columns: 1fr;
     }
 
     .calculator-results {
       position: static;
+    }
+
+    .formula-grid {
+      grid-template-columns: 1fr;
     }
   }
 

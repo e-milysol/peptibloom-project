@@ -11,6 +11,8 @@ Last coordination baseline: 2026-08-18.
 | Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
 | Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
 | Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
+| Growth / SEO / Distribution | operational ownership restored; Search Console state is recorded only as HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18 | continue monitoring and establish current baselines from fresh source telemetry; do not infer current performance from historical observations |
+| Analytics | Analytics v1 contract and 19-event registry restored; only ANALYTICS_CONTRACT_APPROVED is APPROVED; production instrumentation remains BLOCKED | WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING |
 
 ## Web
 
@@ -81,6 +83,14 @@ Scientific Content Production is represented as an editorial transformation stag
 Recovered Scientific Inventory candidate classifications are coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness.
 
 WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
+
+## Growth / Analytics
+
+Growth / SEO / Distribution operational ownership is restored. Search Console observations from `2026-08-18` are historical operational observations only and must not be presented as current impressions, clicks, queries, CTR, rankings, indexed/discovered counts, traffic or conversions.
+
+Analytics v1 is restored as a previously approved domain contract. The contract gate is APPROVED, while WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING. Production instrumentation remains BLOCKED.
+
+PB-DEC-002 remains open/proposed; no historical language/default-locale/URL-prefix policy is restored by this reconciliation.
 
 ## Coordination
 

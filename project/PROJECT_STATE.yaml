@@ -73,6 +73,19 @@ milestones:
     publication_authority: false
     generation_when_required_evidence_missing: PAUSED
     publication_gate: BLOCKED
+  growth:
+    current: operational_ownership_restored
+    organic_baseline_start: 2026-08-18
+    search_console_historical_observation_date: 2026-08-18
+    current_search_console_metrics_asserted: false
+  analytics:
+    current: contract_restored
+    registry_version: v1
+    analytics_contract_approved: APPROVED
+    web_technical_validation_approved: PENDING
+    legal_privacy_review_approved: PENDING
+    owner_production_authorization: PENDING
+    production_instrumentation: BLOCKED
 
 dependencies:
   web_m1: []

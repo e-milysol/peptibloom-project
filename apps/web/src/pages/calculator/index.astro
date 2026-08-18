@@ -1,0 +1,598 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Concentration Calculator"
+  description="A transparent PeptiBloom calculator for concentration, volume and syringe-scale arithmetic. It performs math only and does not recommend doses or regimens."
+>
+  <section class="page-hero calculator-hero">
+    <div class="site-frame page-hero__grid">
+      <div>
+        <p class="eyebrow">Research tool</p>
+        <h1>Concentration &amp; volume calculator.</h1>
+      </div>
+      <div class="page-hero__lead">
+        <p>
+          Convert vial content and final volume into concentration, then calculate the volume and syringe-scale
+          position for an amount you enter. The formulas stay visible so the result is inspectable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="calculator-title">
+    <div class="site-frame calculator-layout">
+      <div>
+        <div class="section-heading reading-column">
+          <p class="eyebrow">Quick calculator</p>
+          <h2 id="calculator-title">Enter the numbers you want to convert.</h2>
+          <p>
+            This tool performs arithmetic only. It does not determine what amount, route, frequency, schedule or
+            treatment is appropriate for any person or compound.
+          </p>
+        </div>
+
+        <form id="concentration-calculator" class="calculator-form" novalidate>
+          <fieldset class="calculator-fieldset">
+            <legend>Vial and final volume</legend>
+
+            <div class="field-grid field-grid--split">
+              <label class="field">
+                <span class="field__label">Total vial content</span>
+                <span class="input-group">
+                  <input id="vial-amount" name="vialAmount" type="number" inputmode="decimal" min="0" step="any" placeholder="10" autocomplete="off" />
+                  <select id="vial-unit" name="vialUnit" aria-label="Vial content unit">
+                    <option value="mg" selected>mg</option>
+                    <option value="mcg">µg</option>
+                  </select>
+                </span>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Final volume</span>
+                <span class="input-group input-group--single-unit">
+                  <input id="final-volume" name="finalVolume" type="number" inputmode="decimal" min="0" step="any" placeholder="2.5" autocomplete="off" />
+                  <span class="input-unit">mL</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="calculator-fieldset">
+            <legend>Amount to convert</legend>
+
+            <div class="field-grid field-grid--split">
+              <label class="field">
+                <span class="field__label">Amount entered</span>
+                <span class="input-group">
+                  <input id="target-amount" name="targetAmount" type="number" inputmode="decimal" min="0" step="any" placeholder="300" autocomplete="off" />
+                  <select id="target-unit" name="targetUnit" aria-label="Entered amount unit">
+                    <option value="mcg" selected>µg</option>
+                    <option value="mg">mg</option>
+                  </select>
+                </span>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Syringe scale</span>
+                <select id="syringe-scale" name="syringeScale" class="select-wide">
+                  <option value="100" selected>U-100 · 100 units = 1 mL</option>
+                  <option value="40">U-40 · 40 units = 1 mL</option>
+                  <option value="custom">Custom scale</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="custom-scale-row" class="field-grid field-grid--split" hidden>
+              <label class="field">
+                <span class="field__label">Custom units per 1 mL</span>
+                <input id="custom-units" name="customUnits" type="number" inputmode="decimal" min="0" step="any" placeholder="50" autocomplete="off" />
+              </label>
+            </div>
+
+            <div class="field-grid field-grid--split">
+              <label class="field">
+                <span class="field__label">Syringe capacity</span>
+                <select id="syringe-capacity" name="syringeCapacity" class="select-wide">
+                  <option value="0.3">0.3 mL</option>
+                  <option value="0.5">0.5 mL</option>
+                  <option value="1" selected>1 mL</option>
+                  <option value="3">3 mL</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="calculator-actions">
+            <button class="button button--primary" type="submit">Calculate</button>
+            <button class="button button--secondary" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="calculator-results" aria-labelledby="results-title">
+        <p class="surface-kicker">Result</p>
+        <h2 id="results-title">Arithmetic, not a recommendation.</h2>
+
+        <div id="calculator-message" class="calculator-message" role="status" aria-live="polite">
+          Enter positive values above, then calculate.
+        </div>
+
+        <dl class="result-list">
+          <div>
+            <dt>Concentration</dt>
+            <dd id="result-mg-ml">—</dd>
+          </div>
+          <div>
+            <dt>Equivalent concentration</dt>
+            <dd id="result-mcg-ml">—</dd>
+          </div>
+          <div>
+            <dt>Calculated volume</dt>
+            <dd id="result-volume">—</dd>
+          </div>
+          <div>
+            <dt>Syringe-scale position</dt>
+            <dd id="result-units">—</dd>
+          </div>
+          <div>
+            <dt>Mathematical portions in vial</dt>
+            <dd id="result-portions">—</dd>
+          </div>
+        </dl>
+
+        <div class="syringe-visual" aria-hidden="true">
+          <div class="syringe-visual__bar">
+            <span id="syringe-fill" class="syringe-visual__fill"></span>
+          </div>
+          <div class="syringe-visual__labels">
+            <span>0</span>
+            <span id="syringe-capacity-label">1 mL</span>
+          </div>
+        </div>
+
+        <details id="calculation-details" class="calculation-details">
+          <summary>Show calculation</summary>
+          <ol>
+            <li id="formula-concentration">Concentration will appear here.</li>
+            <li id="formula-target">Entered amount conversion will appear here.</li>
+            <li id="formula-volume">Volume calculation will appear here.</li>
+            <li id="formula-units">Syringe-scale conversion will appear here.</li>
+          </ol>
+        </details>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--soft" aria-labelledby="guardrails-title">
+    <div class="site-frame feature-layout">
+      <div>
+        <p class="eyebrow">Built-in guardrails</p>
+        <h2 id="guardrails-title">The calculator checks the arithmetic context too.</h2>
+      </div>
+      <div class="reading-column">
+        <p>
+          It flags an entered amount that exceeds the total vial content and warns when the calculated volume is
+          larger than the selected syringe capacity. It never supplies a compound-specific amount or protocol.
+        </p>
+        <p class="calculator-note">
+          A nominal vial size is not assumed to be its usable fill capacity. If physical container capacity matters,
+          verify it independently from the actual container or manufacturer documentation.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector('#concentration-calculator');
+  const syringeScale = document.querySelector('#syringe-scale');
+  const customScaleRow = document.querySelector('#custom-scale-row');
+
+  const getInput = (id) => document.querySelector(id);
+
+  const vialAmountInput = getInput('#vial-amount');
+  const vialUnitInput = getInput('#vial-unit');
+  const finalVolumeInput = getInput('#final-volume');
+  const targetAmountInput = getInput('#target-amount');
+  const targetUnitInput = getInput('#target-unit');
+  const customUnitsInput = getInput('#custom-units');
+  const syringeCapacityInput = getInput('#syringe-capacity');
+
+  const message = getInput('#calculator-message');
+  const resultMgMl = getInput('#result-mg-ml');
+  const resultMcgMl = getInput('#result-mcg-ml');
+  const resultVolume = getInput('#result-volume');
+  const resultUnits = getInput('#result-units');
+  const resultPortions = getInput('#result-portions');
+  const syringeFill = getInput('#syringe-fill');
+  const syringeCapacityLabel = getInput('#syringe-capacity-label');
+  const formulaConcentration = getInput('#formula-concentration');
+  const formulaTarget = getInput('#formula-target');
+  const formulaVolume = getInput('#formula-volume');
+  const formulaUnits = getInput('#formula-units');
+
+  const numberFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 });
+  const compactFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+
+  const readNumber = (element) => {
+    if (!(element instanceof HTMLInputElement) && !(element instanceof HTMLSelectElement)) return Number.NaN;
+    return Number.parseFloat(element.value);
+  };
+
+  const readValue = (element) => {
+    if (!(element instanceof HTMLInputElement) && !(element instanceof HTMLSelectElement)) return '';
+    return element.value;
+  };
+
+  const toMg = (value, unit) => unit === 'mcg' ? value / 1000 : value;
+
+  const clearResults = () => {
+    [resultMgMl, resultMcgMl, resultVolume, resultUnits, resultPortions].forEach((element) => {
+      if (element) element.textContent = '—';
+    });
+    if (syringeFill instanceof HTMLElement) syringeFill.style.width = '0%';
+    if (message) message.textContent = 'Enter positive values above, then calculate.';
+  };
+
+  const setCustomScaleVisibility = () => {
+    if (!(syringeScale instanceof HTMLSelectElement) || !(customScaleRow instanceof HTMLElement)) return;
+    customScaleRow.hidden = syringeScale.value !== 'custom';
+  };
+
+  syringeScale?.addEventListener('change', setCustomScaleVisibility);
+  setCustomScaleVisibility();
+
+  form?.addEventListener('reset', () => {
+    window.setTimeout(() => {
+      setCustomScaleVisibility();
+      clearResults();
+      if (syringeCapacityLabel) syringeCapacityLabel.textContent = '1 mL';
+    }, 0);
+  });
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const vialAmountRaw = readNumber(vialAmountInput);
+    const finalVolumeMl = readNumber(finalVolumeInput);
+    const targetAmountRaw = readNumber(targetAmountInput);
+    const vialUnit = readValue(vialUnitInput);
+    const targetUnit = readValue(targetUnitInput);
+    const scaleValue = readValue(syringeScale);
+    const syringeCapacityMl = readNumber(syringeCapacityInput);
+
+    const unitsPerMl = scaleValue === 'custom' ? readNumber(customUnitsInput) : Number.parseFloat(scaleValue);
+
+    const requiredValues = [vialAmountRaw, finalVolumeMl, targetAmountRaw, unitsPerMl, syringeCapacityMl];
+    if (requiredValues.some((value) => !Number.isFinite(value) || value <= 0)) {
+      clearResults();
+      if (message) message.textContent = 'Please enter positive numbers for every required field.';
+      return;
+    }
+
+    const vialMg = toMg(vialAmountRaw, vialUnit);
+    const targetMg = toMg(targetAmountRaw, targetUnit);
+    const concentrationMgMl = vialMg / finalVolumeMl;
+    const concentrationMcgMl = concentrationMgMl * 1000;
+    const targetVolumeMl = targetMg / concentrationMgMl;
+    const syringeUnits = targetVolumeMl * unitsPerMl;
+    const portions = vialMg / targetMg;
+
+    const warnings = [];
+    if (targetMg > vialMg) warnings.push('The entered amount exceeds the total content of the vial.');
+    if (targetVolumeMl > syringeCapacityMl) warnings.push('The calculated volume exceeds the selected syringe capacity.');
+
+    if (resultMgMl) resultMgMl.textContent = `${numberFormat.format(concentrationMgMl)} mg/mL`;
+    if (resultMcgMl) resultMcgMl.textContent = `${numberFormat.format(concentrationMcgMl)} µg/mL`;
+    if (resultVolume) resultVolume.textContent = `${numberFormat.format(targetVolumeMl)} mL`;
+    if (resultUnits) resultUnits.textContent = `${numberFormat.format(syringeUnits)} units`;
+    if (resultPortions) resultPortions.textContent = compactFormat.format(portions);
+
+    if (message) {
+      message.textContent = warnings.length > 0
+        ? `Check: ${warnings.join(' ')}`
+        : 'Calculation complete. Review the formulas below before using the result.';
+      message.classList.toggle('calculator-message--warning', warnings.length > 0);
+    }
+
+    if (syringeFill instanceof HTMLElement) {
+      const percent = Math.max(0, Math.min(100, (targetVolumeMl / syringeCapacityMl) * 100));
+      syringeFill.style.width = `${percent}%`;
+    }
+    if (syringeCapacityLabel) syringeCapacityLabel.textContent = `${numberFormat.format(syringeCapacityMl)} mL`;
+
+    const vialDisplayUnit = vialUnit === 'mcg' ? 'µg' : 'mg';
+    const targetDisplayUnit = targetUnit === 'mcg' ? 'µg' : 'mg';
+
+    if (formulaConcentration) {
+      formulaConcentration.textContent = `${numberFormat.format(vialAmountRaw)} ${vialDisplayUnit} ÷ ${numberFormat.format(finalVolumeMl)} mL = ${numberFormat.format(concentrationMgMl)} mg/mL.`;
+    }
+    if (formulaTarget) {
+      formulaTarget.textContent = `${numberFormat.format(targetAmountRaw)} ${targetDisplayUnit} = ${numberFormat.format(targetMg)} mg.`;
+    }
+    if (formulaVolume) {
+      formulaVolume.textContent = `${numberFormat.format(targetMg)} mg ÷ ${numberFormat.format(concentrationMgMl)} mg/mL = ${numberFormat.format(targetVolumeMl)} mL.`;
+    }
+    if (formulaUnits) {
+      formulaUnits.textContent = `${numberFormat.format(targetVolumeMl)} mL × ${numberFormat.format(unitsPerMl)} units/mL = ${numberFormat.format(syringeUnits)} units.`;
+    }
+  });
+</script>
+
+<style>
+  .calculator-hero h1 {
+    max-width: 46rem;
+  }
+
+  .calculator-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(19rem, 0.92fr);
+    gap: clamp(2.5rem, 7vw, 6rem);
+    align-items: start;
+  }
+
+  .calculator-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .calculator-fieldset {
+    margin: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-medium);
+    background: var(--color-paper);
+  }
+
+  .calculator-fieldset legend {
+    padding-inline: 0.35rem;
+    color: var(--color-mulberry);
+    font-family: var(--font-system);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .field-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .field-grid + .field-grid {
+    margin-top: 1rem;
+  }
+
+  .field-grid--split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .field__label {
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid #d7cbd5;
+    border-radius: var(--radius-small);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font: 500 1rem/1.2 var(--font-system);
+  }
+
+  input {
+    padding: 0.72rem 0.85rem;
+  }
+
+  select {
+    padding: 0.72rem 2rem 0.72rem 0.85rem;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: var(--color-lavender-deep);
+    outline: 0.18rem solid color-mix(in srgb, var(--color-lavender) 25%, transparent);
+    outline-offset: 0.1rem;
+  }
+
+  .input-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 5.3rem;
+  }
+
+  .input-group input {
+    border-radius: var(--radius-small) 0 0 var(--radius-small);
+  }
+
+  .input-group select,
+  .input-unit {
+    border-left: 0;
+    border-radius: 0 var(--radius-small) var(--radius-small) 0;
+  }
+
+  .input-unit {
+    display: grid;
+    min-height: 3rem;
+    place-items: center;
+    border: 1px solid #d7cbd5;
+    border-left: 0;
+    background: var(--color-soft-bloom);
+    color: var(--color-muted-ink);
+    font: 600 0.9rem/1 var(--font-system);
+  }
+
+  .calculator-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .button--secondary {
+    border-color: var(--color-hairline);
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .button--secondary:hover {
+    border-color: var(--color-lavender);
+    color: var(--color-mulberry);
+  }
+
+  .calculator-results {
+    position: sticky;
+    top: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-medium);
+    background: var(--color-soft-bloom);
+  }
+
+  .calculator-results h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .calculator-message {
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1rem;
+    border-left: 0.2rem solid var(--color-lavender);
+    background: var(--color-paper);
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.92rem;
+  }
+
+  .calculator-message--warning {
+    border-left-color: var(--color-dusty-rose);
+    color: var(--color-ink);
+  }
+
+  .result-list {
+    margin: 0;
+  }
+
+  .result-list > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding-block: 0.9rem;
+    border-top: 1px solid var(--color-hairline);
+  }
+
+  .result-list dt {
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.9rem;
+  }
+
+  .result-list dd {
+    margin: 0;
+    font-family: var(--font-system);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .syringe-visual {
+    margin-top: 1.75rem;
+  }
+
+  .syringe-visual__bar {
+    height: 1.15rem;
+    overflow: hidden;
+    border: 1px solid #d7cbd5;
+    border-radius: 999px;
+    background: var(--color-paper);
+  }
+
+  .syringe-visual__fill {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-dusty-rose), var(--color-lavender));
+    transition: width 180ms ease-out;
+  }
+
+  .syringe-visual__labels {
+    display: flex;
+    margin-top: 0.35rem;
+    justify-content: space-between;
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.78rem;
+  }
+
+  .calculation-details {
+    margin-top: 1.75rem;
+    border-top: 1px solid var(--color-hairline);
+    padding-top: 1.2rem;
+  }
+
+  .calculation-details summary {
+    cursor: pointer;
+    color: var(--color-mulberry);
+    font-family: var(--font-system);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  .calculation-details ol {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.9rem;
+  }
+
+  .calculation-details li + li {
+    margin-top: 0.55rem;
+  }
+
+  .calculator-note {
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-hairline);
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 860px) {
+    .calculator-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .calculator-results {
+      position: static;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .field-grid--split {
+      grid-template-columns: 1fr;
+    }
+
+    .calculator-fieldset {
+      padding: 1.1rem;
+    }
+
+    .result-list > div {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+
+    .result-list dd {
+      text-align: left;
+    }
+  }
+</style>

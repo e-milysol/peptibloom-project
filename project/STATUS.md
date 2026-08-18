@@ -8,8 +8,9 @@ Last coordination baseline: 2026-08-18.
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
-| Evidence | architecture/reconciliation in progress | approved public read contract before WEB M2 |
-| Scientific Inventory | source/review workflow in progress | production-ready handoff to Evidence Layer |
+| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
+| Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
+| Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
 
 ## Web
 
@@ -73,7 +74,11 @@ Delivered canonical model set:
 
 No serializer/viewset/admin/QR or other follow-on operational surface is implied by completion of this v1 data-layer gate; such work requires a new authorized scope.
 
-## Evidence / Scientific Inventory
+## Evidence / Scientific Inventory / Scientific Content Production
+
+Scientific Content Production is represented as an editorial transformation stage only. Its internal Evidence handoff remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`; this does not approve Evidence schema, scientific assessment, scientific content or publication authority.
+
+Recovered Scientific Inventory candidate classifications are coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness.
 
 WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
 

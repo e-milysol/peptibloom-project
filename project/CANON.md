@@ -65,6 +65,17 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - No relationship with `evidence` may be invented without cross-domain approval.
 - Stock is derived from `Movement` history; `StockUnit.available_quantity` is not persisted in Operative Core v1.
 
+### Physical Products / Accessories
+- Physical Products / Accessories is an independent canonical domain and durable source of truth for physical product identity, stable physical product and variant identity, source/design provenance, controlled geometry/source-file references, design revision/state, intended physical material/specification, factual documented IP/license evidence, factual commercial-use permission evidence, prototype state, physical validation state, objective validation criteria/evidence, manufacturing/printability validation facts, physical intended use/limitations, and sanitized product-truth handoffs.
+- This authority does not replace, reassign or redefine Operative Core `Product`, `SKU` or inventory models.
+- A Physical Products product or variant identifier is not implicitly identical to Operative Core `Product.id`, SKU identity, storefront identity or any identifier owned by another domain.
+- WORK 7 / Private Master remains authoritative for private supplier, procurement, inventory, logistics, landed-cost and related private operational truth. Private supplier identities/contacts, procurement prices, landed cost, tracking, payment information, invoices, margins and private operational records must not be copied into the public Control Plane.
+- Physical Products may record factual IP/license evidence and documentary commercial-use permission evidence, but it does not perform legal interpretation or grant Legal clearance.
+- Physical Products does not own scientific claims or Evidence, Web implementation/publication, storefront/sales funnel, pricing presentation, cart/checkout, payments/payment-provider authorization, legal/regulatory approval or `READY_FOR_SALE`.
+- Readiness is orthogonal. At minimum `DESIGN_STATE`, `LICENSE_IP_STATE` and `PHYSICAL_VALIDATION_STATE` remain separate. Physical validation does not imply legal clearance, publication authorization, commercial readiness or authorization to sell.
+- `READY_FOR_SALE` remains outside Physical Products and depends on applicable commercial, Legal, regulatory, territorial, pricing, payment-provider and Owner gates.
+- Continued domain-local reconciliation does not itself require PB-XD. Before Commerce, Web, WORK 7, Operative Core or another domain relies on a material/automated Physical Products data contract, identifier mapping, synchronization mechanism or shared semantic interface, an explicit `PB-XD-NNN` contract is required.
+
 ### Evidence
 - Evidence remains independent from operational inventory unless an explicit cross-domain contract is approved.
 - UI requirements must not dictate the scientific schema.

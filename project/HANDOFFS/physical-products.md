@@ -4,6 +4,9 @@ Owner: PHYSICAL PRODUCTS / ACCESSORIES domain
 
 Canonical authority: `PB-DEC-501` — APPROVED
 
+Canonical operating model:
+`project/PHYSICAL_DESIGN_PIPELINE.md` — Clean-Sheet Physical Design Pipeline v0.1, Owner approved under the authority of PB-DEC-501; approval recorded by PB-DEC-502.
+
 ## Purpose
 
 Physical Products / Accessories is the durable source of truth for the physical product itself: its identity, design provenance, controlled physical references, intended specification, documented IP/license evidence, prototype and validation state, and sanitized product-truth handoffs.

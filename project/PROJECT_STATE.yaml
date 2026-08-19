@@ -74,6 +74,28 @@ milestones:
     scientific_claim_authority: false
     pb_xd_required_now: false
     cross_domain_material_contract_requires_pb_xd: true
+    design_pipeline:
+      version: v0.1
+      status: OWNER_APPROVED
+    geometry_baseline: CLEAN_SHEET
+    fabrication_capability:
+      printer: Bambu Lab P1S
+      ams: true
+      multicolor: SUPPORTED_OPTIONAL
+    pipeline_gates:
+      G0: INTAKE_COMPLETE
+      G1: REQUIREMENTS_READY
+      G2: INTERFACES_MEASURED
+      G3: DESIGN_READY_FOR_PROTOTYPE
+      G4: PRINT_EVIDENCED
+      G5: FIT_FUNCTION_EVIDENCED
+      G6: PHYSICAL_VALIDATION_COMPLETE
+    bloom_caps:
+      current_gate: PRE_G0
+      common_core: HYPOTHESIS_ONLY
+      cad_authorized: false
+    legacy_geometry_recovery: COMPLETE
+    recovered_authoritative_geometry_files: 0
   evidence:
     current: reconciliation
     public_web_contract: BLOCKED

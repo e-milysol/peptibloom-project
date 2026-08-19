@@ -1,6 +1,6 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-08-18.
+Last coordination baseline: 2026-08-19.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
@@ -8,6 +8,7 @@ Last coordination baseline: 2026-08-18.
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
+| Physical Products / Accessories | canonical independent domain authority APPROVED under PB-DEC-501; durable physical product/design/validation truth established without reassigning Operative Core or WORK 7 authority | continue domain-local reconciliation; PB-XD only before another domain relies on a material/automated data contract or shared semantics; `READY_FOR_SALE` remains outside domain |
 | Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
 | Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
 | Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
@@ -75,6 +76,18 @@ Delivered canonical model set:
 - model tests covering the approved v1 rules.
 
 No serializer/viewset/admin/QR or other follow-on operational surface is implied by completion of this v1 data-layer gate; such work requires a new authorized scope.
+
+## Physical Products / Accessories
+
+PB-DEC-501 establishes Physical Products / Accessories as an independent canonical domain for durable physical product identity, design/source provenance, controlled physical references, intended specification, factual IP/license and commercial-use permission evidence, prototype state, physical/manufacturing validation facts, intended physical use/limitations and sanitized product-truth handoffs.
+
+This authority does not replace or reassign Operative Core `Product`, `SKU` or inventory models, and a Physical Products identifier is not implicitly equivalent to any Operative Core, storefront or other-domain identifier.
+
+WORK 7 / Private Master retains private supplier, procurement, inventory, logistics, landed-cost and related operational truth. Only sanitized coordination/product truth may enter the public Control Plane.
+
+Readiness remains orthogonal: `DESIGN_STATE`, `LICENSE_IP_STATE` and `PHYSICAL_VALIDATION_STATE` are distinct. Physical validation does not grant Legal clearance, publication authority, commercial readiness or authorization to sell. `READY_FOR_SALE` remains outside Physical Products.
+
+No additional Commerce canon is created by this decision. `PB-XD REQUIRED NOW: NO`; a PB-XD becomes mandatory before another domain relies on a material/automated Physical Products data contract, identifier mapping, synchronization mechanism or shared semantic interface.
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 

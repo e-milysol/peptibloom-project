@@ -4,15 +4,19 @@ Owner: SCIENTIFIC CONTENT PRODUCTION coordination stage
 
 ## Current operating state
 
-CURRENT_STATE: `coordination_editorial_transformation / autonomous governance ready / production scientific content blocked pending Evidence-qualified input`
+MIGRATION_ACCEPTED: `APPROVED` on 2026-08-19 for Scientific Content Production autonomous operational ownership only.
+
+CURRENT_STATE: `DOMAIN_OPERATION ACTIVE / coordination_editorial_transformation / production scientific content blocked pending Evidence-qualified input`
 
 LAST_COMPLETED:
 - Scientific Content migration Phase 1 authority reconciliation completed.
+- Scientific Content migration Phase 2 durable-state reconciliation completed.
+- Product Owner approved Scientific Content Production migration and autonomous operational ownership on 2026-08-19.
 - Scientific Content supplied its domain response to proposed `PB-XD-001` through Issue #13 comment `5344569595`.
 - All recovered candidate compounds remain fail-closed for Content transformation.
 
 NEXT_ACTION:
-- Continue autonomous Scientific Content governance within the authority boundary below.
+- Continue active autonomous Scientific Content governance within the authority boundary below.
 - Await and consume Evidence-qualified input when available.
 - Participate in `PB-XD-001` review as Scientific Content only; do not approve the shared contract or define Evidence internals.
 - When Evidence-qualified material exists, define only the minimum editorial/template structure needed for the downstream representation, preserving upstream scientific meaning and provenance.
@@ -39,6 +43,7 @@ LAST_VERIFIED_GITHUB_STATE:
 - main SHA: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
 - verified date: `2026-08-19`
 - PR #32: OPEN / DRAFT / UNMERGED at last verification; do not merge or treat its proposed semantics as canonical until approved through normal control.
+- PR #41: OPEN / DRAFT / UNMERGED at last verification; this handoff branch records migration acceptance but normal review/merge authority remains required.
 
 ## Purpose
 
@@ -105,6 +110,10 @@ The required workflow remains:
 
 `Scientific Inventory -> Evidence review/representation -> Scientific Content Production -> WEB`
 
+Permanent readiness distinction:
+
+`SCIENTIFIC INVENTORY CANDIDATE != EVIDENCE ACCEPTED != CONTENT READY != CONTENT COMPLETE != READY_FOR_PUBLICATION`
+
 Scientific Inventory candidate or legacy-request status does not make content ready. Inventory may provide research/intake context, but scientific material intended for production transformation requires Evidence qualification first.
 
 ## Candidate content state
@@ -170,7 +179,9 @@ Scientific Content Production does not bypass the existing WEB M2 gate. Producti
 
 ## Migration vs operational blockers
 
-The following are normal Scientific Content operational backlog or blockers and are not, by themselves, Scientific Content migration blockers:
+Scientific Content migration is `ACCEPTED` for autonomous operational ownership. That migration approval does not approve PB-XD-001, PR #32, PR #41, Evidence schema, scientific claims, candidate readiness, publication readiness, WEB M2, publication, or Legal/Regulatory clearance.
+
+The following are normal Scientific Content operational backlog or blockers and are not Scientific Content migration blockers:
 - all ten candidates currently blocked;
 - zero `READY_FOR_PUBLICATION` pages;
 - incomplete Evidence -> Content contract;

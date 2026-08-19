@@ -13,19 +13,19 @@ LAST_COMPLETED:
 - Scientific Content migration Phase 2 durable-state reconciliation completed.
 - Product Owner approved Scientific Content Production migration and autonomous operational ownership on 2026-08-19.
 - Scientific Content supplied its domain response to proposed `PB-XD-001` through Issue #13 comment `5344569595`.
+- Technical Direction approved `PB-XD-001` on 2026-08-19 for the minimum internal Evidence -> Scientific Content shared semantics.
 - All recovered candidate compounds remain fail-closed for Content transformation.
 
 NEXT_ACTION:
 - Continue active autonomous Scientific Content governance within the authority boundary below.
-- Await and consume Evidence-qualified input when available.
-- Participate in `PB-XD-001` review as Scientific Content only; do not approve the shared contract or define Evidence internals.
+- Await and consume Evidence-qualified input when available under the approved `PB-XD-001` semantics.
 - When Evidence-qualified material exists, define only the minimum editorial/template structure needed for the downstream representation, preserving upstream scientific meaning and provenance.
 
 BLOCKERS:
 - Production scientific transformation is blocked wherever required Evidence-qualified input is missing or insufficient.
 - WEB M2 / production compound pages remain blocked until both the Evidence public read contract is approved and production-ready scientific content exists.
 
-OWNER_REQUIRED: `NONE` for current Scientific Content operation. Pending Evidence, PB-XD review, blocked candidates, incomplete references, incomplete template work, Web M2, or pending Legal review do not by themselves require Owner escalation.
+OWNER_REQUIRED: `NONE` for current Scientific Content operation. Pending Evidence, blocked candidates, incomplete references, incomplete template work, Web M2, or pending Legal review do not by themselves require Owner escalation.
 
 DEPENDENCIES:
 - Scientific Inventory for research/intake candidates and source-review workflow.
@@ -35,15 +35,15 @@ DEPENDENCIES:
 - Legal / Regulatory where public use of otherwise scientifically supported content requires legal/regulatory review.
 
 OPEN_REQUESTS:
-- `PB-XD-001` — proposed Evidence -> Scientific Content internal shared contract. As of last verification it exists only in draft PR #32 and is not canonical `main`. Scientific Content response has been supplied; Technical Direction / Orchestrator review remains pending.
+- No open Evidence -> Scientific Content PB-XD remains after Technical Direction approval of `PB-XD-001`.
+- `PB-XD-001` is resolved through the PR #32 change-control path; its approval does not approve Evidence -> Web or any publication/candidate/claim gate.
 
 LAST_VERIFIED_GITHUB_STATE:
 - repository: `e-milysol/peptibloom-project`
-- branch: `main`
-- main SHA: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
+- canonical main at review start: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
 - verified date: `2026-08-19`
-- PR #32: OPEN / DRAFT / UNMERGED at last verification; do not merge or treat its proposed semantics as canonical until approved through normal control.
-- PR #41: OPEN / DRAFT / UNMERGED at last verification; this handoff branch records migration acceptance but normal review/merge authority remains required.
+- PR #32: OPEN / DRAFT / UNMERGED; Technical Direction has approved and resolved `PB-XD-001` on that branch through normal change control.
+- PR #41: OPEN / DRAFT / UNMERGED; this handoff branch records migration acceptance and PB-XD consistency, while normal review/merge authority remains required.
 
 ## Purpose
 
@@ -82,11 +82,9 @@ Representing this stage is coordination-state documentation only and grants no n
 
 `Evidence -> Scientific Content`
 
-Contract status: `PROPOSED / PARTIAL / PENDING FORMALIZATION`.
+Contract status: `APPROVED / RESOLVED` through `PB-XD-001`.
 
-`PB-XD-001` is a separate shared-contract gate from Scientific Content migration. Scientific Content may operate autonomously while this dependency remains unresolved, provided it keeps scientific transformation fail-closed where required Evidence input is unavailable.
-
-Scientific Content has accepted in principle, subject to Technical Direction approval, minimum Evidence-owned shared semantics sufficient to preserve:
+Technical Direction approved the minimum Evidence-owned shared semantics needed to preserve:
 - the scientific claim/proposition meaning being represented;
 - Evidence-qualified support and assessment/interpretation for that claim;
 - source/provenance traceability sufficient to inspect support;
@@ -96,13 +94,15 @@ Scientific Content has accepted in principle, subject to Technical Direction app
 - evidence gaps;
 - an Evidence-owned eligibility/review state indicating whether editorial transformation may proceed without filling missing science.
 
-A transformed statement must remain traceable to its Evidence-qualified support, limitations, contradictions and evidence-gap state. Scientific Content must not detach prose from the upstream context that constrains its meaning.
+Scientific Content may render or transform those semantics but may not strengthen, redefine or replace them. A transformed statement must remain traceable to its Evidence-qualified support, limitations, contradictions and evidence-gap state. Scientific Content must not detach prose from the upstream context that constrains its meaning.
 
-This status and Content response do not approve a contract or define Evidence database schema, entities, fields, relations, JSON keys, enums, API endpoints, public payloads, acceptance rules or sign-off semantics.
+The approved contract does not define Evidence database schema, entities, fields, relations, JSON keys, enums, API endpoints, public payloads, acceptance rules or sign-off semantics. Downstream requirements do not define Evidence internals.
 
 Evidence eligibility/review state is not publication approval. Publication blocking remains a downstream governance outcome rather than a scientific Evidence field created for Content convenience.
 
 Missing or insufficient input must be routed back to Evidence rather than inferred or filled editorially.
+
+`PB-XD-001` does not approve Evidence -> Web, WEB M2, scientific publication, any candidate, any Evidence assessment or any public claim.
 
 ## Scientific Inventory interface
 
@@ -179,12 +179,13 @@ Scientific Content Production does not bypass the existing WEB M2 gate. Producti
 
 ## Migration vs operational blockers
 
-Scientific Content migration is `ACCEPTED` for autonomous operational ownership. That migration approval does not approve PB-XD-001, PR #32, PR #41, Evidence schema, scientific claims, candidate readiness, publication readiness, WEB M2, publication, or Legal/Regulatory clearance.
+Scientific Content migration is `ACCEPTED` for autonomous operational ownership. That migration approval does not approve PR #32, PR #41, Evidence schema, scientific claims, candidate readiness, publication readiness, WEB M2, publication, or Legal/Regulatory clearance.
+
+`PB-XD-001` is now separately approved by Technical Direction and does not expand those non-authorizations.
 
 The following are normal Scientific Content operational backlog or blockers and are not Scientific Content migration blockers:
 - all ten candidates currently blocked;
 - zero `READY_FOR_PUBLICATION` pages;
-- incomplete Evidence -> Content contract;
 - unresolved Evidence -> Web public read contract;
 - incomplete compound template;
 - WEB M2 blocked;

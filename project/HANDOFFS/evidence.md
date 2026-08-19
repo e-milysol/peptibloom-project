@@ -12,9 +12,9 @@ Owner: EVIDENCE workstream
 
 `DOMAIN_OPERATION = ACTIVE`
 
-Evidence architecture/reconciliation is sufficiently durable for autonomous continuation. No Evidence database schema, API, public read contract, scientific claim, compound assessment, publication, dose, protocol or recommendation is approved by this migration decision.
+Evidence architecture/reconciliation is sufficiently durable for autonomous continuation. No Evidence database schema, API, public read contract, scientific claim, compound assessment, publication, dose, protocol or recommendation is approved by the migration decision.
 
-The migration decision does not merge PR #32, approve PB-XD-001, unblock WEB M2, approve any candidate, create production-ready scientific content, grant Legal/regulatory approval, grant commercial eligibility, or transfer Scientific Inventory / Scientific Content / Web authority to Evidence.
+`PB-XD-001` is separately `APPROVED / RESOLVED` by Technical Direction for the minimum internal Evidence -> Scientific Content shared semantics. That approval does not merge PR #32, unblock WEB M2, approve any candidate, create production-ready scientific content, grant Legal/regulatory approval, grant commercial eligibility, or transfer Scientific Inventory / Scientific Content / Web authority to Evidence.
 
 Permanent guardrails:
 
@@ -30,19 +30,19 @@ Permanent guardrails:
 - Evidence Migration Phase 2 architecture/internal-contract reconciliation completed.
 - Evidence migration finalization completed.
 - Product Owner approved Evidence migration and autonomous domain operation on 2026-08-19.
-- Draft PR #32 contains the minimum Evidence architecture baseline and `PB-XD-001` and remains on its normal review path.
-- Scientific Content supplied its downstream semantic response to `PB-XD-001` in Issue #13 comment `5344569595`; its response is sufficient for Evidence to continue normal contract governance but does not approve the contract.
+- Scientific Content supplied its downstream semantic response to `PB-XD-001` in Issue #13 comment `5344569595`.
+- Technical Direction reviewed the actual request and downstream response and approved `PB-XD-001` on 2026-08-19.
+- The approved minimum shared semantics are recorded in `project/CANON.md` on this normal change-control branch and the request is moved to `project/REQUESTS/resolved/`.
 - Scientific Content migration is Owner-approved and domain operation is active.
 - Scientific Inventory migration is Owner-approved and domain operation is active.
 - All ten recovered candidates remain fail-closed and `NOT_EVIDENCE_ACCEPTED`.
 
 ## NEXT_ACTION
 
-- Continue active Evidence operations under current canon.
-- Continue `PB-XD-001` through Technical Direction / Orchestrator review without Owner relay and without treating downstream agreement as approval.
+- Continue active Evidence operations under current canon and the approved `PB-XD-001` shared semantics.
 - Continue Evidence-domain architecture and scientific review work only within approved authority; do not invent implementation schema to satisfy Content or Web.
 - Accept Scientific Inventory candidate handoffs fail-closed, preserving identity/provenance uncertainty and separating discovery provenance from scientific evidence.
-- When scientifically qualified material exists, expose only the minimum Evidence-owned semantics needed for Scientific Content transformation under an approved shared contract.
+- When scientifically qualified material exists, expose only the approved minimum Evidence-owned semantics needed for Scientific Content transformation.
 - Keep the separate Evidence -> Web public read contract unresolved until its own governance step is authorized and approved.
 
 ## BLOCKERS
@@ -50,7 +50,6 @@ Permanent guardrails:
 Migration blockers: `NONE`.
 
 Operational dependencies/backlog:
-- `PB-XD-001` Technical Direction / Orchestrator review and approval remain pending;
 - no approved Evidence -> Web public read contract exists;
 - no current candidate is Evidence-accepted/qualified;
 - production-ready scientific content remains absent;
@@ -62,37 +61,35 @@ These unresolved states do not prevent Evidence autonomous operation when govern
 
 `NONE` currently.
 
-Normal PB-XD review, PR review/merge, incomplete research, candidate blocking, absent production content and the unresolved Evidence -> Web contract do not by themselves require Owner escalation.
+Normal PR review/merge, incomplete research, candidate blocking, absent production content and the unresolved Evidence -> Web contract do not by themselves require Owner escalation.
 
 ## DEPENDENCIES
 
 - Scientific Inventory for candidate intake, minimum identity normalization, intake provenance, deduplication control and routing context.
-- Scientific Content Production for downstream editorial transformation after Evidence qualification under an approved shared contract.
+- Scientific Content Production for downstream editorial transformation after Evidence qualification under the approved internal shared contract.
 - Web / Technical Direction for the future separate public read contract and downstream implementation gates.
 - Orchestrator for cross-domain review/coordination through Issue #13.
 - Legal / Regulatory where scientifically supported material may still require separate legal/regulatory review for public use.
 
 ## OPEN_REQUESTS
 
-- `PB-XD-001` — Evidence -> Scientific Content internal shared contract. It exists in draft PR #32, is `OPEN`, and is not canonical `main` yet.
-- Scientific Content downstream response: `RECEIVED` in Issue #13 comment `5344569595`.
-- Current contract classification: `DOWNSTREAM RESPONSE RECEIVED / TECHNICAL DIRECTION REVIEW PENDING / APPROVAL PENDING`.
-- This status is not approval and does not establish Evidence schema/API fields.
+- No open Evidence -> Scientific Content PB-XD remains after Technical Direction approval of `PB-XD-001`.
+- `PB-XD-001` is preserved for traceability under `project/REQUESTS/resolved/` on this branch.
+- The separate Evidence -> Web public read contract remains unresolved and is not approved by `PB-XD-001`.
 
 ## LAST_VERIFIED_GITHUB_STATE
 
 Verified 2026-08-19:
 - repository: `e-milysol/peptibloom-project`;
-- last verified canonical `main`: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`;
-- canonical `project/REQUESTS/open/` on `main`: empty at last verification;
+- canonical `main` at review start: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`;
 - PR #32: OPEN / DRAFT / UNMERGED and subject to normal review/merge authority; branch `docs/evidence-migration-phase2`;
-- PB-XD-001: OPEN with downstream response received; Technical Direction / Orchestrator review and approval pending;
+- `PB-XD-001`: `APPROVED / RESOLVED` by Technical Direction on the PR #32 branch;
 - PR #41: Scientific Content migration baseline, OPEN / DRAFT / UNMERGED; Scientific Content migration separately Owner-approved in Issue #13;
 - PR #42: Scientific Inventory migration baseline, OPEN / DRAFT / UNMERGED; Scientific Inventory migration separately Owner-approved in Issue #13.
 
 ## EVIDENCE OWNS
 
-Within current canon and the migration baseline, Evidence may own:
+Within current canon and the migration baseline, Evidence owns:
 - scientific claim/proposition representation;
 - scientific source/provenance and source traceability;
 - scientific assessment/interpretation;
@@ -138,19 +135,9 @@ Evidence may accept candidate intake while preserving `UNKNOWN / REQUIRES_NORMAL
 
 ## EVIDENCE -> SCIENTIFIC CONTENT CONTRACT STATE
 
-Internal contract status remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`.
+Internal contract status: `APPROVED / RESOLVED` through `PB-XD-001`.
 
-PB-XD-001 state remains:
-
-`DOWNSTREAM RESPONSE RECEIVED`
-
-`TECHNICAL DIRECTION REVIEW PENDING`
-
-`APPROVAL PENDING`
-
-`STATUS: OPEN`
-
-Scientific Content has accepted in principle, subject to Technical Direction approval, the minimum Evidence-owned semantics needed to preserve:
+Approved minimum Evidence-owned semantics that must remain preserved through editorial transformation:
 - scientific claim/proposition meaning;
 - Evidence-qualified support and assessment/interpretation;
 - source/provenance traceability;
@@ -160,15 +147,17 @@ Scientific Content has accepted in principle, subject to Technical Direction app
 - evidence gaps;
 - Evidence-owned eligibility/review state for editorial transformation.
 
-Scientific Content does not define Evidence database schema, fields, JSON keys, enums, relations, API endpoints or public payloads. Missing or insufficient Evidence input must route back to Evidence rather than being inferred editorially.
+Scientific Content may render or transform these semantics but may not strengthen, redefine or replace them. Missing or insufficient Evidence input must route back to Evidence rather than being inferred editorially.
+
+The shared contract does not define Evidence database schema, fields, JSON keys, enums, relations, API endpoints or public payloads. Downstream requirements do not define Evidence internal schema.
 
 Evidence eligibility for transformation is not publication approval.
 
 ## EVIDENCE -> WEB CONTRACT STATE
 
-Evidence -> Web public read contract: `UNAPPROVED / BLOCKED / SEPARATE FROM MIGRATION`.
+Evidence -> Web public read contract: `UNAPPROVED / BLOCKED / SEPARATE FROM MIGRATION AND PB-XD-001`.
 
-This is separate from Evidence migration and separate from `PB-XD-001`. Evidence must not invent a public API/payload merely to unblock Web. WEB M2 remains blocked until both an approved Evidence public read contract and production-ready scientific content exist.
+Evidence must not invent a public API/payload merely to unblock Web. WEB M2 remains blocked until both an approved Evidence public read contract and production-ready scientific content exist.
 
 ## CANDIDATE EVIDENCE STATE
 
@@ -214,8 +203,10 @@ It does not independently authorize publication.
 
 Publication blocking is a downstream governance outcome, not a scientific Evidence field invented for Content convenience. Scientific Content and Web remain fail-closed where upstream or publication gates are unsatisfied.
 
+`PB-XD-001` does not approve Evidence -> Web, WEB M2, scientific publication, any candidate, any Evidence assessment or any public claim.
+
 ## CROSS-DOMAIN AUTONOMY
 
 Evidence may coordinate directly through the Control Plane with Scientific Inventory, Scientific Content, Web / Technical Direction and Orchestrator. Issue #13 is the live asynchronous mailbox for routine coordination. PB-XD is used for material shared semantic/interface contracts.
 
-Owner relay is not required for normal candidate handoff, PB-XD review, contract clarification, PR review or unresolved scientific backlog. Use `OWNER_REQUIRED` only when a genuine Product Owner decision is identified.
+Owner relay is not required for normal candidate handoff, contract clarification, PR review or unresolved scientific backlog. Use `OWNER_REQUIRED` only when a genuine Product Owner decision is identified.

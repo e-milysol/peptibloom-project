@@ -4,13 +4,17 @@ Owner: SCIENTIFIC INVENTORY workstream
 
 ## CURRENT_STATE
 
-Scientific Inventory is the scientific/research intake and identity-reconciliation workstream. It is active and its Evidence handoff is in progress. It does not publish directly and does not qualify scientific evidence.
+Scientific Inventory migration is `ACCEPTED` and autonomous domain operation is `ACTIVE` as of 2026-08-19. This acceptance applies only to migration and delegated Scientific Inventory operations; it does not approve scientific candidates, Evidence, Content readiness, publication, Legal/regulatory eligibility, Catalog/SKU identity or research-prioritization authority.
+
+Scientific Inventory is the scientific/research intake and identity-reconciliation workstream. Its Evidence handoff is in progress. It does not publish directly and does not qualify scientific evidence.
 
 Expected flow:
 
 `Scientific Inventory -> Evidence review/representation -> Scientific Content Production -> WEB`
 
 Recovered candidate classifications remain coordination/intake states only. All ten current candidates remain `NOT_EVIDENCE_ACCEPTED`; none is eligible for Scientific Content transformation or publication on the basis of Inventory state alone.
+
+PR #42 remains subject to normal review and merge authority; migration acceptance does not merge or approve that PR.
 
 ## SCIENTIFIC INVENTORY OWNS
 
@@ -23,7 +27,7 @@ Within current canon, Scientific Inventory owns the minimum intake/reconciliatio
 - preservation of unresolved identity/provenance questions;
 - candidate workflow state and handoff to Evidence.
 
-Research-queue prioritization authority is not explicitly assigned by current canon and must not be inferred.
+Research-queue prioritization authority remains `UNKNOWN / NOT VERIFIED` and must not be inferred.
 
 ## SCIENTIFIC INVENTORY DOES NOT OWN
 
@@ -34,7 +38,8 @@ Scientific Inventory does not independently own or approve:
 - scientific claims or publication readiness;
 - Legal/regulatory classification or claim permissibility;
 - Catalog/SKU/commercial eligibility or `READY_FOR_SALE`;
-- supplier/procurement/private-stock truth.
+- supplier/procurement/private-stock truth;
+- research-prioritization policy unless later canon explicitly delegates it.
 
 ## DEFINITION OF INVENTORY
 
@@ -52,7 +57,9 @@ Minimum operating rule:
 - formulation, modification, salt/complex or other scientifically meaningful distinctions remain separate or unresolved until identity is verified;
 - unresolved identity is preserved as `UNKNOWN / REQUIRES_NORMALIZATION` conceptually rather than guessed.
 
-False merge is worse than temporary duplication.
+`FALSE MERGE IS WORSE THAN TEMPORARY DUPLICATION`
+
+Unresolved candidate identity may remain unresolved. Ambiguity must not be resolved by assumption.
 
 ## PROVENANCE RULES
 
@@ -87,11 +94,15 @@ These are workflow/intake classifications only; no substantive compound research
 
 Inventory may prepare and route a candidate; Evidence owns scientific qualification.
 
+Inventory may provide working identity, verified aliases/qualifiers, intake provenance, unresolved identity questions, known duplication/collision risks and workflow context. It may not pre-fill evidence grade, efficacy, safety, mechanism, dosing or scientific conclusions.
+
 Fail-closed distinctions:
 
 `CANDIDATE EXISTS != IDENTITY NORMALIZED != EVIDENCE REQUESTED != EVIDENCE ACCEPTED / QUALIFIED`
 
 No Inventory field or historical candidate list may pre-fill Evidence conclusions.
+
+Routine candidate handoff and identity/provenance clarification do not require a new PB-XD. PB-XD is required only when a material shared semantic/interface contract is actually being defined under current governance.
 
 The internal `Evidence -> Scientific Content` contract remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`. Draft PR #32 proposes Evidence architecture and `PB-XD-001` for that shared semantic interface; neither is approved or merged. Scientific Content has supplied an in-principle response in Issue #13, subject to Technical Direction approval. This does not change Inventory authority.
 
@@ -111,21 +122,23 @@ Scientific Inventory may record a research candidate; Legal / Regulatory owns ap
 
 ## LAST_COMPLETED
 
-Phase 1 migration reconciliation verified current canon, Control Plane, Issue #13, current Scientific Inventory/Evidence/Scientific Content/Web/Private Master handoffs, the empty canonical `project/REQUESTS/open/` queue, and draft PR #32 / PB-XD-001 coordination state. No substantive compound research was performed.
+Phase 1 and Phase 2 Scientific Inventory migration reconciliation completed. Product Owner migration decision on 2026-08-19: `MIGRATION_ACCEPTED = APPROVED`, `DOMAIN_OPERATION = ACTIVE`, with all scientific, Evidence, Content, publication, Catalog, WORK 7, Legal and prioritization boundaries preserved. No substantive compound research was performed and no candidate state was promoted.
 
 ## NEXT_ACTION
 
-After normal review of this migration baseline, continue operational intake normalization and provenance reconciliation for the ten candidates, routing Evidence-ready candidates through the existing fail-closed Evidence workflow. Do not wait for every identity or Evidence review to be complete before considering migration governance ready.
+Continue active Scientific Inventory operations: intake, identity/provenance cleanup, deduplication control and fail-closed Evidence routing for the current candidate universe. Preserve unresolved identity when evidence is insufficient to normalize it. Coordinate routine factual handoffs directly with Evidence and Scientific Content through the Control Plane without Owner relay.
 
 ## BLOCKERS
 
-Migration blockers: none identified in current canon, provided this handoff is accepted through normal review.
+Migration blockers: none.
 
-Operational dependencies/backlog include unresolved candidate identity/provenance, Evidence intake/review, unresolved PB-XD-001, the unapproved Evidence public read contract and absent production-ready compound content. These do not by themselves block Scientific Inventory migration.
+Operational dependencies/backlog include unresolved candidate identity/provenance, Evidence intake/review, unresolved PB-XD-001, the unapproved Evidence public read contract and absent production-ready compound content. These do not by themselves block Scientific Inventory operation.
 
 ## OWNER_REQUIRED
 
-None currently identified. Routine identity normalization, provenance cleanup, Evidence backlog and candidate intake do not require Owner relay. A future material scope expansion or Owner-reserved research-priority choice may require escalation.
+`NONE` currently.
+
+Routine identity normalization, provenance cleanup, Evidence backlog, candidate intake, supplier naming ambiguity and normal PR review do not require Owner relay. A future material scope expansion or explicitly Owner-reserved priority decision may require escalation.
 
 ## DEPENDENCIES
 
@@ -137,10 +150,10 @@ None currently identified. Routine identity normalization, provenance cleanup, E
 
 ## OPEN_REQUESTS
 
-Canonical `project/REQUESTS/open/` on `main` is currently empty. `PB-XD-001` exists only in draft PR #32 and therefore is not yet durable canonical open-request state.
+Canonical `project/REQUESTS/open/` on `main` was empty at the last verified baseline. `PB-XD-001` exists only in draft PR #32 and therefore is not yet durable canonical open-request state.
 
 ## LAST_VERIFIED_GITHUB_STATE
 
 Verified 2026-08-19 against `main` SHA `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`.
 
-Relevant live coordination: Issue #13. Draft PR #32 remains OPEN / DRAFT / UNMERGED and proposes Evidence Phase 2 architecture plus PB-XD-001; its HEAD is `66754d79b74f728d61ad470d6251644b3abd5e20`.
+Relevant live coordination: Issue #13. PR #42 remains OPEN / DRAFT / UNMERGED and subject to normal review/merge authority. Draft PR #32 remains OPEN / DRAFT / UNMERGED and proposes Evidence Phase 2 architecture plus PB-XD-001; its last verified HEAD is `66754d79b74f728d61ad470d6251644b3abd5e20`.

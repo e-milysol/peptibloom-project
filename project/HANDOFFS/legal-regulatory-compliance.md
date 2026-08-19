@@ -2,19 +2,26 @@
 
 Owner: LEGAL / REGULATORY / COMPLIANCE domain
 
-Status: MIGRATION PHASE 2 / WORKING BASELINE / REVIEW REQUIRED
+Status: MIGRATION_ACCEPTED / DOMAIN_OPERATION_ACTIVE / WORKING LEGAL BASELINE
+
+`MIGRATION_ACCEPTED = APPROVED`
+
+`DOMAIN_OPERATION = ACTIVE`
+
+Owner migration acceptance is an existing decision being durably reconciled here. This is not a second migration and does not grant any unresolved Legal clearance or production authorization.
 
 This handoff is a minimal durable Legal-domain coordination surface under the existing PeptiBloom Control Plane. It does not create a parallel governance system, grant production approval, or replace domain canon.
 
 ## CURRENT_STATE
 
-Legal authority boundaries and the existing Legal-dependent gate inventory have been reconstructed from current canon and accepted as the Phase 2 working baseline. Legal is capable of discovery, issue framing, primary-source legal research and fail-closed gate management. No unresolved item is legally cleared by this handoff.
+Legal migration is accepted and autonomous domain operation is active. Legal authority boundaries and the existing Legal-dependent gate inventory have been reconstructed from current canon and accepted as the working baseline. Legal is capable of discovery, issue framing, primary-source legal research and fail-closed gate management. No unresolved item is legally cleared by migration acceptance or by this handoff.
 
 Analytics / Privacy is the first substantive Legal workstream. Discovery and issue framing are active. Production Analytics remains blocked.
 
 ## LAST_COMPLETED
 
 - Initial Legal migration reconciliation accepted as `INITIAL_RECONCILIATION = PASS`.
+- Owner-approved `MIGRATION_ACCEPTED = APPROVED` and `DOMAIN_OPERATION = ACTIVE` reconciled into this durable handoff without reopening migration.
 - Minimum Legal authority map reconstructed.
 - Existing Legal-dependent gates reconciled without creating a global legal-status enum.
 - Analytics Measurement Contract v1 Legal/Privacy questions inspected.
@@ -30,6 +37,10 @@ Analytics / Privacy is the first substantive Legal workstream. Discovery and iss
 
 ## BLOCKERS
 
+Migration blockers: `NONE`.
+
+Operational / Legal determination dependencies:
+
 - Analytics: final controller identity/contact point is not established in current canon.
 - Analytics: production-intended provider/data-flow configuration, provider roles/terms, subprocessors/data regions/transfers and access/security facts require current factual verification.
 - Analytics: Article 6 basis and Spanish audience-measurement consent-exemption applicability require source-specific legal analysis after the factual configuration is known.
@@ -41,9 +52,11 @@ Analytics / Privacy is the first substantive Legal workstream. Discovery and iss
 - Evidence/public claims: Evidence approval and applicable publication/Legal gates remain distinct.
 - Clinical Research / PB-MET-001: recovered regulatory architecture is historical and requires current primary-source verification before adoption.
 
+These operational dependencies do not revoke Legal migration acceptance.
+
 ## OWNER_REQUIRED
 
-None solely to complete Legal migration or Analytics legal research.
+None solely to continue Legal domain operation, complete Legal migration persistence, or perform Analytics legal research.
 
 Owner decisions are required only when an actual Product Owner decision reaches its gate, including future entity/company structure, production authorization, production Commerce activation, incorporation/filings, provider/account commitments where not already operational facts, or other decisions reserved to the Owner.
 
@@ -53,7 +66,7 @@ Legal must not convert research questions, Web/Analytics/Security implementation
 
 - Analytics: event/metric contract and source-specific purpose/data inventory.
 - Web: production-intended implementation/data-flow facts, logging, storage and technical validation.
-- Security: access controls, auditability, incident controls and security dependencies.
+- Security Assurance / Technical Direction: independent security review, security-gate assessment and actual control assurance; implementation evidence remains supplied by owning technical domains.
 - App Core: data inventory and intended processing before any real health/wellness data review.
 - Evidence: scientific provenance/assessment before public-claim review.
 - Physical Products: documentary IP/license/commercial-use evidence before Legal interpretation.
@@ -68,8 +81,9 @@ Legal must not convert research questions, Web/Analytics/Security implementation
 ## LAST_VERIFIED_GITHUB_STATE
 
 - Repository: `e-milysol/peptibloom-project`
-- Branch verified for baseline: `main`
-- Commit: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
+- Branch: `agent/legal-migration-phase-2`
+- Base `main` at migration baseline creation: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
+- PR: #33, normal review path; migration acceptance does not authorize merge.
 - Verified: 2026-08-19
 
 ## LEGAL OWNS
@@ -88,8 +102,8 @@ A scientifically supported statement is not automatically legally publishable. A
 
 | Gate | Current Legal position | Upstream facts / authority | Legal action |
 |---|---|---|---|
-| Analytics / Privacy | BLOCKED / NOT YET | Analytics contract; Web implementation; Security; account/provider facts | Complete privacy/legal review before instrumentation |
-| App Core real health/wellness data | BLOCKED | App Core data inventory; Security; Owner production authorization | Privacy/regulatory review before real data collection |
+| Analytics / Privacy | BLOCKED / NOT YET | Analytics contract; Web implementation; Security Assurance; account/provider facts | Complete privacy/legal review before instrumentation |
+| App Core real health/wellness data | BLOCKED | App Core data inventory; Security Assurance; Owner production authorization | Privacy/regulatory review before real data collection |
 | App Core Product Analytics | BLOCKED | Analytics contract; Web validation; Legal/Privacy; Owner | Review before production Product Analytics |
 | Physical Products licensing/commercial permission | ITEM-SPECIFIC REVIEW REQUIRED | Physical Products factual license/IP evidence; territory/use facts | Interpret evidence; do not infer clearance |
 | Catalog / commercial eligibility | NOT GENERALLY CLEARED | Catalog/product/territory/claims/seller facts | Item/surface-specific review where applicable |
@@ -115,8 +129,8 @@ Current Legal question classification:
 | International transfers | REQUIRES_CROSS_DOMAIN_INPUT + REQUIRES_PRIMARY_SOURCE_RESEARCH | Actual processing/storage/support locations and onward transfers must be known; Chapter V mechanism must then be verified where a restricted transfer exists. |
 | Retention | REQUIRES_PRIMARY_SOURCE_RESEARCH + REQUIRES_CROSS_DOMAIN_INPUT | Storage limitation applies. AEPD's 13-month tracker / 25-month information periods are maxima/guardrails for its exempt model, not PeptiBloom retention targets. Contract proposal of 13 months remains unapproved. |
 | Small-cell suppression | RESOLVED_BY_CURRENT_CANON for contract rule; REQUIRES_CROSS_DOMAIN_INPUT for implementation | Current contract requires cells below 5 to be suppressed/grouped. Web/Analytics must confirm where suppression occurs and whether unsuppressed cells persist. |
-| Data-subject rights | REQUIRES_PRIMARY_SOURCE_RESEARCH + REQUIRES_CROSS_DOMAIN_INPUT | Rights process must reflect actual identifiability. GDPR Article 11 does not require acquiring extra identifying data solely to satisfy rights where identification is not required, but the controller must be able to explain and operationalise this correctly. |
-| Security / access control | REQUIRES_CROSS_DOMAIN_INPUT; legal standard RESOLVED_BY_PRIMARY_LAW | GDPR requires risk-appropriate technical/organisational measures; Security/Web must supply actual controls. Legal does not design them. |
+| Data-subject rights | REQUIRES_PRIMARY_SOURCE_RESEARCH + REQUIRES_CROSS_DOMAIN_INPUT | Rights process must reflect actual identifiability. GDPR Article 11 does not require acquiring extra identifying data solely to identify a person for GDPR compliance, but the controller must be able to explain and operationalise this correctly. |
+| Security / access control | REQUIRES_CROSS_DOMAIN_INPUT; legal standard RESOLVED_BY_PRIMARY_LAW | GDPR requires risk-appropriate technical/organisational measures; Security Assurance and the implementing technical domain must supply actual control evidence. Legal does not design or self-approve technical security controls. |
 
 No current Analytics question is classified as requiring external specialist counsel merely for migration discovery. `REQUIRES_EXTERNAL_SPECIALIST_COUNSEL` remains available if unresolved provider/transfer/entity/jurisdiction facts create a material legal ambiguity that cannot safely be resolved from authoritative sources and competent internal facts.
 
@@ -138,7 +152,7 @@ Key discovery findings:
 7. The AEPD exemption is narrow: measurement must be strictly limited to exclusive audience measurement for the publisher and anonymous statistics; no cross-processing, third-party transmission, cross-site tracking or provider reuse inconsistent with the exemption. Provider use also requires Article 28 terms, no reuse, restricted purposes and compliant transfers, plus documented configuration assessment.
 8. AEPD requires users to be informed about exempt audience-measurement technologies. Consent exemption therefore does not mean transparency exemption.
 9. GDPR Article 11 supports a non-identifying rights model: where purposes do not require identification, the controller need not acquire additional information solely to identify a person for GDPR compliance; operational handling still requires a clear rights/contact process.
-10. GDPR Article 32 makes security risk-based and shared between controller/processor. Legal needs Security/Web evidence of actual controls before closing the gate.
+10. GDPR Article 32 makes security risk-based and shared between controller/processor. Legal needs Security Assurance plus implementing-domain evidence of actual controls before closing applicable Legal/Privacy gates.
 
 ## Fail-closed rule
 

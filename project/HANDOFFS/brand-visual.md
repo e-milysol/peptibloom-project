@@ -4,14 +4,14 @@ Owner: BRAND / VISUAL workstream
 
 ## Operating state
 
-- `CURRENT_STATE`: DURABLE_BASELINE_PREPARED / MIGRATION_REVIEW_PATH
-- `LAST_COMPLETED`: Phase 2 domain reconciliation accepted; Brand authority, canonical logo state, Web M1 scope and unresolved legacy-work status reconciled against current Control Plane.
-- `NEXT_ACTION`: review this handoff through the normal PR path, then continue artifact-level legacy visual reconciliation as operational backlog.
-- `BLOCKERS`: migration blocker is cleared by this durable handoff entering review; unresolved legacy assets and incomplete global design-system work are operational backlog, not inherent migration blockers.
+- `CURRENT_STATE`: MIGRATION_ACCEPTED / DOMAIN_OPERATION_ACTIVE
+- `LAST_COMPLETED`: Owner approved Brand / Visual workstream migration and autonomous operational ownership on 2026-08-19. This approval does not merge PR #39 or expand Brand authority beyond current canon.
+- `NEXT_ACTION`: continue artifact-level legacy visual reconciliation as Brand operational backlog through the Control Plane while PR #39 remains subject to normal review and merge authority.
+- `BLOCKERS`: no current migration blocker. Unresolved legacy assets and incomplete global design-system work are operational backlog, not inherent migration blockers.
 - `OWNER_REQUIRED`: NONE unless a material strategic Brand decision emerges.
 - `DEPENDENCIES`: Physical Products; Packaging / Labels; Web; Growth; Commerce; Catalog / Pricing; Evidence / Scientific Content; Legal.
 - `OPEN_REQUESTS`: no duplicate Brand request required. Packaging / Labels / Marketplace Visuals historical consolidation remains coordinated through Issue #19 where applicable.
-- `LAST_VERIFIED_GITHUB_STATE`: `main` = `7a2f32bd65a33cb6de480e5421bbc02488a1c21f` on 2026-08-19; `project/REQUESTS/open/` contained no active request files.
+- `LAST_VERIFIED_GITHUB_STATE`: `main` = `7a2f32bd65a33cb6de480e5421bbc02488a1c21f` on 2026-08-19; PR #39 remains open/draft and unmerged; `project/REQUESTS/open/` contained no active request files.
 
 ## Brand / Visual owns
 
@@ -82,7 +82,7 @@ A `PB-XD-NNN` is required before another domain relies on a material/automated s
 
 ### Migration blockers
 
-No material Brand authority contradiction is currently identified. This handoff supplies the previously missing durable autonomous operating state and places it on the normal review path.
+`MIGRATION_ACCEPTED = APPROVED` for Brand / Visual migration and autonomous operational ownership only. No material Brand authority contradiction is currently identified. PR #39 remains subject to normal review and merge authority and this acceptance does not itself merge or modify `main`.
 
 ### Brand operational backlog
 

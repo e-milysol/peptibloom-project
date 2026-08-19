@@ -9,9 +9,9 @@ Last coordination baseline: 2026-08-19.
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
 | Physical Products / Accessories | PB-DEC-501 domain authority approved; Clean-Sheet Physical Design Pipeline v0.1 Owner approved; Bambu Lab P1S + AMS recorded as current fabrication capability; legacy geometry recovery closed with no recovered authoritative geometry; Bloom Caps is the first controlled clean-sheet exercise and remains PRE-G0; CAD is not authorized | review and reduce the held Bloom Caps G0–G2 Owner Input & Measurement Pack, then collect only the functional input and physical measurements required for G0–G2 |
-| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
+| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content minimum shared semantics approved through PB-XD-001; Evidence -> Web public contract remains unapproved | continue Evidence-domain work under approved internal semantics without inventing implementation schema; approved public read contract still required before WEB M2 |
 | Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
-| Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
+| Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract approved through PB-XD-001 | receive sufficient Evidence-qualified input under the approved shared semantics; publication remains blocked by existing Evidence/content gates |
 | Growth / SEO / Distribution | operational ownership restored; Search Console state is recorded only as HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18 | continue monitoring and establish current baselines from fresh source telemetry; do not infer current performance from historical observations |
 | Analytics | Analytics v1 contract and 19-event registry restored; only ANALYTICS_CONTRACT_APPROVED is APPROVED; production instrumentation remains BLOCKED | WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING |
 
@@ -91,11 +91,13 @@ Existing PB-DEC-501 domain boundaries remain unchanged. WORK 7 / Private Master 
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 
-Scientific Content Production is represented as an editorial transformation stage only. Its internal Evidence handoff remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`; this does not approve Evidence schema, scientific assessment, scientific content or publication authority.
+Technical Direction approved `PB-XD-001` for the minimum internal Evidence -> Scientific Content shared semantics. Evidence remains authoritative for scientific claim/proposition meaning, support/provenance traceability, assessment/interpretation, material uncertainty and limitations, contradictions, evidence gaps, necessary study/source context, and transformation eligibility/review state. Scientific Content may transform those semantics but may not strengthen, redefine or replace them; missing or insufficient input routes back to Evidence.
 
-Recovered Scientific Inventory candidate classifications are coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness.
+PB-XD-001 does not define Evidence database schema/API/public payloads and does not approve publication. Evidence eligibility for transformation is not publication approval.
 
-WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
+Recovered Scientific Inventory candidate classifications remain coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness. No candidate is approved by PB-XD-001.
+
+The separate Evidence -> Web public read contract remains unapproved. WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
 
 ## Growth / Analytics
 

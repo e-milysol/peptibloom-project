@@ -2,18 +2,28 @@
 
 Owner: GROWTH / SEO / DISTRIBUTION workstream
 
+## Migration status
+
+MIGRATION_ACCEPTED: `APPROVED`
+
+Approval scope: Growth / SEO / Distribution operational migration and autonomy through the PeptiBloom Control Plane only.
+
+This approval does **not** merge this handoff, make PR #35 canonical by itself, resolve PB-DEC-002, authorize Web changes, activate Analytics, approve scientific claims, authorize additional tracking, or create growth targets.
+
 ## Operating checkpoint
 
-CURRENT_STATE: `OPERATIONAL_OWNERSHIP_RESTORED / PHASE_2_RECONCILED`
+CURRENT_STATE: `MIGRATION_ACCEPTED / ACTIVE_GROWTH_OPERATION`
 
 LAST_COMPLETED:
 - historical Search Console state from `2026-08-18` reconciled as dated operational provenance only;
 - Growth ownership restored for SEO strategy, search intent, organic distribution, SEO/content briefs, acquisition experiments and Search Console monitoring;
 - current Analytics ownership boundary and production gates reconciled;
-- next independent Growth workstream identified as a non-implementation SEO brief for `/calculator/`.
+- Search Console operating discipline reconciled;
+- next independent Growth workstream identified as a non-implementation SEO brief for `/calculator/`;
+- Owner approved Growth migration/autonomy on `2026-08-19` without authorizing PR #35 merge or any additional domain authority.
 
 NEXT_ACTION:
-- prepare and maintain the Growth-owned `/calculator/` SEO brief using current page implementation and first-party Search Console telemetry when available;
+- execute and maintain the Growth-owned `/calculator/` SEO brief using current page implementation, public search-intent research, and first-party Search Console telemetry when available;
 - monitor current Search Console indexing/query discovery when authenticated source access is available;
 - route any concrete Web implementation requirement to Web, any new measurement requirement outside the approved Analytics contract to Analytics, and any scientific proposition to Evidence / Scientific Content.
 
@@ -22,7 +32,7 @@ BLOCKERS:
 - PB-DEC-002 remains open and blocks default-locale, URL-prefix, redirect and fallback decisions;
 - scientific compound/content opportunities remain subject to existing Evidence / Scientific Content gates.
 
-OWNER_REQUIRED: `NO`
+OWNER_REQUIRED: `NONE`
 
 DEPENDENCIES:
 - Web: implementation, technical SEO QA and deployment of any approved Growth requirements;
@@ -30,7 +40,7 @@ DEPENDENCIES:
 - Evidence / Scientific Content: scientific propositions, claims and publication-eligible scientific material;
 - Legal / Privacy: any Growth technique introducing tracking, cookies, identifiers, profiling, email capture, remarketing, advertising pixels, third-party audience tooling or materially new personal-data processing.
 
-OPEN_REQUESTS: `NONE ON CURRENT MAIN`
+OPEN_REQUESTS: `NONE ON LAST VERIFIED MAIN`
 
 LAST_VERIFIED_GITHUB_STATE:
 - repository: `e-milysol/peptibloom-project`;
@@ -39,7 +49,8 @@ LAST_VERIFIED_GITHUB_STATE:
 - verified date: `2026-08-19`;
 - `project/REQUESTS/open/`: empty except `.gitkeep` at verification;
 - PB-DEC-002: `PROPOSED` / unresolved;
-- Analytics contract: approved; production instrumentation remains separately gated.
+- Analytics contract: approved; production instrumentation remains separately gated;
+- PR #35: open draft; migration approval does not authorize merge.
 
 ## Purpose
 
@@ -70,7 +81,7 @@ Growth must apply the following rules:
 - Growth must not fabricate impressions, clicks, queries, CTR, position, rankings, traffic or conversions;
 - early indexing and performance data may be incomplete, especially during the initial baseline period, and must be interpreted accordingly;
 - targets must not be retroactively invented and relabelled as baselines;
-- current first-party Search Console observations take precedence over speculative traffic estimates or historical snapshots.
+- current first-party Search Console observations take precedence over speculative traffic estimates, third-party keyword tools or historical snapshots.
 
 The durable methodology in `project/MEASUREMENT.md` remains the measurement reference for reporting cadence and baseline interpretation.
 

@@ -36,8 +36,27 @@ Also confirm these boundaries:
 - Do not treat candidate compounds as Evidence-accepted or production-ready.
 
 ## Response
-Pending Scientific Content / Orchestrator review.
+DOWNSTREAM RESPONSE RECEIVED.
+
+Scientific Content supplied its domain response in Issue #13 comment `5344569595`.
+
+Scientific Content accepts the proposed minimum Evidence-owned handoff semantics as sufficient in principle for editorial transformation, **subject to Technical Direction approval of the shared contract**. It requires preservation through transformation of:
+- scientific claim/proposition meaning;
+- Evidence-qualified support and assessment/interpretation;
+- source/provenance traceability;
+- necessary study/source identity context;
+- material limitations and uncertainty;
+- contradictions;
+- evidence gaps;
+- Evidence-owned transformation eligibility/review state.
+
+Scientific Content explicitly does not define Evidence database schema, fields, relations, JSON keys, enums, API endpoints, public payloads, acceptance rules or sign-off semantics. Missing/insufficient Evidence input must route back to Evidence rather than being inferred or filled editorially.
+
+Current coordination state:
+`DOWNSTREAM RESPONSE RECEIVED / TECHNICAL DIRECTION REVIEW PENDING / APPROVAL PENDING`.
+
+This response is not PB-XD approval and does not make the proposed shared semantics canonical.
 
 ## Resolution
 STATUS: OPEN
-DECISION/OUTPUT: PENDING
+DECISION/OUTPUT: PENDING TECHNICAL DIRECTION / ORCHESTRATOR REVIEW

@@ -99,12 +99,15 @@ milestones:
   evidence:
     current: reconciliation
     public_web_contract: BLOCKED
+    scientific_content_internal_contract: APPROVED
+    scientific_content_internal_contract_request: PB-XD-001
   scientific_inventory:
     current: active
     evidence_handoff: IN_PROGRESS
   scientific_content_production:
     current: coordination_editorial_transformation
-    evidence_internal_contract: PROPOSED / PARTIAL / PENDING FORMALIZATION
+    evidence_internal_contract: APPROVED
+    evidence_internal_contract_request: PB-XD-001
     scientific_assessment_authority: false
     approval_authority: false
     publication_authority: false

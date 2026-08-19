@@ -2,22 +2,28 @@
 
 Owner: CATALOG / PRICING domain
 
-Status: MIGRATION BASELINE / NON-SALE-AUTHORIZING
+Status: MIGRATION_ACCEPTED / DOMAIN_OPERATION_ACTIVE / NON-SALE-AUTHORIZING
 
-This handoff records the durable Catalog / Pricing operating baseline. It does not authorize product publication or sale, create Legal/regulatory clearance, approve Commerce production, or expose WORK 7 private data.
+`MIGRATION_ACCEPTED = APPROVED`
+
+`DOMAIN_OPERATION = ACTIVE`
+
+Owner migration acceptance is an existing decision being durably reconciled here. This is not a second migration and does not authorize product publication or sale, create Legal/regulatory clearance, approve Commerce production, or expose WORK 7 private data.
 
 ## CURRENT_STATE
 
+- Catalog / Pricing migration is accepted and autonomous domain operation is active.
 - Catalog / Pricing reconciliation against the current Control Plane is complete.
 - Issue #14 remains the active Catalog / Pricing coordination/provenance queue; its entries retain their stated status and are not automatically canon.
 - Catalog existence, publication eligibility, commercial eligibility and `READY_FOR_SALE` are independent states: `CATALOG INCLUDED != PUBLICATION ELIGIBLE != COMMERCIAL ELIGIBILITY != READY_FOR_SALE`.
-- No product is established as `READY_FOR_SALE` by this handoff.
+- No product is established as `READY_FOR_SALE` by migration acceptance or this handoff.
 - Physical-product identity/readiness, Legal/regulatory eligibility and Commerce production readiness remain separate upstream/downstream gates.
 - Current Operative Core Product/SKU entities are not silently mapped to Catalog identities; any material future shared mapping/interface requires explicit cross-domain definition.
 
 ## LAST_COMPLETED
 
 - Phase 2 reconciliation established Catalog / Pricing authority boundaries, pricing provenance/status distinctions, fail-closed sale gates and the WORK 7 privacy boundary.
+- Owner-approved `MIGRATION_ACCEPTED = APPROVED` and `DOMAIN_OPERATION = ACTIVE` reconciled into this durable handoff without reopening migration.
 - Verified historical/current Catalog / Pricing decisions from Issue #14 were preserved as pricing/catalog evidence without converting them into sale authorization.
 - The following supplied physical-product assertions were not located in current durable authority and remain unverified: Vial Vault 4/10/12 identity/status, Vial Vault licensing status, Pepper Box commercial-permission status, and the exact six-unit Bloom Caps variant/pack structure.
 
@@ -29,7 +35,7 @@ Do not create a sale candidate merely to advance Catalog work.
 
 ## MIGRATION BLOCKERS
 
-- None after this handoff enters the normal review path.
+`NONE`. Migration is accepted.
 
 ## COMMERCIAL / PUBLICATION / SALE BLOCKERS
 
@@ -37,11 +43,13 @@ Do not create a sale candidate merely to advance Catalog work.
 - Product-specific Physical Products, IP/licensing, Legal/regulatory, territory, publication, pricing, Commerce, payment, shipping/returns and Owner gates remain unresolved where applicable.
 - Complete VAT/tax policy, complete pricing policy, public-catalog approval, production Commerce and final cross-domain SKU mapping are not migration prerequisites; unresolved states must be managed explicitly and fail closed.
 
+These operational/commercial dependencies do not revoke migration acceptance.
+
 ## OWNER_REQUIRED
 
 `NONE`
 
-Normal reconciliation, research, cross-domain coordination and PR review do not require Owner relay. Escalate only a genuine reserved Product Owner decision.
+Normal Catalog/Pricing operation, reconciliation, research, cross-domain coordination and PR review do not require Owner relay. Escalate only a genuine reserved Product Owner decision.
 
 ## DEPENDENCIES
 
@@ -124,8 +132,9 @@ Do not copy those records into the public repository or reconstruct a public pro
 ## LAST_VERIFIED_GITHUB_STATE
 
 - Repository: `e-milysol/peptibloom-project`
-- Base branch: `main`
-- Base SHA at handoff creation: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
+- Branch: `agent/catalog-pricing-migration-baseline`
+- Base `main` at handoff creation: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
 - Catalog / Pricing coordination queue: Issue #14.
-- Commerce migration handoff is proposed separately in draft PR #37; it is not a prerequisite for this Catalog / Pricing migration baseline.
+- PR: #38, normal review path; migration acceptance does not authorize merge.
+- Commerce migration handoff is proposed separately in draft PR #37; it is not a prerequisite for Catalog / Pricing migration acceptance.
 - No direct write to `main` is authorized by this handoff.

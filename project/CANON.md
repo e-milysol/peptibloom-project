@@ -75,6 +75,11 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - Readiness is orthogonal. At minimum `DESIGN_STATE`, `LICENSE_IP_STATE` and `PHYSICAL_VALIDATION_STATE` remain separate. Physical validation does not imply legal clearance, publication authorization, commercial readiness or authorization to sell.
 - `READY_FOR_SALE` remains outside Physical Products and depends on applicable commercial, Legal, regulatory, territorial, pricing, payment-provider and Owner gates.
 - Continued domain-local reconciliation does not itself require PB-XD. Before Commerce, Web, WORK 7, Operative Core or another domain relies on a material/automated Physical Products data contract, identifier mapping, synchronization mechanism or shared semantic interface, an explicit `PB-XD-NNN` contract is required.
+- New controlled physical geometry must follow the Owner-approved Clean-Sheet Physical Design Pipeline v0.1. Requirements precede controlled geometry, and interface-dependent geometry requires measured interface evidence before dependent CAD.
+- Physical product/design identity, design revision, physical prototype build and validation evidence remain distinct control layers. Revision and failure history must remain traceable rather than being destructively overwritten.
+- Editable/parametric design source is the preferred geometry authority where feasible. Printable exports, slicer projects and machine output are controlled downstream fabrication artifacts and must not silently replace editable design authority.
+- Physical design uses gates G0 Intake Complete, G1 Requirements Ready, G2 Interfaces Measured, G3 Design Ready for Prototype, G4 Print Evidenced, G5 Fit/Function Evidenced and G6 Physical Validation Complete. These gates govern physical design/validation only and do not imply `READY_FOR_SALE`, publication authorization, Legal/IP clearance or Commerce authorization.
+- Current Physical Products fabrication capability includes Bambu Lab P1S with AMS multi-filament/multicolor capability. Multicolor is optional and does not by itself define physical product identity.
 
 ### Evidence
 - Evidence remains independent from operational inventory unless an explicit cross-domain contract is approved.

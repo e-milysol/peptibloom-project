@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-18
+state_updated: 2026-08-19
 
 source_of_truth:
   implementation: github
@@ -59,6 +59,21 @@ milestones:
     current: v1
     migration_contract: APPROVED
     implementation: COMPLETE
+  physical_products:
+    current: canonical_domain_authority_approved
+    decision: PB-DEC-501
+    owner_domain: physical_products_accessories
+    operative_core_boundary: SEPARATE_AUTHORITY
+    private_master_boundary: PRIVATE_OPERATIONAL_TRUTH_REMAINS_WORK_7
+    design_state: INDEPENDENT
+    license_ip_state: INDEPENDENT
+    physical_validation_state: INDEPENDENT
+    ready_for_sale_authority: OUTSIDE_DOMAIN
+    legal_clearance_authority: false
+    publication_authority: false
+    scientific_claim_authority: false
+    pb_xd_required_now: false
+    cross_domain_material_contract_requires_pb_xd: true
   evidence:
     current: reconciliation
     public_web_contract: BLOCKED
@@ -112,6 +127,7 @@ cross_domain_rules:
   evidence_required_for_web_m1: false
   evidence_required_for_compound_pages: true
   app_core_private_master_implicit_linkage: false
+  physical_products_cross_domain_contract_requires_pb_xd: true
 
 open_decisions:
   - id: PB-DEC-001

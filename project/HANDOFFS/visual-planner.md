@@ -319,6 +319,12 @@ Only then should Issue #13 receive `FEATURE PREVIEW -> OWNER REVIEW AVAILABLE` w
 
 `OWNER_REQUIRED = YES — NARROW PRODUCT/SURFACE RECONCILIATION`
 
-Reason: approved App Core canon defines WORK 6 as the **authenticated** application, while the proposed FREE target explicitly requires a useful **no-account** experience. This is a real surface/ownership contract fork. Existing FREE/PLUS portability/history rules also need interpretation under local-only FREE; none are overwritten here.
+Verified conflict: approved App Core canon defines WORK 6 as the **authenticated** application, while the proposed FREE target explicitly requires a useful **no-account** experience. Existing FREE/PLUS portability/history rules also need interpretation under local-only FREE; none are overwritten here.
+
+Decision requested only on this boundary:
+
+**Should the proposed no-account local-first FREE planner be treated as an authorized unauthenticated mode of the WORK 6/App Core product domain, while its eventual repository/route/deployment surface remains separately subject to Technical Direction/Web architecture review?**
+
+A `YES` resolves the product-domain conflict without approving production, payments, persistence, routing or hosting. A `NO` means the no-account FREE hypothesis must be redesigned around another explicitly approved product surface/domain.
 
 Work does not stop: recurrence/timezone, IA, wireflows, neutral fixtures, privacy/security studies, cross-domain reviews and the synthetic preview path continue fail-closed. No account/persistence implementation begins until this narrow surface decision is resolved.

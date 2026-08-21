@@ -63,6 +63,10 @@ Do not copy restricted operational data into Issue #13 or public `project/` file
 - repo assignment: `e-milysol/peptibloom-private-master`;
 - repo visibility: private;
 - App Core boundary: separate;
+- Private Master MVP implementation: `COMPLETE`;
+- synthetic testing: `AUTHORIZED` within the private domain;
+- real private data import: `BLOCKED`;
+- import gate: independent external backup plus successful isolated restore test;
 - public Control Plane reporting: sanitized only.
 
-Detailed implementation state remains owned by the private repository and WORK 7 handoff process.
+Detailed supplier, procurement, logistics, inventory, cost, document and related operational state remains owned by the private repository and WORK 7. No restricted operational detail is reproduced here.

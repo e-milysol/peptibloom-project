@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-19
+state_updated: 2026-08-21
 
 source_of_truth:
   implementation: github
@@ -55,6 +55,13 @@ milestones:
     repository: e-milysol/peptibloom-private-master
     repository_visibility: private
     app_core_boundary: SEPARATE
+    mvp_implementation: COMPLETE
+    synthetic_testing: AUTHORIZED
+    real_private_data_import: BLOCKED
+    real_private_data_import_gate:
+      - independent_external_backup
+      - successful_isolated_restore_test
+    public_reporting: SANITIZED_ONLY
   operative_core:
     current: v1
     migration_contract: APPROVED

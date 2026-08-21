@@ -1,12 +1,12 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-08-19.
+Last coordination baseline: 2026-08-21.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
 | Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete | launch hardening; multilingual routing implementation after default-locale decision; WEB M2 remains blocked |
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
-| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
+| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost MVP implemented in `e-milysol/peptibloom-private-master`; intentionally separate from App Core; public reporting remains sanitized only | real private data import remains blocked until the independent backup + isolated restore gate succeeds; otherwise continue only private-domain validation/operations within approved scope |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
 | Physical Products / Accessories | PB-DEC-501 domain authority approved; Clean-Sheet Physical Design Pipeline v0.1 Owner approved; Bambu Lab P1S + AMS recorded as current fabrication capability; legacy geometry recovery closed with no recovered authoritative geometry; Bloom Caps is the first controlled clean-sheet exercise and remains PRE-G0; CAD is not authorized | review and reduce the held Bloom Caps G0–G2 Owner Input & Measurement Pack, then collect only the functional input and physical measurements required for G0–G2 |
 | Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
@@ -59,6 +59,12 @@ Compound pages remain `FUTURE / EVIDENCE-GATED`; no placeholder scientific pages
 ## Private Master / WORK 7
 
 WORK 7 owns the private Inventory / Procurement / Landed Cost application in the private repository `e-milysol/peptibloom-private-master`.
+
+Sanitized implementation state reconciled on 2026-08-21:
+- Private Master MVP implementation: `COMPLETE`;
+- synthetic testing: authorized within the private domain;
+- real private data import: `BLOCKED`;
+- import gate: independent external backup plus successful isolated restore test before real operational data import.
 
 This domain is not the App Core Personal Inventory. The two domains must remain isolated; no shared database, storage, credentials, health identity, implicit synchronization or cross-domain foreign key is assumed.
 

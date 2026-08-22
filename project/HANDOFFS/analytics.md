@@ -25,7 +25,7 @@ Operational checkpoint:
 - `OWNER_REQUIRED`: NONE currently. Owner authority is required only when a genuine Owner decision arises, including the existing future production-authorization gate.
 - `DEPENDENCIES`: Web implementation/runtime validation; Legal privacy determination; provider/account-holder facts; Security-specific control facts are routed to Security Assurance / Technical Direction under Owner-approved PB-DEC-503 as proposed for canonical persistence in draft PR #43. Until #43 is canonically consolidated, this remains a review-state dependency and must not be represented as merged `main` state.
 - `OPEN_REQUESTS`: no durable file request is currently recorded under `project/REQUESTS/open/`; routine Legal discovery and routed dependencies are coordinated through Issue #13.
-- `LAST_VERIFIED_GITHUB_STATE`: `main` at `7a2f32bd65a33cb6de480e5421bbc02488a1c21f` on 2026-08-19 at migration-acceptance recording time.
+- `LAST_VERIFIED_GITHUB_STATE`: `main` baseline for this migration PR remains `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`; Security Assurance reconciliation reviewed against draft PR #43 on 2026-08-22.
 
 Migration acceptance and production readiness are separate gates. Unresolved Web, Legal, Security/provider or Owner production dependencies do not revoke Analytics migration acceptance.
 

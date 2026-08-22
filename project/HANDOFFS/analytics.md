@@ -23,7 +23,7 @@ Operational checkpoint:
 - `NEXT_ACTION`: continue autonomous Analytics work; manage Legal/Web/provider dependencies through the Control Plane and verify proposed implementation against Measurement Contract v1 without activating production instrumentation.
 - `BLOCKERS`: no Analytics migration blocker. Production remains blocked by `WEB_TECHNICAL_VALIDATION_APPROVED`, `LEGAL_PRIVACY_REVIEW_APPROVED` and `OWNER_PRODUCTION_AUTHORIZATION`.
 - `OWNER_REQUIRED`: NONE currently. Owner authority is required only when a genuine Owner decision arises, including the existing future production-authorization gate.
-- `DEPENDENCIES`: Web implementation/runtime validation; Legal privacy determination; provider/account-holder facts; Security-specific control facts remain unassigned/unknown unless and until the Control Plane identifies a current authority.
+- `DEPENDENCIES`: Web implementation/runtime validation; Legal privacy determination; provider/account-holder facts; Security-specific control facts are routed to Security Assurance / Technical Direction under Owner-approved PB-DEC-503 as proposed for canonical persistence in draft PR #43. Until #43 is canonically consolidated, this remains a review-state dependency and must not be represented as merged `main` state.
 - `OPEN_REQUESTS`: no durable file request is currently recorded under `project/REQUESTS/open/`; routine Legal discovery and routed dependencies are coordinated through Issue #13.
 - `LAST_VERIFIED_GITHUB_STATE`: `main` at `7a2f32bd65a33cb6de480e5421bbc02488a1c21f` on 2026-08-19 at migration-acceptance recording time.
 
@@ -54,7 +54,7 @@ Analytics does not manufacture Web implementation, Security-control or provider/
 
 - Web implementation/runtime facts -> Web authority;
 - provider/account-holder facts -> applicable provider/account operational authority;
-- Security-specific RBAC/audit/incident/deletion-control facts -> `DEPENDENCY_UNASSIGNED / UNKNOWN — NOT VERIFIED` while no dedicated Security authority is identified by the current Control Plane.
+- Security-specific RBAC/audit/incident/deletion-control facts -> Security Assurance / Technical Direction under Owner-approved PB-DEC-503, with canonical persistence currently proposed in draft PR #43; until #43 lands, treat this as review-state coordination rather than merged `main` canon.
 
 Routine cross-domain coordination uses Issue #13. Absence of an answer from another technical domain does not by itself create `OWNER_REQUIRED`.
 

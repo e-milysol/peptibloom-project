@@ -14,24 +14,36 @@ assets:
   - asset_id: PB-EV-BLOOM-SHEET-V1.0
     kind: character_sheet
     character: BLOOM
-    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
-    canonical_path: apps/web/public/brand/evidence/characters/bloom/
-    sha256: null
-    note: Exact approved original must be supplied; do not regenerate from prose.
+    status: CANONICAL_FROZEN
+    canonical_filename: PB-EV-BLOOM-SHEET-V1.0.png
+    canonical_path: apps/web/public/brand/evidence/characters/bloom/PB-EV-BLOOM-SHEET-V1.0.png
+    dimensions_px: [1024, 1536]
+    pixel_mode: RGBA
+    bytes: 2905270
+    sha256: 3a645dc1f3356fea80f2af02d4b3bd770b9e9a6b96b8d98bf2afe984057498a5
+    source: owner-supplied exact approved Bloom sheet
   - asset_id: PB-EV-EVIDEN-SHEET-V1.0
     kind: character_sheet
     character: EVIDEN
-    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
-    canonical_path: apps/web/public/brand/evidence/characters/eviden/
-    sha256: null
-    note: Exact approved original must be supplied; do not regenerate from prose.
+    status: CANONICAL_FROZEN
+    canonical_filename: PB-EV-EVIDEN-SHEET-V1.0.png
+    canonical_path: apps/web/public/brand/evidence/characters/eviden/PB-EV-EVIDEN-SHEET-V1.0.png
+    dimensions_px: [1024, 1536]
+    pixel_mode: RGBA
+    bytes: 2756836
+    sha256: befd979a78e24703a54d441c20bdc5ffed53819486ce4d23da6ebbd1dfed4c2f
+    source: owner-supplied exact approved Eviden sheet
   - asset_id: PB-EV-PAIR-SHEET-V1.0
     kind: pair_reference
     characters: [BLOOM, EVIDEN]
-    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
-    canonical_path: apps/web/public/brand/evidence/characters/pair/
-    sha256: null
-    note: Exact approved original must be supplied; do not regenerate from prose.
+    status: CANONICAL_FROZEN
+    canonical_filename: PB-EV-PAIR-SHEET-V1.0.png
+    canonical_path: apps/web/public/brand/evidence/characters/pair/PB-EV-PAIR-SHEET-V1.0.png
+    dimensions_px: [1024, 1536]
+    pixel_mode: RGB
+    bytes: 2253723
+    sha256: 1b4edb33936a764685680ebaa3cf9315fe983687c4fdcb45cc28ff29aa22da51
+    source: exact approved Bloom + Eviden pair reference from the Evidence visual-design session
 policy:
   scientific_truth_source: Evidence workflow only
   generated_new_art_status: GENERATED_DRAFT
@@ -39,3 +51,4 @@ policy:
   canonical_status: CANONICAL
   material_identity_change_requires_new_version: true
   missing_master_may_be_regenerated_from_description: false
+  checksum_mismatch_means_not_canonical: true

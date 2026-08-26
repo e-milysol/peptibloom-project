@@ -14,7 +14,7 @@ Owner: EVIDENCE workstream
 
 Evidence architecture/reconciliation is sufficiently durable for autonomous continuation. No Evidence database schema, API, public read contract, scientific claim, compound assessment, publication, dose, protocol or recommendation is approved by the migration decision.
 
-`PB-XD-001` is separately `APPROVED / RESOLVED` by Technical Direction for the minimum internal Evidence -> Scientific Content shared semantics. That approval does not merge PR #32, unblock WEB M2, approve any candidate, create production-ready scientific content, grant Legal/regulatory approval, grant commercial eligibility, or transfer Scientific Inventory / Scientific Content / Web authority to Evidence.
+`PB-XD-001` is separately `APPROVED / RESOLVED` by Technical Direction for the minimum internal Evidence -> Scientific Content shared semantics. That approval does not unblock WEB M2, approve any candidate, create production-ready scientific content, grant Legal/regulatory approval, grant commercial eligibility, or transfer Scientific Inventory / Scientific Content / Web authority to Evidence.
 
 Permanent guardrails:
 
@@ -32,7 +32,7 @@ Permanent guardrails:
 - Product Owner approved Evidence migration and autonomous domain operation on 2026-08-19.
 - Scientific Content supplied its downstream semantic response to `PB-XD-001` in Issue #13 comment `5344569595`.
 - Technical Direction reviewed the actual request and downstream response and approved `PB-XD-001` on 2026-08-19.
-- The approved minimum shared semantics are recorded in `project/CANON.md` on this normal change-control branch and the request is moved to `project/REQUESTS/resolved/`.
+- The approved minimum shared semantics are recorded in `project/CANON.md` and the request is preserved in `project/REQUESTS/resolved/`.
 - Scientific Content migration is Owner-approved and domain operation is active.
 - Scientific Inventory migration is Owner-approved and domain operation is active.
 - All ten recovered candidates remain fail-closed and `NOT_EVIDENCE_ACCEPTED`.
@@ -74,7 +74,7 @@ Normal PR review/merge, incomplete research, candidate blocking, absent producti
 ## OPEN_REQUESTS
 
 - No open Evidence -> Scientific Content PB-XD remains after Technical Direction approval of `PB-XD-001`.
-- `PB-XD-001` is preserved for traceability under `project/REQUESTS/resolved/` on this branch.
+- `PB-XD-001` is preserved for traceability under `project/REQUESTS/resolved/`.
 - The separate Evidence -> Web public read contract remains unresolved and is not approved by `PB-XD-001`.
 
 ## LAST_VERIFIED_GITHUB_STATE

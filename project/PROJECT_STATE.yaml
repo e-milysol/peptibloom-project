@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-19
+state_updated: 2026-08-26
 
 source_of_truth:
   implementation: github
@@ -11,6 +11,8 @@ repository:
   default_branch: main
   verified_main_sha_at_protocol_start: 5fded280cb587a054b87583ec4ee3e381171b93a
   main_policy: treat_as_protected
+  technical_branch_protection: OWNER_REQUIRED
+  reconciliation_base_sha: 7a2f32bd65a33cb6de480e5421bbc02488a1c21f
 
 work_ownership:
   WORK_6: app_core
@@ -38,6 +40,26 @@ milestones:
       - es
       - fr
     m2: BLOCKED
+    public_content_release_1:
+      execution: ACTIVE
+      operating_rule: OUTPUT_BEFORE_NEW_FOUNDATION
+      library_ficha_minimum: REQUIRED
+      evidence_based_blog_minimum: REQUIRED
+      reusable_templates_and_real_content_ia_preview: REQUIRED
+      production_publication: BLOCKED
+      cross_domain_request: PB-XD-002
+    public_tools:
+      execution: ACTIVE
+      visual_planner_production_candidate: PRIORITY
+      web_branch_preview: AUTHORIZED_WITHIN_EXISTING_GATES
+      production_publication: BLOCKED
+      app_core_production_reactivated: false
+    web_identity_v1_0:
+      decision: OWNER_APPROVED_FROZEN
+      application_scope: WEB_CORPORATE_ONLY
+      product_label_identity_boundary: SEPARATE
+      exact_light_dark_assets: ASSET_INPUT_REQUIRED
+      regeneration_authorized: false
   app_core:
     owner_work: WORK_6
     current: contract_wireflow
@@ -55,6 +77,16 @@ milestones:
     repository: e-milysol/peptibloom-private-master
     repository_visibility: private
     app_core_boundary: SEPARATE
+    implementation_execution: ACTIVE
+    recovery_increment: AUTHORIZED
+    real_data_import: BLOCKED
+    real_data_import_authorization: CONDITIONAL
+    recovery_gates:
+      external_backup: REQUIRED_NOT_EVIDENCED
+      sha256_manifest_verification: REQUIRED_NOT_EVIDENCED
+      isolated_restore: REQUIRED_NOT_EVIDENCED
+      restored_environment_validation: REQUIRED_NOT_EVIDENCED
+      recovery_log: REQUIRED_NOT_EVIDENCED
   operative_core:
     current: v1
     migration_contract: APPROVED
@@ -127,11 +159,43 @@ milestones:
     owner_production_authorization: PENDING
     production_instrumentation: BLOCKED
 
+execution_state:
+  operating_rule: OUTPUT_BEFORE_NEW_FOUNDATION
+  active:
+    - WORK_7_PRIVATE_MASTER
+    - PUBLIC_CONTENT_RELEASE_1_MINIMUM_OWNERS
+    - PUBLIC_TOOLS_MINIMUM_OWNERS
+  active_public_content_owners:
+    - scientific_inventory
+    - evidence
+    - scientific_content
+    - brand_visual_production
+    - web
+    - accessibility
+    - legal_scientific_qa
+    - growth_downstream_only
+  active_public_tools_owners:
+    - web
+    - research_tools_utility_discovery
+    - visual_planner_routine_builder
+  app_core_role_for_public_tools: CONTRACT_CONSISTENCY_ONLY
+  unrelated_workstreams: ARCHIVED_DEFERRED
+
 dependencies:
   web_m1: []
   web_m2:
     - evidence_public_contract
     - production_ready_scientific_content
+  public_content_release_1:
+    - PB-XD-002
+    - evidence_qualified_library_candidate
+    - evidence_supported_blog_opportunity
+    - scientific_content_payloads
+    - legal_scientific_accessibility_web_review
+    - owner_merge_publication_authorization
+  public_tools_production:
+    - legal_security_accessibility_web_validation
+    - owner_merge_publication_authorization
   app_core_production_implementation:
     - owner_production_authorization
   app_core_real_health_wellness_data:
@@ -153,6 +217,20 @@ cross_domain_rules:
   evidence_required_for_compound_pages: true
   app_core_private_master_implicit_linkage: false
   physical_products_cross_domain_contract_requires_pb_xd: true
+  evidence_scientific_content_internal_contract: PB-XD-001_APPROVED
+  release_1_evidence_public_content_contract: PB-XD-002_OPEN
+
+reconciled_issue_13_directives:
+  - 5391139927
+  - 5391213520
+  - 5400901534
+  - 5400984546
+  - 5401050814
+  - 5402273570
+  - 5413980562
+  - 5416421053
+  - 5416698566
+  - 5419310089
 
 open_decisions:
   - id: PB-DEC-001

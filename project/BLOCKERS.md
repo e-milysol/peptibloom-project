@@ -4,6 +4,19 @@ This file contains only dependencies that currently prevent defined work from pr
 
 ## Active blockers
 
+### Public Content Release 1 publication gate
+
+Status: BLOCKED FOR PRODUCTION PUBLICATION
+
+Branch-preview work is active, but Release 1 publication requires:
+1. resolution and approval of `PB-XD-002` for the Evidence / Scientific Content / Web public handoff;
+2. an Evidence-qualified Library pilot and evidence-supported Blog opportunity;
+3. complete source-backed payloads with uncertainty, limitations, review date and references;
+4. Legal, Scientific QA, Accessibility and Web review of the concrete release candidates;
+5. explicit merge/publication authorization.
+
+`PB-XD-001` in PR #32 covers only the internal Evidence -> Scientific Content contract and does not satisfy this public contract gate.
+
 ### WEB M2 Evidence gate
 
 Status: BLOCKED
@@ -40,6 +53,31 @@ Product Analytics expansion may not enter production until all canonical gates a
 4. `OWNER_PRODUCTION_AUTHORIZATION`.
 
 No health/wellness values, inventory content, routine content, notes or persistent user identifiers may be sent to Product Analytics.
+
+### Public Tools / Visual Planner production gate
+
+Status: BLOCKED FOR PRODUCTION PUBLICATION
+
+Neutral, privacy-minimal Web branch previews may proceed under the active public-tools priority. Production requires concrete Legal, Security, Accessibility and Web validation plus explicit merge/publication authorization. This priority does not reactivate App Core production, persistent health/wellness data, payments, external integrations or Analytics production.
+
+### WORK 7 recovery and real-data-import gate
+
+Status: REAL_DATA_IMPORT BLOCKED
+
+Conditional authorization is not an immediate unlock. Before the first limited import, all of the following must be evidenced as passed:
+1. independent external backup;
+2. verifiable SHA-256 manifest;
+3. successful isolated restore that never targets live;
+4. restored-environment validation with no unresolved recovery blocker;
+5. durable recovery-log evidence.
+
+Failure of any gate keeps import blocked. Successful recovery authorizes only the bounded, reversible, auditable increment described in Issue #13 comment `5416698566`.
+
+### Frozen Web Identity asset-ingestion gate
+
+Status: ASSET_INPUT_REQUIRED
+
+The decision is approved, but the exact Owner-approved light and dark sheets are not repository-controlled. They must be supplied and checksum-verified before ingestion. Regeneration from descriptions, screenshots or checksum text is prohibited.
 
 ## Cleared blockers
 

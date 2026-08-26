@@ -1,10 +1,10 @@
 # Evidence Architecture Baseline v0.1
 
-Status: PROPOSED / MIGRATION RECONCILIATION
+Status: PROPOSED ARCHITECTURE / PB-XD-001 SHARED SEMANTICS APPROVED
 Owner: Evidence
 Date: 2026-08-19
 
-This document is a minimum architecture proposal for migration review. It does not approve a database schema, API, public read contract, scientific claim, compound assessment, publication, dose, protocol, or recommendation.
+This document is a minimum architecture proposal for migration review. `PB-XD-001` separately approves only the internal Evidence -> Scientific Content shared semantics recorded below. Neither this document nor that approval defines a database schema, API, public read contract, scientific claim, compound assessment, publication, dose, protocol, or recommendation.
 
 ## Reconciled artifact classes
 
@@ -14,10 +14,10 @@ This document is a minimum architecture proposal for migration review. It does n
 - The approved workflow direction is Scientific Inventory -> Evidence review/representation -> Scientific Content Production -> Web consumption.
 - Evidence owns scientific review/representation, provenance, uncertainty, contradictions, evidence gaps, and scientific interpretation within its approved authority.
 - Scientific Content Production is editorial transformation only and cannot approve Evidence, strengthen missing science, authorize publication, or bypass Evidence gates.
+- `PB-XD-001` approves the minimum internal Evidence -> Scientific Content shared semantics while leaving Evidence implementation schema and the separate public contract unapproved.
 - WEB M2 remains blocked until both an approved Evidence public read contract and production-ready scientific content exist.
 
 ### PROPOSED
-- The internal `Evidence -> Scientific Content` contract is `PROPOSED / PARTIAL / PENDING FORMALIZATION`.
 - Issue #15 architectural concepts such as claim-level assessment, versioned assessment, study/publication separation, exact locators, research-integrity representation, extracted numerical data, post-publication events, screening audit, and AI provenance remain proposals unless separately approved.
 - Historical names such as `ClaimAssessment`, `EvidenceAssessment`, `EvidenceLink`, `AIProcessTrace`, `EvidenceOperationTrace`, and `GenerationTrace` are not canonical entity names.
 
@@ -52,19 +52,19 @@ No additional schema is justified in migration Phase 2.
 
 | Concept | Evidence owns scientific concept? | Existing canonical representation? | Reuse / new representation | Cross-domain note |
 | --- | --- | --- | --- | --- |
-| claims | YES | Principle exists; no schema | A claim-level representation is required before structured handoff; exact model/name remains proposed | Material shared semantics require PB-XD before approval |
-| assessments | YES | Responsibility exists; no schema | Evidence-owned assessment representation required; do not inherit historical names automatically | Material shared semantics require PB-XD before approval |
+| claims | YES | Shared meaning approved through PB-XD-001; no schema | A claim-level representation is required before structured handoff; exact model/name remains proposed | Shared semantics approved; implementation remains Evidence-owned |
+| assessments | YES | Shared meaning approved through PB-XD-001; no schema | Evidence-owned assessment representation required; do not inherit historical names automatically | Shared semantics approved; implementation remains Evidence-owned |
 | studies | PARTIAL | Provenance/source principles exist; no canonical Study model | Represent study identity/context only as needed for scientific traceability; publication/version separation remains proposed | No downstream domain owns scientific study identity |
-| sources | YES | Canonical principle: inspectable sources/provenance | Reuse the source/provenance principle; implementation remains open | Shared payload requires PB-XD |
+| sources | YES | Canonical principle: inspectable sources/provenance | Reuse the source/provenance principle; implementation remains open | PB-XD-001 approves internal semantics, not a public payload |
 | provenance | YES for scientific provenance | Canonical principle exists | Reuse and normalize; do not import historical enum lists as canon | Operational provenance remains with its owning domain |
 | contradictions | YES | Canonical responsibility exists | Explicit Evidence representation required; exact structure open | Scientific Content may render but not redefine |
 | evidence gaps | YES | Canonical responsibility exists | Explicit Evidence representation required; exact structure open | Scientific Content may render but not redefine |
-| sign-off | LIMITED | No canonical Evidence sign-off semantic | Evidence may expose review/eligibility state, but must not create publication approval authority | Publication authorization belongs outside Evidence; shared eligibility semantics require PB-XD |
+| sign-off | LIMITED | Transformation eligibility semantics approved through PB-XD-001; no publication sign-off semantic | Evidence may expose review/eligibility state, but must not create publication approval authority | Publication authorization remains outside Evidence |
 | publication blocking | NO as scientific data | Governance gates already exist | Do not create an Evidence scientific field merely for downstream workflow. Evidence eligibility can be an input; publication blocking is a downstream gate outcome | Web/Content governance consumes the gate outcome |
 
-## Internal contract proposal
+## Approved internal contract semantics
 
-Scientific Content may consume only Evidence-reviewed material that is explicitly eligible for the intended editorial transformation. The handoff must preserve, at minimum:
+Under `PB-XD-001`, Scientific Content may consume only Evidence-reviewed material that is explicitly eligible for the intended editorial transformation. The handoff must preserve, at minimum:
 - the scientific claim/proposition being represented;
 - source/provenance traceability sufficient to inspect support;
 - Evidence assessment/interpretation for that claim;
@@ -74,7 +74,7 @@ Scientific Content may consume only Evidence-reviewed material that is explicitl
 
 Scientific Content must not infer omitted claims, assessments, sources, provenance, certainty, contradictions, gaps, or eligibility. It must route missing/insufficient input back to Evidence.
 
-This proposal deliberately does **not** define database fields, JSON keys, enums, Evidence API endpoints, public payloads, or publication approval.
+This approval deliberately does **not** define database fields, JSON keys, enums, Evidence API endpoints, public payloads, or publication approval.
 
 ## Candidate workflow reconciliation
 
@@ -95,8 +95,8 @@ The recovered ten candidates remain workflow/intake records only:
 
 These labels are migration workflow descriptions, not scientific assessments or new Evidence taxonomy. No substantive compound research is authorized by this document.
 
-## Cross-domain requirement
+## Cross-domain disposition
 
-Formalizing the `Evidence -> Scientific Content` structured handoff creates a material shared semantic interface. Under PB-DEC-300 / PB-DEC-301, approval of that shared contract requires PB-XD coordination. The PB-XD should request review of the minimum handoff semantics above, while explicitly leaving Evidence's internal schema and scientific assessment authority with Evidence.
+The material internal Evidence -> Scientific Content shared semantic interface was coordinated and approved through `PB-XD-001`, while explicitly leaving Evidence's internal schema and scientific assessment authority with Evidence.
 
-The separate Evidence -> Web public read contract remains blocked and is not defined here.
+The separate Release 1 Evidence / Public Content contract is `PB-XD-002` and remains open. Evidence -> Web, WEB M2 and publication remain blocked and are not defined here.

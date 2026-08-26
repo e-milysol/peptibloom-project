@@ -101,6 +101,10 @@ PeptiBloom is being built as a scientific research library and research-oriented
 ### Evidence
 - Evidence remains independent from operational inventory unless an explicit cross-domain contract is approved.
 - UI requirements must not dictate the scientific schema.
+- `PB-XD-001` approves the minimum internal Evidence -> Scientific Content shared semantics for editorial transformation. Evidence remains authoritative for: the scientific claim/proposition meaning being represented; source/provenance traceability sufficient to inspect support; Evidence assessment/interpretation; material uncertainty and limitations; contradictions; evidence gaps; necessary study/source identity context; and an Evidence-owned eligibility/review state indicating whether downstream transformation may proceed without inventing missing science.
+- Scientific Content may render or transform those Evidence-owned semantics but must preserve their meaning and provenance and may not strengthen, redefine or replace them. Missing or insufficient scientific input routes back to Evidence rather than being editorially inferred or filled.
+- The approved shared semantics do not define Evidence database entities, fields, relations, JSON keys, enums, API endpoints or public payloads. Downstream requirements do not define Evidence internal schema.
+- Evidence eligibility/review for transformation is not publication approval. `PB-XD-001` does not approve Evidence -> Web, WEB M2, any candidate, any Evidence assessment, any public claim or scientific publication.
 
 ## Web positioning
 

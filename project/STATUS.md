@@ -1,6 +1,6 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-08-26 state reconciliation from Issue #13. Implementation baseline remains public `main` `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`.
+Last coordination baseline: 2026-08-26 state reconciliation from Issue #13. Implementation baseline at reconciliation start was public `main` `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
@@ -9,9 +9,9 @@ Last coordination baseline: 2026-08-26 state reconciliation from Issue #13. Impl
 | Private Master / WORK 7 | Active and separate from App Core; backup/recovery increment authorized; real-data import conditionally authorized but still BLOCKED | external backup -> SHA-256 verification -> isolated restore -> restored-environment validation -> recovery log; only then one bounded import increment |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
 | Physical Products / Accessories | PB-DEC-501 domain authority approved; Clean-Sheet Physical Design Pipeline v0.1 Owner approved; Bambu Lab P1S + AMS recorded as current fabrication capability; legacy geometry recovery closed with no recovered authoritative geometry; Bloom Caps is the first controlled clean-sheet exercise and remains PRE-G0; CAD is not authorized | review and reduce the held Bloom Caps G0–G2 Owner Input & Measurement Pack, then collect only the functional input and physical measurements required for G0–G2 |
-| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content semantics approved through `PB-XD-001` but pending durable PR #32 reconciliation; public contract remains unapproved | preserve the approved internal boundary without inventing schema; answer the separate PB-XD-002 public-content request; WEB M2 remains blocked |
+| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content minimum shared semantics approved through `PB-XD-001`; the separate `PB-XD-002` public-content contract remains open | continue Evidence-domain work under approved internal semantics without inventing implementation schema; answer PB-XD-002; WEB M2 remains blocked |
 | Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
-| Scientific Content Production | editorial transformation only; no scientific assessment, approval or publication authority; internal `PB-XD-001` semantics approved but pending durable PR #32 reconciliation | receive sufficient Evidence-qualified input and answer PB-XD-002; publication remains blocked by existing Evidence/content gates |
+| Scientific Content Production | editorial transformation only; no scientific assessment, approval or publication authority; internal Evidence contract approved through `PB-XD-001`; the separate `PB-XD-002` public-content contract remains open | receive sufficient Evidence-qualified input under the approved shared semantics and answer PB-XD-002; publication remains blocked by existing Evidence/content gates |
 | Growth / SEO / Distribution | operational ownership restored; Search Console state is recorded only as HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18 | continue monitoring and establish current baselines from fresh source telemetry; do not infer current performance from historical observations |
 | Analytics | Analytics v1 contract and 19-event registry restored; only ANALYTICS_CONTRACT_APPROVED is APPROVED; production instrumentation remains BLOCKED | WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING |
 
@@ -111,13 +111,15 @@ Existing PB-DEC-501 domain boundaries remain unchanged. WORK 7 / Private Master 
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 
-Scientific Content Production is represented as an editorial transformation stage only. The internal Evidence handoff semantics are approved through `PB-XD-001` and represented in draft PR #32, but their repository durability remains pending reconciliation. This does not approve Evidence schema, scientific assessment, scientific content, a public Evidence contract or publication authority.
+Technical Direction approved `PB-XD-001` for the minimum internal Evidence -> Scientific Content shared semantics. Evidence remains authoritative for scientific claim/proposition meaning, support/provenance traceability, assessment/interpretation, material uncertainty and limitations, contradictions, evidence gaps, necessary study/source context, and transformation eligibility/review state. Scientific Content may transform those semantics but may not strengthen, redefine or replace them; missing or insufficient input routes back to Evidence.
 
-Recovered Scientific Inventory candidate classifications are coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness.
+PB-XD-001 does not define Evidence database schema/API/public payloads and does not approve publication. Evidence eligibility for transformation is not publication approval.
 
-WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
+Recovered Scientific Inventory candidate classifications remain coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness. No candidate is approved by PB-XD-001.
 
-Draft PR #32 represents the approved internal `PB-XD-001` Evidence -> Scientific Content semantics, but explicitly excludes Evidence -> Web and publication. `PB-XD-002` is therefore OPEN for the distinct Release 1 Evidence / Public Content contract. Opening the request does not approve its output or unblock publication.
+The separate Evidence -> Web public read contract remains unapproved. WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
+
+`PB-XD-001` records the approved internal Evidence -> Scientific Content semantics, but explicitly excludes Evidence -> Web and publication. `PB-XD-002` is OPEN for the distinct Release 1 Evidence / Public Content contract. Opening the request does not approve its output or unblock publication.
 
 ## Growth / Analytics
 
@@ -157,8 +159,6 @@ This table is review sequencing only. Every PR remains open in its observed stat
 
 ## Unresolved state conflicts
 
-- Public `main` still carries the 2026-08-19 baseline while Issue #13 contains later approved directives; this reconciliation is not durable on GitHub until separately reviewed and merged.
-- PR #32 carries `PB-XD-001` and overlaps core state files. It must be reconciled rather than independently merged without conflict review.
 - Web Identity v1.0 is approved/frozen, but exact Owner-approved assets are absent from repository control and remain `ASSET_INPUT_REQUIRED`.
 - WORK 7 conditional import authorization exists, but no passing recovery evidence or later `WORK 7 ATOMIC INCREMENT CHECKPOINT AVAILABLE` was verified; import remains blocked.
 - PB-DEC-001 and PB-DEC-002 remain `OWNER_REQUIRED`; no later Issue #13 directive closes either decision.

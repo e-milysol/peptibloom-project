@@ -131,14 +131,14 @@ milestones:
   evidence:
     current: reconciliation
     public_web_contract: BLOCKED
-    scientific_content_internal_contract: APPROVED_PENDING_PR_32_DURABILITY
+    scientific_content_internal_contract: APPROVED
     scientific_content_internal_contract_request: PB-XD-001
   scientific_inventory:
     current: active
     evidence_handoff: IN_PROGRESS
   scientific_content_production:
     current: coordination_editorial_transformation
-    evidence_internal_contract: APPROVED_PENDING_PR_32_DURABILITY
+    evidence_internal_contract: APPROVED
     evidence_internal_contract_request: PB-XD-001
     scientific_assessment_authority: false
     approval_authority: false
@@ -217,7 +217,7 @@ cross_domain_rules:
   evidence_required_for_compound_pages: true
   app_core_private_master_implicit_linkage: false
   physical_products_cross_domain_contract_requires_pb_xd: true
-  evidence_scientific_content_internal_contract: PB-XD-001_PENDING_PR_32_DURABILITY
+  evidence_scientific_content_internal_contract: PB-XD-001_APPROVED
   release_1_evidence_public_content_contract: PB-XD-002_OPEN
 
 reconciled_issue_13_directives:

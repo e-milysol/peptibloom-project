@@ -6,7 +6,7 @@ Owner: SCIENTIFIC CONTENT PRODUCTION coordination stage
 
 MIGRATION_ACCEPTED: `APPROVED` on 2026-08-19 for Scientific Content Production autonomous operational ownership only.
 
-CURRENT_STATE: `DOMAIN_OPERATION ACTIVE / coordination_editorial_transformation / production scientific content blocked pending Evidence-qualified input`
+CURRENT_STATE: `DOMAIN_OPERATION ACTIVE / coordination_editorial_transformation / PB-XD-002 response active / production scientific content blocked pending Evidence-qualified input`
 
 LAST_COMPLETED:
 - Scientific Content migration Phase 1 authority reconciliation completed.
@@ -19,10 +19,12 @@ LAST_COMPLETED:
 NEXT_ACTION:
 - Continue active autonomous Scientific Content governance within the authority boundary below.
 - Await and consume Evidence-qualified input when available under the approved `PB-XD-001` semantics.
+- Respond to open `PB-XD-002` with the minimum public-content fields and transformation constraints needed for Release 1, without redefining Evidence semantics, selecting an unqualified candidate or authorizing publication.
 - When Evidence-qualified material exists, define only the minimum editorial/template structure needed for the downstream representation, preserving upstream scientific meaning and provenance.
 
 BLOCKERS:
 - Production scientific transformation is blocked wherever required Evidence-qualified input is missing or insufficient.
+- `PB-XD-002` remains open; no Evidence-qualified Library pilot or Blog opportunity is currently supplied to Scientific Content.
 - WEB M2 / production compound pages remain blocked until both the Evidence public read contract is approved and production-ready scientific content exists.
 
 OWNER_REQUIRED: `NONE` for current Scientific Content operation. Pending Evidence, blocked candidates, incomplete references, incomplete template work, Web M2, or pending Legal review do not by themselves require Owner escalation.
@@ -36,14 +38,15 @@ DEPENDENCIES:
 
 OPEN_REQUESTS:
 - No open Evidence -> Scientific Content PB-XD remains after Technical Direction approval of `PB-XD-001`.
-- `PB-XD-001` is resolved through the PR #32 change-control path; its approval does not approve Evidence -> Web or any publication/candidate/claim gate.
+- `PB-XD-001` is resolved and preserved under `project/REQUESTS/resolved/`; its approval does not approve Evidence -> Web or any publication/candidate/claim gate.
+- `PB-XD-002` is open for the distinct Release 1 Evidence / Public Content contract. Scientific Content may define transformation-preservation requirements but may not supply missing Evidence or approve a candidate, claim or publication.
 
-LAST_VERIFIED_GITHUB_STATE:
-- repository: `e-milysol/peptibloom-project`
-- canonical main at review start: `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`
-- verified date: `2026-08-19`
-- PR #32: OPEN / DRAFT / UNMERGED; Technical Direction has approved and resolved `PB-XD-001` on that branch through normal change control.
-- PR #41: OPEN / DRAFT / UNMERGED; this handoff branch records migration acceptance and PB-XD consistency, while normal review/merge authority remains required.
+LAST_VERIFIED_CONTROL_PLANE_STATE:
+- verified date: `2026-08-26`;
+- internal `PB-XD-001`: `APPROVED / RESOLVED`;
+- public-content `PB-XD-002`: `OPEN`;
+- all ten recovered candidates: `CONTENT BLOCKED` and `NOT_EVIDENCE_ACCEPTED` upstream;
+- Web M2 and publication: `BLOCKED`.
 
 ## Purpose
 
@@ -175,18 +178,20 @@ Scientific Content Production does not bypass the existing WEB M2 gate. Producti
 1. the Evidence public read contract is approved; and
 2. production-ready scientific content exists.
 
+`PB-XD-002` is the open Release 1 cross-domain request for that public-content handoff. Opening or answering it does not itself satisfy Legal, Scientific QA, Accessibility, Web, merge or publication authorization gates.
+
 `CONTENT COMPLETE` does not imply `READY_FOR_PUBLICATION` unless the applicable downstream publication and legal/regulatory gates are satisfied.
 
 ## Migration vs operational blockers
 
-Scientific Content migration is `ACCEPTED` for autonomous operational ownership. That migration approval does not approve PR #32, PR #41, Evidence schema, scientific claims, candidate readiness, publication readiness, WEB M2, publication, or Legal/Regulatory clearance.
+Scientific Content migration is `ACCEPTED` for autonomous operational ownership. That migration approval does not approve Evidence schema, scientific claims, candidate readiness, publication readiness, WEB M2, publication, or Legal/Regulatory clearance, and it does not bypass normal review/merge authority for durable repository changes.
 
 `PB-XD-001` is now separately approved by Technical Direction and does not expand those non-authorizations.
 
 The following are normal Scientific Content operational backlog or blockers and are not Scientific Content migration blockers:
 - all ten candidates currently blocked;
 - zero `READY_FOR_PUBLICATION` pages;
-- unresolved Evidence -> Web public read contract;
+- open `PB-XD-002` / unresolved Evidence -> Web public-content contract;
 - incomplete compound template;
 - WEB M2 blocked;
 - pending Legal review.

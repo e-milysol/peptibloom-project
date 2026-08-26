@@ -13,6 +13,9 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - The master logo must not be used directly as a favicon. Existing `apps/web/public/favicon.ico` and `apps/web/public/favicon.svg` remain temporary technical legacy assets until an approved compact derivative replaces them.
 - Header, footer and social previews may use the master where it is visually suitable; the public web must reuse its shared brand component rather than implementing independent copies.
 - Former provisional header/footer isotopes are not approved derivatives and must not be reintroduced.
+- Web / Corporate Identity v1.0 is Owner-approved and frozen as a separate application system from Product Labels / Packaging identity. The exact approved light and dark source sheets are not yet repository-controlled and remain `ASSET_INPUT_REQUIRED`; they must not be regenerated from descriptions, screenshots or recorded checksums.
+- Production-relevant visual assets require an Asset Record that distinguishes the actual editable `MASTER_SOURCE` from durable faithful-view exports, records purpose, locale where applicable, version/status, locators, timestamps where known and supersession. External editable URLs alone are not durable archival authority.
+- Material asset revisions create a new version and preserve supersession history. The canonical logo and public contact authority remain unchanged.
 
 ## Scientific publication principles
 
@@ -54,6 +57,8 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - The Private Master is not the App Core Personal Inventory.
 - App Core and Private Master must not share a database, document storage, credentials, health identity, implicit synchronization or cross-domain foreign keys unless a future explicit cross-domain contract approves a specific interface.
 - Restricted supplier, purchasing, logistics, cost, document and related operational data must not be copied into the public repository. The public Control Plane receives sanitized status only.
+- `REAL_DATA_IMPORT` remains blocked until an independent external backup, verifiable SHA-256 manifest, successful isolated restore, restored-environment validation and durable recovery-log evidence all pass. Owner conditional authorization permits one limited, reversible and auditable import increment only after all gates pass; it is not an immediate unlock.
+- A qualifying import must preserve provenance and uncertainty, remain schema-safe and reversible, and must not trigger purchasing, payments, refunds, supplier communication, publication, stock invention, approved-price promotion or any other external action.
 
 ### API
 - Location: `apps/api/` for the existing public-project API surface unless a later approved domain design specifies otherwise.
@@ -64,6 +69,18 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - `products`, `inventory` and `documents` are operational domains.
 - No relationship with `evidence` may be invented without cross-domain approval.
 - Stock is derived from `Movement` history; `StockUnit.available_quantity` is not persisted in Operative Core v1.
+
+### Packaging / Fulfillment
+- Packaging classes describe operational fit/protection requirements, not price bands, marketing tiers or quality grades.
+- `S`, `M` and `LARGE` are mutually exclusive physical-size classes determined by validated fit/protection constraints. `COLD` is an independently authorized temperature-control overlay and `BUNDLE` is a multi-item composition overlay whose components remain independently inventory-identifiable.
+- Catalog/Pricing must not invent packaging geometry, temperature requirements, validation, materials or costs. Packaging cost remains distinct from product landed cost and business CAPEX.
+- No packaging configuration becomes production-approved before the responsible physical workstream validates it.
+
+### Assisted Commerce
+- `COMMERCE_V1` is assisted ordering. A submitted request is not autonomous acceptance, and no payment integration may silently convert it into autonomous checkout.
+- Order, payment, fulfillment and inventory-reservation state are independent dimensions. Historical orders, prices, promotions, payments, refunds, cancellations and reservations remain auditable and are not destructively rewritten.
+- Payment/refund transactions and inventory movements remain immutable sources where applicable. Refund does not imply physical return or restock, and cancellation releases any live reservation exactly once.
+- Consumer-rights, tax, withdrawal, return-eligibility, disclosure and jurisdiction-specific policy remain Legal/Tax gated. This data contract does not authorize payments, checkout, selling or production activation.
 
 ### Physical Products / Accessories
 - Physical Products / Accessories is an independent canonical domain and durable source of truth for physical product identity, stable physical product and variant identity, source/design provenance, controlled geometry/source-file references, design revision/state, intended physical material/specification, factual documented IP/license evidence, factual commercial-use permission evidence, prototype state, physical validation state, objective validation criteria/evidence, manufacturing/printability validation facts, physical intended use/limitations, and sanitized product-truth handoffs.
@@ -84,6 +101,10 @@ PeptiBloom is being built as a scientific research library and research-oriented
 ### Evidence
 - Evidence remains independent from operational inventory unless an explicit cross-domain contract is approved.
 - UI requirements must not dictate the scientific schema.
+- `PB-XD-001` approves the minimum internal Evidence -> Scientific Content shared semantics for editorial transformation. Evidence remains authoritative for: the scientific claim/proposition meaning being represented; source/provenance traceability sufficient to inspect support; Evidence assessment/interpretation; material uncertainty and limitations; contradictions; evidence gaps; necessary study/source identity context; and an Evidence-owned eligibility/review state indicating whether downstream transformation may proceed without inventing missing science.
+- Scientific Content may render or transform those Evidence-owned semantics but must preserve their meaning and provenance and may not strengthen, redefine or replace them. Missing or insufficient scientific input routes back to Evidence rather than being editorially inferred or filled.
+- The approved shared semantics do not define Evidence database entities, fields, relations, JSON keys, enums, API endpoints or public payloads. Downstream requirements do not define Evidence internal schema.
+- Evidence eligibility/review for transformation is not publication approval. `PB-XD-001` does not approve Evidence -> Web, WEB M2, any candidate, any Evidence assessment, any public claim or scientific publication.
 
 ## Web positioning
 
@@ -101,3 +122,5 @@ The Scientific Library is the central knowledge destination. Science and commerc
 - Approved decisions recorded here or in `DECISIONS.md` beat proposals in chat transcripts.
 - Missing canon creates a decision request; it is not permission to infer.
 - Cross-domain changes require a `PB-XD-NNN` request.
+- Workstream owners may make documented, reversible, low-risk implementation decisions inside approved canon. They must escalate real-money commitments, public/commercial activation, legal/privacy/regulatory risk, scientific claims, destructive data actions, gate bypasses, material shared contracts, sensitive-data expansion and genuinely unresolved Owner choices.
+- Active public-value execution follows `OUTPUT-BEFORE-NEW-FOUNDATION`: produce concrete, reviewable branch-preview artifacts when gates permit, and create new foundation/specification work only when it directly resolves a named blocker.

@@ -14,7 +14,7 @@ Expected flow:
 
 Recovered candidate classifications remain coordination/intake states only. All ten current candidates remain `NOT_EVIDENCE_ACCEPTED`; none is eligible for Scientific Content transformation or publication on the basis of Inventory state alone.
 
-PR #42 remains subject to normal review and merge authority; migration acceptance does not merge or approve that PR.
+Migration acceptance does not bypass normal review or merge authority for durable repository changes.
 
 ## SCIENTIFIC INVENTORY OWNS
 
@@ -104,7 +104,7 @@ No Inventory field or historical candidate list may pre-fill Evidence conclusion
 
 Routine candidate handoff and identity/provenance clarification do not require a new PB-XD. PB-XD is required only when a material shared semantic/interface contract is actually being defined under current governance.
 
-The internal `Evidence -> Scientific Content` contract remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`. Draft PR #32 proposes Evidence architecture and `PB-XD-001` for that shared semantic interface; neither is approved or merged. Scientific Content has supplied an in-principle response in Issue #13, subject to Technical Direction approval. This does not change Inventory authority.
+The internal `Evidence -> Scientific Content` shared semantics are `APPROVED / RESOLVED` through `PB-XD-001`. This does not change Inventory authority, define an Evidence schema or approve a public payload. The separate Release 1 Evidence / Public Content contract is `PB-XD-002` and remains open.
 
 ## EVIDENCE -> CONTENT / PUBLICATION BOUNDARY
 
@@ -126,13 +126,13 @@ Phase 1 and Phase 2 Scientific Inventory migration reconciliation completed. Pro
 
 ## NEXT_ACTION
 
-Continue active Scientific Inventory operations: intake, identity/provenance cleanup, deduplication control and fail-closed Evidence routing for the current candidate universe. Preserve unresolved identity when evidence is insufficient to normalize it. Coordinate routine factual handoffs directly with Evidence and Scientific Content through the Control Plane without Owner relay.
+Continue active Scientific Inventory operations: intake, identity/provenance cleanup, deduplication control and fail-closed Evidence routing for the current candidate universe. Preserve unresolved identity when evidence is insufficient to normalize it. For `PB-XD-002`, provide candidate-readiness and gap state only; do not promote a candidate, supply Evidence conclusions or infer public-content eligibility. Coordinate routine factual handoffs directly with Evidence and Scientific Content through the Control Plane without Owner relay.
 
 ## BLOCKERS
 
 Migration blockers: none.
 
-Operational dependencies/backlog include unresolved candidate identity/provenance, Evidence intake/review, unresolved PB-XD-001, the unapproved Evidence public read contract and absent production-ready compound content. These do not by themselves block Scientific Inventory operation.
+Operational dependencies/backlog include unresolved candidate identity/provenance, Evidence intake/review, open `PB-XD-002`, the unapproved Evidence public read contract and absent production-ready compound content. These do not by themselves block Scientific Inventory operation.
 
 ## OWNER_REQUIRED
 
@@ -150,10 +150,8 @@ Routine identity normalization, provenance cleanup, Evidence backlog, candidate 
 
 ## OPEN_REQUESTS
 
-Canonical `project/REQUESTS/open/` on `main` was empty at the last verified baseline. `PB-XD-001` exists only in draft PR #32 and therefore is not yet durable canonical open-request state.
+`PB-XD-001` is resolved and preserved under `project/REQUESTS/resolved/`. `PB-XD-002` is open for the distinct Release 1 Evidence / Public Content contract; Scientific Inventory contributes readiness and gap facts without taking Evidence or publication authority.
 
-## LAST_VERIFIED_GITHUB_STATE
+## LAST_VERIFIED_CONTROL_PLANE_STATE
 
-Verified 2026-08-19 against `main` SHA `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`.
-
-Relevant live coordination: Issue #13. PR #42 remains OPEN / DRAFT / UNMERGED and subject to normal review/merge authority. Draft PR #32 remains OPEN / DRAFT / UNMERGED and proposes Evidence Phase 2 architecture plus PB-XD-001; its last verified HEAD is `66754d79b74f728d61ad470d6251644b3abd5e20`.
+Verified 2026-08-26 against the reconciled Control Plane stack through approved internal `PB-XD-001` semantics. `PB-XD-002` remains open, all ten recovered candidates remain `NOT_EVIDENCE_ACCEPTED`, and no public-content or publication gate is satisfied by this handoff.

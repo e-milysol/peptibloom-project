@@ -1,0 +1,41 @@
+schema_version: 1
+visual_system_id: PB-EVIDENCE-VISUAL-001
+version: "1.0"
+status: FROZEN_CANONICAL
+characters:
+  - id: BLOOM
+    role: Evidence editorial character
+    canonical_sheet_asset_id: PB-EV-BLOOM-SHEET-V1.0
+  - id: EVIDEN
+    role: Evidence editorial character
+    canonical_sheet_asset_id: PB-EV-EVIDEN-SHEET-V1.0
+canonical_pair_asset_id: PB-EV-PAIR-SHEET-V1.0
+assets:
+  - asset_id: PB-EV-BLOOM-SHEET-V1.0
+    kind: character_sheet
+    character: BLOOM
+    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
+    canonical_path: apps/web/public/brand/evidence/characters/bloom/
+    sha256: null
+    note: Exact approved original must be supplied; do not regenerate from prose.
+  - asset_id: PB-EV-EVIDEN-SHEET-V1.0
+    kind: character_sheet
+    character: EVIDEN
+    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
+    canonical_path: apps/web/public/brand/evidence/characters/eviden/
+    sha256: null
+    note: Exact approved original must be supplied; do not regenerate from prose.
+  - asset_id: PB-EV-PAIR-SHEET-V1.0
+    kind: pair_reference
+    characters: [BLOOM, EVIDEN]
+    status: FROZEN_REFERENCE_ASSET_INPUT_REQUIRED
+    canonical_path: apps/web/public/brand/evidence/characters/pair/
+    sha256: null
+    note: Exact approved original must be supplied; do not regenerate from prose.
+policy:
+  scientific_truth_source: Evidence workflow only
+  generated_new_art_status: GENERATED_DRAFT
+  approved_derivative_status: APPROVED_DERIVATIVE
+  canonical_status: CANONICAL
+  material_identity_change_requires_new_version: true
+  missing_master_may_be_regenerated_from_description: false

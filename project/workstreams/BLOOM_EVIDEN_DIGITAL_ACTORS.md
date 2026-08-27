@@ -12,14 +12,14 @@
 - SHA-256: `5851308bcdb0525c33b3f77851615a1b5e6b0c1ab06b99d927646bc78d6b33b1`
 - Identity Bible v1.0 — `CANONICAL_FROZEN`
 - Turnaround Master v1.0 — `CANONICAL_FROZEN`
-- Expression Library v1.0 — `REVIEW`
+- Expression Library v1.0 — `CANONICAL_FROZEN`
 
 ### Eviden
 - Master: `PB-EV-EVIDEN-CHARACTER-MASTER-V1.0` — `CANONICAL_FROZEN`
 - SHA-256: `5ccaf041f9dfeaa06994fdbbc16d907dedadfd841974da6d4226b62c929ab9cd`
 - Identity Bible v1.0 — `CANONICAL_FROZEN`
 - Turnaround Master v1.0 — `CANONICAL_FROZEN`
-- Expression Library v1.0 — `TODO`
+- Expression Library v1.0 — `REVIEW`
 
 Canonical rule: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor, prose-regeneration, silent overwrite or material identity change under the same version.
 
@@ -31,7 +31,7 @@ Canonical rule: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor, prose-r
 | AV-01 | Canonical asset ingest | IN_PROGRESS | Metadata reconciled; exact PNG repository binary ingest remains pending. |
 | AV-02 | Character identity bible | DONE | Bloom + Eviden frozen. |
 | AV-03 | Turnaround masters | DONE | Bloom + Eviden exact-source turnaround references frozen. |
-| AV-04 | Expression library | IN_PROGRESS | Bloom exact-source 15-expression library in Owner review; Eviden TODO. |
+| AV-04 | Expression library | IN_PROGRESS | Bloom frozen; Eviden exact-source 15-expression library in Owner review. |
 | AV-05 | Pose & gesture library | TODO | Not started. |
 | AV-06 | Duo interaction bible | TODO | Not started. |
 | AV-07 | Editorial role bible | TODO | Not started. |
@@ -56,21 +56,21 @@ Canonical rule: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor, prose-r
 | AV-26 | Post-release review | TODO | Not started. |
 
 ## AV-01 note
-Exact actor master binaries are still not stored in the repository asset path. Their metadata and canonical checksums are durable, but AV-01 must not be marked DONE until the exact PNG binaries are physically ingested and verified.
+Exact actor master binaries are still not stored in the repository asset path. Their metadata and canonical checksums are durable, but AV-01 must not be marked DONE until exact PNG binaries are physically ingested and verified.
 
 ## AV-02 completion
 Bloom and Eviden Identity Bible v1.0 are both `CANONICAL_FROZEN` by Owner approval on 2026-08-27.
 
 ## AV-03 completion
-Bloom and Eviden Turnaround Master v1.0 are both `CANONICAL_FROZEN` by Owner approval on 2026-08-27. All turnaround references are exact crops from their respective canonical source masters; no generative reconstruction was used. These references are not transparent rig-ready sprites.
+Bloom and Eviden Turnaround Master v1.0 are both `CANONICAL_FROZEN` by Owner approval on 2026-08-27. Turnarounds are exact canonical-source crops, not transparent rig-ready sprites.
 
 ## AV-04 record
 
 ### Bloom
-`project/brand/evidence/actors/BLOOM_EXPRESSION_LIBRARY_V1.0.md` is in `REVIEW` and contains 15 exact-source expression references: Neutral, Happy, Curious, Surprised, Excited, Thoughtful, Explaining, Concerned, Focused, Confident, Empathetic, Encouraging, Questioning, Playful and Grateful. Each derivative has its own SHA-256 and traces directly to `PB-EV-BLOOM-CHARACTER-MASTER-V1.0`. No facial synthesis/redraw was used.
+`project/brand/evidence/actors/BLOOM_EXPRESSION_LIBRARY_V1.0.md` — `CANONICAL_FROZEN` by Owner approval on 2026-08-27. Fifteen exact-source expressions with per-asset checksums; no facial synthesis/redraw.
 
 ### Eviden
-Not started. Begin only after Bloom review/freeze unless explicitly parallelized.
+`project/brand/evidence/actors/EVIDEN_EXPRESSION_LIBRARY_V1.0.md` — `REVIEW`. Fifteen exact-source expressions: Neutral, Focused, Curious, Thoughtful, Surprised, Analytical, Explaining, Confident, Concerned, Skeptical, Pensive, Clarifying, Emphatic, Approving and Calm Smile. Each has its own SHA-256 and traces directly to `PB-EV-EVIDEN-CHARACTER-MASTER-V1.0`. No facial synthesis/redraw was used.
 
 Expression references are not animation-ready facial rigs or viseme sets. Cleaning, masking, enlargement, interpolation and rig linkage are separate controlled derivatives.
 
@@ -83,4 +83,4 @@ Expression references are not animation-ready facial rigs or viseme sets. Cleani
 6. New actor versions are additive/versioned; frozen masters are never silently replaced.
 
 ## Exact next action
-Owner review of Bloom Expression Library v1.0. If approved, freeze Bloom's library and prepare Eviden Expression Library v1.0 from exact canonical source-sheet expressions.
+Owner review of Eviden Expression Library v1.0. If approved, freeze Eviden's library, mark `AV-04 = DONE`, and begin `AV-05 Pose & Gesture Library` with Bloom first.

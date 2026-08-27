@@ -158,16 +158,6 @@ milestones:
     legal_privacy_review_approved: PENDING
     owner_production_authorization: PENDING
     production_instrumentation: BLOCKED
-  legal_regulatory_compliance:
-    current: active
-    migration_accepted: APPROVED
-    domain_operation: ACTIVE
-    migration_reopen_required: false
-  catalog_pricing:
-    current: active
-    migration_accepted: APPROVED
-    domain_operation: ACTIVE
-    migration_reopen_required: false
   security_assurance:
     current: active_capability
     authority: TECHNICAL_DIRECTION_CONTROL_PLANE

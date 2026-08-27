@@ -26,9 +26,13 @@ Develop Bloom and Eviden from frozen visual characters into reproducible digital
 ### Eviden
 - Asset ID: `PB-EV-EVIDEN-CHARACTER-MASTER-V1.0`
 - Status: `CANONICAL_FROZEN`
-- SHA-256 currently recorded: `38189c4ed4c88f04c8bd67deeac6839a0f1d14fe682ccb7f1d67f92ce50599c3`
+- Binary authority: exact user-approved PNG supplied 2026-08-27
+- SHA-256: `5ccaf041f9dfeaa06994fdbbc16d907dedadfd841974da6d4226b62c929ab9cd`
 - Dimensions: 1536 × 1024 px
-- State: exact user-approved binary still requires repository-ingest verification before AV-01 can close.
+- Mode: RGBA
+- Bytes: 2,946,020
+- Registry: `project/brand/evidence/actors/EVIDEN_BINARY_V1.0.md`
+- Note: this checksum supersedes the earlier provisional Eviden checksum. The provisional checksum is not canonical.
 
 Canonical rule for both: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor, regeneration from prose, silent overwrite, or material identity change without a new approved version.
 
@@ -46,7 +50,7 @@ Canonical rule for both: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor
 | ID | Stage | Status | Exit criterion / deliverable |
 |---|---|---|---|
 | AV-00 | Workstream foundation | DONE | Dedicated branch, durable tracker, scope and canonical master checksums recorded. |
-| AV-01 | Canonical asset ingest | IN_PROGRESS | Exact Bloom/Eviden frozen binaries stored in approved repository asset paths and SHA-256 verified. Bloom metadata is reconciled; exact binary ingest plus Eviden verification remain. |
+| AV-01 | Canonical asset ingest | IN_PROGRESS | Exact Bloom/Eviden frozen binaries stored in approved repository asset paths and SHA-256 verified. Both canonical metadata records are reconciled; binary ingest remains. |
 | AV-02 | Character identity bible | TODO | Immutable traits, allowed variation, forbidden drift, proportions, wardrobe, accessories and visual invariants documented for each actor. |
 | AV-03 | Turnaround masters | TODO | Approved front / 3⁄4 / profile / back references for each actor derived from canonical identity. |
 | AV-04 | Expression library | TODO | Controlled expression set for Bloom and Eviden, individually approved and versioned. |
@@ -75,11 +79,13 @@ Canonical rule for both: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor
 
 ## AV-01 reconciliation record
 
-- Bloom exact approved binary metadata is now durable and its canonical SHA-256 is `5851308bcdb0525c33b3f77851615a1b5e6b0c1ab06b99d927646bc78d6b33b1`.
+- Bloom exact approved binary metadata is durable and its canonical SHA-256 is `5851308bcdb0525c33b3f77851615a1b5e6b0c1ab06b99d927646bc78d6b33b1`.
 - Earlier Bloom SHA-256 `7ec8d8b7d408e2093ff973a17efe1b686dbfc6978a3319575715906d261a5b6c` is explicitly superseded and must not be used as canonical authority.
 - Bloom binary registry exists at `project/brand/evidence/actors/BLOOM_BINARY_V1.0.md`.
-- The exact Bloom PNG itself still needs binary repository ingest; no text record substitutes for the binary.
-- Eviden exact binary must likewise be ingested and checksum-verified before `AV-01 = DONE`.
+- Eviden exact approved binary metadata is durable and its canonical SHA-256 is `5ccaf041f9dfeaa06994fdbbc16d907dedadfd841974da6d4226b62c929ab9cd`.
+- Earlier Eviden SHA-256 `38189c4ed4c88f04c8bd67deeac6839a0f1d14fe682ccb7f1d67f92ce50599c3` is explicitly superseded and must not be used as canonical authority.
+- Eviden binary registry exists at `project/brand/evidence/actors/EVIDEN_BINARY_V1.0.md`.
+- The exact Bloom and Eviden PNG files themselves still need binary repository ingest; no text record substitutes for the binaries.
 
 ## Non-negotiable separation rules
 
@@ -101,4 +107,4 @@ Canonical rule for both: `CHECKSUM_MISMATCH = NOT_CANONICAL`. No redraw, recolor
 
 ## Exact next action
 
-Finish `AV-01`: ingest the exact Bloom PNG and exact Eviden PNG into the approved repository binary asset paths, verify both SHA-256 values, and record their paths. Then begin `AV-02 Character identity bible` for Bloom first, followed by Eviden.
+Finish `AV-01`: ingest the exact Bloom PNG and exact Eviden PNG into the approved repository binary asset paths and verify them against the canonical SHA-256 values above. Then mark `AV-01 = DONE` and begin `AV-02 Character identity bible` for Bloom first, followed by Eviden.

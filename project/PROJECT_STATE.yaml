@@ -158,6 +158,14 @@ milestones:
     legal_privacy_review_approved: PENDING
     owner_production_authorization: PENDING
     production_instrumentation: BLOCKED
+  security_assurance:
+    current: active_capability
+    authority: TECHNICAL_DIRECTION_CONTROL_PLANE
+    decision: PB-DEC-503
+    independent_business_domain: false
+    security_gate_authority: true
+    implementation_ownership: OWNING_TECHNICAL_DOMAIN
+    legal_privacy_authority: false
 
 execution_state:
   operating_rule: OUTPUT_BEFORE_NEW_FOUNDATION

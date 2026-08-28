@@ -4,6 +4,7 @@ Only approved decisions belong here. Proposals remain in domain handoffs or open
 
 | ID | Decision | Status |
 |---|---|---|
+| PB-DEC-002 | Web / Localization: Spanish (`es`) is the primary/default public locale and uses unprefixed routes (for example `/`, `/calculator/`, `/library/`, `/methodology/`); English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable. Minimum multilingual support remains `es` / `en` / `fr` under PB-DEC-116. This resolves the primary-language, URL-prefix and fallback question referenced by PB-DEC-117. It authorizes Control Plane reconciliation and localization-ready Web implementation within existing Web, Evidence, Legal, Accessibility, merge and publication gates, but does not itself authorize publication, merge, scientific claims, Analytics production instrumentation or Commerce. Owner approval date: 2026-08-28. | APPROVED |
 | PB-DEC-003 | Web / Infrastructure: PeptiBloom's permanent production canonical domain is `https://peptibloomproject.com` and Cloudflare Workers is the approved production hosting. Public Web/SEO references may treat this URL as the production origin. Any material future domain or hosting change requires a new Owner decision. Owner approval date: 2026-08-18. | APPROVED |
 | I13-5391139927/#13 | Packaging classes are operational, not commercial or quality grades: `S/M/LARGE` are validated physical-size classes; `COLD` and `BUNDLE` are independent overlays; components remain inventory-authoritative; production use requires responsible physical validation. Owner directive: Issue #13 comment 5391139927, 2026-08-24. | APPROVED |
 | I13-5391139927/#14 | Production-relevant visual assets use distinct editable-master and durable-export authority, version/supersession provenance and stable Asset Records; the official logo and public contact authority remain unchanged. Owner directive: Issue #13 comment 5391139927, 2026-08-24. | APPROVED |
@@ -57,7 +58,6 @@ The following remain outside this approval and must not be inferred as global ca
 - definitive Compound detail layout;
 - final scientific dense-data/table patterns;
 - OpenGraph art and final brand asset set;
-- public launch primary language;
 
 ## Open decisions
 

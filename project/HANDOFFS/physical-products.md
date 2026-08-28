@@ -90,6 +90,49 @@ Physical Products / Accessories does not own or authorize:
 
 This handoff does not create additional Commerce canon.
 
+## Bloom Caps — latest Owner evidence reconciliation
+
+Source: Issue #17 comment `5346269304`.
+
+The latest Owner-provided functional/interface evidence is accepted as controlled PRE-G0 / G0-G2 input only. It does not pass a gate and does not authorize CAD or fabrication.
+
+Functional interaction selected by Owner:
+
+- Bloom Cap may cover/block the original green flip-off while installed;
+- Bloom Cap is removed before vial access;
+- the original flip-off/crimp closure remains intact and non-sacrificial;
+- installation must not require dismantling the original green flip-off.
+
+Owner constraints retained:
+
+- manual removal without tools;
+- intermediate retention: the Bloom Cap should not fall off loosely;
+- must not damage, deform or pull the original aluminum closure;
+- aluminum must not be assumed to be a safe retention surface without evidence.
+
+Controlled observed interface evidence currently available:
+
+- measured quantity: maximum external diameter of the closed green plastic flip-off, edge-to-edge through the center, excluding the aluminum below;
+- Owner readings: `15.07 mm`, `15.06 mm`, `15.07 mm`;
+- observed arithmetic mean: `15.0667 mm`, reportable at this phase as `15.07 mm` observed mean;
+- observed range across those three readings: `0.01 mm`.
+
+These observations are not a nominal standard, manufacturing tolerance, fit allowance, clearance, common-core proof or evidence of any unmeasured height, undercut, aluminum, neck, shoulder or open-cap geometry.
+
+Current Bloom Caps gate interpretation remains fail-closed:
+
+- baseline: `CLEAN_SHEET`;
+- `G0`: NOT DECLARED PASSED;
+- `G1`: NOT DECLARED PASSED;
+- `G2`: NOT PASSED from the available diameter evidence alone;
+- `common_core = HYPOTHESIS_ONLY`;
+- `cad_authorized = false`;
+- prototype fabrication is not authorized by this reconciliation.
+
+The first clean-sheet candidate architecture — a removable cap enveloping only the green plastic flip-off — may be evaluated as a candidate only. If additional evidence is required, request only the next minimum physical measurement needed for a concrete architecture/gate decision and specify the measurement points, orientation and practical precision. Do not infer missing dimensions or tolerances.
+
+Physical validation, if eventually achieved, remains independent from `READY_FOR_SALE`, publication, Legal/IP clearance and Commerce authorization.
+
 ## PB-XD timing
 
 `PB-XD REQUIRED NOW: NO` for continued Physical Products reconciliation and domain-local documentation.

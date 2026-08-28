@@ -38,9 +38,15 @@ The editorial avatars are distinct from lighter/junior character skins. Earlier 
 
 These assets are visual communicators only. They do not create scientific truth, approval, publication authority, or evidence status.
 
+## Working-session binary verification
+
+On 2026-08-28 the Owner supplied the exact Bloom and Eviden master PNG files. Their SHA-256 values were recomputed in the working session and matched the frozen registry values above exactly.
+
+This confirms the supplied files are the frozen source masters for visual derivative QA. Repository-level binary persistence remains a separate step: a committed binary is canonical only if its hash matches this registry.
+
 ## Binary persistence status
 
-The exact binary masters are frozen by filename + dimensions + SHA-256 above. This GitHub connector can persist the registry text but cannot upload arbitrary binary PNG content through the text-file API. Therefore the binary masters still need to be placed in the repository asset paths through a binary-capable workflow before repository-level binary persistence is complete.
+The exact binary masters are frozen by filename + dimensions + SHA-256 above. Repository-level binary persistence is still pending.
 
 Recommended canonical paths:
 

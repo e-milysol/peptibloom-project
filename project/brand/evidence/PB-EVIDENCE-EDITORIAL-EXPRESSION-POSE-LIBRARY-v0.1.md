@@ -1,6 +1,6 @@
 # PB-EVIDENCE-EDITORIAL-EXPRESSION-POSE-LIBRARY v0.1
 
-**STATUS: DRAFT / DERIVED FROM FROZEN MASTERS / NOT YET VISUALLY VALIDATED**
+**STATUS: DRAFT / DERIVED FROM FROZEN MASTERS / VISUAL QA PERFORMED / TEXT RECONCILIATION PENDING**
 
 This library defines the first controlled expression and pose set for the frozen PeptiBloom Evidence editorial avatars recorded in `PB-EVIDENCE-EDITORIAL-AVATARS-v1.0.md`.
 
@@ -13,12 +13,14 @@ It does **not** redefine either character. It defines permitted derivative actin
 - Asset ID: `PB-BLOOM-EDITORIAL-v1.0`
 - Role: Explain · Orient · Connect
 - Canonical master identity remains frozen by the registry filename, dimensions and SHA-256.
+- Working-session binary re-verification: PASS against frozen SHA-256.
 
 ### Eviden Editorial
 
 - Asset ID: `PB-EVIDEN-EDITORIAL-v1.0`
 - Role: Question · Analyze · Clarify
 - Canonical master identity remains frozen by the registry filename, dimensions and SHA-256.
+- Working-session binary re-verification: PASS against frozen SHA-256.
 
 ## Identity locks for every derivative
 
@@ -123,6 +125,14 @@ The first visual-production round should be deliberately small. Do not generate 
 5. `EV-X06 + EV-P06` — clarify/compare.
 6. `EV-X07 + EV-P07` — flag gap/contradiction.
 
+## Reference-sheet QA status
+
+Bloom-only, Eviden-only and joint reference sheets have been produced as visual candidates and reviewed. See `PB-EVIDENCE-EDITORIAL-REFERENCE-SHEETS-QA-v0.1.md`.
+
+Important: labels and IDs generated inside the sheet images are not authoritative metadata. Several differ from this durable table. Therefore no sheet is frozen yet and no sheet may redefine an ID from image text alone.
+
+The Owner-approved direction to avoid overconfident Eviden semantics and prefer bounded evaluation language (e.g. `Ponderando / Evaluación`) is recorded as a reconciliation input, not silently applied to the table until the durable taxonomy is explicitly updated.
+
 ## Validation criteria for each generated derivative
 
 A candidate passes visual review only if all are true:
@@ -153,11 +163,11 @@ Reject and regenerate if any of the following occurs:
 
 ## Binary-production gate
 
-The exact canonical Bloom and Eviden PNG masters are not present in this branch as repository binaries at the time this document is created; the registry freezes them by filename, dimensions and SHA-256.
+The exact canonical Bloom and Eviden PNG masters were supplied by the Owner in the working session and re-verified against the frozen registry hashes. They are therefore valid source masters for controlled visual QA/derivative work in the working session.
 
-Therefore visual derivative generation must wait until an exact master binary is available to the image-editing workflow and can be verified against the frozen registry. Do **not** regenerate a master from prose in order to create poses.
+Repository-level binary persistence is still pending. Do **not** substitute regenerated masters; when binaries are committed, their hashes must match the frozen registry exactly.
 
-Once the master binaries are available and verified, produce Round 1 one character at a time, review identity fidelity, then expand only after the first round passes.
+Reference sheets are not derivative extraction sources. Individual reusable derivatives must be generated from the verified master binary and validated individually.
 
 ## Versioning
 

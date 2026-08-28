@@ -1,181 +1,165 @@
 # PB-EVIDENCE-EDITORIAL-EXPRESSION-POSE-LIBRARY v0.1
 
-**STATUS: DRAFT / DERIVED FROM FROZEN MASTERS / VISUAL QA PERFORMED / TEXT RECONCILIATION PENDING**
+**STATUS: RECONCILED / FREEZE CANDIDATE / DERIVED FROM VERIFIED FROZEN MASTERS**
 
-This library defines the first controlled expression and pose set for the frozen PeptiBloom Evidence editorial avatars recorded in `PB-EVIDENCE-EDITORIAL-AVATARS-v1.0.md`.
+This library defines the controlled expression and pose taxonomy for the frozen PeptiBloom Evidence editorial avatars recorded in `PB-EVIDENCE-EDITORIAL-AVATARS-v1.0.md`.
 
 It does **not** redefine either character. It defines permitted derivative acting states that must preserve the exact frozen master identity when visual assets are produced.
 
 ## Source masters
 
 ### Bloom Editorial
-
 - Asset ID: `PB-BLOOM-EDITORIAL-v1.0`
 - Role: Explain · Orient · Connect
-- Canonical master identity remains frozen by the registry filename, dimensions and SHA-256.
-- Working-session binary re-verification: PASS against frozen SHA-256.
+- Master binary SHA-256 re-verified in working session: PASS.
 
 ### Eviden Editorial
-
 - Asset ID: `PB-EVIDEN-EDITORIAL-v1.0`
 - Role: Question · Analyze · Clarify
-- Canonical master identity remains frozen by the registry filename, dimensions and SHA-256.
-- Working-session binary re-verification: PASS against frozen SHA-256.
+- Master binary SHA-256 re-verified in working session: PASS.
 
 ## Identity locks for every derivative
 
 Every expression/pose derivative must preserve:
-
 - same character identity and apparent age;
 - same facial structure and proportions;
 - same hair identity and silhouette unless motion naturally displaces it;
 - same wardrobe identity, garment design and color relationships;
 - same body proportions and visual style;
-- same overall rendering language and material treatment;
-- no added logos, accessories, scientific symbols, props or UI unless separately authorized;
-- no recasting, beautification, age shift, body reshaping or style drift;
-- no uncontrolled "lookalike" or cousin generation.
+- same rendering language and material treatment;
+- no uncontrolled lookalike/cousin generation;
+- no recasting, beautification, age shift, body reshaping or style drift.
 
-A derivative that changes identity rather than acting state is rejected.
+Props and scene objects are optional composition context only unless separately approved. They do not become character identity or canon merely because they appear in a sheet.
 
 ## Acting intensity scale
 
-Use a restrained editorial scale rather than cartoon exaggeration:
+- `L1` — neutral/subtle.
+- `L2` — clear/editorial.
+- `L3` — emphatic, still restrained and identity-safe.
 
-- `L1` — neutral/subtle: suitable for persistent UI, cards and calm explanatory surfaces.
-- `L2` — clear/editorial: readable at medium size without becoming theatrical.
-- `L3` — emphatic: reserved for hero/feature moments; still compatible with the canonical character.
+Default target: `L1–L2`.
 
-Default target for this library: `L1–L2`.
+# Reconciled canonical draft taxonomy
 
-## Bloom expression set
+## Bloom expressions
 
-Bloom communicates warmth, explanation, orientation and connection. Expressions should read as approachable and confident, never promotional or medically authoritative.
+Bloom communicates clarity, empathy, explanation, orientation and connection. Expressions must remain warm and readable without becoming promotional, overly cute or medically authoritative.
 
-| ID | Expression | Intent | Intensity |
+| ID | Display label | Controlled meaning | Intensity |
 | --- | --- | --- | --- |
-| `BL-X01` | Neutral attentive | listening / presence / default | L1 |
-| `BL-X02` | Warm small smile | welcome / reassurance / connection | L1 |
-| `BL-X03` | Open explanatory | introducing or explaining an idea | L2 |
-| `BL-X04` | Encouraging | gentle positive reinforcement | L2 |
-| `BL-X05` | Curious attentive | inviting exploration without judgment | L1–L2 |
-| `BL-X06` | Thoughtful | considering context or uncertainty | L1 |
-| `BL-X07` | Concerned but calm | acknowledging limitation, caveat or friction | L1–L2 |
-| `BL-X08` | Clear emphasis | highlighting one important point | L2 |
+| `BL-X01` | Neutra / Amable | default attentive presence; calm welcome | L1 |
+| `BL-X02` | Entusiasta | moderate positive energy; encouragement without sales tone | L2 |
+| `BL-X03` | Curiosa / Pensativa | curiosity, exploration, reflective attention | L1–L2 |
+| `BL-X04` | Explicativa | actively introducing or explaining an idea | L2 |
+| `BL-X05` | Empática | acknowledgement, reassurance and human connection | L1–L2 |
+| `BL-X06` | Pensativa | considering context, uncertainty or methodology | L1 |
+| `BL-X07` | Seria / Rigurosa | focused, careful, non-dramatic scientific seriousness | L1–L2 |
+| `BL-X08` | Límite / Precaución | bounded caution, caveat or do-not-overinterpret signal | L2 |
 
-## Bloom pose/gesture set
+## Bloom postures
 
-| ID | Pose / gesture | Intended use |
+| ID | Display label | Controlled use |
 | --- | --- | --- |
-| `BL-P01` | Neutral three-quarter standing, relaxed arms | canonical/default editorial presence |
-| `BL-P02` | Open-hand explanation, one hand slightly forward | explain a concept or section |
-| `BL-P03` | Two-hand framing gesture, compact | connect two related ideas |
-| `BL-P04` | Side presentation gesture with open palm | orient toward adjacent text/card/diagram |
-| `BL-P05` | Hands lightly together at midline | calm listening / transition / reassurance |
-| `BL-P06` | One hand near chin, restrained thinking posture | uncertainty / reflection / methodology context |
-| `BL-P07` | Slight forward engagement, hands relaxed | welcome / call attention without sales energy |
-| `BL-P08` | Small stop/caution gesture, palm low and non-alarmist | limitation / boundary / do-not-overinterpret |
+| `BL-P01` | De pie – Neutra | canonical/default editorial presence |
+| `BL-P02` | Explicando | explain a concept with open-hand gesture |
+| `BL-P03` | Orientando | guide attention toward adjacent text, card or diagram |
+| `BL-P04` | Caminando | transition, movement between sections, approachable continuity |
+| `BL-P05` | Sentada – Tablet | calm review/reading posture; tablet optional composition prop |
+| `BL-P06` | En laboratorio | observational/research context only; microscope/lab prop optional and non-authoritative |
+| `BL-P07` | Con libros | learning/reference context only; books optional composition prop |
+| `BL-P08` | Señalando límite | clear but non-alarmist caution/boundary gesture |
 
-## Eviden expression set
+## Eviden expressions
 
-Eviden communicates inquiry, analysis and clarification. Expressions should read as rigorous and perceptive, never hostile, smug or theatrically skeptical.
+Eviden communicates inquiry, analysis, skepticism, evaluation and clarification. Expressions must remain rigorous and perceptive, never hostile, smug, absolute or theatrically skeptical.
 
-| ID | Expression | Intent | Intensity |
+| ID | Display label | Controlled meaning | Intensity |
 | --- | --- | --- | --- |
-| `EV-X01` | Neutral analytical | default review state | L1 |
-| `EV-X02` | Focused | close reading / analysis | L1–L2 |
-| `EV-X03` | Curious question | request clarification / investigate | L2 |
-| `EV-X04` | Skeptical but neutral | challenge unsupported inference without ridicule | L1–L2 |
-| `EV-X05` | Thoughtful | weighing competing evidence | L1 |
-| `EV-X06` | Clarifying | resolving ambiguity / distinction | L2 |
-| `EV-X07` | Concerned analytical | flag evidence gap or contradiction | L1–L2 |
-| `EV-X08` | Satisfied resolution | conclusion reached / ambiguity resolved | L1 |
+| `EV-X01` | Neutro / Amable | default analytical presence | L1 |
+| `EV-X02` | Curioso | asks, investigates, seeks clarification | L1–L2 |
+| `EV-X03` | Analítico / Lupa | close analysis and evidence inspection; lupa optional prop | L2 |
+| `EV-X04` | Escéptico | bounded challenge to unsupported inference, without ridicule | L1–L2 |
+| `EV-X05` | Aclarador / Explica | resolves ambiguity or draws a precise distinction | L2 |
+| `EV-X06` | Pensativo | weighs context, uncertainty or competing evidence | L1 |
+| `EV-X07` | Ponderando / Evaluación | balanced evaluation; expresses assessed weight, not certainty | L1–L2 |
+| `EV-X08` | Gap / Contradicción | flags evidence gap, contradiction or unresolved inconsistency | L1–L2 |
 
-## Eviden pose/gesture set
+`Seguro` is explicitly **not** an Eviden expression state in this library. It is superseded by the bounded `EV-X07 Ponderando / Evaluación` concept.
 
-| ID | Pose / gesture | Intended use |
+## Eviden postures
+
+| ID | Display label | Controlled use |
 | --- | --- | --- |
-| `EV-P01` | Neutral three-quarter standing, composed arms | canonical/default analytical presence |
-| `EV-P02` | One-hand question gesture, palm slightly upward | ask / challenge / request evidence |
-| `EV-P03` | Small pinching/precision gesture | distinguish a narrow technical point |
-| `EV-P04` | Open palm toward adjacent evidence block | cite / point to source or comparison |
-| `EV-P05` | One hand near chin, analytical thinking posture | evaluate uncertainty / contradiction |
-| `EV-P06` | Two-hand comparison gesture | compare A vs B / separate contexts |
-| `EV-P07` | Low caution gesture, controlled | flag unsupported claim / limitation |
-| `EV-P08` | Compact conclusion gesture, hands settled | clarify / close analytical loop |
+| `EV-P01` | De pie – Neutra | canonical/default analytical presence |
+| `EV-P02` | Pensando | restrained analytical reflection |
+| `EV-P03` | Analizando | active examination of material/data; handheld prop optional |
+| `EV-P04` | Investigando | research/inquiry context; lupa/document optional composition props |
+| `EV-P05` | Explicando | clarify or explain a distinction |
+| `EV-P06` | En pizarra | structured comparison/explanation context; board optional prop |
+| `EV-P07` | Con libros | reference/review context only; books optional composition prop |
+| `EV-P08` | Comparando | compare A vs B, agreement vs disagreement, or alternative interpretations |
 
-## First controlled production matrix
+## Semantic guardrails for prop-based postures
 
-The first visual-production round should be deliberately small. Do not generate the full Cartesian product of expressions and poses.
+- `En laboratorio`, `Con libros`, `En pizarra`, `Investigando`, `Sentada – Tablet` describe **composition/context**, not permanent accessories.
+- A prop must never imply a scientific claim, clinical instruction, Evidence approval, product endorsement or regulatory authority.
+- The character must remain recognizable without the prop.
+- Prop removal does not create a new character version.
 
-### Bloom Round 1
+## First controlled production matrix after reconciliation
 
+### Bloom
 1. `BL-X01 + BL-P01` — neutral/default.
-2. `BL-X03 + BL-P02` — explain.
-3. `BL-X02 + BL-P04` — orient/present.
-4. `BL-X06 + BL-P06` — thoughtful.
-5. `BL-X07 + BL-P08` — limitation/caution.
+2. `BL-X04 + BL-P02` — explain.
+3. `BL-X03 + BL-P03` — orient/explore.
+4. `BL-X06 + BL-P05` — thoughtful review.
+5. `BL-X08 + BL-P08` — limitation/caution.
 
-### Eviden Round 1
-
+### Eviden
 1. `EV-X01 + EV-P01` — neutral/default.
-2. `EV-X03 + EV-P02` — question.
-3. `EV-X02 + EV-P03` — analyze precisely.
-4. `EV-X05 + EV-P05` — weigh evidence.
-5. `EV-X06 + EV-P06` — clarify/compare.
-6. `EV-X07 + EV-P07` — flag gap/contradiction.
+2. `EV-X02 + EV-P02` — curious/thinking.
+3. `EV-X03 + EV-P03` — analyze precisely.
+4. `EV-X07 + EV-P04` — evaluate/investigate.
+5. `EV-X05 + EV-P05` — clarify/explain.
+6. `EV-X08 + EV-P08` — flag gap/compare contradiction.
 
-## Reference-sheet QA status
+## Reference-sheet status
 
-Bloom-only, Eviden-only and joint reference sheets have been produced as visual candidates and reviewed. See `PB-EVIDENCE-EDITORIAL-REFERENCE-SHEETS-QA-v0.1.md`.
+The Bloom-only, Eviden-only and joint sheets remain `REFERENCE_CANDIDATE` until regenerated so every displayed ID and label exactly matches this reconciled taxonomy.
 
-Important: labels and IDs generated inside the sheet images are not authoritative metadata. Several differ from this durable table. Therefore no sheet is frozen yet and no sheet may redefine an ID from image text alone.
+Reference sheets are indexes only: **DO NOT EXTRACT ASSETS FROM THIS IMAGE**.
 
-The Owner-approved direction to avoid overconfident Eviden semantics and prefer bounded evaluation language (e.g. `Ponderando / Evaluación`) is recorded as a reconciliation input, not silently applied to the table until the durable taxonomy is explicitly updated.
+Individual reusable derivatives must be generated from the verified master binaries and validated individually.
 
-## Validation criteria for each generated derivative
+## Validation criteria
 
-A candidate passes visual review only if all are true:
-
-1. Character is immediately recognizable as the same frozen master.
-2. Face identity is preserved; expression changes muscles, not facial anatomy.
-3. Hair, wardrobe, proportions and rendering style remain materially consistent.
-4. Pose reads clearly without exaggerated anatomy or theatrical gesturing.
-5. Intended communication state is understandable without text.
-6. No accidental scientific authority, clinical instruction or evidence-status symbolism is introduced.
-7. No extra prop or accessory becomes part of the character canon by accident.
-8. Background/composition changes do not alter character identity.
+A candidate passes only if:
+1. same frozen-master identity at first glance;
+2. face identity preserved; acting changes expression, not anatomy;
+3. hair, wardrobe, proportions and rendering style materially consistent;
+4. pose reads clearly without exaggerated anatomy or theatrical gesturing;
+5. intended communication state understandable without caption;
+6. no accidental scientific authority, medical instruction or Evidence-status symbolism;
+7. no prop/accessory silently becomes character canon;
+8. composition does not alter character identity.
 
 ## Rejection triggers
 
-Reject and regenerate if any of the following occurs:
-
-- face drift or different-person appearance;
-- age drift;
-- hairstyle redesign rather than natural pose motion;
-- wardrobe redesign/recoloring;
-- altered body proportions;
-- caricatured emotion;
-- aggressive, flirtatious, sales-like or heroic posing inconsistent with editorial roles;
-- new jewelry/accessories/props becoming visually dominant;
-- scientific or medical symbolism that implies authority not granted by Evidence;
-- output that resembles a new character rather than a derivative acting state.
+Reject on face drift, age drift, hairstyle redesign, wardrobe redesign/recoloring, body-proportion change, caricatured emotion, aggressive/flirtatious/sales/heroic posing, dominant unapproved prop, or any output that resembles a new character rather than a derivative acting state.
 
 ## Binary-production gate
 
-The exact canonical Bloom and Eviden PNG masters were supplied by the Owner in the working session and re-verified against the frozen registry hashes. They are therefore valid source masters for controlled visual QA/derivative work in the working session.
+The exact Bloom and Eviden masters were supplied by the Owner and re-verified against the frozen registry hashes in the working session. Repository-level binary persistence is still pending.
 
-Repository-level binary persistence is still pending. Do **not** substitute regenerated masters; when binaries are committed, their hashes must match the frozen registry exactly.
-
-Reference sheets are not derivative extraction sources. Individual reusable derivatives must be generated from the verified master binary and validated individually.
+Do not substitute regenerated masters. When binaries are committed, their hashes must match the frozen registry exactly.
 
 ## Versioning
 
-Generated visual assets should use stable derivative identifiers tied to the source master and library IDs. Suggested naming pattern:
-
-- `bloom_editorial_v1__BL-X03__BL-P02__r01.png`
-- `eviden_editorial_v1__EV-X06__EV-P06__r01.png`
+Suggested derivative naming:
+- `bloom_editorial_v1__BL-X04__BL-P02__r01.png`
+- `eviden_editorial_v1__EV-X05__EV-P05__r01.png`
 
 `rNN` is a production revision, not a new canonical character version.
 
-Approval of an individual derivative does not automatically approve all combinations in this library.
+Approval of an individual derivative does not automatically approve every combination in this library.

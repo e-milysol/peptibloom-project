@@ -23,9 +23,9 @@ Operational checkpoint:
 - `NEXT_ACTION`: continue autonomous Analytics work; manage Legal/Web/provider dependencies through the Control Plane and verify proposed implementation against Measurement Contract v1 without activating production instrumentation.
 - `BLOCKERS`: no Analytics migration blocker. Production remains blocked by `WEB_TECHNICAL_VALIDATION_APPROVED`, `LEGAL_PRIVACY_REVIEW_APPROVED` and `OWNER_PRODUCTION_AUTHORIZATION`.
 - `OWNER_REQUIRED`: NONE currently. Owner authority is required only when a genuine Owner decision arises, including the existing future production-authorization gate.
-- `DEPENDENCIES`: Web implementation/runtime validation; Legal privacy determination; provider/account-holder facts; Security-specific control facts are routed to Security Assurance / Technical Direction under Owner-approved PB-DEC-503 as proposed for canonical persistence in draft PR #43. Until #43 is canonically consolidated, this remains a review-state dependency and must not be represented as merged `main` state.
+- `DEPENDENCIES`: Web implementation/runtime validation; Legal privacy determination; provider/account-holder facts; Security-specific control facts are routed to Security Assurance / Technical Direction under Owner-approved PB-DEC-503, with current review-state canonical persistence represented by draft PR #53. Until #53 is canonically consolidated, this remains a review-state dependency and must not be represented as merged `main` state.
 - `OPEN_REQUESTS`: no durable file request is currently recorded under `project/REQUESTS/open/`; routine Legal discovery and routed dependencies are coordinated through Issue #13.
-- `LAST_VERIFIED_GITHUB_STATE`: `main` baseline for this migration PR remains `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`; Security Assurance reconciliation reviewed against draft PR #43 on 2026-08-22.
+- `LAST_VERIFIED_GITHUB_STATE`: `main` baseline for this migration PR remains `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`; Security Assurance reconciliation verified against scope-corrected draft PR #53 at HEAD `79982464bf89fe36edc5225caea667042967cdf3` on 2026-08-28.
 
 Migration acceptance and production readiness are separate gates. Unresolved Web, Legal, Security/provider or Owner production dependencies do not revoke Analytics migration acceptance.
 
@@ -54,7 +54,7 @@ Analytics does not manufacture Web implementation, Security-control or provider/
 
 - Web implementation/runtime facts -> Web authority;
 - provider/account-holder facts -> applicable provider/account operational authority;
-- Security-specific RBAC/audit/incident/deletion-control facts -> Security Assurance / Technical Direction under Owner-approved PB-DEC-503, with canonical persistence currently proposed in draft PR #43; until #43 lands, treat this as review-state coordination rather than merged `main` canon.
+- Security-specific RBAC/audit/incident/deletion-control facts -> Security Assurance / Technical Direction under Owner-approved PB-DEC-503, with current review-state canonical persistence represented by draft PR #53; until #53 lands, treat this as review-state coordination rather than merged `main` canon.
 
 Routine cross-domain coordination uses Issue #13. Absence of an answer from another technical domain does not by itself create `OWNER_REQUIRED`.
 

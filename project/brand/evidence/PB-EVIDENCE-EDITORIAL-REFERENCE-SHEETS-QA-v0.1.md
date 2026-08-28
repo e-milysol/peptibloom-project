@@ -1,6 +1,6 @@
 # PB-EVIDENCE-EDITORIAL-REFERENCE-SHEETS QA v0.1
 
-**STATUS: TAXONOMY RECONCILED / FINAL CROSS-QA COMPLETE / METADATA CORRECTION REQUIRED / FREEZE NOT YET AUTHORIZED**
+**STATUS: TAXONOMY RECONCILED / FINAL CROSS-QA COMPLETE / METADATA CORRECTED / SHEET FREEZE CANDIDATE**
 
 This record reviews the current Bloom-only, Eviden-only and joint Bloom+Eviden reference-sheet candidates against the reconciled expression/pose library and frozen master identities.
 
@@ -59,55 +59,57 @@ The durable source of truth is `PB-EVIDENCE-EDITORIAL-EXPRESSION-POSE-LIBRARY-v0
 - `EV-P07` Con libros
 - `EV-P08` Comparando
 
-## Final-sheet candidates reviewed
+## Corrected final-sheet candidates
 
-### Bloom-only regenerated candidate
+The prior generated metadata was corrected deterministically without regenerating character artwork. Wrong generated master IDs and generated hash strings were replaced with the authoritative registry values.
+
+### Bloom-only corrected candidate
+- Filename: `PB-BLOOM-EDITORIAL-REFERENCE-SHEET-v1.0-corrected.png`
 - Dimensions: `1024 x 1536`
 - Mode: `RGB`
-- Working-file SHA-256: `81deb74821df68973893246473c3bc7d2d08c3805b05909fa27929294220d451`
+- Corrected-file SHA-256: `711fd358832d441358d4da44f69a242f1e929e07d609d7c0b7f073d1b8a46b5e`
 - Taxonomy labels/IDs: `PASS`
-- Character-specific `DO NOT EXTRACT ASSETS` boundary: `PASS`
-- Freeze status: `BLOCKED BY METADATA`
+- Authoritative master ID displayed: `PASS`
+- Authoritative master SHA-256 displayed: `PASS`
+- `DO NOT EXTRACT ASSETS` boundary: `PASS`
+- Status: `SHEET_FREEZE_CANDIDATE`
 
-### Eviden-only regenerated candidate
+### Eviden-only corrected candidate
+- Filename: `PB-EVIDEN-EDITORIAL-REFERENCE-SHEET-v1.0-corrected.png`
 - Dimensions: `1024 x 1536`
 - Mode: `RGB`
-- Working-file SHA-256: `3667daa50f394afd830c1db4b170f1b6494ef602b332f902c2f860a7692aaf11`
+- Corrected-file SHA-256: `78f518cd21a179a2c391487d1329d0072107f01f8aabed49e43adb9c0e44503b`
 - Taxonomy labels/IDs: `PASS`
 - `EV-X07 = Ponderando / Evaluación`: `PASS`
 - `EV-X08 = Gap / Contradicción`: `PASS`
-- Character-specific `DO NOT EXTRACT ASSETS` boundary: `PASS`
-- Freeze status: `BLOCKED BY METADATA`
+- Authoritative master ID displayed: `PASS`
+- Authoritative master SHA-256 displayed: `PASS`
+- `DO NOT EXTRACT ASSETS` boundary: `PASS`
+- Status: `SHEET_FREEZE_CANDIDATE`
 
-### Joint Bloom + Eviden regenerated candidate
+### Joint Bloom + Eviden corrected candidate
+- Filename: `PB-BLOOM-EVIDEN-EDITORIAL-PAIR-REFERENCE-SHEET-v1.0-corrected.png`
 - Dimensions: `1024 x 1536`
 - Mode: `RGB`
-- Working-file SHA-256: `5fa9fe7a33887c0e39130a9dfb545dc95bda6abd1fd15628c72bf5303d56a2ec`
+- Corrected-file SHA-256: `b83bee8fe45e611411833362cd0d068dd5c431e3844271612151b5a96fe965c1`
 - Bloom/Eviden expression and posture lookup tables: `PASS`
+- Authoritative Bloom master ID/SHA-256 displayed: `PASS`
+- Authoritative Eviden master ID/SHA-256 displayed: `PASS`
 - `DO NOT EXTRACT ASSETS` boundary: `PASS`
 - Pair-overview purpose: `PASS`
-- Freeze status: `BLOCKED BY METADATA`
+- Status: `SHEET_FREEZE_CANDIDATE`
 
 ## Cross-QA findings
 
 ### PASS
 
-- All three regenerated sheets use the reconciled `BL-X01..08`, `BL-P01..08`, `EV-X01..08` and `EV-P01..08` lookup labels consistently.
+- All three corrected sheets use the reconciled `BL-X01..08`, `BL-P01..08`, `EV-X01..08` and `EV-P01..08` lookup labels consistently.
 - Bloom and Eviden remain visually distinguishable and coherent with their respective editorial roles.
 - The three-sheet architecture is sound: two character-specific sheets plus one pair overview.
 - Reference sheets remain indexes only and are not reusable-asset extraction sources.
 - Props such as tablet, microscope/lab context, books, lupa and board remain composition context only and do not become character identity or scientific authority.
-
-### BLOCKERS BEFORE FREEZE
-
-The regenerated sheets contain generated metadata text that does **not** match the authoritative frozen registry and therefore cannot be frozen as-is.
-
-1. **Wrong displayed master IDs.** The images use generated IDs such as `BL-MASTER-CHILD-v1.0` and `EV-MASTER-CHILD-v1.0`. These must be replaced with the authoritative Asset IDs `PB-BLOOM-EDITORIAL-v1.0` and `PB-EVIDEN-EDITORIAL-v1.0`.
-2. **Wrong displayed SHA-256 values.** The hashes printed inside the images are generated text and do not match the verified master hashes above. Final sheets must display the exact verified SHA-256 values or omit hashes from the image and leave them only in the durable manifest.
-3. **Joint-sheet reference-sheet filenames are not yet durable artifacts.** Generated labels such as `PB-BLOOM-EDITORIAL-REFERENCE-SHEET-v1.0` / `PB-EVIDEN-EDITORIAL-REFERENCE-SHEET-v1.0` must not be treated as authoritative until exact binary filenames are selected and persisted.
-4. **Joint role summaries are descriptive, not canonical identifiers.** They must not replace the durable role semantics: Bloom = Explain / Orient / Connect; Eviden = Question / Analyze / Clarify.
-
-These are metadata/governance blockers, not a failure of the reconciled expression/pose taxonomy.
+- Wrong generated master IDs are no longer present in the corrected metadata blocks.
+- Wrong generated master hashes are no longer present in the corrected metadata blocks.
 
 ## Prop/context rule
 
@@ -115,22 +117,20 @@ Prop-based labels describe composition context only. Tablet, microscope/lab cont
 
 ## Remaining freeze work
 
-Before any sheet receives `FROZEN_CANONICAL`:
-1. correct the three sheets so displayed master IDs exactly match the frozen registry;
-2. correct or remove on-image SHA-256 text so no generated hash conflicts with the verified registry;
-3. keep all displayed taxonomy IDs/labels exactly as reconciled;
-4. re-run visual/text QA on the corrected exports;
-5. compute new final SHA-256 values from the corrected PNG files;
-6. generate and QA individual reusable derivatives from verified masters, never by cropping sheets;
-7. persist exact masters, corrected final sheets and approved derivatives through a binary-capable Git workflow;
-8. verify committed binaries against the recorded hashes.
+Before the complete derivative system becomes `FROZEN_CANONICAL`:
+1. generate and QA individual reusable derivatives from verified masters, never by cropping sheets;
+2. persist exact masters, corrected final sheets and approved derivatives through a binary-capable Git workflow;
+3. verify committed binaries against the recorded hashes;
+4. only after those checks may the durable registry be promoted from sheet-level freeze candidate to complete frozen derivative library.
+
+The three corrected reference sheets themselves have no remaining taxonomy/metadata blocker and are valid `SHEET_FREEZE_CANDIDATE` artifacts pending binary persistence verification.
 
 ## Authority hierarchy
 
 1. frozen master registry + verified master binary hash;
 2. reconciled durable expression/pose library;
 3. approved individual derivative + hash;
-4. final corrected reference sheet;
+4. corrected reference sheet + hash;
 5. exploratory/contact-sheet output.
 
 A lower layer may not override a higher layer.
@@ -139,10 +139,11 @@ A lower layer may not override a higher layer.
 
 - Master identities: `VERIFIED`.
 - Expression/pose taxonomy: `RECONCILED / PASS`.
-- Bloom-only regenerated sheet: `VISUAL/TAXONOMY PASS / METADATA CORRECTION REQUIRED`.
-- Eviden-only regenerated sheet: `VISUAL/TAXONOMY PASS / METADATA CORRECTION REQUIRED`.
-- Joint regenerated sheet: `VISUAL/TAXONOMY PASS / METADATA CORRECTION REQUIRED`.
-- Final-sheet freeze: `BLOCKED`.
+- Bloom-only corrected sheet: `SHEET_FREEZE_CANDIDATE`.
+- Eviden-only corrected sheet: `SHEET_FREEZE_CANDIDATE`.
+- Joint corrected sheet: `SHEET_FREEZE_CANDIDATE`.
+- Sheet metadata blockers: `RESOLVED`.
 - Individual derivative library: `NOT YET FROZEN`.
 - Binary persistence in repository: `PENDING`.
+- Complete derivative-library freeze: `BLOCKED BY DERIVATIVE QA + BINARY PERSISTENCE`.
 - Merge/publication: `NOT AUTHORIZED`.

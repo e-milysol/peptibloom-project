@@ -1,0 +1,32 @@
+{
+  "system_id": "PEPTIBLOOM-PRICE-LIST-RENDERER",
+  "version": "1.0",
+  "status": "PASS",
+  "supported_compositions": [
+    "AVAILABLE",
+    "ON_DEMAND",
+    "COMBINED"
+  ],
+  "sample_data": "SYNTHETIC_ONLY",
+  "visual_system_dependency": "PB-PRICE-LIST-VISUAL-SYSTEM-v1.0",
+  "checks": {
+    "available_pdf_generated": true,
+    "on_demand_pdf_generated": true,
+    "combined_pdf_generated": true,
+    "combined_rendered_pages": 2,
+    "no_clipped_text_observed": true,
+    "no_overlaps_observed": true,
+    "no_broken_glyphs_observed": true,
+    "promo_optional_supported": true,
+    "variable_text_programmatic": true,
+    "source_reference_icons_used_as_masters": false,
+    "source_reference_ui_used_as_masters": false,
+    "bloom_eviden_modified": false
+  },
+  "pdf_sha256": {
+    "PB-PRICE-LIST-AVAILABLE-SAMPLE-v1.0.pdf": "570696b0bbeb52881e84dbb01e00f3b4bac603140d8e88d82651befbc9ae253f",
+    "PB-PRICE-LIST-COMBINED-SAMPLE-v1.0.pdf": "f55694a16fbc5c3e8a428603848aef2117f613072546215d9b07fd263587a25f",
+    "PB-PRICE-LIST-ON_DEMAND-SAMPLE-v1.0.pdf": "f668195321bc50421951578c5a5a74110b1d6ed3657afb2409d894b7681750e5"
+  },
+  "next_integration": "Replace synthetic JSON with approved application export/adapter."
+}

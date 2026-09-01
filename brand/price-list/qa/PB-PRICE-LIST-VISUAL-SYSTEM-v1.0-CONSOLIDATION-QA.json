@@ -1,0 +1,42 @@
+{
+  "system_id": "PEPTIBLOOM-PRICE-LIST-VISUAL-SYSTEM",
+  "version": "1.0",
+  "consolidation_status": "PASS",
+  "source_set_status": "PASS",
+  "family_closure": {
+    "floral": "PASS",
+    "molecular": "PASS_WITH_PL-MO05_RETIRED",
+    "ornaments": "PASS_CLOSED_NO_PRODUCTION_MASTERS",
+    "icons": "PASS_SOURCE_REFERENCE",
+    "empty_states": "PASS_SOURCE_REFERENCE"
+  },
+  "counts": {
+    "floral_records": 9,
+    "molecular_records": 5,
+    "ornament_records": 6,
+    "icon_records": 18,
+    "empty_state_records": 8,
+    "frozen_production_masters": 13,
+    "source_reference_assets": 26,
+    "blocked_reference_assets": 6,
+    "retired_assets": 1
+  },
+  "duplicate_asset_ids": [],
+  "formal_decisions": {
+    "PL-MO05": "RETIRED_NOT_REQUIRED",
+    "ornaments": "No production masters in v1.0; source/reference retained.",
+    "icons": "Reference-only until renderer-driven deterministic vectorization.",
+    "empty_states": "Reference-only until renderer-driven deterministic reconstruction."
+  },
+  "increment_package_sha256_verified": {
+    "floral": "d37b59df70065d11229e28b9fc038bb7e20ce54b53534e0572a775186b1c5022",
+    "molecular": "e6d557c284791eb4671f7763928484199abfe31caeb94dad93943cefae7d5d08",
+    "ornaments": "294e0bd101bea3e82bc10ee87f22ac66b6e0a3672b2a120e0efb570731c56b89",
+    "icons": "2d481f35eee542de99715c9ad7a19ff5dde456bbd2f13d6c409e0c5c59e6ee30",
+    "empty_states": "8e0ed1fc10d771d03058727d71c0a70a522867ce2e2750be0bcc6e4dc19948cd"
+  },
+  "unrelated_assets_modified": false,
+  "bloom_eviden_modified": false,
+  "ready_for_next_phase": true,
+  "next_phase": "PRICE_LIST_RENDERER_V1"
+}

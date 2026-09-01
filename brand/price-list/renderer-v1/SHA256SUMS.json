@@ -1,0 +1,17 @@
+{
+  "README.md": "fd7bfe33c86c47bac9f2ffe37bd7f522c6b0c7280ae7c0f5890a30687e70d96d",
+  "assets/PL-FL05_single-blossom.png": "638bb0217e0a80a0906577b18252ba4cb56f02abadedd21079b08138b991628c",
+  "assets/PL-MO04_glass-molecule-accent.png": "85df1f087163c10a39a06ab9777990d48d1c6fa8620c59cefa0df65873f13dcb",
+  "assets/papel_botanico_cientifico_lavanda.png": "e1abd3b9af64446184f6ef1027f814c028534f78f8133a7d700141356e2fc560",
+  "assets/podio_floral.png": "ce57a8a5ea40c59213a46fcd1944eda980c2b71d80e6db2f70809a24432ca93b",
+  "config/input_schema_v1.json": "c25a7cccd52d9fb2207979349eafd4d07b0ebb3db76abb36f8ac131f23dd5580",
+  "config/visual_tokens_v1.json": "5b2dfee43e42897dfb8b51cad75178bb233017ce443c6a47a5b1b155d771af66",
+  "outputs/PB-PRICE-LIST-AVAILABLE-SAMPLE-v1.0.pdf": "570696b0bbeb52881e84dbb01e00f3b4bac603140d8e88d82651befbc9ae253f",
+  "outputs/PB-PRICE-LIST-COMBINED-SAMPLE-v1.0.pdf": "f55694a16fbc5c3e8a428603848aef2117f613072546215d9b07fd263587a25f",
+  "outputs/PB-PRICE-LIST-ON_DEMAND-SAMPLE-v1.0.pdf": "f668195321bc50421951578c5a5a74110b1d6ed3657afb2409d894b7681750e5",
+  "outputs/previews/COMBINED-page-1.png": "8a6803992a9cebd9406632d746fbaa30195e7eeba49c702b5a666a0a5956cb0d",
+  "outputs/previews/COMBINED-page-2.png": "8e7a676eb9fae95fad4c06663df91d63f62f43042bf1343a2d9d2cb4e392167f",
+  "qa/PB-PRICE-LIST-RENDERER-v1.0-QA.json": "fbfe8c5b8069991b104d4adc6b576b3d4ae1e4cc3f470bfc86de69c313331d63",
+  "renderer/render_price_list.py": "52fed4c34b83c69118c411716606b9b6458ee2bd7ac9da225a736f2343a79ad3",
+  "sample-data/sample_price_list.json": "29c861acdc05481c326e8fd0a7be1b76be00d1322e47d37ff2b8ff9e805f7302"
+}

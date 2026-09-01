@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PeptiBloom Price List Input v1",
+  "type": "object",
+  "required": [
+    "document",
+    "available",
+    "on_demand"
+  ],
+  "properties": {
+    "document": {
+      "type": "object"
+    },
+    "promo": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "available": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "on_demand": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "document": {
+    "language": "es",
+    "currency": "EUR",
+    "title": "Lista de precios",
+    "subtitle": "Catálogo de investigación",
+    "ruo_notice": "SOLO PARA USO DE INVESTIGACIÓN (RUO)",
+    "effective_date": "31/08/2026",
+    "contact_line": "peptibloomproject.com",
+    "footer_note": "MUESTRA - datos sintéticos; sustituir por datos aprobados de la aplicación."
+  },
+  "promo": {
+    "enabled": true,
+    "badge": "NOVEDAD",
+    "title": "Selección destacada",
+    "subtitle": "Bloque promocional opcional",
+    "price": "€--,--",
+    "stock_note": "Contenido comercial variable."
+  },
+  "available": [
+    {
+      "code": "PB-A01",
+      "name": "Producto Alpha",
+      "presentation": "10 mg",
+      "availability": "Disponible",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-A02",
+      "name": "Producto Beta",
+      "presentation": "5 mg",
+      "availability": "Disponible",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-A03",
+      "name": "Producto Gamma",
+      "presentation": "20 mg",
+      "availability": "Disponible",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-A04",
+      "name": "Producto Delta",
+      "presentation": "10 mg",
+      "availability": "Disponible",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-A05",
+      "name": "Producto Epsilon",
+      "presentation": "50 mg",
+      "availability": "Disponible",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-A06",
+      "name": "Producto Zeta",
+      "presentation": "10 ml",
+      "availability": "Disponible",
+      "price": "€--,--"
+    }
+  ],
+  "on_demand": [
+    {
+      "code": "PB-O01",
+      "name": "Producto Lambda",
+      "presentation": "10 mg",
+      "availability": "Bajo pedido",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-O02",
+      "name": "Producto Sigma",
+      "presentation": "5 mg",
+      "availability": "Bajo pedido",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-O03",
+      "name": "Producto Omega",
+      "presentation": "20 mg",
+      "availability": "Bajo pedido",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-O04",
+      "name": "Producto Kappa",
+      "presentation": "10 mg",
+      "availability": "Bajo pedido",
+      "price": "€--,--"
+    },
+    {
+      "code": "PB-O05",
+      "name": "Producto Theta",
+      "presentation": "50 mg",
+      "availability": "Bajo pedido",
+      "price": "€--,--"
+    }
+  ]
+}

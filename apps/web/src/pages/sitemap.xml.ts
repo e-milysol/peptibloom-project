@@ -16,6 +16,7 @@ const routes = [
   '/research-basics/coa-100-seguridad/',
   '/research-basics/que-es-espectrometria-de-masas/',
   '/research-basics/como-verificar-coa-laboratorios-europa/',
+  '/research-basics/dosis-concentracion-volumen-escala-jeringa/',
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

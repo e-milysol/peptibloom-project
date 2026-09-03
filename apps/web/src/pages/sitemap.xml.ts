@@ -12,6 +12,7 @@ const routes = [
   '/research-basics/',
   '/research-basics/que-es-un-aminoacido/',
   '/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/',
+  '/research-basics/viales-materiales-cierres/',
   '/research-basics/que-es-un-coa/',
   '/research-basics/como-leer-un-coa/',
   '/research-basics/coa-100-seguridad/',

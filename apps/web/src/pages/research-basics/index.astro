@@ -1,35 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="Research Basics"
-  description="Respuestas breves y verificadas a preguntas cotidianas sobre investigación, laboratorio, química y lectura crítica."
->
-  <section class="section section--hero">
-    <div class="site-frame reading-column">
-      <p class="eyebrow">Research Basics</p>
-      <h1>Preguntas sencillas. Respuestas claras.</h1>
-      <p class="hero__lead">Una colección de lecturas cortas para entender conceptos que aparecen una y otra vez en foros, comunidades y conversaciones sobre investigación.</p>
-    </div>
-  </section>
-
-  <section class="section section--quiet" aria-labelledby="articles-title">
-    <div class="site-frame">
-      <div class="section-heading reading-column"><p class="eyebrow">Últimos artículos</p><h2 id="articles-title">Empieza por una duda concreta.</h2></div>
-      <div class="rb-list">
-        <a class="rb-card" href="/research-basics/que-es-un-aminoacido/"><div><p class="surface-kicker">Química básica · ~2 min</p><h3>¿Qué es un aminoácido?</h3><p>La pieza mínima que ayuda a entender de qué están hechos los péptidos y las proteínas.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/"><div><p class="surface-kicker">Historia de la química · ~3 min</p><h3>¿Quién descubrió los aminoácidos y por qué se llaman así?</h3><p>De la asparagina aislada en 1806 a la treonina en 1935: una historia de descubrimientos acumulativos.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/viales-materiales-cierres/"><div><p class="surface-kicker">Envase y materiales · ~3 min</p><h3>Viales: materiales, sistemas de cierre y por qué se elige cada tipo</h3><p>Vidrio Tipo I, II y III, transparente vs ámbar, tapones elastoméricos, crimp y flip-off explicados como un sistema.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/que-es-un-coa/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>¿Qué es un COA y qué nos dice realmente?</h3><p>Qué contiene un certificado de análisis y por qué no conviene leer un porcentaje aislado como una garantía total.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/como-leer-un-coa/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>Cómo leer un COA sin perderse</h3><p>Un orden simple para distinguir muestra, ensayo, método, criterio, resultado y conclusión.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/coa-100-seguridad/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>¿Un COA me da 100 % de seguridad?</h3><p>Qué puede respaldar un certificado de análisis y qué límites siguen existiendo aunque el documento sea real.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/que-es-espectrometria-de-masas/"><div><p class="surface-kicker">Análisis · ~2 min</p><h3>¿Qué es la espectrometría de masas?</h3><p>Qué significa m/z, qué puede apoyar una señal de masa y por qué MS no es lo mismo que HPLC.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/como-verificar-coa-laboratorios-europa/"><div><p class="surface-kicker">Documentación · ~3 min</p><h3>Cómo verificar un COA y quién puede analizar una muestra en Europa</h3><p>Checklist de verificación, cómo comprobar acreditación y dónde buscar capacidades analíticas sin confundir marketing con scope acreditado.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/dosis-concentracion-volumen-escala-jeringa/"><div><p class="surface-kicker">Matemática y metrología · ~3 min</p><h3>Cómo se relacionan dosis, concentración, volumen y la escala de una jeringa</h3><p>Las fórmulas básicas, las unidades y por qué mg, mL y las marcas de una jeringa no son intercambiables.</p></div><span aria-hidden="true">→</span></a>
-        <a class="rb-card" href="/research-basics/tipos-escalas-jeringas/"><div><p class="surface-kicker">Dispositivos y metrología · ~3 min</p><h3>Tipos y escalas de jeringas: por qué 1 mL, 40 y 100 no significan lo mismo</h3><p>Cómo distinguir capacidad, graduación y escalas U-40/U-100 sin asumir que el mismo número significa el mismo volumen.</p></div><span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
-<style>.rb-list{display:grid;gap:1rem}.rb-card{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none}.rb-card:hover{border-color:rgba(122,63,104,.35);color:var(--color-ink)}.rb-card h3{font-size:clamp(1.8rem,4vw,2.7rem)}.rb-card p:not(.surface-kicker){color:var(--color-muted-ink)}.rb-card>span{color:var(--color-mulberry);font-size:2rem}</style>
+<BaseLayout title="Research Basics" description="Respuestas breves y verificadas a preguntas cotidianas sobre investigación, laboratorio, química y lectura crítica."><section class="section section--hero"><div class="site-frame reading-column"><p class="eyebrow">Research Basics</p><h1>Preguntas sencillas. Respuestas claras.</h1><p class="hero__lead">Una colección de lecturas cortas para entender conceptos que aparecen una y otra vez en foros, comunidades y conversaciones sobre investigación.</p></div></section><section class="section section--quiet" aria-labelledby="articles-title"><div class="site-frame"><div class="section-heading reading-column"><p class="eyebrow">Últimos artículos</p><h2 id="articles-title">Empieza por una duda concreta.</h2></div><div class="rb-list">
+<a class="rb-card" href="/research-basics/que-es-un-aminoacido/"><div><p class="surface-kicker">Química básica · ~2 min</p><h3>¿Qué es un aminoácido?</h3><p>La pieza mínima que ayuda a entender de qué están hechos los péptidos y las proteínas.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/"><div><p class="surface-kicker">Historia de la química · ~3 min</p><h3>¿Quién descubrió los aminoácidos y por qué se llaman así?</h3><p>Una historia de descubrimientos acumulativos.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/viales-materiales-cierres/"><div><p class="surface-kicker">Envase y materiales · ~3 min</p><h3>Viales: materiales, sistemas de cierre y por qué se elige cada tipo</h3><p>Vidrio, color y componentes del sistema de cierre.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/lavado-manos-agua-jabon-gel-alcoholico/"><div><p class="surface-kicker">Scientific / Safety · ~3 min</p><h3>Lavado de manos: cuándo agua y jabón y cuándo solución hidroalcohólica</h3><p>Qué diferencia ambos métodos y por qué no son intercambiables en todas las situaciones.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/que-es-un-coa/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>¿Qué es un COA y qué nos dice realmente?</h3><p>Qué contiene un certificado de análisis y cuáles son sus límites.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/como-leer-un-coa/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>Cómo leer un COA sin perderse</h3><p>Muestra, ensayo, método, criterio y resultado.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/coa-100-seguridad/"><div><p class="surface-kicker">Documentación · ~2 min</p><h3>¿Un COA me da 100 % de seguridad?</h3><p>Qué puede respaldar y qué límites siguen existiendo.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/que-es-espectrometria-de-masas/"><div><p class="surface-kicker">Análisis · ~2 min</p><h3>¿Qué es la espectrometría de masas?</h3><p>Qué significa m/z y qué puede apoyar una señal de masa.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/como-verificar-coa-laboratorios-europa/"><div><p class="surface-kicker">Documentación · ~3 min</p><h3>Cómo verificar un COA y quién puede analizar una muestra en Europa</h3><p>Checklist de verificación, acreditación y capacidades analíticas.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/dosis-concentracion-volumen-escala-jeringa/"><div><p class="surface-kicker">Matemática y metrología · ~3 min</p><h3>Cómo se relacionan dosis, concentración, volumen y la escala de una jeringa</h3><p>Fórmulas básicas y unidades.</p></div><span>→</span></a>
+<a class="rb-card" href="/research-basics/tipos-escalas-jeringas/"><div><p class="surface-kicker">Dispositivos y metrología · ~3 min</p><h3>Tipos y escalas de jeringas: por qué 1 mL, 40 y 100 no significan lo mismo</h3><p>Capacidad, graduación y escalas U-40/U-100.</p></div><span>→</span></a>
+</div></div></section></BaseLayout><style>.rb-list{display:grid;gap:1rem}.rb-card{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none}.rb-card h3{font-size:clamp(1.8rem,4vw,2.7rem)}.rb-card p:not(.surface-kicker){color:var(--color-muted-ink)}.rb-card>span{color:var(--color-mulberry);font-size:2rem}</style>

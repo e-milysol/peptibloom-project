@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cómo leer un COA sin perderse" description="Guía breve para leer un Certificate of Analysis: muestra, lote, método, especificación, resultado, unidades y conclusión.">
+  <article class="rb-article section">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">Research Basics · Documentación · ~2 min</p>
+      <h1>Cómo leer un COA sin perderse</h1>
+      <p class="rb-lead"><strong>En pocas palabras:</strong> no empieces por el porcentaje más grande. Primero confirma <strong>qué muestra</strong> se analizó, <strong>qué ensayo</strong> se hizo, <strong>con qué método</strong>, <strong>qué criterio</strong> se aplicó y <strong>qué resultado</strong> se obtuvo.</p>
+
+      <div class="read-order" aria-label="Orden recomendado para leer un certificado de análisis">
+        <span>1 · Muestra / lote</span><b aria-hidden="true">→</b><span>2 · Ensayo</span><b aria-hidden="true">→</b><span>3 · Método</span><b aria-hidden="true">→</b><span>4 · Criterio</span><b aria-hidden="true">→</b><span>5 · Resultado</span>
+      </div>
+
+      <h2>1. ¿A qué muestra corresponde?</h2>
+      <p>Busca el identificador del informe, el número de muestra y, cuando exista, el lote. La OMS incluye estos campos precisamente para vincular el certificado con la muestra a la que se refieren los resultados. Si esa relación no está clara, el resto del documento pierde contexto.</p>
+
+      <h2>2. ¿Qué se analizó realmente?</h2>
+      <p>Un COA puede contener varios ensayos, pero no existe un panel universal. Cada fila debe leerse como una afirmación separada: <strong>este ensayo concreto produjo este resultado concreto</strong>. Que aparezca “pureza” no significa que también se hayan evaluado identidad, contenido, esterilidad, endotoxinas u otros parámetros.</p>
+
+      <h2>3. Resultado y especificación no son lo mismo</h2>
+      <div class="compare-box">
+        <div><span class="surface-kicker">Especificación / criterio</span><strong>El límite o condición que se esperaba cumplir.</strong></div>
+        <div><span class="surface-kicker">Resultado</span><strong>Lo que el ensayo reportó para esa muestra.</strong></div>
+      </div>
+      <p>La OMS recomienda mostrar el procedimiento de ensayo, sus criterios de aceptación y los resultados obtenidos, de modo que puedan compararse. “Resultado” y “límite” son dos campos distintos.</p>
+
+      <h2>4. Mira método, unidades y notas</h2>
+      <p>Un número sin método o unidad puede ser fácil de malinterpretar. Revisa si el documento identifica el procedimiento usado, la unidad del resultado y cualquier comentario necesario para interpretarlo. Si parte del trabajo fue subcontratada, el modelo de la OMS indica que debería identificarse como tal.</p>
+
+      <div class="annotated-coa" aria-label="Ejemplo educativo de lectura de un COA">
+        <p class="surface-kicker">Ejemplo sintético — no corresponde a un producto real</p>
+        <div><span>Informe</span><strong>COA-DEMO-017</strong><small>Identifica el documento.</small></div>
+        <div><span>Muestra</span><strong>PB-SAMPLE-A</strong><small>Indica qué muestra se analizó.</small></div>
+        <div><span>Ensayo</span><strong>Ensayo X</strong><small>Qué propiedad se evaluó.</small></div>
+        <div><span>Criterio</span><strong>≥ 95,0 %</strong><small>Condición de aceptación ficticia.</small></div>
+        <div><span>Resultado</span><strong>96,2 %</strong><small>Valor ficticio obtenido.</small></div>
+        <div><span>Conclusión</span><strong>Cumple</strong><small>Solo respecto al criterio mostrado.</small></div>
+      </div>
+
+      <aside class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li><strong>Resultado ≠ especificación.</strong></li>
+          <li><strong>Pureza ≠ identidad.</strong></li>
+          <li><strong>Pureza ≠ cantidad o contenido.</strong></li>
+          <li><strong>Pureza ≠ esterilidad.</strong></li>
+          <li><strong>No analizado ≠ aprobado.</strong></li>
+          <li>Un documento con aspecto profesional no demuestra por sí solo que sea auténtico.</li>
+        </ul>
+      </aside>
+
+      <h2>La pregunta más útil al terminar</h2>
+      <p>En lugar de preguntar solo “¿qué porcentaje dice?”, prueba con: <strong>“¿qué midieron exactamente, sobre qué muestra, con qué método y frente a qué criterio?”</strong>. Esa pregunta evita muchas de las confusiones que aparecen en foros y fichas comerciales.</p>
+
+      <p class="next-link"><strong>Anterior:</strong> <a href="/research-basics/que-es-un-coa/">¿Qué es un COA y qué nos dice realmente?</a><br /><strong>Siguiente:</strong> <a href="/research-basics/coa-100-seguridad/">¿Un COA me da 100 % de seguridad? →</a></p>
+
+      <footer class="rb-sources">
+        <p class="surface-kicker">Fuentes principales</p>
+        <ol>
+          <li><a href="https://www.who.int/docs/default-source/medicines/norms-and-standards/guidelines/quality-control/trs1010-annex4-who-model-certificate-analysis.pdf" rel="noreferrer">World Health Organization. <em>WHO model certificate of analysis</em>. Technical Report Series 1010, Annex 4.</a></li>
+          <li><a href="https://www.who.int/docs/default-source/medicines/norms-and-standards/guidelines/mqa-terminology-sept-2020.pdf" rel="noreferrer">World Health Organization. <em>Quality Assurance of Medicines Terminology Database</em> — Certificate of analysis.</a></li>
+        </ol>
+        <p class="source-note">Research Basics enseña lectura crítica de documentos. No determina la autenticidad ni la aptitud de un producto concreto.</p>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-article h1{max-width:15ch}.rb-lead{font-size:clamp(1.18rem,2vw,1.45rem);color:var(--color-muted-ink)}
+  .read-order{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.55rem;margin:2.5rem 0;padding:1.4rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-soft-bloom);font-family:var(--font-system)}.read-order span{padding:.65rem .8rem;border-radius:999px;background:var(--color-paper);border:1px solid var(--color-hairline);font-weight:600}.read-order b{color:var(--color-mulberry)}
+  .compare-box{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}.compare-box div{padding:1.25rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper)}.compare-box strong{display:block;margin-top:.35rem}
+  .annotated-coa{margin:2rem 0;padding:1.4rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}.annotated-coa div{display:grid;grid-template-columns:7rem 1fr 1.4fr;gap:1rem;padding:.7rem 0;border-top:1px solid var(--color-hairline);font-family:var(--font-system);font-size:.9rem}.annotated-coa span,.annotated-coa small{color:var(--color-muted-ink)}
+  .not-meaning{margin:2rem 0;padding:1.5rem;border-left:.22rem solid var(--color-mulberry);background:var(--color-soft-bloom)}.not-meaning ul{margin-bottom:0}.next-link{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--color-hairline);color:var(--color-muted-ink)}.rb-sources{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--color-hairline)}.rb-sources li,.source-note{font-size:.9rem;color:var(--color-muted-ink)}
+  @media(max-width:620px){.compare-box{grid-template-columns:1fr}.annotated-coa div{grid-template-columns:1fr;gap:.2rem}.read-order b{transform:rotate(90deg)}}
+</style>

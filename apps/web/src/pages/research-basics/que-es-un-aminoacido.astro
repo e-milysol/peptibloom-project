@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articleSchema = {
+  '@type': 'Article',
+  headline: '¿Qué es un aminoácido?',
+  description: 'Explicación breve de qué es un aminoácido, qué partes comparte su estructura general y cómo los aminoácidos se unen para formar péptidos y proteínas.',
+  inLanguage: 'es',
+  datePublished: '2026-09-03',
+  dateModified: '2026-09-03',
+  author: { '@type': 'Organization', name: 'PeptiBloom' },
+  publisher: { '@type': 'Organization', name: 'PeptiBloom' },
+};
+---
+
+<BaseLayout
+  title="¿Qué es un aminoácido?"
+  description="Qué es un aminoácido, qué significa el grupo R y cómo varios aminoácidos pueden unirse para formar péptidos y proteínas."
+  structuredData={articleSchema}
+>
+  <article class="rb-article">
+    <header class="rb-hero section">
+      <div class="site-frame reading-column">
+        <a class="back-link" href="/research-basics/">← Research Basics</a>
+        <p class="eyebrow">Química básica · ~2 min</p>
+        <h1>¿Qué es un aminoácido?</h1>
+        <p class="rb-lead">Si los péptidos están hechos de aminoácidos, ¿qué es exactamente un aminoácido?</p>
+      </div>
+    </header>
+
+    <div class="site-frame reading-column rb-body">
+      <section class="quick-answer" aria-labelledby="quick-answer-title">
+        <p class="surface-kicker">En pocas palabras</p>
+        <h2 id="quick-answer-title">Un aminoácido es una pequeña molécula con una estructura básica común y una parte variable.</h2>
+        <p>
+          En los aminoácidos que forman proteínas, esa estructura incluye un grupo amino, un grupo carboxilo y una cadena lateral —el llamado grupo <strong>R</strong>— unida al carbono central. El grupo R cambia de un aminoácido a otro y es una de las razones por las que sus propiedades químicas pueden ser diferentes.
+        </p>
+      </section>
+
+      <section>
+        <h2>La idea visual</h2>
+        <div class="amino-diagram" role="img" aria-label="Esquema simplificado de un aminoácido alfa con grupo amino, grupo carboxilo, hidrógeno y grupo R alrededor del carbono central">
+          <span class="node node--top">H</span>
+          <span class="node node--left">NH₂<br><small>grupo amino</small></span>
+          <strong class="node node--center">C</strong>
+          <span class="node node--right">COOH<br><small>grupo carboxilo</small></span>
+          <span class="node node--bottom">R<br><small>parte variable</small></span>
+        </div>
+        <p>
+          Esa fórmula es una simplificación útil para los α-aminoácidos comunes. No todos los aminoácidos son químicamente idénticos: cambiar el grupo R cambia características como tamaño, carga, polaridad o afinidad por el agua.
+        </p>
+      </section>
+
+      <section>
+        <h2>¿Y qué tiene que ver esto con los péptidos?</h2>
+        <p>
+          Los aminoácidos pueden unirse mediante <strong>enlaces peptídicos</strong>. Cuando dos o más se enlazan, cada unidad pasa a formar parte de una cadena y se denomina un <strong>residuo de aminoácido</strong>. Una cadena corta puede llamarse péptido; cadenas más largas forman polipéptidos y pueden constituir proteínas.
+        </p>
+        <div class="chain" aria-label="Representación conceptual de aminoácidos unidos en una cadena">
+          <span>Aminoácido</span><b>→</b><span>Aminoácido</span><b>→</b><span>Aminoácido</span><b>→</b><strong>Péptido</strong>
+        </div>
+      </section>
+
+      <section class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li>Un aminoácido no es lo mismo que un péptido.</li>
+          <li>Un péptido no es simplemente “un aminoácido más grande”.</li>
+          <li>Que un aminoácido forme parte de una molécula no significa que se comporte igual que el aminoácido libre.</li>
+          <li>Conocer la estructura básica no permite deducir por sí sola un efecto biológico concreto.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Entonces, ¿por qué importa?</h2>
+        <p>
+          Entender esta pieza básica permite leer con más sentido conceptos como <strong>secuencia de aminoácidos</strong>, <strong>enlace peptídico</strong>, <strong>péptido</strong>, <strong>proteína</strong> o <strong>modificación química</strong>. Es el primer ladrillo para entender moléculas mucho más complejas sin memorizar nombres aislados.
+        </p>
+        <p><strong>Relacionado:</strong> <a href="/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/">¿Quién descubrió los aminoácidos y por qué se llaman así?</a></p>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-title">
+        <p class="surface-kicker">Fuentes</p>
+        <h2 id="sources-title">Para seguir leyendo</h2>
+        <ol>
+          <li><a href="https://goldbook.iupac.org/terms/view/A00279" rel="external">IUPAC Gold Book — amino-acid residue</a>.</li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK564343/" rel="external">NCBI Bookshelf — Biochemistry, Primary Protein Structure</a>.</li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK26883/" rel="external">NCBI Bookshelf — The Chemical Components of a Cell</a>.</li>
+        </ol>
+        <p class="source-note">Última revisión editorial: 3 de septiembre de 2026. Este artículo es educativo y no contiene recomendaciones de suplementación, dosificación o uso clínico.</p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-hero { background: radial-gradient(circle at 80% 20%, rgba(200,111,154,.11), transparent 24rem), var(--color-porcelain); }
+  .back-link { display:inline-block; margin-bottom:2rem; font-family:var(--font-system); font-size:.92rem; font-weight:600; text-decoration:none; }
+  .rb-lead { color:var(--color-muted-ink); font-size:clamp(1.25rem,2.4vw,1.6rem); }
+  .rb-body { padding-block:var(--space-7) var(--space-8); }
+  .rb-body section { margin-bottom:var(--space-7); }
+  .rb-body h2 { font-size:clamp(1.9rem,4vw,2.9rem); }
+  .quick-answer { padding:clamp(1.5rem,4vw,2.5rem); border:1px solid rgba(122,63,104,.18); border-radius:var(--radius-large); background:var(--color-soft-bloom); }
+  .quick-answer h2 { font-size:clamp(1.7rem,3.6vw,2.5rem); }
+  .amino-diagram { display:grid; width:min(100%,30rem); margin:2rem auto; grid-template-columns:1fr 1fr 1fr; grid-template-rows:auto auto auto; align-items:center; gap:1rem; text-align:center; font-family:var(--font-system); }
+  .node { padding:.9rem; }
+  .node small { color:var(--color-muted-ink); font-weight:400; }
+  .node--top { grid-column:2; }
+  .node--left { grid-column:1; grid-row:2; }
+  .node--center { grid-column:2; grid-row:2; display:grid; width:4rem; height:4rem; place-items:center; justify-self:center; border:1px solid var(--color-mulberry); border-radius:50%; background:var(--color-paper); color:var(--color-mulberry); }
+  .node--right { grid-column:3; grid-row:2; }
+  .node--bottom { grid-column:2; grid-row:3; color:var(--color-mulberry); font-weight:600; }
+  .chain { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; margin-top:1.5rem; font-family:var(--font-system); }
+  .chain span,.chain strong { padding:.55rem .75rem; border:1px solid var(--color-hairline); border-radius:999px; background:var(--color-paper); }
+  .chain strong { border-color:rgba(122,63,104,.25); color:var(--color-mulberry); }
+  .not-meaning { padding:1.5rem 1.75rem; border-left:.22rem solid var(--color-lavender); background:var(--color-soft-bloom); }
+  .not-meaning ul { margin-bottom:0; }
+  .sources { padding-top:var(--space-5); border-top:1px solid var(--color-hairline); }
+  .sources ol { padding-left:1.25rem; }
+  .sources li { margin-bottom:.75rem; }
+  .source-note { color:var(--color-muted-ink); font-family:var(--font-system); font-size:.88rem; }
+</style>

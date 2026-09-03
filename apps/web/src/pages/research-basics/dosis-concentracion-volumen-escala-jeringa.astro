@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cómo se relacionan dosis, concentración, volumen y la escala de una jeringa" description="Explicación matemática de la relación entre cantidad, concentración, volumen y graduación de una jeringa, sin recomendar dosis ni protocolos de administración.">
+  <article class="rb-article section">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">Research Basics · Matemática y metrología · ~3 min</p>
+      <h1>Cómo se relacionan dosis, concentración, volumen y la escala de una jeringa</h1>
+      <p class="rb-lead"><strong>En pocas palabras:</strong> son cuatro conceptos distintos. La <strong>cantidad</strong> dice cuánto hay de una sustancia; la <strong>concentración</strong> dice cuánto hay por unidad de volumen; el <strong>volumen</strong> dice cuánto líquido ocupa; y la <strong>escala de la jeringa</strong> solo indica cómo está graduado ese volumen.</p>
+
+      <div class="formula-card" aria-label="Relaciones matemáticas básicas">
+        <p><strong>Concentración = cantidad ÷ volumen</strong></p>
+        <p><strong>Cantidad = concentración × volumen</strong></p>
+        <p><strong>Volumen = cantidad ÷ concentración</strong></p>
+      </div>
+
+      <h2>1. Cantidad no es lo mismo que volumen</h2>
+      <p><strong>mg</strong> y <strong>mcg</strong> expresan cantidad de masa. <strong>mL</strong> expresa volumen. No pueden convertirse directamente entre sí sin conocer una concentración.</p>
+
+      <div class="example-box">
+        <p class="surface-kicker">Ejemplo matemático ficticio</p>
+        <p>Si una solución contiene <strong>10 mg en 2 mL</strong>, su concentración es:</p>
+        <p class="math">10 mg ÷ 2 mL = <strong>5 mg/mL</strong></p>
+        <p>Esto no dice cuánto debe usarse. Solo describe cuánta sustancia hay en cada mililitro.</p>
+      </div>
+
+      <h2>2. La concentración funciona como un puente</h2>
+      <p>Una vez conocida la concentración, puede relacionarse una cantidad con un volumen. Por ejemplo, en la solución ficticia anterior, <strong>0,20 mL</strong> contienen matemáticamente:</p>
+      <p class="math">5 mg/mL × 0,20 mL = <strong>1 mg</strong></p>
+      <p>La operación es dimensional: <code>mg/mL × mL = mg</code>.</p>
+
+      <h2>3. ¿Dónde entra la escala de la jeringa?</h2>
+      <p>La jeringa no cambia la concentración. Solo permite medir un volumen mediante sus marcas. Por eso, antes de interpretar una escala, hay que saber <strong>qué volumen total representa</strong> y <strong>cuánto vale cada división</strong>.</p>
+
+      <div class="scale-demo" aria-label="Ejemplo genérico de graduación de una jeringa">
+        <span>0 mL</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span>1 mL</span>
+      </div>
+      <p>Si, de forma puramente matemática, un dispositivo de <strong>1 mL</strong> tiene <strong>100 divisiones iguales</strong>, cada división representa:</p>
+      <p class="math">1 mL ÷ 100 = <strong>0,01 mL por división</strong></p>
+
+      <h2>4. Las escalas no son intercambiables</h2>
+      <p>Dos jeringas pueden tener el mismo tamaño físico y escalas distintas. Una marca con el número “10” no significa necesariamente el mismo volumen en todos los dispositivos. La referencia válida es la graduación declarada por el fabricante para esa jeringa concreta.</p>
+
+      <aside class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li><strong>mg ≠ mL.</strong></li>
+          <li><strong>mcg ≠ una marca de jeringa.</strong></li>
+          <li><strong>La misma cifra en dos escalas distintas ≠ el mismo volumen.</strong></li>
+          <li>Conocer la fórmula matemática <strong>no determina qué cantidad debe usarse</strong>.</li>
+          <li>Una calculadora de volumen no sustituye una indicación clínica, un protocolo de investigación ni la verificación del dispositivo.</li>
+        </ul>
+      </aside>
+
+      <h2>5. Una comprobación que evita muchos errores</h2>
+      <p>Antes de calcular, escribe siempre las unidades. Si quieres obtener volumen, el resultado final debe quedar en <strong>mL</strong>. Si quieres obtener cantidad, debe quedar en <strong>mg</strong>, <strong>mcg</strong> u otra unidad de masa. Si las unidades no se cancelan correctamente, la operación probablemente está mal planteada.</p>
+
+      <div class="conversion-card">
+        <p class="surface-kicker">Conversión útil</p>
+        <p><strong>1 mg = 1000 mcg</strong></p>
+        <p>Por tanto, 0,5 mg = 500 mcg y 250 mcg = 0,25 mg.</p>
+      </div>
+
+      <h2>La idea más útil</h2>
+      <p>Piensa en esta cadena: <strong>cantidad ↔ concentración ↔ volumen ↔ escala del dispositivo</strong>. Cada paso necesita su propio dato. Saltarse uno de ellos es una de las formas más fáciles de terminar comparando unidades que no significan lo mismo.</p>
+
+      <p class="next-link"><strong>Relacionado:</strong> <a href="/research-basics/tipos-escalas-jeringas/">Tipos y escalas de jeringas: por qué 1 mL, 40 y 100 no significan lo mismo →</a><br /><strong>Herramienta:</strong> <a href="/calculator/">Calculadora PeptiBloom</a> — matemática; no establece dosis ni protocolos.</p>
+
+      <footer class="rb-sources">
+        <p class="surface-kicker">Base matemática</p>
+        <p class="source-note">Este artículo usa relaciones dimensionales y conversiones métricas elementales. Los ejemplos son ficticios y sirven únicamente para enseñar cálculo y lectura de unidades; no constituyen recomendaciones de uso o administración.</p>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-article h1{max-width:18ch}.rb-lead{font-size:clamp(1.18rem,2vw,1.45rem);color:var(--color-muted-ink)}
+  .formula-card,.example-box,.conversion-card{margin:2rem 0;padding:1.4rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}
+  .formula-card p{font-family:var(--font-system);font-size:1.05rem}.math{font-family:var(--font-system);font-size:1.15rem;padding:.75rem 1rem;background:var(--color-soft-bloom);border-radius:.8rem}
+  .scale-demo{display:grid;grid-template-columns:auto repeat(9,1fr) auto;gap:.25rem;align-items:end;margin:2rem 0;padding:1rem;border-bottom:3px solid var(--color-ink);font-family:var(--font-system);font-size:.85rem}.scale-demo i{height:1.3rem;border-left:1px solid var(--color-ink)}
+  .not-meaning{margin:2rem 0;padding:1.5rem;border-left:.22rem solid var(--color-mulberry);background:var(--color-soft-bloom)}.not-meaning ul{margin-bottom:0}.next-link{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--color-hairline)}.rb-sources{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--color-hairline)}.source-note{font-size:.9rem;color:var(--color-muted-ink)}
+</style>

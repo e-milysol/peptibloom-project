@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articleSchema = {
+  '@type': 'Article',
+  headline: '¿Quién descubrió los aminoácidos y por qué se llaman así?',
+  description: 'Historia breve del descubrimiento de los aminoácidos, desde la asparagina en 1806 hasta la treonina en 1935, y explicación del origen del término aminoácido.',
+  inLanguage: 'es',
+  datePublished: '2026-09-03',
+  dateModified: '2026-09-03',
+  author: { '@type': 'Organization', name: 'PeptiBloom' },
+  publisher: { '@type': 'Organization', name: 'PeptiBloom' },
+};
+---
+
+<BaseLayout
+  title="¿Quién descubrió los aminoácidos y por qué se llaman así?"
+  description="Una historia breve: la asparagina fue el primer aminoácido aislado, pero no hubo un único descubridor de todos los aminoácidos ni del concepto moderno."
+  structuredData={articleSchema}
+>
+  <article class="rb-article section">
+    <div class="site-frame reading-column">
+      <a class="back-link" href="/research-basics/">← Research Basics</a>
+      <p class="eyebrow">Research Basics · Historia de la química · ~3 min</p>
+      <h1>¿Quién descubrió los aminoácidos y por qué se llaman así?</h1>
+      <p class="rb-lead"><strong>En pocas palabras:</strong> no hubo un único descubridor. El primer aminoácido reconocido retrospectivamente como tal fue la <strong>asparagina</strong>, aislada en 1806 por Louis-Nicolas Vauquelin y Pierre Jean Robiquet a partir de espárragos. Después fueron apareciendo otros durante más de un siglo, hasta la identificación de la <strong>treonina</strong> en 1935.</p>
+
+      <div class="timeline" aria-label="Cronología simplificada del descubrimiento de aminoácidos">
+        <div><strong>1806</strong><span>Asparagina</span><small>Vauquelin y Robiquet</small></div>
+        <div><strong>1820</strong><span>Glicina</span><small>Henri Braconnot</small></div>
+        <div><strong>siglo XIX</strong><span>Se amplía la familia</span><small>Se aíslan y caracterizan nuevos compuestos</small></div>
+        <div><strong>1935</strong><span>Treonina</span><small>Último de los 20 aminoácidos proteicos comunes en ser identificado</small></div>
+      </div>
+
+      <h2>El primero apareció en un espárrago</h2>
+      <p>En 1806, Vauquelin y Robiquet aislaron cristales a partir de jugo de espárrago. El compuesto recibió el nombre de <strong>asparagina</strong> por su origen vegetal. Hoy se considera el primer aminoácido aislado, aunque en ese momento todavía no existía la categoría química moderna “aminoácido”.</p>
+
+      <h2>Entonces, ¿quién “descubrió los aminoácidos”?</h2>
+      <p>La pregunta tiene una trampa: descubrir una molécula no es lo mismo que reconocer una familia química. A lo largo del siglo XIX distintos investigadores aislaron compuestos que después serían agrupados bajo una misma idea química. Por eso es más correcto hablar de una <strong>historia acumulativa</strong> que de un único descubridor.</p>
+
+      <div class="history-card">
+        <p class="surface-kicker">Un buen ejemplo</p>
+        <p>Henri Braconnot obtuvo en 1820 a partir de gelatina una sustancia dulce que más tarde recibió el nombre de <strong>glicina</strong>. Su nombre actual deriva de una raíz griega relacionada con “dulce”.</p>
+      </div>
+
+      <h2>¿Por qué se llaman “aminoácidos”?</h2>
+      <p>El nombre describe dos rasgos químicos presentes en la estructura general de estos compuestos: un <strong>grupo amino</strong> y un <strong>grupo ácido carboxílico</strong>. La expresión moderna se consolidó después de que los químicos reconocieran que moléculas descubiertas por separado compartían esa combinación estructural.</p>
+      <p>El término inglés <em>amino acid</em> está documentado a finales del siglo XIX; el alemán <em>Aminosäure</em> se utilizó antes. Así que la palabra llegó <strong>mucho después</strong> del aislamiento de la asparagina.</p>
+
+      <h2>¿Cuánto tardó en completarse el “grupo de 20”?</h2>
+      <p>Aproximadamente 130 años separan la asparagina de la treonina. La treonina fue identificada en 1935 en el trabajo de William C. Rose y colaboradores, y suele citarse como el último de los 20 aminoácidos proteicos comunes en ser descubierto.</p>
+
+      <aside class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li>No existió un científico que descubriera los 20 aminoácidos de una sola vez.</li>
+          <li>La asparagina se aisló antes de que existiera el término moderno “aminoácido”.</li>
+          <li>“Primer aminoácido descubierto” no significa que en 1806 ya se entendiera su papel en las proteínas como hoy.</li>
+          <li>La lista histórica de los 20 aminoácidos proteicos comunes no agota toda la química de aminoácidos conocida actualmente.</li>
+        </ul>
+      </aside>
+
+      <h2>La idea más útil</h2>
+      <p>La historia fue al revés de como solemos aprenderla: primero aparecieron moléculas aisladas con nombres propios y, con el tiempo, la química permitió reconocer que muchas pertenecían a una misma familia. <strong>La categoría vino después de los descubrimientos.</strong></p>
+
+      <p class="next-link"><strong>Relacionado:</strong> <a href="/research-basics/que-es-un-aminoacido/">¿Qué es un aminoácido?</a></p>
+
+      <footer class="rb-sources">
+        <p class="surface-kicker">Fuentes principales</p>
+        <ol>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3243381/" rel="noreferrer">Lea PJ et al. Review on primary nitrogen assimilation — notes asparagine as the first amino acid discovered, crystallized by Vauquelin and Robiquet in 1806.</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3398780/" rel="noreferrer">On the utility of alternative amino acid scripts — historical overview of the 1806–1935 discovery period.</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/12218068/" rel="noreferrer">Simoni RD, Hill RL, Vaughan M. The discovery of the amino acid threonine: the work of William C. Rose.</a></li>
+          <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0166128099000457" rel="noreferrer">Historical review of amino-acid terminology and conceptual development.</a></li>
+        </ol>
+        <p class="source-note">Última revisión editorial: 3 de septiembre de 2026. La cronología resume hitos históricos ampliamente documentados y no pretende ser una historia exhaustiva de cada aminoácido.</p>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .back-link{display:inline-block;margin-bottom:2rem;font-family:var(--font-system);font-size:.92rem;font-weight:600;text-decoration:none}.rb-article h1{max-width:18ch}.rb-lead{font-size:clamp(1.18rem,2vw,1.45rem);color:var(--color-muted-ink)}
+  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2.5rem 0}.timeline div,.history-card{padding:1.25rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper)}.timeline strong,.timeline span,.timeline small{display:block}.timeline strong{color:var(--color-mulberry);font-family:var(--font-system);font-size:1.25rem}.timeline span{margin:.35rem 0;font-weight:700}.timeline small{color:var(--color-muted-ink)}
+  .history-card{margin:1.5rem 0;background:var(--color-soft-bloom)}.not-meaning{margin:2rem 0;padding:1.5rem;border-left:.22rem solid var(--color-lavender);background:var(--color-soft-bloom)}.not-meaning ul{margin-bottom:0}.next-link{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--color-hairline)}.rb-sources{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--color-hairline)}.rb-sources li,.source-note{font-size:.9rem;color:var(--color-muted-ink)}
+  @media(max-width:760px){.timeline{grid-template-columns:1fr 1fr}}@media(max-width:480px){.timeline{grid-template-columns:1fr}}
+</style>

@@ -14,6 +14,7 @@ const routes = [
   '/research-basics/que-es-un-coa/',
   '/research-basics/como-leer-un-coa/',
   '/research-basics/coa-100-seguridad/',
+  '/research-basics/que-es-espectrometria-de-masas/',
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

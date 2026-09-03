@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articleSchema = {
+  '@type': 'Article',
+  headline: 'Viales: materiales, sistemas de cierre y por qué se elige cada tipo',
+  description: 'Guía breve para entender vidrio farmacéutico, viales transparentes o ámbar, tapones elastoméricos, sellos de aluminio y sistemas flip-off.',
+  inLanguage: 'es',
+  datePublished: '2026-09-03',
+  dateModified: '2026-09-03',
+  author: { '@type': 'Organization', name: 'PeptiBloom' },
+  publisher: { '@type': 'Organization', name: 'PeptiBloom' },
+};
+---
+
+<BaseLayout
+  title="Viales: materiales, sistemas de cierre y por qué se elige cada tipo"
+  description="Qué diferencia al vidrio Tipo I, II y III, qué hace un tapón elastomérico y qué función tienen el crimp y el flip-off en un vial."
+  structuredData={articleSchema}
+>
+  <article class="rb-article">
+    <header class="rb-hero section">
+      <div class="site-frame reading-column">
+        <a class="back-link" href="/research-basics/">← Research Basics</a>
+        <p class="eyebrow">Envase y materiales · ~3 min</p>
+        <h1>Viales: materiales, sistemas de cierre y por qué se elige cada tipo</h1>
+        <p class="rb-lead">Un vial no es solo “un frasco pequeño”: forma parte de un sistema de envase y cierre en el que cuerpo, tapón y sello trabajan juntos.</p>
+      </div>
+    </header>
+
+    <div class="site-frame reading-column rb-body">
+      <section class="quick-answer">
+        <p class="surface-kicker">En pocas palabras</p>
+        <h2>El material del vial y su cierre se eligen como un sistema, no como piezas aisladas.</h2>
+        <p>En productos farmacéuticos pueden encontrarse viales de vidrio o polímero. En los sistemas tradicionales de vidrio para productos parenterales, el conjunto suele incluir <strong>vial + tapón elastomérico + sello de aluminio</strong>. Cada componente tiene una función diferente: contener, proteger, mantener el cierre y permitir el acceso cuando corresponda.</p>
+      </section>
+
+      <section>
+        <h2>1. ¿Todos los viales de vidrio son iguales?</h2>
+        <p><strong>No.</strong> La USP clasifica los envases de vidrio según su comportamiento frente al agua y su resistencia hidrolítica. De forma simplificada:</p>
+        <div class="glass-grid">
+          <article><strong>Tipo I</strong><span>Habitualmente vidrio borosilicato. Presenta alta resistencia hidrolítica y es adecuado para la mayoría de productos parenterales y no parenterales.</span></article>
+          <article><strong>Tipo II</strong><span>Vidrio soda-cal-sílice tratado superficialmente para mejorar su resistencia. Puede ser adecuado para determinadas soluciones acuosas.</span></article>
+          <article><strong>Tipo III</strong><span>Vidrio soda-cal-sílice con menor resistencia hidrolítica; normalmente no es la primera elección para productos parenterales salvo que los datos de estabilidad demuestren su idoneidad.</span></article>
+        </div>
+        <p>“Tipo” no describe el color del vial. Un vidrio Tipo I puede existir en presentación transparente o ámbar.</p>
+      </section>
+
+      <section>
+        <h2>2. Transparente vs ámbar: ¿cuál es “mejor”?</h2>
+        <p>No existe un color universalmente mejor. El vidrio transparente facilita la inspección visual del contenido. El vidrio ámbar puede reducir la exposición a determinadas longitudes de onda de luz y se utiliza cuando el producto necesita protección frente a la luz.</p>
+        <div class="compare-box">
+          <div><p class="surface-kicker">Transparente</p><strong>Mayor visibilidad del contenido.</strong><span>No implica por sí mismo menor calidad ni menor resistencia química.</span></div>
+          <div><p class="surface-kicker">Ámbar</p><strong>Puede aportar protección frente a la luz.</strong><span>Su utilidad depende de que el producto sea realmente fotosensible y del nivel de protección requerido.</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. ¿Para qué sirve el tapón?</h2>
+        <p>El tapón suele ser un <strong>componente elastomérico</strong>. La USP describe estos componentes como parte del sistema de envase y cierre: deben proteger y contener el producto y, cuando el diseño lo requiere, permitir el acceso al contenido.</p>
+        <p>Su comportamiento importa porque está en contacto directo o muy próximo al producto. Compatibilidad química, partículas, extractables/leachables, ajuste dimensional y comportamiento funcional forman parte de la evaluación del sistema.</p>
+      </section>
+
+      <section>
+        <h2>4. ¿Qué hace el aro de aluminio?</h2>
+        <p>Después de colocar el tapón, un <strong>sello de aluminio</strong> se crimpa alrededor del cuello del vial. Su función es mantener el tapón comprimido y sujeto contra la superficie de cierre del vial. En un sistema correctamente diseñado, vial, tapón, sello y proceso de crimpado trabajan juntos para mantener la integridad del cierre.</p>
+        <div class="layer-diagram" role="img" aria-label="Esquema conceptual de las capas de cierre de un vial">
+          <span class="cap">Botón / flip-off</span>
+          <span class="seal">Sello de aluminio</span>
+          <span class="stopper">Tapón elastomérico</span>
+          <span class="vial">Vial</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>5. ¿Y el “flip-off” de color?</h2>
+        <p>En muchos cierres, el botón plástico visible se integra con el sello de aluminio y puede retirarse con un gesto de “flip-off”. Ayuda a proteger la zona de acceso y puede aportar evidencia visual de manipulación. <strong>El color del botón, por sí solo, no indica pureza, potencia, esterilidad ni calidad del contenido.</strong></p>
+      </section>
+
+      <section class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li><strong>Ámbar ≠ automáticamente mejor.</strong></li>
+          <li><strong>Transparente ≠ vidrio de baja calidad.</strong></li>
+          <li><strong>Tipo I ≠ garantía absoluta de compatibilidad con cualquier formulación.</strong></li>
+          <li><strong>Flip-off intacto ≠ prueba completa de esterilidad o autenticidad.</strong></li>
+          <li>Un vial debe evaluarse como parte de un <strong>sistema completo</strong>, no solo por su aspecto.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>La idea más útil</h2>
+        <p>Cuando mires un vial, piensa en cuatro preguntas separadas: <strong>¿de qué material está hecho?, ¿necesita protección frente a la luz?, ¿qué tipo de tapón utiliza? y ¿cómo se mantiene comprimido ese tapón?</strong> La respuesta correcta rara vez está en una sola pieza del envase.</p>
+      </section>
+
+      <section class="sources">
+        <p class="surface-kicker">Fuentes principales</p>
+        <ol>
+          <li><a href="https://doi.usp.org/USPNF/USPNF_M1757_02_01.html" rel="external">USP &lt;660&gt; — Containers—Glass</a>.</li>
+          <li><a href="https://doi.usp.org/USPNF/USPNF_M99140_09_01.html" rel="external">USP &lt;381&gt; — Elastomeric Components in Injectable Pharmaceutical Product Packaging/Delivery Systems</a>.</li>
+          <li><a href="https://doi.usp.org/USPNF/USPNF_M11355_05_01.html" rel="external">USP &lt;382&gt; — Elastomeric Component Functional Suitability in Parenteral Product Packaging/Delivery Systems</a>.</li>
+          <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/container-closure-system-and-component-changes-glass-vials-and-stoppers" rel="external">FDA — Container Closure System and Component Changes: Glass Vials and Stoppers</a>.</li>
+          <li><a href="https://www.schott-pharma.com/en/products/vials" rel="external">SCHOTT Pharma — Vials</a> (documentación de fabricante usada únicamente como ejemplo de presentaciones y protección frente a la luz).</li>
+        </ol>
+        <p class="source-note">Última revisión editorial: 3 de septiembre de 2026. Este artículo explica materiales y componentes de envase; no establece condiciones de conservación para una molécula concreta.</p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-hero{background:radial-gradient(circle at 82% 18%,rgba(139,123,184,.12),transparent 24rem),var(--color-porcelain)}
+  .back-link{display:inline-block;margin-bottom:2rem;font-family:var(--font-system);font-size:.92rem;font-weight:600;text-decoration:none}.rb-lead{color:var(--color-muted-ink);font-size:clamp(1.25rem,2.4vw,1.6rem)}
+  .rb-body{padding-block:var(--space-7) var(--space-8)}.rb-body section{margin-bottom:var(--space-7)}.rb-body h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+  .quick-answer{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid rgba(122,63,104,.18);border-radius:var(--radius-large);background:var(--color-soft-bloom)}
+  .glass-grid,.compare-box{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}.glass-grid article,.compare-box div{padding:1.2rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper)}.glass-grid strong,.glass-grid span,.compare-box strong,.compare-box span{display:block}.glass-grid span,.compare-box span{margin-top:.45rem;color:var(--color-muted-ink)}
+  .compare-box{grid-template-columns:1fr 1fr}.layer-diagram{display:grid;gap:.35rem;width:min(100%,26rem);margin:2rem auto;text-align:center;font-family:var(--font-system);font-weight:600}.layer-diagram span{padding:.75rem;border:1px solid var(--color-hairline);border-radius:.7rem;background:var(--color-paper)}.layer-diagram .cap{width:65%;justify-self:center}.layer-diagram .seal{width:82%;justify-self:center}.layer-diagram .stopper{width:72%;justify-self:center;background:var(--color-soft-bloom)}.layer-diagram .vial{padding:2rem .75rem;border-color:rgba(122,63,104,.28)}
+  .not-meaning{padding:1.5rem 1.75rem;border-left:.22rem solid var(--color-lavender);background:var(--color-soft-bloom)}.not-meaning ul{margin-bottom:0}.sources{padding-top:var(--space-5);border-top:1px solid var(--color-hairline)}.sources li{margin-bottom:.75rem}.source-note{color:var(--color-muted-ink);font-family:var(--font-system);font-size:.88rem}
+  @media(max-width:700px){.glass-grid,.compare-box{grid-template-columns:1fr}}
+</style>

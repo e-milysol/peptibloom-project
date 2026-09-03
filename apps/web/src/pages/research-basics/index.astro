@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Research Basics"
+  description="Respuestas breves y verificadas a preguntas cotidianas sobre investigación, laboratorio, química y lectura crítica."
+>
+  <section class="section section--hero">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">Research Basics</p>
+      <h1>Preguntas sencillas. Respuestas claras.</h1>
+      <p class="hero__lead">
+        Una colección de lecturas cortas para entender conceptos que aparecen una y otra vez en foros, comunidades y conversaciones sobre investigación.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="articles-title">
+    <div class="site-frame">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Últimos artículos</p>
+        <h2 id="articles-title">Empieza por una duda concreta.</h2>
+      </div>
+
+      <a class="rb-card" href="/research-basics/que-es-un-aminoacido/">
+        <div>
+          <p class="surface-kicker">Química básica · ~2 min</p>
+          <h3>¿Qué es un aminoácido?</h3>
+          <p>La pieza mínima que ayuda a entender de qué están hechos los péptidos y las proteínas.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .rb-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-large);
+    background: var(--color-paper);
+    box-shadow: var(--shadow-paper);
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .rb-card:hover { border-color: rgba(122, 63, 104, 0.35); color: var(--color-ink); }
+  .rb-card h3 { font-size: clamp(1.8rem, 4vw, 2.7rem); }
+  .rb-card p:not(.surface-kicker) { color: var(--color-muted-ink); }
+  .rb-card > span { color: var(--color-mulberry); font-size: 2rem; }
+</style>

@@ -13,6 +13,7 @@ const routes = [
   '/research-basics/que-es-un-aminoacido/',
   '/research-basics/que-es-un-coa/',
   '/research-basics/como-leer-un-coa/',
+  '/research-basics/coa-100-seguridad/',
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

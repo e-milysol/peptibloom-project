@@ -11,48 +11,123 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="page-hero__copy">
         <p class="eyebrow">Scientific Library</p>
         <h1>Research should be easier to inspect than marketing.</h1>
-        <p class="page-hero__lead">PeptiBloom scientific entries make evidence, uncertainty and provenance visible. Compound pages appear only after completing the approved scientific and editorial review path.</p>
+        <p class="page-hero__lead">
+          This library is being built around evidence, transparency and traceability. Scientific entries will
+          appear only after they complete the approved review path; the web will not invent content to make the
+          library look fuller than it is.
+        </p>
         <div class="hero__actions" aria-label="Library actions">
-          <a class="button button--primary" href="#published-entries">Explore the library</a>
+          <a class="button button--primary" href="#publication-state">See the publication standard</a>
           <a class="editorial-link" href="/methodology/">Read the methodology <span aria-hidden="true">→</span></a>
         </div>
       </div>
+
       <aside class="library-cover" aria-labelledby="library-cover-title">
-        <div class="library-cover__topline"><span>PeptiBloom Scientific Library</span><span aria-hidden="true">01</span></div>
-        <div class="library-cover__halo" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="library-cover__topline">
+          <span>PeptiBloom Scientific Library</span>
+          <span aria-hidden="true">01</span>
+        </div>
+        <div class="library-cover__halo" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
         <p class="surface-kicker">Reading standard</p>
         <h2 id="library-cover-title">What is known. What is not. Where it comes from.</h2>
-        <div class="library-cover__footer"><span>Evidence</span><span>Uncertainty</span><span>Provenance</span></div>
+        <div class="library-cover__footer">
+          <span>Evidence</span><span>Uncertainty</span><span>Provenance</span>
+        </div>
       </aside>
     </div>
   </section>
 
-  <section class="section section--quiet" id="published-entries" aria-labelledby="entries-title">
+  <section class="section section--quiet" aria-labelledby="library-principles-title">
     <div class="site-frame">
-      <div class="section-heading reading-column"><p class="eyebrow">Reviewed entries</p><h2 id="entries-title">The library begins with evidence, not catalogue size.</h2><p>Each entry is revision-controlled and reviewed before it is surfaced here.</p></div>
-      <a class="entry-card" href="/library/retatrutide/">
-        <div><p class="surface-kicker">Investigational · Evidence cutoff 03 Sep 2026</p><h3>Retatrutide</h3><p>Triple GIPR / GLP-1R / GCGR agonist with peer-reviewed human phase 1b, phase 2 and phase 3 evidence.</p></div>
-        <div class="entry-card__meta"><span>Human efficacy <strong>Solid within scope</strong></span><span>Long-term outcomes <strong>Unresolved</strong></span><span>Preparation evidence <strong>Insufficient</strong></span><b aria-hidden="true">→</b></div>
-      </a>
-    </div>
-  </section>
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Library principles</p>
+        <h2 id="library-principles-title">What a PeptiBloom scientific entry is expected to make visible.</h2>
+      </div>
 
-  <section class="section" aria-labelledby="library-principles-title">
-    <div class="site-frame"><div class="section-heading reading-column"><p class="eyebrow">Library principles</p><h2 id="library-principles-title">What every PeptiBloom scientific entry makes visible.</h2></div>
       <div class="library-principles library-principles--cards">
-        <article class="library-principle"><span><small>01</small>Evidence</span><p>What the available research can support — without extending beyond it.</p></article>
-        <article class="library-principle"><span><small>02</small>Uncertainty</span><p>What remains theoretical, disputed, incomplete or unknown.</p></article>
-        <article class="library-principle"><span><small>03</small>Provenance</span><p>Where information comes from and how a reader can trace it back.</p></article>
-        <article class="library-principle"><span><small>04</small>Contradictions</span><p>Where sources or findings do not align cleanly.</p></article>
+        <article class="library-principle">
+          <span><small>01</small>Evidence</span>
+          <p>What the available research can support — without extending beyond it.</p>
+        </article>
+        <article class="library-principle">
+          <span><small>02</small>Uncertainty</span>
+          <p>What remains theoretical, disputed, incomplete or unknown.</p>
+        </article>
+        <article class="library-principle">
+          <span><small>03</small>Provenance</span>
+          <p>Where information comes from and how a reader can trace it back.</p>
+        </article>
+        <article class="library-principle">
+          <span><small>04</small>Contradictions</span>
+          <p>Where sources or findings do not align cleanly.</p>
+        </article>
       </div>
     </div>
   </section>
 
+  <section class="section" id="publication-state" aria-labelledby="current-library-title">
+    <div class="site-frame feature-layout feature-layout--publication">
+      <div class="feature-copy">
+        <p class="eyebrow">Current publication state</p>
+        <h2 id="current-library-title">No placeholder compounds. No fabricated evidence.</h2>
+        <p class="section-lead">
+          PeptiBloom will publish compound-level scientific pages only when an approved Evidence contract and
+          production-ready scientific content are available. Until then, this page explains the publication
+          standard rather than pretending finished entries already exist.
+        </p>
+      </div>
+
+      <aside class="publication-ledger" aria-labelledby="why-this-matters-title">
+        <div class="publication-ledger__heading">
+          <p class="surface-kicker">Why this matters</p>
+          <span>Review gate</span>
+        </div>
+        <h3 id="why-this-matters-title">A gap is better than invented certainty.</h3>
+        <ul>
+          <li><span>Scientific Inventory</span><strong>Source and review workflow</strong></li>
+          <li><span>Evidence</span><strong>Public contract required</strong></li>
+          <li><span>Library entry</span><strong>Published only when ready</strong></li>
+        </ul>
+        <p>
+          Missing content is visible by design. The library does not use mock studies, unsupported claims or
+          unreviewed copy as a substitute for production-ready scientific material.
+        </p>
+      </aside>
+    </div>
+  </section>
+
   <section class="section section--soft" aria-labelledby="next-title">
-    <div class="site-frame method-callout"><div class="method-callout__marker" aria-hidden="true"><span>01</span><span>04</span></div><div class="reading-column"><p class="eyebrow">How to read PeptiBloom</p><h2 id="next-title">Start with the method, then follow the sources.</h2><p>The methodology explains how PeptiBloom approaches provenance, interpretation, contradictions and the boundary between scientific information and commercial information.</p><a class="button button--primary" href="/methodology/">Read the methodology</a></div></div>
+    <div class="site-frame method-callout">
+      <div class="method-callout__marker" aria-hidden="true"><span>01</span><span>04</span></div>
+      <div class="reading-column">
+        <p class="eyebrow">How to read PeptiBloom</p>
+        <h2 id="next-title">Start with the method, then follow the sources.</h2>
+        <p>
+          The methodology explains how PeptiBloom approaches provenance, interpretation, contradictions and the
+          boundary between scientific information and commercial information.
+        </p>
+        <a class="button button--primary" href="/methodology/">Read the methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="research-tools-title">
+    <div class="site-frame feature-layout research-tools-band">
+      <div class="feature-copy">
+        <p class="eyebrow">Research tools</p>
+        <h2 id="research-tools-title">Useful now, without pretending the scientific catalogue is finished.</h2>
+        <p class="section-lead">
+          The concentration and reconstitution calculator is available as a transparent arithmetic tool. Its
+          formulas, limits and worked example are visible on the page.
+        </p>
+      </div>
+      <div class="research-tools-band__action">
+        <p class="surface-kicker">Transparent arithmetic</p>
+        <div class="research-tools-band__units" aria-hidden="true"><span>mg/mL</span><span>µg/mL</span><span>mL</span></div>
+        <a class="button button--primary" href="/calculator/">Use the calculator</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
-
-<style>
-.entry-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(18rem,.75fr);gap:clamp(2rem,6vw,5rem);padding:clamp(1.5rem,4vw,3rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none}.entry-card:hover{border-color:rgba(122,63,104,.35);color:var(--color-ink)}.entry-card h3{font-size:clamp(2rem,4vw,3.2rem)}.entry-card p:not(.surface-kicker){color:var(--color-muted-ink)}.entry-card__meta{display:grid;gap:.8rem;align-content:center;font-family:var(--font-system);font-size:.86rem}.entry-card__meta span{display:flex;justify-content:space-between;gap:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--color-hairline)}.entry-card__meta strong{color:var(--color-mulberry);text-align:right}.entry-card__meta b{justify-self:end;font-size:1.8rem;color:var(--color-mulberry)}@media(max-width:760px){.entry-card{grid-template-columns:1fr}.entry-card__meta span{display:grid}.entry-card__meta strong{text-align:left}}
-</style>

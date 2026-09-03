@@ -11,6 +11,7 @@ const routes = [
   '/methodology/',
   '/research-basics/',
   '/research-basics/que-es-un-aminoacido/',
+  '/research-basics/que-es-un-coa/',
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

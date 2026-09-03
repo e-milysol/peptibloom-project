@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="¿Un COA me da 100 % de seguridad?" description="Qué puede respaldar un Certificate of Analysis y cuáles son sus límites: muestra, método, laboratorio, autenticidad y alcance de los ensayos.">
+  <article class="rb-article section">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">Research Basics · Documentación · ~2 min</p>
+      <h1>¿Un COA me da 100 % de seguridad?</h1>
+      <p class="rb-lead"><strong>En pocas palabras:</strong> no. Un COA puede aportar información valiosa sobre una muestra concreta y los ensayos que realmente se realizaron, pero no convierte automáticamente un producto en “100 % seguro”, ni demuestra por sí solo todo lo que podría interesar sobre ese producto.</p>
+
+      <div class="can-cannot" aria-label="Qué puede y qué no puede decir un COA">
+        <section>
+          <p class="surface-kicker">Puede ayudar a saber</p>
+          <ul>
+            <li>qué muestra o lote figura en el informe;</li>
+            <li>qué ensayos aparecen realizados;</li>
+            <li>qué métodos, criterios y resultados se reportaron;</li>
+            <li>qué laboratorio o entidad emitió el documento.</li>
+          </ul>
+        </section>
+        <section>
+          <p class="surface-kicker">No demuestra por sí solo</p>
+          <ul>
+            <li>que todos los riesgos posibles fueron evaluados;</li>
+            <li>que todas las unidades del lote sean idénticas;</li>
+            <li>que el documento sea auténtico solo por su apariencia;</li>
+            <li>que el producto sea apto para cualquier uso concreto.</li>
+          </ul>
+        </section>
+      </div>
+
+      <h2>El COA habla de una muestra y de unos ensayos</h2>
+      <p>El modelo de la OMS vincula el certificado con una muestra registrada y enumera los procedimientos de ensayo, criterios de aceptación y resultados. Eso significa que el documento debe leerse dentro de ese alcance: <strong>muestra identificada + pruebas concretas + resultados concretos</strong>.</p>
+
+      <h2>Una muestra no equivale automáticamente a cada unidad</h2>
+      <p>El resultado de una muestra puede ser representativo si el muestreo y el sistema de calidad están bien controlados, pero un COA no elimina por sí mismo la pregunta de <strong>cómo se tomó la muestra</strong>, de qué lote procede o cómo se mantuvo su trazabilidad. Por eso, en control de calidad, el muestreo se trata como una parte separada del proceso analítico.</p>
+
+      <h2>El método también importa</h2>
+      <p>No basta con ver un número. La EMA exige que los métodos analíticos sean adecuados para su finalidad y, según la fase y el contexto, que se documenten parámetros como exactitud, precisión, especificidad y límites de detección o cuantificación cuando correspondan. Un resultado solo tiene sentido dentro del método que lo generó.</p>
+
+      <h2>¿Y si el laboratorio está acreditado?</h2>
+      <p>La acreditación puede aportar evidencia sobre la competencia del laboratorio para un <strong>alcance concreto</strong>, pero no convierte cualquier ensayo del laboratorio en acreditado automáticamente. La propia OMS indica que, cuando un laboratorio ISO/IEC 17025 menciona acreditación en un COA, esa referencia debe estar relacionada con el análisis específico.</p>
+
+      <aside class="not-meaning">
+        <p class="surface-kicker">Lo que esto NO significa</p>
+        <ul>
+          <li><strong>Existe COA ≠ COA auténtico.</strong></li>
+          <li><strong>COA auténtico ≠ cadena de custodia demostrada automáticamente.</strong></li>
+          <li><strong>Una muestra ≠ todas las unidades del lote.</strong></li>
+          <li><strong>Pasar los ensayos listados ≠ excluir todos los riesgos posibles.</strong></li>
+          <li><strong>Laboratorio acreditado ≠ todo ensayo está dentro del alcance acreditado.</strong></li>
+        </ul>
+      </aside>
+
+      <h2>La conclusión práctica</h2>
+      <p>Un COA es una pieza de evidencia documental, no una garantía absoluta. Cuanto mejor puedas responder <strong>quién emitió el informe, qué muestra recibió, qué se analizó, con qué método y bajo qué alcance</strong>, mejor podrás interpretar lo que ese documento realmente respalda.</p>
+
+      <p class="next-link"><strong>Anterior:</strong> <a href="/research-basics/como-leer-un-coa/">Cómo leer un COA sin perderse</a><br /><strong>Siguiente:</strong> <span>¿Qué es la espectrometría de masas? → próximamente</span></p>
+
+      <footer class="rb-sources">
+        <p class="surface-kicker">Fuentes principales</p>
+        <ol>
+          <li><a href="https://www.who.int/publications/m/item/trs1010-annex4" rel="noreferrer">World Health Organization. <em>TRS 1010, Annex 4: WHO model certificate of analysis</em>.</a></li>
+          <li><a href="https://extranet.who.int/prequal/medicines/who-technical-report-series" rel="noreferrer">World Health Organization. Quality control testing guidance, including sampling and model COA resources.</a></li>
+          <li><a href="https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-requirements-chemical-and-pharmaceutical-quality-documentation-concerning-investigational-medicinal-products-clinical-trials-revision-1_en.pdf" rel="noreferrer">European Medicines Agency. IMP quality guideline — analytical procedures and batch analyses.</a></li>
+        </ol>
+        <p class="source-note">Research Basics enseña lectura crítica de documentos. No evalúa la autenticidad, calidad, seguridad ni aptitud de un producto concreto.</p>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-article h1{max-width:15ch}.rb-lead{font-size:clamp(1.18rem,2vw,1.45rem);color:var(--color-muted-ink)}
+  .can-cannot{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2.2rem 0}.can-cannot section{padding:1.35rem;border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper)}.can-cannot ul{margin-bottom:0}
+  .not-meaning{margin:2rem 0;padding:1.5rem;border-left:.22rem solid var(--color-mulberry);background:var(--color-soft-bloom)}.not-meaning ul{margin-bottom:0}.next-link{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--color-hairline);color:var(--color-muted-ink)}.rb-sources{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--color-hairline)}.rb-sources li,.source-note{font-size:.9rem;color:var(--color-muted-ink)}
+  @media(max-width:620px){.can-cannot{grid-template-columns:1fr}}
+</style>

@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-19
+state_updated: 2026-09-04
 
 source_of_truth:
   implementation: github
@@ -10,7 +10,16 @@ source_of_truth:
 repository:
   default_branch: main
   verified_main_sha_at_protocol_start: 5fded280cb587a054b87583ec4ee3e381171b93a
-  main_policy: treat_as_protected
+  main_policy: protected_via_pull_requests
+  branch_protection_policy:
+    decision: PB-DEC-001
+    status: APPROVED
+    owner_approval_date: 2026-09-03
+    require_pull_request: true
+    allow_force_push: false
+    allow_branch_deletion: false
+    required_checks_policy: ONLY_EXISTING_STABLE_APPROPRIATE_CHECKS
+    github_enforcement_state: PENDING_CONFIGURATION
 
 work_ownership:
   WORK_6: app_core
@@ -37,6 +46,16 @@ milestones:
       - en
       - es
       - fr
+    locale_policy:
+      decision: PB-DEC-002
+      status: APPROVED
+      owner_approval_date: 2026-08-28
+      primary_default_locale: es
+      default_locale_prefixed: false
+      locale_prefixes:
+        en: /en/
+        fr: /fr/
+      silent_cross_locale_fallback: false
     m2: BLOCKED
   app_core:
     owner_work: WORK_6
@@ -151,12 +170,4 @@ cross_domain_rules:
   app_core_private_master_implicit_linkage: false
   physical_products_cross_domain_contract_requires_pb_xd: true
 
-open_decisions:
-  - id: PB-DEC-001
-    domain: repository
-    subject: technical_branch_protection_for_main
-    status: PROPOSED
-  - id: PB-DEC-002
-    domain: web
-    subject: primary_language_for_public_launch
-    status: PROPOSED
+open_decisions: []

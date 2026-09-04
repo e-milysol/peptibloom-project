@@ -1,0 +1,59 @@
+﻿{
+    "collection":  "Bloom Editorial Extensions",
+    "version":  "1.0",
+    "status":  "BINARY_FROZEN",
+    "character":  "Bloom Editorial",
+    "artifact_class":  "editorial_extensions",
+    "specification":  {
+                          "format":  "PNG",
+                          "width":  1024,
+                          "height":  1536,
+                          "mode":  "RGBA",
+                          "transparent_background":  true,
+                          "hash_algorithm":  "SHA256"
+                      },
+    "assets":  [
+                   {
+                       "id":  "BL-E01",
+                       "label":  "Escéptica",
+                       "file":  "derived/editorial_extensions/BL-E01.png",
+                       "sha256":  "B645D2D912204F3C0072F27F5F54E1EA98CE33FBEC2D591DBA8D427D108A12E9"
+                   },
+                   {
+                       "id":  "BL-E02",
+                       "label":  "Cálida",
+                       "file":  "derived/editorial_extensions/BL-E02.png",
+                       "sha256":  "B166F9EDC08591AF298F1B80B4E957B1D0C977DC08537858BFE3B44672FEAC5D"
+                   },
+                   {
+                       "id":  "BL-E03",
+                       "label":  "Cómplice",
+                       "file":  "derived/editorial_extensions/BL-E03.png",
+                       "sha256":  "AECDC2BC1D9CA521F01F0D564CBC62C061CDB2CB7DBA389A78041E09B7A51B06"
+                   },
+                   {
+                       "id":  "BL-E04",
+                       "label":  "Traduce",
+                       "file":  "derived/editorial_extensions/BL-E04.png",
+                       "sha256":  "A99B36E6D6B4BD4728A9269F9FE4BEF66C09F69560B445AC920F8684B018B8B6"
+                   },
+                   {
+                       "id":  "BL-E05",
+                       "label":  "Conecta",
+                       "file":  "derived/editorial_extensions/BL-E05.png",
+                       "sha256":  "6B1A356F2EFDDA5A75F0160827303E59D45B9F57AE55AC28ED54582B5D8D35EB"
+                   },
+                   {
+                       "id":  "BL-E06",
+                       "label":  "Simplifica",
+                       "file":  "derived/editorial_extensions/BL-E06.png",
+                       "sha256":  "116ACCECCBC69F0DB73A08D53F3A93B256B17A9539E1A4E5895C28FD1ED32796"
+                   },
+                   {
+                       "id":  "BL-E07",
+                       "label":  "Orienta",
+                       "file":  "derived/editorial_extensions/BL-E07.png",
+                       "sha256":  "3AE6796C583DA5AD6F5D0372E68A4A2D20DB0AD40164DA3DD538401DE87A83FF"
+                   }
+               ]
+}

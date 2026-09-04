@@ -32,7 +32,7 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - Compound pages require an approved Evidence public contract and production-ready scientific content.
 - The public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`).
 - New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
-- The primary/default locale, URL-prefix policy and fallback behavior remain open until explicitly approved; they must not be inferred from the current English M1 copy.
+- PB-DEC-002 is approved: Spanish (`es`) is the primary/default locale and is unprefixed; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.
 - The permanent production canonical domain is `https://peptibloomproject.com`.
 - Cloudflare Workers is the approved production hosting for PeptiBloom Web.
 - Web, SEO, sitemap, canonicals, metadata and other public references may treat `https://peptibloomproject.com` as the production origin.
@@ -101,3 +101,5 @@ The Scientific Library is the central knowledge destination. Science and commerc
 - Approved decisions recorded here or in `DECISIONS.md` beat proposals in chat transcripts.
 - Missing canon creates a decision request; it is not permission to infer.
 - Cross-domain changes require a `PB-XD-NNN` request.
+- PB-DEC-001 is approved as repository policy: changes to `main` go through Pull Requests; force-push and deletion of `main` are not allowed; required checks may be enforced only when the checks actually exist, are stable and are appropriate for the repository.
+- PB-DEC-001 policy approval does not imply that GitHub branch/ruleset enforcement is already active. Repository-settings enforcement remains a separate technical configuration step and must be verified from GitHub state.

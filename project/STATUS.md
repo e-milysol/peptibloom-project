@@ -1,19 +1,39 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-08-19.
+Last coordination baseline: 2026-08-26 state reconciliation from Issue #13. Implementation baseline remains public `main` `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
-| Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete | launch hardening; multilingual routing implementation after default-locale decision; WEB M2 remains blocked |
+| Web | M1 complete; Public Content Release 1 and Public Tools branch-preview execution active under `OUTPUT-BEFORE-NEW-FOUNDATION`; Web Identity v1.0 approved/frozen but exact assets are `ASSET_INPUT_REQUIRED` | one real Library ficha + one evidence-based Blog article + reusable templates/IA preview; Visual Planner production-candidate preview; all production gates remain blocked |
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
-| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
+| Private Master / WORK 7 | Active and separate from App Core; backup/recovery increment authorized; real-data import conditionally authorized but still BLOCKED | external backup -> SHA-256 verification -> isolated restore -> restored-environment validation -> recovery log; only then one bounded import increment |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
 | Physical Products / Accessories | PB-DEC-501 domain authority approved; Clean-Sheet Physical Design Pipeline v0.1 Owner approved; Bambu Lab P1S + AMS recorded as current fabrication capability; legacy geometry recovery closed with no recovered authoritative geometry; Bloom Caps is the first controlled clean-sheet exercise and remains PRE-G0; CAD is not authorized | review and reduce the held Bloom Caps G0–G2 Owner Input & Measurement Pack, then collect only the functional input and physical measurements required for G0–G2 |
-| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize internal representation without inventing schema; approved public read contract still required before WEB M2 |
+| Evidence | architecture/reconciliation in progress; internal Evidence -> Scientific Content semantics approved through `PB-XD-001` but pending durable PR #32 reconciliation; public contract remains unapproved | preserve the approved internal boundary without inventing schema; answer the separate PB-XD-002 public-content request; WEB M2 remains blocked |
 | Scientific Inventory | source/review workflow in progress; recovered candidates recorded for reconciliation only | production-ready handoff to Evidence Layer |
-| Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
+| Scientific Content Production | editorial transformation only; no scientific assessment, approval or publication authority; internal `PB-XD-001` semantics approved but pending durable PR #32 reconciliation | receive sufficient Evidence-qualified input and answer PB-XD-002; publication remains blocked by existing Evidence/content gates |
 | Growth / SEO / Distribution | operational ownership restored; Search Console state is recorded only as HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18 | continue monitoring and establish current baselines from fresh source telemetry; do not infer current performance from historical observations |
 | Analytics | Analytics v1 contract and 19-event registry restored; only ANALYTICS_CONTRACT_APPROVED is APPROVED; production instrumentation remains BLOCKED | WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING |
+
+## Reconciled execution state
+
+Active execution is limited to:
+- WORK 7 / Private Master under its recovery-first checkpoint protocol;
+- Public Content Release 1 minimum owners: Scientific Inventory, Evidence, Scientific Content, Brand/Visual Production, Web, Accessibility, Legal/Scientific QA and Growth as a downstream consumer;
+- Public Tools minimum owners: Web, Research Tools/Utility Discovery and the existing Visual Planner / Routine Builder path, with App Core consulted only for contract consistency.
+
+All unrelated workstreams remain `ARCHIVED / DEFERRED`. App Core production implementation is not reactivated. No payment, external integration, health/wellness-data, Analytics production, Web M2 publication or Physical Products fabrication authority is created.
+
+The active operating rule is `OUTPUT-BEFORE-NEW-FOUNDATION`: concrete, safe branch-preview artifacts take priority over additional foundation/specification documents unless a named blocker requires one.
+
+Directive sources reconciled:
+- contracts #13-#15: Issue #13 comment `5391139927`;
+- assisted-commerce contract #16: `5391213520`;
+- Public Content Release 1 and output-first rule: `5400901534`, refined by `5400984546`;
+- Public Tools / Visual Planner priority: `5401050814`;
+- active/deferred reconciliation: `5402273570`;
+- WORK 7 recovery increment and conditional import: `5413980562`, `5416698566`, routed by `5419310089`;
+- frozen Web Identity v1.0 disposition: `5416421053`.
 
 ## Web
 
@@ -91,11 +111,13 @@ Existing PB-DEC-501 domain boundaries remain unchanged. WORK 7 / Private Master 
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 
-Scientific Content Production is represented as an editorial transformation stage only. Its internal Evidence handoff remains `PROPOSED / PARTIAL / PENDING FORMALIZATION`; this does not approve Evidence schema, scientific assessment, scientific content or publication authority.
+Scientific Content Production is represented as an editorial transformation stage only. The internal Evidence handoff semantics are approved through `PB-XD-001` and represented in draft PR #32, but their repository durability remains pending reconciliation. This does not approve Evidence schema, scientific assessment, scientific content, a public Evidence contract or publication authority.
 
 Recovered Scientific Inventory candidate classifications are coordination-state reconciliation only and do not constitute Evidence intake, acceptance, approval or production readiness.
 
 WEB M2 and production compound pages remain BLOCKED until the Evidence public contract is approved and production-ready scientific content exists.
+
+Draft PR #32 represents the approved internal `PB-XD-001` Evidence -> Scientific Content semantics, but explicitly excludes Evidence -> Web and publication. `PB-XD-002` is therefore OPEN for the distinct Release 1 Evidence / Public Content contract. Opening the request does not approve its output or unblock publication.
 
 ## Growth / Analytics
 
@@ -104,6 +126,42 @@ Growth / SEO / Distribution operational ownership is restored. Search Console ob
 Analytics v1 is restored as a previously approved domain contract. The contract gate is APPROVED, while WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING. Production instrumentation remains BLOCKED.
 
 PB-DEC-002 remains open/proposed; no historical language/default-locale/URL-prefix policy is restored by this reconciliation.
+
+## Open PR disposition and review order
+
+This table is review sequencing only. Every PR remains open in its observed state; no merge, close or supersession is authorized.
+
+| Order | PR | Observed state | Disposition | Review dependency / reason |
+|---:|---:|---|---|---|
+| 1 | #32 | OPEN / DRAFT | REVIEW FIRST; KEEP OPEN | Preserve approved `PB-XD-001`; reconcile overlapping core-state edits with this increment and keep Evidence -> Web excluded. |
+| 2 | #42 | OPEN / DRAFT | REVIEW AFTER #32 | Scientific Inventory readiness is the first Release 1 candidate-selection input. |
+| 3 | #41 | OPEN / DRAFT | REVIEW AFTER #32/#42 | Scientific Content must consume Evidence-qualified inputs under the internal contract and new PB-XD-002 gate. |
+| 4 | #43 | OPEN / DRAFT | REVIEW GATE INPUT | Security authority/handoff is relevant to Public Tools and later App Core gates; no production authorization. |
+| 5 | #48 | OPEN / DRAFT | REVIEW WORK 7 SANITIZED STATE | Reconcile only sanitized implementation status; preserve recovery-first and private-data boundaries. |
+| 6 | #44 | OPEN / DRAFT | REVIEW ASSET CHAIN | Registry is the intended durability path for exact frozen Web Identity assets once supplied. |
+| 7 | #51 | OPEN / DRAFT | REVIEW AFTER #44 | Visual Production foundation must consume, not duplicate, the asset registry and editable-master contract. |
+| 8 | #39 | OPEN / DRAFT | REVIEW WITH #44/#51 | Brand/Visual handoff must preserve Web Identity versus Product Label separation. |
+| 9 | #47 | OPEN / DRAFT | REVIEW RELEASE 1 INPUT | Opportunity discovery may inform Blog selection but community sources are not Evidence. |
+| 10 | #49 | OPEN / DRAFT | REVIEW RELEASE 1 PREVIEW INPUT | Evaluate the ordered non-claim visual experiments under current identity and Evidence gates. |
+| 11 | #45 | OPEN / DRAFT | REVIEW PUBLIC TOOLS CONTRACT | Product-design scope is input to the active Visual Planner production-candidate path, not App Core production authority. |
+| 12 | #46 | OPEN / DRAFT | REVIEW PUBLIC TOOLS IMPLEMENTATION | Reconcile synthetic prototype into a neutral, privacy-minimal Web branch-preview path; no production publication. |
+| 13 | #36 | OPEN / DRAFT | REVIEW OPERATING HANDOFF | Reconcile Web autonomy with Release 1/Public Tools priorities and PB-DEC-002 remaining open. |
+| 14 | #33 | OPEN / DRAFT | REVIEW GATE HANDOFF | Legal handoff supports concrete Release 1/Public Tools review; it does not supply legal approval by itself. |
+| 15 | #35 | OPEN / DRAFT | REVIEW DOWNSTREAM ONLY | Growth consumes real release candidates after scientific/publication gates; no claim inflation. |
+| 16 | #34 | OPEN / DRAFT | REVIEW, KEEP PRODUCTION BLOCKED | Migration acceptance does not satisfy technical, Legal/Privacy or Owner production gates. |
+| 17 | #38 | OPEN / DRAFT | DEFER / KEEP OPEN | Catalog/Pricing is outside the active execution set except for named dependencies. |
+| 18 | #40 | OPEN / DRAFT | DEFER / KEEP OPEN | Packaging handoff is archived/deferred; review later against contract #13 and physical validation authority. |
+| 19 | #50 | OPEN / DRAFT | DEFER / KEEP OPEN | Physical CX is archived/deferred; no packaging production or fabrication authority. |
+| 20 | #37 | OPEN / DRAFT | DEFER / KEEP OPEN | Commerce handoff is archived/deferred; later review must consume contract #16 and Legal policy. |
+| 21 | #31 | OPEN / READY, NO CHECKS/REVIEWS OBSERVED | DEFER / KEEP OPEN | Provider-neutral mock remains non-production; no Commerce/payment activation or merge authority. |
+
+## Unresolved state conflicts
+
+- Public `main` still carries the 2026-08-19 baseline while Issue #13 contains later approved directives; this reconciliation is not durable on GitHub until separately reviewed and merged.
+- PR #32 carries `PB-XD-001` and overlaps core state files. It must be reconciled rather than independently merged without conflict review.
+- Web Identity v1.0 is approved/frozen, but exact Owner-approved assets are absent from repository control and remain `ASSET_INPUT_REQUIRED`.
+- WORK 7 conditional import authorization exists, but no passing recovery evidence or later `WORK 7 ATOMIC INCREMENT CHECKPOINT AVAILABLE` was verified; import remains blocked.
+- PB-DEC-001 and PB-DEC-002 remain `OWNER_REQUIRED`; no later Issue #13 directive closes either decision.
 
 ## Coordination
 

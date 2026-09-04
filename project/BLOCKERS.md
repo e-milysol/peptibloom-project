@@ -49,9 +49,14 @@ Status: COMPLETE
 
 Technical Direction approved the WEB M1 Visual Foundation on 2026-08-16. WEB M1 implementation is authorized within its approved scope. The approved M1 foundation does not create or finalize the global PeptiBloom Design System.
 
-## Open decisions tracked elsewhere
+### PB-DEC-002 public locale policy
 
-The following are PROPOSED decisions in `PROJECT_STATE.yaml`, not current development blockers:
+Status: DECIDED / NOT A BLOCKER
 
-- PB-DEC-001 — technical protection for `main`;
-- PB-DEC-002 — public launch primary language;
+Owner approved PB-DEC-002 on 2026-08-28: Spanish (`es`) is primary/default and unprefixed; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.
+
+### PB-DEC-001 `main` protection policy
+
+Status: POLICY APPROVED / TECHNICAL ENFORCEMENT PENDING
+
+Owner approved PB-DEC-001 on 2026-09-03. The policy requires Pull Requests for changes to `main`, disallows force-push and deletion of `main`, and limits required checks to checks that actually exist, are stable and are appropriate for the repository. GitHub repository-settings enforcement is a separate pending configuration step and must not be represented as already active.

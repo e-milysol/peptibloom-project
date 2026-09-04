@@ -42,6 +42,7 @@ The binary files are identified here by exact SHA-256 so the reviewed visual can
 | `orchid_blend_series(2).png` | orchid + DNA + molecule reference artwork | BLENDS_SERIES | 1536x1024 | `5069f72d3a46b5b01bfdef1ed57f7032b91a1ab43eb9cbc749f0ded8f574c4fe` | FROZEN REFERENCE |
 | `amolecular_lab_search_pantone(3).png` | purple/pearl molecular palette/reference artwork | RESEARCH_SERIES | 1536x1024 | `39f525cbf17e0d3344419839db7b86d4320bf9b16a44725aaf4e3a2ac0497a78` | FROZEN REFERENCE; PALETTE VALUES NEED CLEAN SPEC SHEET |
 | `molecular_research_series(3).png` | standalone purple/pearl molecule | RESEARCH_SERIES | 2048x682 | `dc37e3e8dde0ba8a9de564bd6372478a098379247568dc333d4b750f792b8e2e` | FROZEN REFERENCE |
+| `research_series_orchid(4).png` | standalone orchid + DNA + molecule master | RESEARCH_SERIES | 1536x1024 | `27a1b3913849ca5b1189ca46e76823c05282e0fd646a43b04c4e844842792616` | FROZEN FAMILY ORCHID MASTER |
 | `molecular_lab_search_artwork(2).png` | full molecular color specification guide | LAB_ESSENTIALS | 1536x1024 | `07518b5c560dd1b1b827c765f3b2ba9bb684044c42ec4426dab26ae0108d0e02` | FROZEN SPEC REFERENCE |
 | `orchid_artwork(2).png` | full orchid + DNA + molecule color specification guide | LAB_ESSENTIALS | 1536x1024 | `fd2eb52f12bbb574bf07ab89e75b1b67e3d66af9b335b231f2897609d02e32ff` | FROZEN SPEC REFERENCE |
 | `orchid_lab_research(3).png` | standalone orchid + DNA + molecule | LAB_ESSENTIALS | 1536x1024 | `bb89e8c49b4921073193b8c612e6aa383f12ceddbf4c2cd699f254050690c79c` | FROZEN REFERENCE |
@@ -88,7 +89,7 @@ The supplied artwork is the controlling visual reference. The visible palette in
 Note: earlier chat shorthand used a nearby terracotta value. This freeze uses the value printed in the Owner-supplied master artwork (`#C4664A`) until/unless a later controlled Brand decision supersedes it.
 
 ### RESEARCH_SERIES — Purple / Pearl
-The visual direction and the two supplied molecular artworks are frozen. **Exact numeric palette values are not promoted from the small embedded labels in the current source image.** A clean Research Series color-specification sheet must be generated and approved before its numeric palette becomes production authority.
+The visual direction, molecular artwork and Owner-supplied orchid + DNA + molecule master are frozen. **Exact numeric palette values are not promoted from the small embedded labels in the current molecular palette image.** A clean Research Series color-specification sheet must still be generated and approved before its numeric palette becomes production authority.
 
 ## Master card composition — frozen from the approved blue sample as layout reference
 
@@ -156,23 +157,22 @@ AVAILABLE: molecular palette/reference artwork; orchid + DNA + molecule artwork.
 MISSING: clean color-spec sheet matching the documentation standard; isolated production-ready transparent orchid master; isolated transparent molecule master where needed; final editable family card master + preview.
 
 ### RESEARCH_SERIES
-AVAILABLE: purple/pearl molecule artwork + standalone molecule.
-MISSING: clean authoritative Research Series color-spec sheet; orchid + DNA + molecule master; standalone transparent orchid master; optional clean secondary molecule/DNA arrangement; final editable family card master + preview.
+AVAILABLE: purple/pearl molecule artwork + standalone molecule; **standalone orchid + DNA + molecule master now frozen** (`research_series_orchid(4).png`).
+MISSING: clean authoritative Research Series color-spec sheet; final editable family card master + preview. Optional separate DNA/molecule secondary arrangement only if the card layout needs it.
 
 ## Minimum generation batch before product-by-product labels
 
 Do **not** generate every product label yet. First complete these family-level masters:
 
 1. Research Series color-spec sheet;
-2. Research Series orchid + DNA + molecule transparent master;
-3. Metabolic Series isolated transparent orchid master;
-4. Metabolic Series isolated transparent molecule/DNA master if needed;
-5. Neuro Series clean spec sheet + isolated transparent production masters where needed;
-6. Blends Series clean spec sheet + isolated transparent production masters;
-7. five editable `FAMILY_CARD_MASTER` templates rebuilt with canonical logo and conditional fields;
-8. five flattened family-card review previews, one per family.
+2. Metabolic Series isolated transparent orchid master;
+3. Metabolic Series isolated transparent molecule/DNA master if needed;
+4. Neuro Series clean spec sheet + isolated transparent production masters where needed;
+5. Blends Series clean spec sheet + isolated transparent production masters;
+6. five editable `FAMILY_CARD_MASTER` templates rebuilt with canonical logo and conditional fields;
+7. five flattened family-card review previews, one per family.
 
-After those eight deliverables pass Brand/Packaging review, product-level cards can be generated from Catalog data without redesigning the family identity each time.
+After those seven deliverables pass Brand/Packaging review, product-level cards can be generated from Catalog data without redesigning the family identity each time.
 
 ## Guardrail
 

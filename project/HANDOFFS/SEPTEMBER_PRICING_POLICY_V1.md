@@ -53,7 +53,7 @@ PeptiBloom pricing from September 2026 follows these rules:
 | BAC Water | 10 ml | 15 |
 | Selank | 10 mg | 35 |
 | Semax | 10 mg | 35 |
-| FOXO1-DRI | 10 mg | 45 |
+| FOXO4-DRI | 10 mg | 45 |
 | AHK-Cu | 100 mg | 35 |
 | Epithalon | 10 mg | 30 |
 
@@ -68,7 +68,7 @@ For catalogue/master-data handling, a priced SKU must also carry a separate avai
 - `OUT_OF_STOCK` — known catalogue reference with no currently available physical stock.
 - `NOT_CURRENTLY_LISTED` / `UNPUBLISHED` — internal/priced identity not currently exposed publicly.
 
-The five September additions **Selank 10 mg, Semax 10 mg, FOXO1-DRI 10 mg, AHK-Cu 100 mg and Epithalon 10 mg** have owner-approved base prices for September planning, but their price approval alone does not make them `AVAILABLE` or authorize public publication. Their actual state must be sourced from the operational inventory/publication gates rather than inferred from this pricing document.
+The five September additions **Selank 10 mg, Semax 10 mg, FOXO4-DRI 10 mg, AHK-Cu 100 mg and Epithalon 10 mg** have owner-approved base prices for September planning, but their price approval alone does not make them `AVAILABLE` or authorize public publication. Their actual state must be sourced from the operational inventory/publication gates rather than inferred from this pricing document.
 
 ## 4. Historical/promotion handling
 

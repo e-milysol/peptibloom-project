@@ -2,6 +2,46 @@
 
 Owner: WEB workstream
 
+## Autonomous operating checkpoint
+
+- `CURRENT_STATE`: WEB M1 public/editorial implementation is complete on `main`; current public routes are `/`, `/library/`, `/methodology/`, `/about/`, `/calculator/`. WEB M2 remains blocked.
+- `LAST_COMPLETED`: public calculator and calculator visual/comparison enhancement merged through PRs #20/#21; SEO foundation merged through PR #22; approved Home/Scientific Library visual enrichment merged through PR #23; Web handoff reconciliation merged through PR #25; PB-DEC-003 production domain/hosting closure merged through PR #26.
+- `NEXT_ACTION`: maintain/harden the approved M1 implementation; receive exact cross-domain implementation deltas through the Control Plane. Do not implement the currently proposed Growth `/calculator/` SEO direction until Growth supplies an exact implementable delta. For Analytics, complete only the Web-owned technical/runtime verification required by the canonical production gate; do not activate instrumentation.
+- `BLOCKERS`: WEB M2 is blocked on an approved Evidence public read contract plus production-ready scientific content. Analytics production instrumentation is separately blocked until all canonical Analytics production gates are approved.
+- `OWNER_REQUIRED`: NONE for routine Web continuation. PB-DEC-002 remains an unresolved Owner decision before Web may choose primary/default locale, default-locale prefixing or fallback/redirect policy. Analytics Owner production authorization is a later production gate and must not be requested as a substitute for pending Web/Legal validation.
+- `DEPENDENCIES`: Growth owns search strategy/SEO requirements; Analytics owns event taxonomy/measurement contract; Legal owns privacy/compliance approval; Evidence/Scientific Content owns scientific truth/publication eligibility; Orchestrator coordinates routine cross-domain work through Issue #13.
+- `OPEN_REQUESTS`: `project/REQUESTS/open/` contained only `.gitkeep` at last verification. Draft PR #32 proposes PB-XD-001 for Evidence -> Scientific Content, but that request is not canonical on `main` and is not the Evidence -> Web public-read contract.
+- `LAST_VERIFIED_GITHUB_STATE`: 2026-08-19; `main` = `7a2f32bd65a33cb6de480e5421bbc02488a1c21f`. Re-verify before implementation or merge decisions.
+
+## Web authority
+
+### WEB OWNS
+
+Within approved scope and cross-domain requirements, Web owns implementation under `apps/web/`, including:
+- public templates, components, routing and frontend behavior;
+- technical SEO, metadata and structured-data implementation;
+- accessibility, responsive behavior and performance implementation;
+- integration of approved content and approved cross-domain contracts;
+- Web deployment mechanics already assigned by canon.
+
+### WEB DOES NOT OWN
+
+Web must not independently decide or redefine:
+- scientific truth, scientific claims, Evidence grades or publication eligibility;
+- Growth search strategy or search-intent prioritization;
+- Analytics event names, schemas, metric definitions, retention approval or Legal basis;
+- Legal/compliance approval;
+- commercial eligibility, sale authorization, pricing, checkout/payment authority or `READY_FOR_SALE`;
+- unresolved Owner product/language strategy.
+
+### CROSS-DOMAIN WEB GATES
+
+- WEB M2 / compound pages: approved Evidence public read contract + production-ready scientific content.
+- Growth-driven implementation: exact implementable requirements must arrive before Web changes the page; scientific meaning still requires Evidence authority.
+- Analytics production instrumentation: `ANALYTICS_CONTRACT_APPROVED`, `WEB_TECHNICAL_VALIDATION_APPROVED`, `LEGAL_PRIVACY_REVIEW_APPROVED` and `OWNER_PRODUCTION_AUTHORIZATION` must all be approved.
+- Multilingual routing: minimum `en`, `es`, `fr` support is approved, but PB-DEC-002 remains open for primary/default locale and URL-prefix/fallback policy.
+- Material new cross-domain shared semantics/interfaces require PB-XD under current governance; routine factual coordination does not.
+
 ## Current milestone
 
 WEB M0: COMPLETE.
@@ -156,7 +196,7 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - final Compound-page layout;
 - final scientific dense-data/table patterns;
 - primary public/default language;
-- default-locale URL-prefix/fallback behavior;
+- default-locale URL-prefix/fallback behavior.
 
 ## Launch hardening
 

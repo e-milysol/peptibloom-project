@@ -1,0 +1,59 @@
+﻿{
+    "collection":  "PeptiBloom Vial Family Derivatives",
+    "version":  "1.0",
+    "status":  "BINARY_FROZEN",
+    "parent":  {
+                   "asset_id":  "PB-VIAL-MASTER-v1.0",
+                   "sha256":  "BEB7725B0241E6B5CF19AA6A854A2BA37BE5A1D5C4614F01192A928DFF8CF772"
+               },
+    "invariant_elements":  [
+                               "glass geometry",
+                               "vial proportions",
+                               "silver collar",
+                               "rubber stopper",
+                               "camera angle",
+                               "lighting",
+                               "transparent background"
+                           ],
+    "variable_element":  "cap color",
+    "specification":  {
+                          "format":  "PNG",
+                          "width":  1024,
+                          "height":  1536,
+                          "mode":  "RGBA",
+                          "transparent_background":  true,
+                          "hash_algorithm":  "SHA256"
+                      },
+    "assets":  [
+                   {
+                       "id":  "PB-VIAL-BLUE-v1.0",
+                       "family_color":  "blue",
+                       "file":  "derived/vial_families/PB-VIAL-BLUE-v1.0.png",
+                       "sha256":  "8097311968FC258B5053D7E346FE9E27FC26770D5AB9EB33486627F1961EA073"
+                   },
+                   {
+                       "id":  "PB-VIAL-BROWN-v1.0",
+                       "family_color":  "brown",
+                       "file":  "derived/vial_families/PB-VIAL-BROWN-v1.0.png",
+                       "sha256":  "88E166D75B3582114CB44C31B46E48F8859B9BB6522DFB0DB3113AF7D0077ACF"
+                   },
+                   {
+                       "id":  "PB-VIAL-GOLD-v1.0",
+                       "family_color":  "gold",
+                       "file":  "derived/vial_families/PB-VIAL-GOLD-v1.0.png",
+                       "sha256":  "F6314424ECF5A6DB6331F6123B01678A584B76AEDFD3A7F8DEBF8D3645B377B8"
+                   },
+                   {
+                       "id":  "PB-VIAL-GREEN-v1.0",
+                       "family_color":  "green",
+                       "file":  "derived/vial_families/PB-VIAL-GREEN-v1.0.png",
+                       "sha256":  "E6244034511828E431482C2AE803D11994399C2FF88704FB25DB7589D93EC8DE"
+                   },
+                   {
+                       "id":  "PB-VIAL-PURPLE-v1.0",
+                       "family_color":  "purple",
+                       "file":  "derived/vial_families/PB-VIAL-PURPLE-v1.0.png",
+                       "sha256":  "1944BAA87B154F128EFAB05785D9A8679800CA98482FAB7D81A7AA9362E033CC"
+                   }
+               ]
+}

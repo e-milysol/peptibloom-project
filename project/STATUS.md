@@ -124,6 +124,6 @@ Bloom Caps remains `PRE-G0`; CAD is not authorized and the common-core architect
 
 The files under `project/` remain the durable coordination source of truth. Issue #13 remains the live asynchronous coordination mailbox.
 
-PB-DEC-001 remains open/proposed. The repository policy is still to **treat `main` as protected**, but this reconciliation does not claim that effective technical branch protection has been verified.
+PB-DEC-001 is now **OWNER APPROVED** as repository policy. `main` is required to use PR-based changes, prohibit force-pushes and deletion, and require successful repository QA before merge where applicable. Effective technical enforcement is **not yet verified** because the connected GitHub integration does not expose repository-administration writes; GitHub settings must still be configured/verified before branch protection can be marked technically complete.
 
 PB-DEC-002 remains open/proposed. No default-language decision is inferred from current published content.

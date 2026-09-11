@@ -4,7 +4,7 @@ export const prerender = true;
 
 const origin = 'https://peptibloomproject.com';
 const routes = [
-  '/', '/about/', '/calculator/', '/library/', '/methodology/', '/research-basics/',
+  '/', '/about/', '/calculator/', '/library/', '/methodology/', '/peptibloom/', '/research-basics/',
   '/research-basics/que-es-un-aminoacido/',
   '/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/',
   '/research-basics/viales-materiales-cierres/',

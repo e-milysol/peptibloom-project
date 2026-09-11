@@ -6,211 +6,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Evidence-First Peptide Research Library"
   description="PeptiBloom is a public peptide research library and calculation toolkit built around evidence, transparent uncertainty and traceable sources."
 >
-  <section class="section section--hero">
-    <div class="site-frame hero">
-      <div class="hero__copy">
+  <section class="section home-hero">
+    <div class="site-frame home-hero__grid">
+      <div class="home-hero__copy">
         <p class="eyebrow">Scientific Research Library</p>
-        <h1>Know what we know.<br />Know what we don’t.</h1>
-        <p class="hero__lead">
-          PeptiBloom is building a public scientific research library designed to make evidence,
-          uncertainty, provenance and open questions easier to inspect.
-        </p>
-        <div class="hero__actions" aria-label="Primary actions">
+        <h1>Know what we know.<br /><em>Know what we don’t.</em></h1>
+        <p class="hero__lead">PeptiBloom is building a public scientific research library designed to make evidence, uncertainty, provenance and open questions easier to inspect.</p>
+        <div class="hero__actions">
           <a class="button button--primary" href="/library/">Explore the library</a>
-          <a class="editorial-link" href="/methodology/">Read our methodology <span aria-hidden="true">→</span></a>
+          <a class="button button--ghost" href="/research-basics/">Start with Research Basics</a>
         </div>
-
-        <ul class="hero__standards" aria-label="PeptiBloom editorial principles">
-          <li><span>Evidence</span><small>Support without overstatement</small></li>
-          <li><span>Uncertainty</span><small>Gaps kept visible</small></li>
-          <li><span>Traceability</span><small>A route back to sources</small></li>
-        </ul>
+        <div class="home-hero__trust" aria-label="Editorial principles">
+          <span><strong>Evidence</strong><small>without overstatement</small></span>
+          <span><strong>Independent</strong><small>science before hype</small></span>
+          <span><strong>Traceable</strong><small>a route back to sources</small></span>
+        </div>
       </div>
-
-      <aside class="hero-edition" aria-labelledby="hero-edition-title">
-        <div class="hero-edition__masthead">
-          <span>PeptiBloom</span>
-          <span>Public research resource</span>
-        </div>
-        <div class="hero-edition__visual" aria-hidden="true">
-          <div class="evidence-halo">
-            <span class="evidence-halo__ring evidence-halo__ring--outer"></span>
-            <span class="evidence-halo__ring evidence-halo__ring--middle"></span>
-            <span class="evidence-halo__ring evidence-halo__ring--inner"></span>
-            <span class="evidence-halo__node evidence-halo__node--one"></span>
-            <span class="evidence-halo__node evidence-halo__node--two"></span>
-            <span class="evidence-halo__node evidence-halo__node--three"></span>
-          </div>
-        </div>
-        <p class="surface-kicker">Editorial standard</p>
-        <h2 id="hero-edition-title">Evidence belongs beside its limits.</h2>
-        <p>Support, contradiction and unanswered questions are part of the same scientific record.</p>
-        <div class="hero-edition__footer">
-          <span>Library notes · 01</span>
-          <a href="/about/">Why PeptiBloom exists <span aria-hidden="true">→</span></a>
-        </div>
-      </aside>
+      <figure class="home-hero__visual">
+        <img src="/brand/editorial/visuals/pb-home-bloom-molecule-v1.svg" alt="Abstract lavender flower and molecular structure representing PeptiBloom's editorial science identity" />
+        <figcaption><span>Evidence first.</span><strong>Science can be beautiful without becoming marketing.</strong></figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="section section--quiet" aria-labelledby="purpose-title">
+  <section class="section section--quiet" aria-labelledby="explore-title">
     <div class="site-frame">
-      <div class="section-heading reading-column">
-        <p class="eyebrow">Purpose</p>
-        <h2 id="purpose-title">Scientific information should show its limits as clearly as its conclusions.</h2>
+      <div class="home-section-heading">
+        <div><p class="eyebrow">Start here</p><h2 id="explore-title">Three ways to explore PeptiBloom.</h2></div>
+        <p>Move from scientific literacy to the library itself without confusing education, evidence and commercial information.</p>
       </div>
-
-      <div class="principle-grid principle-grid--featured">
-        <article class="principle">
-          <p class="principle__index">01</p>
-          <h3>Evidence</h3>
-          <p>Separate what is supported from what is theoretical, contradictory or anecdotal.</p>
-        </article>
-        <article class="principle">
-          <p class="principle__index">02</p>
-          <h3>Transparency</h3>
-          <p>Make ownership, limitations and unresolved questions visible rather than hiding them behind certainty.</p>
-        </article>
-        <article class="principle">
-          <p class="principle__index">03</p>
-          <h3>Traceability</h3>
-          <p>Keep the path back to sources and provenance inspectable.</p>
-        </article>
+      <div class="explore-grid">
+        <a class="explore-card" href="/library/">
+          <img src="/brand/editorial/visuals/pb-library-dossier-v1.svg" alt="Editorial illustration of scientific books and a molecular structure" />
+          <div><p class="surface-kicker">Scientific Library</p><h3>Follow evidence, limits and provenance.</h3><span>Browse the library →</span></div>
+        </a>
+        <a class="explore-card" href="/research-basics/">
+          <img src="/brand/editorial/visuals/pb-coa-document-v1.svg" alt="Editorial illustration of a laboratory certificate and vial" />
+          <div><p class="surface-kicker">Research Basics</p><h3>Understand the documents, methods and concepts around research.</h3><span>Start learning →</span></div>
+        </a>
+        <a class="explore-card explore-card--statement" href="/about/">
+          <div class="statement-mark" aria-hidden="true">PB</div>
+          <div><p class="surface-kicker">About PeptiBloom</p><h3>A library before a catalogue.</h3><p>Scientific information remains structurally distinguishable from commercial information.</p><span>Why PeptiBloom exists →</span></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="library-title">
-    <div class="site-frame feature-layout feature-layout--library">
-      <div class="feature-copy">
-        <p class="eyebrow">Scientific Library</p>
-        <h2 id="library-title">A library before a catalogue.</h2>
-        <p class="section-lead">
-          Scientific entries are published to inform research, not to fill a product grid. PeptiBloom’s
-          public library is structured around what the evidence can support, where it conflicts and what
-          still remains unanswered.
-        </p>
-        <a class="editorial-link" href="/library/">Enter the Scientific Library <span aria-hidden="true">→</span></a>
-      </div>
-
-      <aside class="library-dossier" aria-labelledby="publication-standard-title">
-        <div class="library-dossier__header">
-          <p class="surface-kicker">Publication standard</p>
-          <span aria-hidden="true">PB · LIB</span>
-        </div>
-        <h3 id="publication-standard-title">No scientific content just to fill space.</h3>
-        <ol class="library-dossier__path" aria-label="Scientific publication path">
-          <li><span>01</span><div><strong>Scientific Inventory</strong><small>Sources and review</small></div></li>
-          <li><span>02</span><div><strong>Evidence</strong><small>Representation and provenance</small></div></li>
-          <li><span>03</span><div><strong>Public Library</strong><small>Production-ready content only</small></div></li>
-        </ol>
-        <p class="library-dossier__note">
-          Until the review path is complete, the web does not invent studies, claims, evidence levels or compounds.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section section--quiet" aria-labelledby="tool-title">
-    <div class="site-frame feature-layout tool-feature">
-      <div class="feature-copy">
-        <p class="eyebrow">Open research tool</p>
-        <h2 id="tool-title">Check concentration arithmetic without hiding the formula.</h2>
-        <p class="section-lead">
-          The free calculator converts stated vial content, final solution volume, mass units and syringe-scale
-          positions. It shows every step and never supplies a dose or regimen.
-        </p>
-        <a class="button button--primary" href="/calculator/">Open the concentration calculator</a>
-      </div>
-      <aside class="tool-card" aria-labelledby="tool-boundary-title">
-        <div class="tool-card__units" aria-hidden="true">
-          <span>mg/mL</span><span>µg/mL</span><span>mL</span><span>U-100</span>
-        </div>
-        <div>
-          <p class="surface-kicker">Visible boundary</p>
-          <h3 id="tool-boundary-title">Arithmetic is not a recommendation.</h3>
-          <p>
-            The tool can expose unit conversions and calculation errors. It cannot determine safety, suitability,
-            purity, sterility or an appropriate amount for any compound or person.
-          </p>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section section--soft" aria-labelledby="method-title">
-    <div class="site-frame">
-      <div class="section-heading reading-column">
-        <p class="eyebrow">Methodology</p>
-        <h2 id="method-title">A visible path from source to interpretation.</h2>
-      </div>
-
-      <ol class="method-steps" aria-label="Editorial research process">
-        <li>
-          <span>01</span>
-          <h3>Source</h3>
-          <p>Start with inspectable provenance rather than unsupported summaries.</p>
-        </li>
-        <li>
-          <span>02</span>
-          <h3>Review</h3>
-          <p>Separate evidence from hypothesis, contradiction and anecdotal experience.</p>
-        </li>
-        <li>
-          <span>03</span>
-          <h3>Interpretation</h3>
-          <p>Describe what the available evidence supports without manufacturing certainty.</p>
-        </li>
-        <li>
-          <span>04</span>
-          <h3>Traceability</h3>
-          <p>Preserve a clear route back to the underlying sources and limitations.</p>
-        </li>
-      </ol>
-
-      <a class="editorial-link" href="/methodology/">How PeptiBloom handles evidence <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="uncertainty-title">
-    <div class="site-frame uncertainty-layout">
-      <div class="section-heading">
-        <p class="eyebrow">Designed uncertainty</p>
-        <h2 id="uncertainty-title">The unknown belongs on the page.</h2>
-        <p>
-          A useful scientific library should make it easy to see both the support for a conclusion and the
-          limits around it.
-        </p>
-      </div>
-
-      <div class="uncertainty-pair">
-        <article class="uncertainty-panel">
-          <p class="surface-kicker">What the evidence supports</p>
-          <h3>Conclusions with visible provenance.</h3>
-          <p>Supported findings should be understandable in context and traceable to their sources.</p>
-        </article>
-        <article class="uncertainty-panel uncertainty-panel--open">
-          <p class="surface-kicker">What remains uncertain</p>
-          <h3>Contradictions and gaps are findings too.</h3>
-          <p>Missing evidence, disagreement and unanswered questions should remain visible rather than being normalised into certainty.</p>
-        </article>
+  <section class="section" aria-labelledby="principles-title">
+    <div class="site-frame editorial-band">
+      <div><p class="eyebrow">Editorial standard</p><h2 id="principles-title">Evidence belongs beside its limits.</h2></div>
+      <div class="editorial-band__grid">
+        <article><span>01</span><h3>What the evidence supports</h3><p>Supported findings should be understandable in context and traceable to their sources.</p></article>
+        <article><span>02</span><h3>What remains uncertain</h3><p>Missing evidence, disagreement and unanswered questions remain visible rather than being normalised into certainty.</p></article>
+        <article><span>03</span><h3>How we got there</h3><p>Provenance, review boundaries and interpretation stay inspectable.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section section--transparency" aria-labelledby="transparency-title">
-    <div class="site-frame transparency-band">
-      <div>
-        <p class="eyebrow">Transparency</p>
-        <h2 id="transparency-title">Ownership should be visible.</h2>
-      </div>
-      <div class="reading-column">
-        <p>
-          The Scientific Library is a PeptiBloom initiative, and that ownership is shown explicitly.
-          Scientific information remains structurally distinguishable from commercial information.
-        </p>
-        <a class="editorial-link" href="/about/">About PeptiBloom and this library <span aria-hidden="true">→</span></a>
-      </div>
+  <section class="section section--soft" aria-labelledby="tool-title">
+    <div class="site-frame tool-modern">
+      <div><p class="eyebrow">Open research tool</p><h2 id="tool-title">Transparent arithmetic, visible boundaries.</h2><p class="section-lead">The free calculator converts stated vial content, final solution volume, mass units and syringe-scale positions. It shows every step and never supplies a dose or regimen.</p><a class="button button--primary" href="/calculator/">Open the calculator</a></div>
+      <aside><p class="surface-kicker">Arithmetic ≠ recommendation</p><div class="unit-cloud"><span>mg/mL</span><span>µg/mL</span><span>mL</span><span>U-100</span></div><p>The tool cannot determine safety, suitability, purity, sterility or an appropriate amount for any compound or person.</p></aside>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+.home-hero{padding-top:clamp(2rem,5vw,5rem)}.home-hero__grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(2rem,6vw,5rem);align-items:center}.home-hero__copy h1{font-size:clamp(3.4rem,7vw,6.8rem);line-height:.92;letter-spacing:-.045em;max-width:9.2ch;margin:.35rem 0 1.5rem}.home-hero__copy h1 em{color:var(--color-mulberry);font-weight:400}.button--ghost{background:transparent;border:1px solid var(--color-hairline);color:var(--color-mulberry)}.home-hero__visual{position:relative;margin:0}.home-hero__visual img{display:block;width:100%;border-radius:2rem;box-shadow:0 24px 70px rgba(83,61,93,.14)}.home-hero__visual figcaption{position:absolute;right:1.3rem;bottom:1.3rem;max-width:15rem;padding:1rem 1.1rem;border-radius:1rem;background:rgba(36,29,37,.78);backdrop-filter:blur(12px);color:white}.home-hero__visual figcaption span,.home-hero__visual figcaption strong{display:block}.home-hero__visual figcaption span{font:600 .72rem/1.2 var(--font-system);text-transform:uppercase;letter-spacing:.12em;opacity:.7}.home-hero__visual figcaption strong{margin-top:.35rem;font-family:var(--font-serif);font-size:1.15rem;line-height:1.2}.home-hero__trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;padding-top:1.35rem;border-top:1px solid var(--color-hairline)}.home-hero__trust span{display:grid;gap:.15rem}.home-hero__trust strong{font:600 .82rem var(--font-system);color:var(--color-ink)}.home-hero__trust small{color:var(--color-muted-ink)}.home-section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,.55fr);gap:2rem;align-items:end;margin-bottom:2rem}.home-section-heading h2{margin:.35rem 0 0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:.98}.home-section-heading>p{margin:0;color:var(--color-muted-ink)}.explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}.explore-card{overflow:hidden;border:1px solid var(--color-hairline);border-radius:1.4rem;background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.explore-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(83,61,93,.11);color:var(--color-ink)}.explore-card img{width:100%;aspect-ratio:16/8;object-fit:cover;display:block}.explore-card>div{padding:1.25rem}.explore-card h3{margin:.35rem 0 .8rem;font-size:1.55rem;line-height:1.08}.explore-card span{color:var(--color-mulberry);font:600 .9rem var(--font-system)}.explore-card--statement{display:grid;grid-template-rows:auto 1fr;background:linear-gradient(145deg,#F7F2F7,#EEE8F6)}.statement-mark{min-height:12rem;display:grid;place-items:center;font-family:var(--font-serif);font-size:5rem;color:rgba(122,63,104,.18);background:radial-gradient(circle at 65% 35%,rgba(200,111,154,.22),transparent 38%),radial-gradient(circle at 30% 65%,rgba(139,123,184,.26),transparent 42%)}.editorial-band{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(2rem,7vw,6rem);align-items:start}.editorial-band h2{font-size:clamp(2.5rem,5vw,4.5rem);line-height:.98;margin:.4rem 0}.editorial-band__grid{display:grid;gap:0}.editorial-band__grid article{display:grid;grid-template-columns:3rem 1fr;column-gap:1rem;padding:1.25rem 0;border-top:1px solid var(--color-hairline)}.editorial-band__grid span{grid-row:1/3;color:var(--color-lavender-deep);font:600 .8rem var(--font-system)}.editorial-band__grid h3,.editorial-band__grid p{margin:0}.editorial-band__grid p{margin-top:.35rem;color:var(--color-muted-ink)}.tool-modern{display:grid;grid-template-columns:minmax(0,1fr) minmax(19rem,.72fr);gap:clamp(2rem,6vw,5rem);align-items:center}.tool-modern aside{padding:2rem;border:1px solid var(--color-hairline);border-radius:1.4rem;background:rgba(255,255,255,.72)}.unit-cloud{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.unit-cloud span{padding:.55rem .7rem;border-radius:999px;background:var(--color-paper);border:1px solid var(--color-hairline);font:600 .85rem var(--font-system);color:var(--color-lavender-deep)}@media(max-width:900px){.home-hero__grid,.editorial-band,.tool-modern{grid-template-columns:1fr}.explore-grid{grid-template-columns:1fr 1fr}.home-hero__copy h1{max-width:11ch}.home-section-heading{grid-template-columns:1fr}}@media(max-width:640px){.explore-grid,.home-hero__trust{grid-template-columns:1fr}.home-hero__visual figcaption{position:static;margin-top:.8rem;background:var(--color-ink)}.home-hero__copy h1{font-size:clamp(3rem,16vw,4.8rem)}}
+</style>

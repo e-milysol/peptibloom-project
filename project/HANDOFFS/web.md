@@ -86,33 +86,32 @@ The public web must support at minimum:
 - Spanish: `es`
 - French: `fr`
 
-This requirement is approved canon. It does **not** close PB-DEC-002: the primary/default locale for launch remains open.
+PB-DEC-002 is Owner approved and defines the routing policy:
+- Spanish (`es`) is primary/default and unprefixed;
+- English uses `/en/`;
+- French uses `/fr/`;
+- localized URLs must not silently serve another language when localized content is unavailable.
 
-Until PB-DEC-002 is approved, WEB must not silently choose:
-- the default locale;
-- whether the default locale is URL-prefixed;
-- browser-language redirect behavior;
-- fallback relationships between locales.
-
-All new public-web work must remain localization-ready. In practice:
+Implementation must therefore follow these rules:
 - do not introduce new shared navigation/UI copy in a way that requires duplicating component markup per language;
 - keep locale-dependent copy separable from structural/layout code;
-- do not hardcode internal URLs when locale-aware URL helpers become available;
-- when Astro i18n routing is enabled, use its locale-aware routing helpers rather than manual string concatenation where practical;
+- use locale-aware routing helpers rather than ad-hoc string concatenation where practical;
 - every localized page must emit the correct HTML `lang` value;
 - language switching must remain keyboard accessible and must not rely on flags alone to communicate language;
 - localized equivalents of a scientific page must preserve the same scientific identity/provenance rather than becoming independent scientific records;
 - translations must not invent or strengthen scientific claims; scientific meaning, uncertainty and evidence qualifiers must remain equivalent across locales;
 - source titles/citations should preserve source provenance; translation of presentation text must not alter the underlying citation identity;
-- once localized routes exist, QA/build review must cover all supported locales and broken cross-locale links.
+- missing localized content must remain explicitly unavailable rather than silently falling back to another language;
+- localized routes must receive canonical/hreflang metadata and per-locale QA before publication.
 
-Recommended implementation sequence after PB-DEC-002 closes:
-1. configure Astro `i18n` with `locales: ["en", "es", "fr"]` and the approved `defaultLocale`;
-2. explicitly choose `prefixDefaultLocale`/fallback behavior according to the approved URL policy;
+Approved implementation sequence:
+1. configure Astro `i18n` with `locales: ["es", "en", "fr"]` and `defaultLocale: "es"`;
+2. implement Spanish as unprefixed, English under `/en/`, and French under `/fr/`;
 3. centralize shared UI strings and locale metadata;
 4. introduce locale-aware internal-link helpers and a language selector;
 5. add localized routes/content progressively without duplicating scientific entities;
-6. add canonical/hreflang metadata and per-locale QA before production launch.
+6. add canonical/hreflang metadata and per-locale QA before publication;
+7. do not implement silent cross-locale fallback for unavailable localized content.
 
 ## Cloudflare deployment
 
@@ -154,14 +153,12 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - animation language;
 - complete icon system;
 - final Compound-page layout;
-- final scientific dense-data/table patterns;
-- primary public/default language;
-- default-locale URL-prefix/fallback behavior;
+- final scientific dense-data/table patterns.
 
 ## Launch hardening
 
 Before production launch, resolve/review:
-- primary/default public language and i18n URL policy;
+- implement and QA PB-DEC-002 multilingual routing;
 - final brand/favicons;
 - CI for `npm run check` + `npm run build`;
 - current Google Fonts loading versus self-hosting for privacy/performance;

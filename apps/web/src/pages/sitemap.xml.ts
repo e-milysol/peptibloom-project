@@ -4,12 +4,7 @@ export const prerender = true;
 
 const origin = 'https://peptibloomproject.com';
 const routes = [
-  '/',
-  '/about/',
-  '/calculator/',
-  '/library/',
-  '/methodology/',
-  '/research-basics/',
+  '/', '/about/', '/calculator/', '/library/', '/methodology/', '/research-basics/',
   '/research-basics/que-es-un-aminoacido/',
   '/research-basics/quien-descubrio-aminoacidos-por-que-se-llaman-asi/',
   '/research-basics/viales-materiales-cierres/',
@@ -32,12 +27,29 @@ const routes = [
   '/research-basics/que-es-spps/',
   '/research-basics/proteger-desproteger-aminoacido/',
   '/research-basics/por-que-peptidos-largos-son-dificiles/',
+  '/research-basics/que-significa-lote-lot-batch/',
+  '/research-basics/fabricacion-caducidad-retest-fechas/',
+  '/research-basics/que-significa-mg-por-vial/',
+  '/research-basics/que-significa-research-use-only-ruo/',
+  '/research-basics/precision-exactitud-diferencia/',
+  '/research-basics/incertidumbre-medicion-que-significa/',
+  '/research-basics/limite-deteccion-cuantificacion-lod-loq/',
+  '/research-basics/especificacion-criterio-aceptacion-resultado/',
+  '/research-basics/que-significa-conservar-2-8-c/',
+  '/research-basics/excursion-temperatura-que-significa/',
+  '/research-basics/temperatura-ambiente-controlled-room-temperature/',
+  '/research-basics/cadena-frio-que-es-como-se-controla/',
+  '/research-basics/esteril-vs-libre-endotoxinas/',
+  '/research-basics/que-es-bioburden-carga-microbiana/',
+  '/research-basics/que-es-endotoxina-bacteriana/',
+  '/research-basics/filtro-esterilizante-elimina-endotoxinas/',
+  '/research-basics/agua-esteril-vs-bacteriostatica/',
+  '/research-basics/que-significa-bacteriostatico/',
+  '/research-basics/bacteriostatico-no-significa-esteril-para-siempre/',
+  '/research-basics/que-es-alcohol-bencilico-conservante/',
 ];
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/sitemap/0.9">
-${routes.map((route) => `  <url><loc>${origin}${route}</loc></url>`).join('\n')}
-</urlset>`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/sitemap/0.9">\n${routes.map((route) => `  <url><loc>${origin}${route}</loc></url>`).join('\n')}\n</urlset>`;
 
 export const GET: APIRoute = () => new Response(sitemap, {
   headers: {

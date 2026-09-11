@@ -1,10 +1,10 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-08-19.
+Last coordination baseline: 2026-09-04.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
-| Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete | launch hardening; multilingual routing implementation after default-locale decision; WEB M2 remains blocked |
+| Web | M0 complete; M1 architecture/launch plan, visual foundation, implementation and approved Home/Library visual enrichment complete; PB-DEC-002 locale policy approved | implement approved multilingual routing/hreflang/canonical behavior; launch hardening; WEB M2 remains blocked |
 | App Core / WORK 6 | Product Design v0.1 OWNER APPROVED; Technical Design / UX IA v0.1 OWNER APPROVED; MVP Architecture APPROVED for contract/wireflow phase | contracts, wireflows, model/API refinement and Security/Legal handoffs; production implementation remains blocked pending explicit authorization |
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain assigned to `e-milysol/peptibloom-private-master`; intentionally separate from App Core | continue private-repo foundation and implementation under its own gates; only sanitized status crosses to the public Control Plane |
 | Operative Core | v1 final migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization; PostgreSQL runtime smoke before deployment |
@@ -14,6 +14,12 @@ Last coordination baseline: 2026-08-19.
 | Scientific Content Production | editorial transformation stage represented for coordination only; no scientific assessment, approval or publication authority; internal Evidence contract is PROPOSED / PARTIAL / PENDING FORMALIZATION | formalize the internal contract and receive sufficient Evidence-qualified input; publication remains blocked by existing Evidence/content gates |
 | Growth / SEO / Distribution | operational ownership restored; Search Console state is recorded only as HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18 | continue monitoring and establish current baselines from fresh source telemetry; do not infer current performance from historical observations |
 | Analytics | Analytics v1 contract and 19-event registry restored; only ANALYTICS_CONTRACT_APPROVED is APPROVED; production instrumentation remains BLOCKED | WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING |
+
+## Repository governance
+
+PB-DEC-001 was Owner approved on 2026-09-03. The approved repository policy requires changes to `main` through Pull Requests, disallows force-push and deletion of `main`, and allows required checks only when those checks actually exist, are stable and are appropriate for the repository.
+
+GitHub technical enforcement is not yet active. The current repository state must therefore be described as `POLICY_APPROVED / ENFORCEMENT_PENDING_CONFIGURATION`, not as technically protected.
 
 ## Web
 
@@ -36,7 +42,7 @@ M1 intentionally excludes production compound pages, scientific mocks, ecommerce
 
 PB-DEC-003 was Owner approved on 2026-08-18: `https://peptibloomproject.com` is the permanent production canonical domain and Cloudflare Workers is the approved production hosting. Web, SEO, sitemap, canonicals, metadata and other public references may treat that URL as the production origin. Any material future domain or hosting change requires a new Owner decision.
 
-The public web is deployed through Cloudflare Workers from `main`. It is approved as multilingual with minimum supported locales English (`en`), Spanish (`es`) and French (`fr`). PB-DEC-002 remains open, so primary/default locale, URL-prefix strategy and fallback behavior must not be inferred.
+The public web is deployed through Cloudflare Workers from `main`. It is approved as multilingual with minimum supported locales English (`en`), Spanish (`es`) and French (`fr`). PB-DEC-002 was Owner approved on 2026-08-28: Spanish (`es`) is primary/default and unprefixed; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.
 
 ## App Core / WORK 6
 
@@ -102,8 +108,6 @@ WEB M2 and production compound pages remain BLOCKED until the Evidence public co
 Growth / SEO / Distribution operational ownership is restored. Search Console observations from `2026-08-18` are historical operational observations only and must not be presented as current impressions, clicks, queries, CTR, rankings, indexed/discovered counts, traffic or conversions.
 
 Analytics v1 is restored as a previously approved domain contract. The contract gate is APPROVED, while WEB technical validation, Legal/Privacy review and Owner production authorization remain PENDING. Production instrumentation remains BLOCKED.
-
-PB-DEC-002 remains open/proposed; no historical language/default-locale/URL-prefix policy is restored by this reconciliation.
 
 ## Coordination
 

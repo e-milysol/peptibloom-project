@@ -4,7 +4,7 @@ Owner: GROWTH / SEO / DISTRIBUTION workstream
 
 ## Purpose
 
-Own organic discovery strategy and operational search-distribution coordination without creating scientific claims, changing language policy, or treating historical search observations as current telemetry.
+Own organic discovery strategy and operational search-distribution coordination without creating scientific claims, changing approved language policy, or treating historical search observations as current telemetry.
 
 ## Operational ownership
 
@@ -17,7 +17,7 @@ Growth / SEO / Distribution owns:
 - acquisition experiments;
 - Search Console monitoring.
 
-This ownership does not authorize scientific claims, Evidence decisions, production Analytics instrumentation, or changes to the public language/default-locale/URL-prefix policy.
+This ownership does not authorize scientific claims, Evidence decisions, production Analytics instrumentation, or unilateral changes to the approved public language/default-locale/URL-prefix policy.
 
 ## HISTORICAL OPERATIONAL OBSERVATION — 2026-08-18
 
@@ -34,6 +34,14 @@ These observations must not be used as current impressions, clicks, queries, CTR
 
 ## Language / URL boundary
 
-Recovered historical language or URL-architecture proposals are not restored here.
+PB-DEC-002 is Owner approved and is the current public locale-routing authority:
 
-PB-DEC-002 remains open/proposed. Growth must not infer the primary/default language, default-locale prefixing, browser-language redirects, fallback behavior, or other unresolved language-routing policy.
+- Spanish (`es`) is the primary/default locale and is unprefixed;
+- English uses `/en/`;
+- French uses `/fr/`;
+- localized URLs must not silently serve another language when localized content is unavailable;
+- minimum multilingual support remains `es` / `en` / `fr` under PB-DEC-116.
+
+Growth may use this approved routing policy for SEO architecture, canonical/hreflang planning, internal-link planning and content briefs. Growth must not independently alter locale routing, browser-language redirect behavior or fallback semantics beyond the approved policy; implementation remains Web-owned.
+
+Historical language or URL-architecture proposals that conflict with PB-DEC-002 are superseded on those points.

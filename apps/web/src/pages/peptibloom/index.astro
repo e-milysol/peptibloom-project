@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="PeptiBloom — Beyond the research library"
-  description="Discover the PeptiBloom project, its public research resources and the boundary between scientific and commercial information."
+  description="Discover PeptiBloom, its public research resources, and how to contact the project while keeping scientific and commercial information clearly separated."
 >
   <section class="section section--hero">
     <div class="site-frame reading-column">
@@ -15,8 +15,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         The scientific library remains editorially separate from commercial information so that one never acts as evidence for the other.
       </p>
       <div class="hero__actions">
-        <a class="button button--primary" href="/research-basics/">Explore Research Basics</a>
-        <a class="editorial-link" href="/about/">Why PeptiBloom exists <span aria-hidden="true">→</span></a>
+        <a class="button button--primary" href="#contact">Contact PeptiBloom</a>
+        <a class="editorial-link" href="/research-basics/">Explore Research Basics <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -51,7 +51,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="section" aria-labelledby="commercial-title">
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="site-frame contact-band">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Talk to PeptiBloom.</h2>
+        <p>For questions about PeptiBloom, availability or the wider project, choose the channel that works best for you.</p>
+      </div>
+      <div class="contact-actions" aria-label="PeptiBloom contact channels">
+        <a class="button button--primary" href="https://wa.me/34697947311?text=Hola%20PeptiBloom%2C%20he%20llegado%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">Hablar por WhatsApp</a>
+        <a class="button contact-email" href="mailto:info@peptibloomproject.com?subject=Consulta%20desde%20PeptiBloom" data-conversion="email">Escribir por email</a>
+        <small>WhatsApp is the quickest contact path. Email: info@peptibloomproject.com</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="commercial-title">
     <div class="site-frame boundary-band">
       <div>
         <p class="eyebrow">Commercial boundary</p>
@@ -59,14 +74,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
       <div class="reading-column">
         <p>
-          PeptiBloom may develop separate commercial surfaces and physical products. When they are published, they will be clearly identified as commercial information and kept structurally distinct from scientific conclusions, evidence levels and Research Basics articles.
+          PeptiBloom may publish separate commercial information and physical products. Those surfaces remain structurally distinct from scientific conclusions, evidence levels and Research Basics articles.
         </p>
-        <p class="boundary-note"><strong>Current state:</strong> no public product catalogue or sales contact channel is published on this website yet.</p>
+        <p class="boundary-note"><strong>Important:</strong> contacting PeptiBloom about availability or a product does not change the evidence status of that product and does not constitute medical advice.</p>
       </div>
     </div>
   </section>
 </BaseLayout>
 
+<script>
+  document.querySelectorAll<HTMLElement>('[data-conversion]').forEach((element) => {
+    element.addEventListener('click', () => {
+      const channel = element.dataset.conversion;
+      window.dispatchEvent(new CustomEvent('peptibloom:contact-click', { detail: { channel } }));
+    });
+  });
+</script>
+
 <style>
-.path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}.path-card{display:flex;flex-direction:column;gap:1rem;padding:clamp(1.5rem,3vw,2.25rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}.path-card h3,.path-card p{margin:0}.path-card .editorial-link{margin-top:auto}.boundary-band{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(2rem,7vw,6rem);align-items:start}.boundary-note{padding-top:1rem;border-top:1px solid var(--color-hairline);color:var(--color-muted-ink)}@media(max-width:800px){.path-grid,.boundary-band{grid-template-columns:1fr}}
+.path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}.path-card{display:flex;flex-direction:column;gap:1rem;padding:clamp(1.5rem,3vw,2.25rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}.path-card h3,.path-card p{margin:0}.path-card .editorial-link{margin-top:auto}.contact-band{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:clamp(2rem,7vw,6rem);align-items:center}.contact-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}.contact-actions small{flex-basis:100%;color:var(--color-muted-ink)}.contact-email{background:transparent;color:var(--color-mulberry);border:1px solid var(--color-hairline)}.boundary-band{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(2rem,7vw,6rem);align-items:start}.boundary-note{padding-top:1rem;border-top:1px solid var(--color-hairline);color:var(--color-muted-ink)}@media(max-width:800px){.path-grid,.contact-band,.boundary-band{grid-template-columns:1fr}}
 </style>

@@ -49,9 +49,14 @@ Status: COMPLETE
 
 Technical Direction approved the WEB M1 Visual Foundation on 2026-08-16. WEB M1 implementation is authorized within its approved scope. The approved M1 foundation does not create or finalize the global PeptiBloom Design System.
 
+### Repository branch-protection policy decision
+
+Status: POLICY APPROVED / TECHNICAL ENFORCEMENT PENDING VERIFICATION
+
+PB-DEC-001 was Owner approved on 2026-09-11. The approved target is PR-based changes to `main`, no force-pushes, no branch deletion, and successful repository QA before merge where applicable. The connected GitHub integration does not expose repository-administration writes, so effective technical enforcement must still be configured/verified in GitHub settings before this item can be considered technically complete.
+
 ## Open decisions tracked elsewhere
 
-The following are PROPOSED decisions in `PROJECT_STATE.yaml`, not current development blockers:
+The following is a PROPOSED decision in `PROJECT_STATE.yaml`, not a current development blocker:
 
-- PB-DEC-001 — technical protection for `main`;
 - PB-DEC-002 — public launch primary language;

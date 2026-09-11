@@ -20,6 +20,18 @@ const routes = [
   '/research-basics/como-verificar-coa-laboratorios-europa/',
   '/research-basics/dosis-concentracion-volumen-escala-jeringa/',
   '/research-basics/tipos-escalas-jeringas/',
+  '/research-basics/por-que-liofilizado-parece-cake/',
+  '/research-basics/liofilizado-colapsado-agrietado-retraido/',
+  '/research-basics/liofilizado-siempre-blanco/',
+  '/research-basics/que-degrada-peptidos-temperatura-luz-humedad-oxidacion-agitacion/',
+  '/research-basics/identidad-pureza-cantidad-no-son-lo-mismo/',
+  '/research-basics/hplc-99-que-significa/',
+  '/research-basics/hplc-vs-lc-ms/',
+  '/research-basics/impurezas-degradacion-agregados-peptidos/',
+  '/research-basics/como-se-fabrica-un-peptido/',
+  '/research-basics/que-es-spps/',
+  '/research-basics/proteger-desproteger-aminoacido/',
+  '/research-basics/por-que-peptidos-largos-son-dificiles/',
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

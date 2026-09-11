@@ -51,12 +51,12 @@ Technical Direction approved the WEB M1 Visual Foundation on 2026-08-16. WEB M1 
 
 ### Repository branch-protection policy decision
 
-Status: POLICY APPROVED / TECHNICAL ENFORCEMENT PENDING VERIFICATION
+Status: COMPLETE / TECHNICALLY ENFORCED
 
-PB-DEC-001 was Owner approved on 2026-09-11. The approved target is PR-based changes to `main`, no force-pushes, no branch deletion, and successful repository QA before merge where applicable. The connected GitHub integration does not expose repository-administration writes, so effective technical enforcement must still be configured/verified in GitHub settings before this item can be considered technically complete.
+PB-DEC-001 was Owner approved on 2026-09-03. The approved target is PR-based changes to `main`, no force-pushes, no branch deletion, and successful repository QA before merge where applicable. Technical enforcement was subsequently verified in GitHub via ruleset `Protect main`, including required `web-qa`, strict up-to-date checks, PR-required changes, and no bypass.
 
-## Open decisions tracked elsewhere
+### Public web locale policy
 
-The following is a PROPOSED decision in `PROJECT_STATE.yaml`, not a current development blocker:
+Status: COMPLETE
 
-- PB-DEC-002 — public launch primary language;
+PB-DEC-002 was Owner approved on 2026-08-28. Spanish (`es`) is the primary/default locale using unprefixed routes; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.

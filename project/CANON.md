@@ -32,7 +32,7 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - Compound pages require an approved Evidence public contract and production-ready scientific content.
 - The public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`).
 - New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
-- The primary/default locale, URL-prefix policy and fallback behavior remain open until explicitly approved; they must not be inferred from the current English M1 copy.
+- PB-DEC-002 is Owner approved: Spanish (`es`) is the primary/default locale and uses unprefixed routes; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.
 - The permanent production canonical domain is `https://peptibloomproject.com`.
 - Cloudflare Workers is the approved production hosting for PeptiBloom Web.
 - Web, SEO, sitemap, canonicals, metadata and other public references may treat `https://peptibloomproject.com` as the production origin.

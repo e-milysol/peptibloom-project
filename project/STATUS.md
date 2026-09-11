@@ -2,11 +2,11 @@
 
 Last coordination baseline: 2026-09-11.
 
-Verified public `main` at this reconciliation: `2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4`.
+Verified public `main` at this reconciliation: `b12ec1a0f26f6d0ccea8b5a75963ef789fc53142`.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
-| Web | M0/M1 complete and deployed on Cloudflare Workers at `https://peptibloomproject.com`; Research Basics traffic tranches #85 and #86 are merged; #87 and #88 are draft Web candidates only | review #87 non-commercial continuation and #88 visual modernization; WEB M2 remains blocked by Evidence public contract + production-ready scientific content |
+| Web | M0/M1 complete and deployed on Cloudflare Workers at `https://peptibloomproject.com`; Research Basics traffic tranches #85 and #86 are merged; visual modernization #88 is merged; #87 remains a draft Web candidate | review #87 non-commercial continuation; implement approved locale policy as Web work proceeds; WEB M2 remains blocked by Evidence public contract + production-ready scientific content |
 | Research Basics / Public Content | Active public-content lane; tranche #85 added 12 articles and tranche #86 added 20 high-intent articles; CI runs `npm ci`, `npm run check`, `npm run build` | continue source-grounded fast/editorial lane and scientific/safety escalation by claim; no compound Evidence authority is created by this lane |
 | App Core / WORK 6 | Product Design v0.1 and Technical Design / UX IA v0.1 approved; MVP Architecture approved for contract/wireflow phase | continue non-production contracts/wireflows; production implementation remains blocked pending explicit authorization |
 | Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain remains in `e-milysol/peptibloom-private-master`; intentionally separate from App Core/public repo | continue private operational implementation; only sanitized coordination facts cross to the public Control Plane |
@@ -23,19 +23,25 @@ Verified public `main` at this reconciliation: `2e4ac6615eb25ccef1e13cb7b95b2dc5
 
 The public Web remains on the approved `Editorial Evidence / Warm Scientific` foundation and production origin `https://peptibloomproject.com`, hosted on Cloudflare Workers.
 
-The current public `main` now includes the Research Basics organic-traffic releases:
+The current public `main` includes:
 - PR #85 — 12 Research Basics articles, merged as `878a7214df03a67f6c64b4273641d0ce5bcf8676`;
-- PR #86 — 20 additional high-intent Research Basics articles, merged as `2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4`.
+- PR #86 — 20 additional high-intent Research Basics articles, merged as `2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4`;
+- PR #89 — Control Plane reconciliation, later corrected by this decision-history follow-up;
+- PR #88 — visual modernization for Home, Library and one representative Research Basics article, merged as `b12ec1a0f26f6d0ccea8b5a75963ef789fc53142`.
 
 The Research Basics release workflow validates the Web with `npm ci`, `npm run check` and `npm run build`.
 
-Two later Web candidates are intentionally **not** part of `main` yet:
-- PR #87 — non-commercial `/peptibloom/` continuation path; draft/open, no WhatsApp/email conversion surface, no Analytics event semantics, no merge authorization;
-- PR #88 — visual modernization for Home, Library and one representative Research Basics article; draft/open, QA passed, presentation-only assets, no scientific/governance expansion, no merge authorization.
+PR #87 remains a draft candidate for a non-commercial `/peptibloom/` continuation path. It does not add WhatsApp/email conversion, public product catalogue/pricing, Analytics event semantics or scientific endorsement.
 
 WEB M2 remains blocked. Research Basics publication does not satisfy compound-page Evidence requirements and must not be treated as an Evidence contract substitute.
 
-Multilingual public Web remains approved for at least `en`, `es` and `fr`. PB-DEC-002 is still open/proposed, so primary/default locale, prefix strategy and fallback behavior remain unresolved. Existing Spanish Research Basics content does not itself resolve that decision.
+PB-DEC-002 was Owner approved on 2026-08-28. The public locale policy is now canonical:
+- Spanish (`es`) is the primary/default locale and uses unprefixed routes;
+- English uses `/en/`;
+- French uses `/fr/`;
+- localized URLs must not silently serve another language when localized content is unavailable.
+
+This locale decision authorizes localization-ready implementation within existing gates; it does not itself authorize unrelated publication, scientific claims, Analytics, Commerce or other gated production activation.
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 
@@ -124,6 +130,6 @@ Bloom Caps remains `PRE-G0`; CAD is not authorized and the common-core architect
 
 The files under `project/` remain the durable coordination source of truth. Issue #13 remains the live asynchronous coordination mailbox.
 
-PB-DEC-001 is now **OWNER APPROVED** as repository policy. `main` is required to use PR-based changes, prohibit force-pushes and deletion, and require successful repository QA before merge where applicable. Effective technical enforcement is **not yet verified** because the connected GitHub integration does not expose repository-administration writes; GitHub settings must still be configured/verified before branch protection can be marked technically complete.
+PB-DEC-001 was **OWNER APPROVED on 2026-09-03** as repository policy. `main` is required to use PR-based changes, prohibit force-pushes and deletion, and require successful repository QA before merge where applicable. Technical enforcement was subsequently verified in GitHub: ruleset `Protect main` is active, requires PRs and `web-qa`, requires branches to be up to date, blocks force-pushes/deletion and has no bypass.
 
-PB-DEC-002 remains open/proposed. No default-language decision is inferred from current published content.
+PB-DEC-002 was **OWNER APPROVED on 2026-08-28** and is no longer an open decision. The approved locale/URL/fallback policy is recorded above and in `DECISIONS.md` / `CANON.md`.

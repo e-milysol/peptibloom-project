@@ -94,5 +94,15 @@ const clusters = [
   <section class="section section--quiet"><div class="site-frame cluster-stack">
     {clusters.map((cluster) => (<section class="rb-cluster"><div class="section-heading reading-column"><p class="eyebrow">Research Basics</p><h2>{cluster.title}</h2><p>{cluster.description}</p></div><div class="rb-grid">{cluster.articles.map(([title, href, meta]) => (<a class="rb-card" href={href}><div><p class="surface-kicker">{meta}</p><h3>{title}</h3></div><span aria-hidden="true">→</span></a>))}</div></section>))}
   </div></section>
+  <section class="section" aria-labelledby="continue-title">
+    <div class="site-frame rb-continuation">
+      <div class="reading-column">
+        <p class="eyebrow">Más allá de esta lectura</p>
+        <h2 id="continue-title">¿Quieres conocer el proyecto detrás de la biblioteca?</h2>
+        <p>Research Basics es una superficie educativa. Puedes seguir explorando PeptiBloom sin convertir estos artículos en recomendaciones de producto ni mezclar evidencia científica con información comercial.</p>
+      </div>
+      <a class="button button--primary" href="/peptibloom/">Explorar PeptiBloom</a>
+    </div>
+  </section>
 </BaseLayout>
-<style>.cluster-stack{display:grid;gap:clamp(4rem,8vw,7rem)}.rb-cluster{display:grid;gap:1.5rem}.section-heading>p:last-child{color:var(--color-muted-ink)}.rb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.rb-card{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:clamp(1.25rem,3vw,2rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none}.rb-card:hover{border-color:rgba(122,63,104,.35);color:var(--color-ink)}.rb-card h3{font-size:clamp(1.35rem,2.6vw,1.9rem);margin:0}.rb-card>span{color:var(--color-mulberry);font-size:1.6rem}@media(max-width:760px){.rb-grid{grid-template-columns:1fr}}</style>
+<style>.cluster-stack{display:grid;gap:clamp(4rem,8vw,7rem)}.rb-cluster{display:grid;gap:1.5rem}.section-heading>p:last-child{color:var(--color-muted-ink)}.rb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.rb-card{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:clamp(1.25rem,3vw,2rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none}.rb-card:hover{border-color:rgba(122,63,104,.35);color:var(--color-ink)}.rb-card h3{font-size:clamp(1.35rem,2.6vw,1.9rem);margin:0}.rb-card>span{color:var(--color-mulberry);font-size:1.6rem}.rb-continuation{display:flex;gap:2rem;align-items:center;justify-content:space-between;padding-top:1rem}.rb-continuation .button{flex:0 0 auto}@media(max-width:760px){.rb-grid{grid-template-columns:1fr}.rb-continuation{align-items:flex-start;flex-direction:column}}</style>

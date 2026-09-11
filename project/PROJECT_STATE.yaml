@@ -10,7 +10,14 @@ source_of_truth:
 repository:
   default_branch: main
   verified_main_sha: 2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4
-  main_policy: treat_as_protected
+  main_policy: protected_required
+  branch_protection_decision: PB-DEC-001
+  branch_protection_policy_status: OWNER_APPROVED_PENDING_TECHNICAL_ENFORCEMENT
+  branch_protection_target:
+    changes_via_pull_request: true
+    force_pushes_allowed: false
+    branch_deletion_allowed: false
+    successful_repository_qa_before_merge_where_applicable: true
   technical_branch_protection_verified: false
 
 work_ownership:
@@ -191,10 +198,6 @@ cross_domain_rules:
   analytics_event_semantics_require_analytics_change_control: true
 
 open_decisions:
-  - id: PB-DEC-001
-    domain: repository
-    subject: technical_branch_protection_for_main
-    status: PROPOSED
   - id: PB-DEC-002
     domain: web
     subject: primary_language_for_public_launch

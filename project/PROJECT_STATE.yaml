@@ -12,13 +12,20 @@ repository:
   verified_main_sha: 2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4
   main_policy: protected_required
   branch_protection_decision: PB-DEC-001
-  branch_protection_policy_status: OWNER_APPROVED_PENDING_TECHNICAL_ENFORCEMENT
-  branch_protection_target:
-    changes_via_pull_request: true
+  branch_protection_policy_status: OWNER_APPROVED_AND_TECHNICALLY_ENFORCED
+  branch_protection_ruleset:
+    id: 22937759
+    name: Protect main
+    enforcement: active
+    target: DEFAULT_BRANCH
+    required_status_check: web-qa
+    required_status_check_source: GitHub Actions
+    strict_up_to_date_required: true
+    pull_request_required: true
     force_pushes_allowed: false
     branch_deletion_allowed: false
-    successful_repository_qa_before_merge_where_applicable: true
-  technical_branch_protection_verified: false
+    bypass_allowed: false
+  technical_branch_protection_verified: true
 
 work_ownership:
   WORK_6: app_core

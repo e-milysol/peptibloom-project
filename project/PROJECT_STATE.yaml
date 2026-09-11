@@ -9,9 +9,10 @@ source_of_truth:
 
 repository:
   default_branch: main
-  verified_main_sha: 2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4
+  verified_main_sha: b12ec1a0f26f6d0ccea8b5a75963ef789fc53142
   main_policy: protected_required
   branch_protection_decision: PB-DEC-001
+  branch_protection_owner_approval_date: 2026-09-03
   branch_protection_policy_status: OWNER_APPROVED_AND_TECHNICALLY_ENFORCED
   branch_protection_ruleset:
     id: 22937759
@@ -52,6 +53,15 @@ milestones:
       - en
       - es
       - fr
+    locale_policy:
+      decision: PB-DEC-002
+      status: APPROVED
+      owner_approval_date: 2026-08-28
+      default_locale: es
+      default_locale_prefix: none
+      english_prefix: /en/
+      french_prefix: /fr/
+      silent_cross_locale_fallback: false
     research_basics:
       status: ACTIVE_PUBLIC_CONTENT
       traffic_release_1:
@@ -73,9 +83,9 @@ milestones:
         merge_authorized: false
       visual_modernization_v1:
         pr: 88
-        status: DRAFT_OPEN_QA_PASS
+        status: MERGED
+        merge_commit: b12ec1a0f26f6d0ccea8b5a75963ef789fc53142
         scope: HOME_LIBRARY_AND_ONE_RESEARCH_BASICS_VISUAL_PATTERN
-        merge_authorized: false
     m2: BLOCKED
   app_core:
     owner_work: WORK_6
@@ -204,8 +214,4 @@ cross_domain_rules:
   public_pricing_does_not_imply_availability_or_sale_authority: true
   analytics_event_semantics_require_analytics_change_control: true
 
-open_decisions:
-  - id: PB-DEC-002
-    domain: web
-    subject: primary_language_for_public_launch
-    status: PROPOSED
+open_decisions: []

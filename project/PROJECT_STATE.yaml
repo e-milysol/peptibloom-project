@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-08-19
+state_updated: 2026-09-11
 
 source_of_truth:
   implementation: github
@@ -9,8 +9,23 @@ source_of_truth:
 
 repository:
   default_branch: main
-  verified_main_sha_at_protocol_start: 5fded280cb587a054b87583ec4ee3e381171b93a
-  main_policy: treat_as_protected
+  verified_main_sha: 2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4
+  main_policy: protected_required
+  branch_protection_decision: PB-DEC-001
+  branch_protection_policy_status: OWNER_APPROVED_AND_TECHNICALLY_ENFORCED
+  branch_protection_ruleset:
+    id: 22937759
+    name: Protect main
+    enforcement: active
+    target: DEFAULT_BRANCH
+    required_status_check: web-qa
+    required_status_check_source: GitHub Actions
+    strict_up_to_date_required: true
+    pull_request_required: true
+    force_pushes_allowed: false
+    branch_deletion_allowed: false
+    bypass_allowed: false
+  technical_branch_protection_verified: true
 
 work_ownership:
   WORK_6: app_core
@@ -18,7 +33,7 @@ work_ownership:
 
 milestones:
   web:
-    current: M1
+    current: M1_WITH_RESEARCH_BASICS_RELEASES
     m0: COMPLETE
     m1_architecture_launch_plan: APPROVED
     m1_visual_foundation: APPROVED
@@ -37,6 +52,30 @@ milestones:
       - en
       - es
       - fr
+    research_basics:
+      status: ACTIVE_PUBLIC_CONTENT
+      traffic_release_1:
+        pr: 85
+        articles: 12
+        status: MERGED
+        merge_commit: 878a7214df03a67f6c64b4273641d0ce5bcf8676
+      traffic_release_2:
+        pr: 86
+        articles: 20
+        status: MERGED
+        merge_commit: 2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4
+      qa_workflow: Research Basics Release QA
+    open_web_candidates:
+      conversion_path_v1:
+        pr: 87
+        status: DRAFT_OPEN
+        scope: NON_COMMERCIAL_BRAND_CONTINUATION
+        merge_authorized: false
+      visual_modernization_v1:
+        pr: 88
+        status: DRAFT_OPEN_QA_PASS
+        scope: HOME_LIBRARY_AND_ONE_RESEARCH_BASICS_VISUAL_PATTERN
+        merge_authorized: false
     m2: BLOCKED
   app_core:
     owner_work: WORK_6
@@ -97,8 +136,11 @@ milestones:
     legacy_geometry_recovery: COMPLETE
     recovered_authoritative_geometry_files: 0
   evidence:
-    current: reconciliation
-    public_web_contract: BLOCKED
+    current: PUBLICATION_CONTRACTS_DRAFT_REVIEW
+    publication_contracts_pr: 60
+    publication_contracts_scope: CONTRACTS_ONLY
+    publication_contracts_merge_authorized: false
+    public_web_contract: PROPOSED_NOT_APPROVED
   scientific_inventory:
     current: active
     evidence_handoff: IN_PROGRESS
@@ -110,10 +152,15 @@ milestones:
     publication_authority: false
     generation_when_required_evidence_missing: PAUSED
     publication_gate: BLOCKED
+  public_catalog_legal:
+    request: PB-XD-003
+    status: OPEN_REVIEW_REQUIRED
+    pricing_publication_authority: false
+    catalog_publication_authority: false
   growth:
-    current: operational_ownership_restored
+    current: ORGANIC_TRAFFIC_RELEASE_ACTIVE
     organic_baseline_start: 2026-08-18
-    search_console_historical_observation_date: 2026-08-18
+    research_basics_release_date: 2026-09-11
     current_search_console_metrics_asserted: false
   analytics:
     current: contract_restored
@@ -140,6 +187,9 @@ dependencies:
     - web_technical_validation_approved
     - legal_privacy_review_approved
     - owner_production_authorization
+  public_catalog_publication:
+    - PB-XD-003
+    - applicable_commercial_publication_gates
 
 cross_domain_rules:
   infer_missing_canon: false
@@ -148,14 +198,13 @@ cross_domain_rules:
   web_as_scientific_source_of_truth: false
   evidence_required_for_web_m1: false
   evidence_required_for_compound_pages: true
+  research_basics_fast_lane_does_not_create_compound_evidence_authority: true
   app_core_private_master_implicit_linkage: false
   physical_products_cross_domain_contract_requires_pb_xd: true
+  public_pricing_does_not_imply_availability_or_sale_authority: true
+  analytics_event_semantics_require_analytics_change_control: true
 
 open_decisions:
-  - id: PB-DEC-001
-    domain: repository
-    subject: technical_branch_protection_for_main
-    status: PROPOSED
   - id: PB-DEC-002
     domain: web
     subject: primary_language_for_public_launch

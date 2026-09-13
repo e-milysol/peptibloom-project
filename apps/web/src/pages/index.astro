@@ -4,75 +4,85 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Evidence-First Peptide Research Library"
-  description="PeptiBloom is a public peptide research library and calculation toolkit built around evidence, transparent uncertainty and traceable sources."
+  description="PeptiBloom is a public peptide research library built around evidence, transparent uncertainty and traceable sources."
 >
-  <section class="section home-hero">
-    <div class="site-frame home-hero__grid">
+  <section class="home-hero">
+    <div class="home-shell home-hero__grid">
       <div class="home-hero__copy">
-        <p class="eyebrow">Scientific Research Library</p>
-        <h1>Know what we know.<br /><em>Know what we don’t.</em></h1>
-        <p class="hero__lead">PeptiBloom is building a public scientific research library designed to make evidence, uncertainty, provenance and open questions easier to inspect.</p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="/library/">Explore the library</a>
-          <a class="button button--ghost" href="/research-basics/">Start with Research Basics</a>
-        </div>
+        <p class="eyebrow">Science today. Clearer knowledge tomorrow.</p>
+        <h1>Peptides.<br />Knowledge in <em>Bloom.</em></h1>
+        <p class="home-hero__lead">PeptiBloom is an independent, science-driven project built to make peptide evidence, uncertainty and provenance easier to inspect.</p>
+        <a class="home-cta" href="/library/">Explore the Library <span aria-hidden="true">→</span></a>
         <div class="home-hero__trust" aria-label="Editorial principles">
-          <span><strong>Evidence</strong><small>without overstatement</small></span>
-          <span><strong>Independent</strong><small>science before hype</small></span>
-          <span><strong>Traceable</strong><small>a route back to sources</small></span>
+          <span><strong>Evidence-based</strong><small>content</small></span>
+          <span><strong>Independent</strong><small>and transparent</small></span>
+          <span><strong>For researchers</strong><small>and the curious</small></span>
         </div>
       </div>
+
       <figure class="home-hero__visual">
         <div class="home-hero__art">
           <img src="/brand/editorial/web-assets/hero_home.png" alt="Lavender flower, molecular model and laboratory glassware representing PeptiBloom's scientific editorial identity" />
         </div>
-        <figcaption><span>Evidence first.</span><strong>Science can be beautiful without becoming marketing.</strong></figcaption>
+        <figcaption>Small molecules.<br />A bigger tomorrow.</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="section section--quiet" aria-labelledby="explore-title">
-    <div class="site-frame">
-      <div class="home-section-heading">
-        <div><p class="eyebrow">Start here</p><h2 id="explore-title">Three ways to explore PeptiBloom.</h2></div>
-        <p>Move from scientific literacy to the library itself without confusing education, evidence and commercial information.</p>
+  <section class="home-explore" aria-labelledby="explore-title">
+    <div class="home-shell">
+      <div class="home-explore__heading">
+        <div>
+          <p class="eyebrow">Start here</p>
+          <h2 id="explore-title">Three ways to <em>explore</em></h2>
+        </div>
+        <p>Dive into the science, understand the basics, or browse our curated library.</p>
       </div>
-      <div class="explore-grid">
-        <a class="explore-card" href="/library/">
-          <div class="explore-card__visual"><img src="/brand/editorial/web-assets/card_library.png" alt="Books, botanical elements and molecular structure representing the Scientific Library" /></div>
-          <div><p class="surface-kicker">Scientific Library</p><h3>Follow evidence, limits and provenance.</h3><span>Browse the library →</span></div>
+
+      <div class="home-card-grid">
+        <a class="home-card" href="/library/">
+          <div class="home-card__visual"><img src="/brand/editorial/web-assets/card_library.png" alt="Books, botanical elements and molecular structure representing the Scientific Library" /></div>
+          <div class="home-card__body">
+            <h3>Library</h3>
+            <p>Explore our growing collection of evidence, reviews and resources on peptides.</p>
+            <span>Browse the Library →</span>
+          </div>
         </a>
-        <a class="explore-card" href="/research-basics/">
-          <div class="explore-card__visual"><img src="/brand/editorial/web-assets/card_research.png" alt="Laboratory pipette, Petri dish and molecular structure representing Research Basics" /></div>
-          <div><p class="surface-kicker">Research Basics</p><h3>Understand the documents, methods and concepts around research.</h3><span>Start learning →</span></div>
+
+        <a class="home-card" href="/research-basics/">
+          <div class="home-card__visual"><img src="/brand/editorial/web-assets/card_research.png" alt="Laboratory pipette, Petri dish and molecular structure representing Research Basics" /></div>
+          <div class="home-card__body">
+            <h3>Research Basics</h3>
+            <p>Clear, visual overviews of recurring concepts, documents and methods around research.</p>
+            <span>Start learning →</span>
+          </div>
         </a>
-        <a class="explore-card" href="/about/">
-          <div class="explore-card__visual"><img src="/brand/editorial/web-assets/card_about.png" alt="Scientific globe, laboratory glassware, DNA and books representing PeptiBloom's wider project" /></div>
-          <div><p class="surface-kicker">About PeptiBloom</p><h3>A library before a catalogue.</h3><p>Scientific information remains structurally distinguishable from commercial information.</p><span>Why PeptiBloom exists →</span></div>
+
+        <a class="home-card" href="/about/">
+          <div class="home-card__visual"><img src="/brand/editorial/web-assets/card_about.png" alt="Scientific globe, laboratory glassware, DNA and books representing PeptiBloom's wider project" /></div>
+          <div class="home-card__body">
+            <h3>About PeptiBloom</h3>
+            <p>Our mission, principles and why scientific information remains separate from commercial information.</p>
+            <span>Learn more →</span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="principles-title">
-    <div class="site-frame editorial-band">
-      <div><p class="eyebrow">Editorial standard</p><h2 id="principles-title">Evidence belongs beside its limits.</h2></div>
-      <div class="editorial-band__grid">
-        <article><span>01</span><h3>What the evidence supports</h3><p>Supported findings should be understandable in context and traceable to their sources.</p></article>
-        <article><span>02</span><h3>What remains uncertain</h3><p>Missing evidence, disagreement and unanswered questions remain visible rather than being normalised into certainty.</p></article>
-        <article><span>03</span><h3>How we got there</h3><p>Provenance, review boundaries and interpretation stay inspectable.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft" aria-labelledby="tool-title">
-    <div class="site-frame tool-modern">
-      <div><p class="eyebrow">Open research tool</p><h2 id="tool-title">Transparent arithmetic, visible boundaries.</h2><p class="section-lead">The free calculator converts stated vial content, final solution volume, mass units and syringe-scale positions. It shows every step and never supplies a dose or regimen.</p><a class="button button--primary" href="/calculator/">Open the calculator</a></div>
-      <aside><p class="surface-kicker">Arithmetic ≠ recommendation</p><div class="unit-cloud"><span>mg/mL</span><span>µg/mL</span><span>mL</span><span>U-100</span></div><p>The tool cannot determine safety, suitability, purity, sterility or an appropriate amount for any compound or person.</p></aside>
+  <section class="home-signoff" aria-label="PeptiBloom editorial statement">
+    <div class="home-shell home-signoff__inner">
+      <p>Independent science. Open knowledge. <em>A brighter tomorrow.</em></p>
+      <span>PeptiBloom</span>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-.home-hero{padding-top:clamp(2rem,5vw,5rem);overflow:hidden}.home-hero__grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}.home-hero__copy h1{font-size:clamp(3.4rem,7vw,6.8rem);line-height:.92;letter-spacing:-.045em;max-width:9.2ch;margin:.35rem 0 1.5rem}.home-hero__copy h1 em{color:var(--color-mulberry);font-weight:400}.button--ghost{background:transparent;border:1px solid var(--color-hairline);color:var(--color-mulberry)}.home-hero__visual{position:relative;margin:0;isolation:isolate}.home-hero__art{position:relative;min-height:clamp(27rem,42vw,40rem);display:flex;align-items:flex-end;justify-content:center;border-radius:2.2rem;background:radial-gradient(circle at 68% 36%,rgba(200,111,154,.18),transparent 29%),radial-gradient(circle at 38% 62%,rgba(139,123,184,.22),transparent 36%),linear-gradient(145deg,#fbf8fc 0%,#f2edf8 54%,#eef5f3 100%);box-shadow:0 30px 75px rgba(83,61,93,.12);overflow:hidden}.home-hero__art::after{content:"";position:absolute;inset:auto 8% 4% 8%;height:22%;background:radial-gradient(ellipse,rgba(102,85,142,.18),transparent 68%);filter:blur(14px);z-index:-1}.home-hero__art img{display:block;width:min(118%,58rem);max-width:none;height:auto;transform:translate(4%,2%);filter:drop-shadow(0 24px 26px rgba(74,55,91,.16))}.home-hero__visual figcaption{position:absolute;right:1.3rem;bottom:1.3rem;max-width:15rem;padding:1rem 1.1rem;border-radius:1rem;background:rgba(36,29,37,.80);backdrop-filter:blur(12px);color:white}.home-hero__visual figcaption span,.home-hero__visual figcaption strong{display:block}.home-hero__visual figcaption span{font:600 .72rem/1.2 var(--font-system);text-transform:uppercase;letter-spacing:.12em;opacity:.7}.home-hero__visual figcaption strong{margin-top:.35rem;font-family:var(--font-serif);font-size:1.15rem;line-height:1.2}.home-hero__trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;padding-top:1.35rem;border-top:1px solid var(--color-hairline)}.home-hero__trust span{display:grid;gap:.15rem}.home-hero__trust strong{font:600 .82rem var(--font-system);color:var(--color-ink)}.home-hero__trust small{color:var(--color-muted-ink)}.home-section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,.55fr);gap:2rem;align-items:end;margin-bottom:2rem}.home-section-heading h2{margin:.35rem 0 0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:.98}.home-section-heading>p{margin:0;color:var(--color-muted-ink)}.explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}.explore-card{overflow:hidden;border:1px solid var(--color-hairline);border-radius:1.4rem;background:var(--color-paper);box-shadow:var(--shadow-paper);color:var(--color-ink);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.explore-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(83,61,93,.11);color:var(--color-ink)}.explore-card__visual{height:clamp(12rem,17vw,15rem);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:radial-gradient(circle at 60% 40%,rgba(200,111,154,.15),transparent 32%),linear-gradient(145deg,#f9f6fb,#efe9f6)}.explore-card__visual img{width:112%;height:112%;object-fit:contain;object-position:center bottom;display:block;filter:drop-shadow(0 14px 18px rgba(83,61,93,.12))}.explore-card>div:last-child{padding:1.25rem}.explore-card h3{margin:.35rem 0 .8rem;font-size:1.55rem;line-height:1.08}.explore-card p{margin-top:0}.explore-card span{color:var(--color-mulberry);font:600 .9rem var(--font-system)}.editorial-band{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(2rem,7vw,6rem);align-items:start}.editorial-band h2{font-size:clamp(2.5rem,5vw,4.5rem);line-height:.98;margin:.4rem 0}.editorial-band__grid{display:grid;gap:0}.editorial-band__grid article{display:grid;grid-template-columns:3rem 1fr;column-gap:1rem;padding:1.25rem 0;border-top:1px solid var(--color-hairline)}.editorial-band__grid span{grid-row:1/3;color:var(--color-lavender-deep);font:600 .8rem var(--font-system)}.editorial-band__grid h3,.editorial-band__grid p{margin:0}.editorial-band__grid p{margin-top:.35rem;color:var(--color-muted-ink)}.tool-modern{display:grid;grid-template-columns:minmax(0,1fr) minmax(19rem,.72fr);gap:clamp(2rem,6vw,5rem);align-items:center}.tool-modern aside{padding:2rem;border:1px solid var(--color-hairline);border-radius:1.4rem;background:rgba(255,255,255,.72)}.unit-cloud{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.unit-cloud span{padding:.55rem .7rem;border-radius:999px;background:var(--color-paper);border:1px solid var(--color-hairline);font:600 .85rem var(--font-system);color:var(--color-lavender-deep)}@media(max-width:900px){.home-hero__grid,.editorial-band,.tool-modern{grid-template-columns:1fr}.explore-grid{grid-template-columns:1fr 1fr}.home-hero__copy h1{max-width:11ch}.home-section-heading{grid-template-columns:1fr}.home-hero__art{min-height:32rem}.home-hero__art img{width:min(106%,46rem);transform:translate(0,2%)}}@media(max-width:640px){.explore-grid,.home-hero__trust{grid-template-columns:1fr}.home-hero__visual figcaption{position:static;margin-top:.8rem;background:var(--color-ink)}.home-hero__copy h1{font-size:clamp(3rem,16vw,4.8rem)}.home-hero__art{min-height:24rem;border-radius:1.5rem}.home-hero__art img{width:125%;transform:translate(3%,1%)}.explore-card__visual{height:14rem}}
+.home-shell{width:min(calc(100% - 3rem),92rem);margin-inline:auto}.home-hero{padding:clamp(2.25rem,4vw,4.75rem) 0 2.4rem;background:linear-gradient(180deg,#fff 0%,#fcfafc 100%);overflow:hidden}.home-hero__grid{display:grid;grid-template-columns:minmax(25rem,.82fr) minmax(34rem,1.18fr);align-items:center;gap:clamp(1.5rem,3.5vw,4rem)}.home-hero__copy{position:relative;z-index:2;padding-block:1rem}.home-hero__copy .eyebrow{margin-bottom:1.2rem;color:var(--color-lavender-deep);letter-spacing:.19em}.home-hero__copy h1{max-width:8.3ch;margin:0 0 1.1rem;font-size:clamp(3.45rem,5.55vw,5.9rem);line-height:.9;letter-spacing:-.055em;font-weight:500}.home-hero__copy h1 em{color:#5f4cc4;font-weight:400}.home-hero__lead{max-width:34rem;margin:0 0 1.45rem;color:#3f435f;font-size:clamp(1.06rem,1.45vw,1.32rem);line-height:1.43}.home-cta{display:inline-flex;align-items:center;gap:1.1rem;min-height:3.25rem;padding:.83rem 1.55rem;border-radius:999px;background:linear-gradient(135deg,#6046c8,#7a56d4);color:#fff;font-family:var(--font-system);font-size:1rem;font-weight:500;text-decoration:none;box-shadow:0 .55rem 1.25rem rgba(96,70,200,.2)}.home-cta:hover{color:#fff;transform:translateY(-1px)}.home-hero__trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;max-width:38rem;margin-top:1.5rem;padding-top:1.15rem;border-top:1px solid #ece8f1}.home-hero__trust span{display:grid;gap:.05rem;padding-left:2.1rem;position:relative;font-family:var(--font-system)}.home-hero__trust span::before{content:"";position:absolute;left:0;top:.1rem;width:1.35rem;height:1.35rem;border:1.5px solid #6655c8;border-radius:.35rem}.home-hero__trust strong{font-size:.84rem;color:#2c3152}.home-hero__trust small{font-size:.76rem;line-height:1.3;color:#6a6d82}.home-hero__visual{position:relative;margin:0;min-height:clamp(27rem,39vw,39rem);display:flex;align-items:center}.home-hero__art{position:absolute;inset:0;border-radius:0;background:radial-gradient(circle at 58% 48%,rgba(196,181,255,.34),transparent 31%),radial-gradient(circle at 83% 46%,rgba(207,232,219,.22),transparent 34%),linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(245,242,251,.88) 26%,rgba(239,236,249,.95) 100%)}.home-hero__art img{position:absolute;right:-8%;bottom:-1%;width:112%;max-width:none;filter:drop-shadow(0 28px 28px rgba(73,54,98,.16))}.home-hero__visual figcaption{position:absolute;right:2.2rem;top:3rem;z-index:2;max-width:10rem;color:#fff;font-size:clamp(1.15rem,1.8vw,1.55rem);font-style:italic;line-height:1.28;text-shadow:0 2px 10px rgba(44,37,73,.35)}
+
+.home-explore{padding:2.65rem 0 3.1rem;background:#fff;border-top:1px solid #eeeaf2}.home-explore__heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(18rem,.62fr);gap:2rem;align-items:end;margin-bottom:1.35rem}.home-explore__heading .eyebrow{margin-bottom:.3rem;color:var(--color-lavender-deep)}.home-explore__heading h2{margin:0;font-size:clamp(2.35rem,3.9vw,4rem);line-height:.96}.home-explore__heading h2 em{color:#5f4cc4;font-weight:400}.home-explore__heading>p{max-width:29rem;margin:0;color:#4d526e;font-size:1.08rem;line-height:1.45}.home-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}.home-card{display:grid;grid-template-rows:13.5rem 1fr;overflow:hidden;border:1px solid #e9e5ee;border-radius:1rem;background:#fff;color:var(--color-ink);text-decoration:none;box-shadow:0 .45rem 1.5rem rgba(61,49,83,.07);transition:transform .18s ease,box-shadow .18s ease}.home-card:hover{transform:translateY(-3px);box-shadow:0 .8rem 1.9rem rgba(61,49,83,.11);color:var(--color-ink)}.home-card__visual{display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:linear-gradient(150deg,#f5f2fb,#eee9f7)}.home-card__visual img{width:108%;height:108%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 14px 16px rgba(67,53,91,.12))}.home-card__body{display:flex;flex-direction:column;min-height:11.2rem;padding:1.05rem 1.15rem 1.1rem}.home-card h3{margin:0 0 .35rem;font-size:1.35rem;line-height:1.1}.home-card p{margin:0 0 .8rem;color:#505470;font-family:var(--font-system);font-size:.9rem;line-height:1.4}.home-card span{margin-top:auto;color:#5f4cc4;font-family:var(--font-system);font-size:.88rem;font-weight:500}.home-signoff{padding:2.2rem 0;background:linear-gradient(90deg,#f0ecfb,#f8f6fc 48%,#efeafa);border-top:1px solid #e7e1ef}.home-signoff__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}.home-signoff p{margin:0;color:#343a65;font-size:1.24rem}.home-signoff em{color:#5f4cc4}.home-signoff span{font-family:var(--font-system);font-size:.9rem;letter-spacing:.1em;color:#454b72}
+
+@media(max-width:980px){.home-hero__grid{grid-template-columns:1fr}.home-hero__copy h1{max-width:11ch}.home-hero__visual{min-height:31rem}.home-hero__art img{right:-4%;width:100%}.home-explore__heading{grid-template-columns:1fr}.home-card-grid{grid-template-columns:1fr 1fr}.home-card:last-child{grid-column:1/-1}}
+@media(max-width:640px){.home-shell{width:min(calc(100% - 2rem),92rem)}.home-hero{padding-top:1.5rem}.home-hero__copy h1{font-size:clamp(3rem,15vw,4.8rem)}.home-hero__trust{grid-template-columns:1fr}.home-hero__visual{min-height:23rem}.home-hero__art img{right:-18%;width:132%}.home-hero__visual figcaption{top:1.2rem;right:1rem;font-size:1rem}.home-card-grid{grid-template-columns:1fr}.home-card:last-child{grid-column:auto}.home-signoff__inner{align-items:flex-start;flex-direction:column}.home-signoff p{font-size:1.05rem}}
 </style>

@@ -6,25 +6,61 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Scientific Library"
   description="The PeptiBloom Scientific Library is a public research resource built to make evidence, uncertainty, provenance and unanswered questions inspectable."
 >
-  <section class="section library-hero">
-    <div class="site-frame library-hero__grid">
+  <section class="library-hero">
+    <div class="library-shell library-hero__grid">
       <div class="library-hero__copy">
         <p class="eyebrow">Scientific Library</p>
-        <h1>Research should be easier to inspect than marketing.</h1>
-        <p class="page-hero__lead">This library is being built around evidence, transparency and traceability. Scientific entries appear only after they complete the approved review path.</p>
-        <div class="hero__actions"><a class="button button--primary" href="#publication-state">See the publication standard</a><a class="editorial-link" href="/methodology/">Read the methodology <span aria-hidden="true">→</span></a></div>
+        <h1>Explore.<br />Learn. <em>Grow.</em></h1>
+        <p class="library-hero__lead">A curated scientific library built to make evidence, uncertainty, provenance and unanswered questions easier to inspect.</p>
+
+        <div class="library-hero__features" aria-label="Library content types">
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5A2.5 2.5 0 0 1 20 21.5z"/></svg>
+            <small>Monographs<br />and fact sheets</small>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3M8 15h8"/></svg>
+            <small>Scientific<br />reviews</small>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2zM8 7h8M8 11h8M8 15h5"/></svg>
+            <small>Clinical<br />studies</small>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6zM9 8h6M9 12h6M9 16h4"/></svg>
+            <small>Patents and<br />technical data</small>
+          </span>
+        </div>
+
+        <div class="library-search" aria-label="Library search placeholder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+          <span>Search peptides, topics or keywords...</span>
+        </div>
       </div>
+
       <figure class="library-hero__visual">
-        <img src="/brand/editorial/visuals/pb-library-dossier-v1.svg" alt="Editorial illustration of scientific books, leaves and a molecular structure" />
-        <figcaption><span>PeptiBloom Scientific Library</span><strong>What is known. What is not. Where it comes from.</strong></figcaption>
+        <div class="library-hero__art">
+          <img src="/brand/editorial/web-assets/card_library.png" alt="Scientific books, botanical leaves and molecular structure representing the PeptiBloom Scientific Library" />
+        </div>
+        <figcaption>
+          <span>Evidence · limits · provenance</span>
+          <strong>Knowledge should be inspectable.</strong>
+        </figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="section section--quiet" aria-labelledby="library-principles-title">
-    <div class="site-frame">
-      <div class="section-heading reading-column"><p class="eyebrow">Library principles</p><h2 id="library-principles-title">Every entry should make four things visible.</h2></div>
-      <div class="library-principles-modern">
+  <section class="library-principles" aria-labelledby="library-principles-title">
+    <div class="library-shell">
+      <div class="library-heading">
+        <div>
+          <p class="eyebrow">Library principles</p>
+          <h2 id="library-principles-title">Every entry should make four things visible.</h2>
+        </div>
+        <p>Evidence is more useful when its boundaries remain visible.</p>
+      </div>
+
+      <div class="library-principles__grid">
         <article><span>01</span><h3>Evidence</h3><p>What the available research can support — without extending beyond it.</p></article>
         <article><span>02</span><h3>Uncertainty</h3><p>What remains theoretical, disputed, incomplete or unknown.</p></article>
         <article><span>03</span><h3>Provenance</h3><p>Where information comes from and how a reader can trace it back.</p></article>
@@ -33,21 +69,47 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="section" id="publication-state" aria-labelledby="current-library-title">
-    <div class="site-frame publication-modern">
-      <div class="publication-modern__copy"><p class="eyebrow">Current publication state</p><h2 id="current-library-title">No placeholder compounds. No fabricated evidence.</h2><p class="section-lead">PeptiBloom will publish compound-level scientific pages only when an approved Evidence contract and production-ready scientific content are available. Until then, this surface explains the publication standard rather than pretending finished entries already exist.</p></div>
-      <aside class="publication-modern__path"><p class="surface-kicker">Publication path</p><ol><li><span>01</span><div><strong>Scientific Inventory</strong><small>Sources and review workflow</small></div></li><li><span>02</span><div><strong>Evidence</strong><small>Public contract required</small></div></li><li><span>03</span><div><strong>Public Library</strong><small>Production-ready content only</small></div></li></ol><p class="boundary-copy">A gap is better than invented certainty.</p></aside>
+  <section class="library-publication" id="publication-state" aria-labelledby="current-library-title">
+    <div class="library-shell library-publication__grid">
+      <div>
+        <p class="eyebrow">Current publication state</p>
+        <h2 id="current-library-title">No placeholder compounds.<br /><em>No fabricated evidence.</em></h2>
+        <p>Compound-level scientific pages appear only after the approved evidence and publication path is complete. Until then, a visible gap is better than invented certainty.</p>
+        <a class="library-link" href="/methodology/">Read the methodology →</a>
+      </div>
+
+      <aside class="library-path">
+        <p class="surface-kicker">Publication path</p>
+        <ol>
+          <li><span>01</span><div><strong>Scientific Inventory</strong><small>Sources and review workflow</small></div></li>
+          <li><span>02</span><div><strong>Evidence</strong><small>Public contract required</small></div></li>
+          <li><span>03</span><div><strong>Public Library</strong><small>Production-ready content only</small></div></li>
+        </ol>
+      </aside>
     </div>
   </section>
 
-  <section class="section section--soft" aria-labelledby="learn-now-title">
-    <div class="site-frame learn-now">
-      <div><p class="eyebrow">Available now</p><h2 id="learn-now-title">While the monograph library grows, the literacy layer is already useful.</h2><p>Research Basics explains recurring concepts around COAs, HPLC, sterility, cold chain, lyophilization and related technical literacy without pretending those articles are compound monographs.</p></div>
-      <a class="button button--primary" href="/research-basics/">Explore Research Basics</a>
+  <section class="library-available" aria-labelledby="learn-now-title">
+    <div class="library-shell library-available__inner">
+      <div>
+        <p class="eyebrow">Available now</p>
+        <h2 id="learn-now-title">Start with the literacy layer.</h2>
+        <p>Research Basics explains recurring concepts around COAs, HPLC, sterility, cold chain, lyophilization and related technical literacy without presenting those articles as compound monographs.</p>
+      </div>
+      <a class="library-cta" href="/research-basics/">Explore Research Basics <span aria-hidden="true">→</span></a>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-.library-hero__grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(2rem,6vw,5rem);align-items:center}.library-hero__copy h1{font-size:clamp(3.2rem,6.2vw,6rem);line-height:.94;letter-spacing:-.04em;max-width:10ch;margin:.4rem 0 1.4rem}.library-hero__visual{margin:0;position:relative}.library-hero__visual img{width:100%;display:block;border-radius:2rem;box-shadow:0 24px 70px rgba(83,61,93,.14)}.library-hero__visual figcaption{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;padding:1rem 1.15rem;border-radius:1rem;background:rgba(252,250,251,.88);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.75)}.library-hero__visual figcaption span,.library-hero__visual figcaption strong{display:block}.library-hero__visual figcaption span{font:600 .72rem var(--font-system);text-transform:uppercase;letter-spacing:.12em;color:var(--color-lavender-deep)}.library-hero__visual figcaption strong{margin-top:.35rem;font-family:var(--font-serif);font-size:1.25rem}.library-principles-modern{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}.library-principles-modern article{padding:1.4rem;border:1px solid var(--color-hairline);border-radius:1.2rem;background:var(--color-paper);box-shadow:var(--shadow-paper)}.library-principles-modern span{font:600 .75rem var(--font-system);color:var(--color-lavender-deep)}.library-principles-modern h3{margin:.8rem 0 .45rem}.library-principles-modern p{margin:0;color:var(--color-muted-ink)}.publication-modern{display:grid;grid-template-columns:minmax(0,1fr) minmax(19rem,.78fr);gap:clamp(2rem,7vw,6rem);align-items:start}.publication-modern__copy h2{font-size:clamp(2.6rem,5vw,4.8rem);line-height:.98;margin:.4rem 0 1rem}.publication-modern__path{padding:2rem;border:1px solid var(--color-hairline);border-radius:1.4rem;background:linear-gradient(145deg,#FCFAFB,#F3EDF7)}.publication-modern__path ol{list-style:none;padding:0;margin:1rem 0}.publication-modern__path li{display:grid;grid-template-columns:2.6rem 1fr;gap:.8rem;padding:1rem 0;border-top:1px solid var(--color-hairline)}.publication-modern__path li>span{font:600 .75rem var(--font-system);color:var(--color-lavender-deep)}.publication-modern__path strong,.publication-modern__path small{display:block}.publication-modern__path small{margin-top:.2rem;color:var(--color-muted-ink)}.boundary-copy{font-family:var(--font-serif);font-size:1.35rem;color:var(--color-mulberry)}.learn-now{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}.learn-now h2{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1;margin:.35rem 0}.learn-now p{max-width:60ch;color:var(--color-muted-ink)}@media(max-width:900px){.library-hero__grid,.publication-modern{grid-template-columns:1fr}.library-principles-modern{grid-template-columns:1fr 1fr}.learn-now{grid-template-columns:1fr;align-items:start}}@media(max-width:600px){.library-principles-modern{grid-template-columns:1fr}.library-hero__visual figcaption{position:static;margin-top:.75rem}.library-hero__copy h1{font-size:clamp(3rem,15vw,4.7rem)}}
+.library-shell{width:min(calc(100% - 3rem),92rem);margin-inline:auto}.library-hero{padding:clamp(1.8rem,3.8vw,4rem) 0 2.5rem;background:linear-gradient(180deg,#fff 0%,#fcfafc 100%);overflow:hidden}.library-hero__grid{display:grid;grid-template-columns:minmax(26rem,.88fr) minmax(33rem,1.12fr);gap:clamp(1.5rem,4vw,4.5rem);align-items:center}.library-hero__copy .eyebrow{margin-bottom:1rem;color:var(--color-lavender-deep);letter-spacing:.18em}.library-hero__copy h1{max-width:9ch;margin:0 0 1rem;font-size:clamp(3.7rem,6vw,6.6rem);line-height:.88;letter-spacing:-.055em;font-weight:500}.library-hero__copy h1 em{color:#5f4cc4;font-weight:400}.library-hero__lead{max-width:35rem;margin:0;color:#454a67;font-size:clamp(1.08rem,1.5vw,1.34rem);line-height:1.45}.library-hero__features{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;max-width:40rem;margin-top:1.55rem;padding-top:1.2rem;border-top:1px solid #ebe6f0}.library-hero__features span{display:grid;grid-template-columns:1.6rem 1fr;gap:.5rem;align-items:start;color:#4d526e;font-family:var(--font-system)}.library-hero__features svg{width:1.5rem;height:1.5rem;fill:none;stroke:#6655c8;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}.library-hero__features small{font-size:.7rem;line-height:1.3}.library-search{display:flex;align-items:center;gap:.7rem;max-width:34rem;margin-top:1.35rem;padding:.8rem 1rem;border:1px solid #e4dfeb;border-radius:.75rem;background:#fff;color:#8a8ca0;box-shadow:0 .25rem 1rem rgba(67,53,91,.05);font:400 .85rem var(--font-system)}.library-search svg{width:1.2rem;height:1.2rem;fill:none;stroke:#4f4a79;stroke-width:1.6}.library-hero__visual{position:relative;margin:0;min-height:clamp(27rem,37vw,36rem)}.library-hero__art{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;background:radial-gradient(circle at 58% 44%,rgba(193,180,255,.32),transparent 30%),radial-gradient(circle at 78% 48%,rgba(212,235,219,.25),transparent 34%),linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(245,242,251,.9) 24%,rgba(239,236,249,.97) 100%)}.library-hero__art img{position:absolute;right:-2%;bottom:3%;width:104%;max-width:none;filter:drop-shadow(0 24px 24px rgba(73,54,98,.14))}.library-hero__visual figcaption{position:absolute;right:1.6rem;bottom:1.5rem;max-width:17rem;padding:.9rem 1rem;border:1px solid rgba(255,255,255,.8);border-radius:.9rem;background:rgba(255,255,255,.76);backdrop-filter:blur(10px)}.library-hero__visual figcaption span,.library-hero__visual figcaption strong{display:block}.library-hero__visual figcaption span{font:600 .67rem var(--font-system);letter-spacing:.12em;text-transform:uppercase;color:#6655c8}.library-hero__visual figcaption strong{margin-top:.3rem;font-size:1.05rem;line-height:1.25}
+
+.library-principles{padding:2.8rem 0 3.2rem;border-top:1px solid #eeeaf2;background:#fff}.library-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(17rem,.45fr);gap:2rem;align-items:end;margin-bottom:1.5rem}.library-heading h2{max-width:13ch;margin:.3rem 0 0;font-size:clamp(2.45rem,4vw,4rem);line-height:.98}.library-heading>p{max-width:24rem;margin:0;color:#555a75}.library-principles__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.library-principles__grid article{min-height:13.5rem;padding:1.25rem;border:1px solid #e8e3ee;border-radius:1rem;background:linear-gradient(155deg,#fff,#faf7fc);box-shadow:0 .45rem 1.4rem rgba(61,49,83,.05)}.library-principles__grid article:nth-child(2){background:linear-gradient(155deg,#fbf8fd,#f2edf8)}.library-principles__grid article:nth-child(3){background:linear-gradient(155deg,#fff,#f7f2fa)}.library-principles__grid span{font:600 .72rem var(--font-system);color:#6655c8}.library-principles__grid h3{margin:.75rem 0 .4rem;font-size:1.35rem}.library-principles__grid p{margin:0;color:#5d6076;font-size:.95rem;line-height:1.45}
+
+.library-publication{padding:3.3rem 0;background:linear-gradient(180deg,#fbfafc,#f6f2f9)}.library-publication__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(20rem,.72fr);gap:clamp(2rem,7vw,6rem);align-items:center}.library-publication h2{margin:.3rem 0 1rem;font-size:clamp(2.65rem,4.8vw,4.8rem);line-height:.96}.library-publication h2 em{color:#5f4cc4;font-weight:400}.library-publication p:not(.eyebrow){max-width:47rem;color:#555a75}.library-link{display:inline-block;margin-top:.75rem;color:#5f4cc4;font:600 .92rem var(--font-system);text-decoration:none}.library-path{padding:1.7rem;border:1px solid #e5deeb;border-radius:1.2rem;background:rgba(255,255,255,.74);box-shadow:0 .45rem 1.5rem rgba(61,49,83,.06)}.library-path ol{margin:1rem 0 0;padding:0;list-style:none}.library-path li{display:grid;grid-template-columns:2.4rem 1fr;gap:.75rem;padding:.9rem 0;border-top:1px solid #e9e4ee}.library-path li>span{font:600 .7rem var(--font-system);color:#6655c8}.library-path strong,.library-path small{display:block}.library-path strong{font-size:1rem}.library-path small{margin-top:.15rem;color:#6d7084;font:400 .78rem var(--font-system)}
+
+.library-available{padding:2.8rem 0;background:#fff}.library-available__inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}.library-available h2{margin:.25rem 0 .55rem;font-size:clamp(2.25rem,3.8vw,3.7rem);line-height:.98}.library-available p:not(.eyebrow){max-width:60ch;color:#5d6076}.library-cta{display:inline-flex;align-items:center;gap:1rem;padding:.8rem 1.25rem;border-radius:999px;background:linear-gradient(135deg,#6046c8,#7a56d4);color:#fff;font:500 .92rem var(--font-system);text-decoration:none;white-space:nowrap}.library-cta:hover{color:#fff}
+
+@media(max-width:980px){.library-hero__grid,.library-publication__grid{grid-template-columns:1fr}.library-hero__visual{min-height:28rem}.library-hero__art img{width:92%;right:2%}.library-principles__grid{grid-template-columns:1fr 1fr}.library-heading{grid-template-columns:1fr}.library-available__inner{grid-template-columns:1fr;align-items:start}}
+@media(max-width:640px){.library-shell{width:min(calc(100% - 2rem),92rem)}.library-hero__copy h1{font-size:clamp(3.15rem,15vw,4.8rem)}.library-hero__features{grid-template-columns:1fr 1fr}.library-hero__visual{min-height:21rem}.library-hero__art img{width:118%;right:-12%}.library-hero__visual figcaption{position:static;margin-top:.8rem}.library-principles__grid{grid-template-columns:1fr}}
 </style>

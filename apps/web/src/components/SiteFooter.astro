@@ -10,22 +10,23 @@ const year = new Date().getFullYear();
       <a class="brand brand--footer" href="/" aria-label="PeptiBloom home">
         <BrandLogo class="brand-logo--footer" />
       </a>
-      <p class="site-footer__statement">
-        A scientific research library built around evidence, transparency and traceability.
-      </p>
+      <p class="site-footer__statement">Independent science. Open knowledge. A brighter tomorrow.</p>
     </div>
 
     <nav class="site-footer__nav" aria-label="Footer navigation">
-      <a href="/library/">Scientific Library</a>
-      <a href="/calculator/">Concentration Calculator</a>
-      <a href="/methodology/">Methodology</a>
-      <a href="/about/">About &amp; transparency</a>
+      <a href="/">Home</a>
+      <a href="/library/">Library</a>
+      <a href="/research-basics/">Research Basics</a>
+      <a href="/about/">About</a>
     </nav>
 
     <div class="site-footer__meta">
-      <p>The Scientific Library is a PeptiBloom initiative.</p>
-      <p>Evidence · Transparency · Traceability</p>
+      <p>Science today.<br />Real possibilities tomorrow.</p>
       <p>© {year} PeptiBloom</p>
     </div>
   </div>
 </footer>
+
+<style>
+.site-footer{border-top:1px solid #e8e3ee;background:#fff;color:#2d3154}.site-footer__grid{display:grid;padding-block:1.7rem;grid-template-columns:minmax(15rem,.85fr) minmax(20rem,1fr) minmax(12rem,.55fr);align-items:end;gap:2rem}.brand--footer{margin-bottom:.65rem}.site-footer__statement{max-width:30rem;margin:0;color:#4a5073;font-size:1rem;font-style:italic}.site-footer__nav{display:flex;flex-direction:row;flex-wrap:wrap;gap:1rem 1.25rem;align-items:center}.site-footer a{color:#30355b}.site-footer__nav a{font-family:var(--font-system);font-size:.82rem;text-decoration:none}.site-footer__nav a:hover{text-decoration:underline}.site-footer__meta{text-align:right;color:#5e6380;font-family:var(--font-system);font-size:.76rem;line-height:1.4}.site-footer__meta p{margin:0 0 .3rem}.site-footer :global(.brand-logo--footer){width:min(100%,10.5rem)}@media(max-width:760px){.site-footer__grid{grid-template-columns:1fr}.site-footer__meta{text-align:left}.site-footer__nav{gap:.75rem 1rem}}
+</style>

@@ -36,4 +36,4 @@ These observations must not be used as current impressions, clicks, queries, CTR
 
 Recovered historical language or URL-architecture proposals are not restored here.
 
-PB-DEC-002 remains open/proposed. Growth must not infer the primary/default language, default-locale prefixing, browser-language redirects, fallback behavior, or other unresolved language-routing policy.
+PB-DEC-002 is approved: Spanish is the primary/default language with unprefixed routes, English uses `/en/`, French uses `/fr/`, silent cross-locale fallback is prohibited, and localized content may be published only when reviewed content exists for that locale. Browser-language redirect behaviour remains outside Growth authority unless separately approved.

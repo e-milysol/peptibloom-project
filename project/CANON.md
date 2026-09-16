@@ -16,6 +16,7 @@ PeptiBloom is being built as a scientific research library and research-oriented
 
 ## Scientific publication principles
 
+- `project/PEPTIBLOOM_SCIENTIFIC_PUBLISHING_STANDARD_v1.1.md` is the OWNER APPROVED / FROZEN operational scientific publishing standard as of 2026-09-16 and supersedes PeptiBloom Standard Editorial Articles v1.0. Historical v1.0 remains provenance.
 - Clearly distinguish what is known, unknown, theoretical, contradictory and anecdotal.
 - Do not present opinion as fact.
 - Do not create scientific claims, studies, compounds or evidence to fill UI.
@@ -32,7 +33,7 @@ PeptiBloom is being built as a scientific research library and research-oriented
 - Compound pages require an approved Evidence public contract and production-ready scientific content.
 - The public web is multilingual and must support at minimum English (`en`), Spanish (`es`) and French (`fr`).
 - New public-web routes, components and copy structures must remain localization-ready rather than assuming a single language.
-- PB-DEC-002 is Owner approved: Spanish (`es`) is the primary/default locale and uses unprefixed routes; English uses `/en/`; French uses `/fr/`; localized URLs must not silently serve another language when localized content is unavailable.
+- PB-DEC-002 is Owner approved: Spanish (`es`) is the primary/default locale and uses unprefixed routes; English uses `/en/`; French uses `/fr/`; silent cross-locale fallback is prohibited, and localized content may be published only when reviewed content exists for that locale.
 - The permanent production canonical domain is `https://peptibloomproject.com`.
 - Cloudflare Workers is the approved production hosting for PeptiBloom Web.
 - Web, SEO, sitemap, canonicals, metadata and other public references may treat `https://peptibloomproject.com` as the production origin.

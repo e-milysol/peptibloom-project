@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="PeptiBloom — Más allá de la biblioteca científica"
+  description="Descubre el proyecto PeptiBloom, sus recursos públicos de investigación y la separación entre información científica y comercial."
+>
+  <section class="section section--hero">
+    <div class="site-frame reading-column">
+      <p class="eyebrow">PeptiBloom</p>
+      <h1>Primero la ciencia. Y un proyecto más amplio a su alrededor.</h1>
+      <p class="hero__lead">
+        PeptiBloom reúne divulgación científica pública, herramientas de investigación y un ecosistema de marca en desarrollo.
+        La biblioteca científica se mantiene editorialmente separada de la información comercial para que una nunca actúe como evidencia de la otra.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="/research-basics/">Explorar Research Basics</a>
+        <a class="editorial-link" href="/about/">Por qué existe PeptiBloom <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--quiet" aria-labelledby="paths-title">
+    <div class="site-frame">
+      <div class="section-heading reading-column">
+        <p class="eyebrow">Elige tu camino</p>
+        <h2 id="paths-title">¿Qué estás buscando?</h2>
+        <p>Distintas preguntas pertenecen a distintas partes de PeptiBloom. Mantener esos caminos visibles forma parte del estándar de transparencia del proyecto.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card">
+          <p class="surface-kicker">Aprender</p>
+          <h3>Entender conceptos de laboratorio y ciencia peptídica</h3>
+          <p>Explicaciones breves y basadas en fuentes sobre COA, HPLC, esterilidad, cadena de frío, liofilización y otras preguntas recurrentes de investigación.</p>
+          <a class="editorial-link" href="/research-basics/">Ver Research Basics <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="path-card">
+          <p class="surface-kicker">Investigar</p>
+          <h3>Seguir el estándar de publicación científica</h3>
+          <p>Las páginas científicas sobre compuestos solo aparecen cuando se ha completado la ruta de evidencia y revisión requerida.</p>
+          <a class="editorial-link" href="/library/">Abrir la Biblioteca Científica <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="path-card">
+          <p class="surface-kicker">Herramientas</p>
+          <h3>Comprobar cálculos de concentración</h3>
+          <p>Usa la calculadora transparente para conversiones de unidades y cálculos de concentración sin convertir las matemáticas en una recomendación de dosificación.</p>
+          <a class="editorial-link" href="/calculator/">Abrir la calculadora <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="commercial-title">
+    <div class="site-frame boundary-band">
+      <div>
+        <p class="eyebrow">Separación comercial</p>
+        <h2 id="commercial-title">El contenido científico no es un respaldo de producto.</h2>
+      </div>
+      <div class="reading-column">
+        <p>
+          PeptiBloom puede desarrollar superficies comerciales y productos físicos por separado. Cuando se publiquen, estarán claramente identificados como información comercial y se mantendrán estructuralmente separados de las conclusiones científicas, los niveles de evidencia y los artículos de Research Basics.
+        </p>
+        <p class="boundary-note"><strong>Estado actual:</strong> este sitio todavía no publica un catálogo público de productos ni un canal de contacto comercial.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}.path-card{display:flex;flex-direction:column;gap:1rem;padding:clamp(1.5rem,3vw,2.25rem);border:1px solid var(--color-hairline);border-radius:var(--radius-large);background:var(--color-paper);box-shadow:var(--shadow-paper)}.path-card h3,.path-card p{margin:0}.path-card .editorial-link{margin-top:auto}.boundary-band{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(2rem,7vw,6rem);align-items:start}.boundary-note{padding-top:1rem;border-top:1px solid var(--color-hairline);color:var(--color-muted-ink)}@media(max-width:800px){.path-grid,.boundary-band{grid-template-columns:1fr}}
+</style>

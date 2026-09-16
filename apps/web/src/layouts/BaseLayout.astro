@@ -2,8 +2,10 @@
 import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import ContinueResearching from '../components/ContinueResearching.astro';
 import { localeFromPathname, openGraphLocales } from '../i18n/config';
 import { getUi } from '../i18n/ui';
+import { resolveArticleFromPathname } from '../lib/research-basics-graph';
 
 interface Props {
   title?: string;
@@ -23,6 +25,7 @@ const cloudflareAnalyticsToken = import.meta.env.PUBLIC_CLOUDFLARE_WEB_ANALYTICS
 
 const pageLocale = localeFromPathname(Astro.url.pathname);
 const ui = getUi(pageLocale);
+const researchArticle = resolveArticleFromPathname(Astro.url.pathname, pageLocale);
 
 const websiteSchema = {
   '@type': 'WebSite',
@@ -92,6 +95,7 @@ const jsonLd = {
     <SiteHeader locale={pageLocale} />
     <main id="main-content">
       <slot />
+      {researchArticle && <ContinueResearching articleId={researchArticle.articleId} locale={pageLocale} />}
     </main>
     <SiteFooter locale={pageLocale} />
     {isCalculatorPage && <script is:inline type="module" src="/calculator-enhancements.js"></script>}

@@ -102,6 +102,6 @@ Search Console metrics are measurable only from current source observations. Eve
 Do not set traffic-growth percentages before the 28-day baseline exists. Early percentage changes from a near-zero
 denominator are numerically dramatic and strategically meaningless.
 
-## Multilingual decision still required
+## Approved multilingual policy boundary
 
-PeptiBloom canon requires English, Spanish and French support. PB-DEC-002 remains open/proposed: the primary/default locale and URL-prefix/fallback policy are not approved. Do not restore historical language architecture, create localized URLs or `hreflang`, or infer default-locale behavior until that policy is explicitly approved.
+PeptiBloom canon requires English, Spanish and French support. PB-DEC-002 is approved: Spanish is the primary/default locale with unprefixed routes, English uses `/en/`, French uses `/fr/`, silent cross-locale fallback is prohibited, and localized content may be published only when reviewed content exists for that locale. Do not restore historical language architecture or create localized URLs or `hreflang` outside the approved Web implementation scope.

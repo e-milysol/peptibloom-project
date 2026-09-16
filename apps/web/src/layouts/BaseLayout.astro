@@ -3,13 +3,16 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 
+type Locale = 'es' | 'en' | 'fr';
+
 interface Props {
   title?: string;
   description: string;
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+  locale?: Locale;
 }
 
-const { title = 'PeptiBloom', description, structuredData } = Astro.props;
+const { title = 'PeptiBloom', description, structuredData, locale } = Astro.props;
 const pageTitle = title === 'PeptiBloom' ? title : `${title} — PeptiBloom`;
 const siteUrl = Astro.site ?? new URL('https://peptibloomproject.com');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
@@ -19,13 +22,25 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
 const cloudflareAnalyticsToken = import.meta.env.PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
 
+const pathLocale: Locale = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/')
+  ? 'en'
+  : Astro.url.pathname === '/fr' || Astro.url.pathname.startsWith('/fr/')
+    ? 'fr'
+    : 'es';
+const pageLocale: Locale = locale ?? pathLocale;
+const openGraphLocale: Record<Locale, string> = {
+  es: 'es_ES',
+  en: 'en_US',
+  fr: 'fr_FR',
+};
+
 const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${siteUrl.href}#website`,
   url: siteUrl.href,
   name: 'PeptiBloom',
   description: 'An evidence-first scientific research library for peptides and research compounds.',
-  inLanguage: 'en',
+  inLanguage: ['es', 'en', 'fr'],
 };
 
 const webpageSchema = {
@@ -35,7 +50,7 @@ const webpageSchema = {
   name: pageTitle,
   description,
   isPartOf: { '@id': `${siteUrl.href}#website` },
-  inLanguage: 'en',
+  inLanguage: pageLocale,
 };
 
 const extraSchema = structuredData
@@ -48,7 +63,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={pageLocale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -65,7 +80,7 @@ const jsonLd = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="PeptiBloom" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={openGraphLocale[pageLocale]} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />

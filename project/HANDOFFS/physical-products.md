@@ -90,6 +90,50 @@ Physical Products / Accessories does not own or authorize:
 
 This handoff does not create additional Commerce canon.
 
+## Bloom Caps — latest controlled Owner evidence
+
+The latest Owner evidence recorded in the Hardware / Physical Products queue is accepted here as controlled interface/functional evidence only. It does not by itself pass G0, G1 or G2 and does not authorize CAD or fabrication.
+
+### Functional interaction
+
+Owner-selected interaction: **B**.
+
+- Bloom Cap may cover/block the original green plastic flip-off while installed.
+- Bloom Cap is removed before vial access.
+- The original flip-off/crimp closure remains intact and non-sacrificial.
+- Removal must be manual and tool-free.
+- Retention should be intermediate: the cap should not fall off loosely.
+- The design must not damage, deform or pull the original aluminum closure.
+- Aluminum must not be assumed to be a safe retention surface without evidence.
+- The original green flip-off must not be dismantled for Bloom Cap installation.
+
+### Controlled observed interface measurement
+
+Measured quantity: maximum external diameter of the **green plastic flip-off cap while closed**, edge-to-edge through the center, excluding the aluminum closure below.
+
+Owner readings with digital caliper:
+- 15.07 mm
+- 15.06 mm
+- 15.07 mm
+
+Observed arithmetic mean: `(15.07 + 15.06 + 15.07) / 3 = 15.0667 mm`, reportable for this evidence record as **15.07 mm observed mean**.
+
+Observed range: **0.01 mm**.
+
+This is one observed interface dimension only. It is **not** a manufacturing tolerance, nominal standard, fit allowance, design dimension or evidence of a common core. No unmeasured height, undercut, aluminum, neck, shoulder, open-cap geometry, clearance or interference value may be inferred from it.
+
+### Current Bloom Caps gate state
+
+- `G0`: NOT DECLARED PASSED
+- `G1`: NOT DECLARED PASSED
+- `G2`: NOT PASSED from this diameter alone
+- `common_core`: HYPOTHESIS_ONLY
+- `cad_authorized`: false
+
+The next Physical Products step, if pursued, is to identify only the next minimum controlled functional/interface evidence required by the clean-sheet pipeline before dependent geometry may advance. This section creates no Legal/IP, publication, Commerce or `READY_FOR_SALE` implication.
+
+Source coordination record: Issue #17, Owner-evidence reconciliation comment `5346269304`.
+
 ## PB-XD timing
 
 `PB-XD REQUIRED NOW: NO` for continued Physical Products reconciliation and domain-local documentation.

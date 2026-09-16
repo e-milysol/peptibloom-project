@@ -23,6 +23,11 @@ interface UiStrings {
   };
   siteDescription: string;
   socialImageAlt: string;
+  researchGraph: {
+    eyebrow: string;
+    heading: string;
+    relationLabels: Record<'PREREQUISITE' | 'DEEPER' | 'INTERPRETATION' | 'RELATED', string>;
+  };
 }
 
 const ui = {
@@ -49,6 +54,16 @@ const ui = {
     },
     siteDescription: 'Una biblioteca de investigación científica basada en evidencia sobre péptidos y compuestos de investigación.',
     socialImageAlt: 'PeptiBloom — Ciencia, longevidad y bienestar',
+    researchGraph: {
+      eyebrow: 'Ruta de aprendizaje',
+      heading: 'Continúa investigando',
+      relationLabels: {
+        PREREQUISITE: 'Concepto previo',
+        DEEPER: 'Profundiza',
+        INTERPRETATION: 'Interpreta la evidencia',
+        RELATED: 'Concepto relacionado',
+      },
+    },
   },
   en: {
     skipToContent: 'Skip to content',
@@ -73,6 +88,16 @@ const ui = {
     },
     siteDescription: 'An evidence-first scientific research library for peptides and research compounds.',
     socialImageAlt: 'PeptiBloom — Science, Longevity, Wellness',
+    researchGraph: {
+      eyebrow: 'Learning path',
+      heading: 'Continue exploring',
+      relationLabels: {
+        PREREQUISITE: 'Prerequisite',
+        DEEPER: 'Go deeper',
+        INTERPRETATION: 'Interpret the evidence',
+        RELATED: 'Related concept',
+      },
+    },
   },
   fr: {
     skipToContent: 'Aller au contenu',
@@ -97,6 +122,16 @@ const ui = {
     },
     siteDescription: 'Une bibliothèque de recherche scientifique fondée sur les preuves concernant les peptides et les composés de recherche.',
     socialImageAlt: 'PeptiBloom — Science, longévité et bien-être',
+    researchGraph: {
+      eyebrow: 'Parcours pédagogique',
+      heading: 'Poursuivre l’exploration',
+      relationLabels: {
+        PREREQUISITE: 'Notion préalable',
+        DEEPER: 'Approfondir',
+        INTERPRETATION: 'Interpréter les preuves',
+        RELATED: 'Notion associée',
+      },
+    },
   },
 } as const satisfies Record<Locale, UiStrings>;
 

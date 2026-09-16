@@ -1,0 +1,103 @@
+---
+import type { Locale } from '../i18n/config';
+import { getUi } from '../i18n/ui';
+import { selectResearchRecommendations } from '../lib/research-basics-graph';
+
+interface Props {
+  articleId: string;
+  locale: Locale;
+}
+
+const { articleId, locale } = Astro.props;
+const recommendations = selectResearchRecommendations(articleId, locale);
+const ui = getUi(locale);
+const headingId = `continue-researching-${articleId.replaceAll('.', '-')}`;
+---
+
+{recommendations.length > 0 && (
+  <nav class="continue-researching section" aria-labelledby={headingId}>
+    <div class="site-frame">
+      <div class="continue-researching__heading">
+        <p class="eyebrow">{ui.researchGraph.eyebrow}</p>
+        <h2 id={headingId}>{ui.researchGraph.heading}</h2>
+      </div>
+      <ul class="continue-researching__grid">
+        {recommendations.map(({ relationship, article }) => (
+          <li>
+            <a href={article.url}>
+              <span>{ui.researchGraph.relationLabels[relationship.relationType]}</span>
+              <strong>{article.title}</strong>
+              <b aria-hidden="true">→</b>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+)}
+
+<style>
+  .continue-researching {
+    border-top: 1px solid var(--color-hairline);
+    background: var(--color-soft-bloom);
+  }
+
+  .continue-researching__heading {
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .continue-researching__heading h2 {
+    margin: .35rem 0 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .continue-researching__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .continue-researching__grid a {
+    position: relative;
+    display: grid;
+    min-height: 100%;
+    gap: .6rem;
+    padding: 1.35rem 3rem 1.35rem 1.35rem;
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-large);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    text-decoration: none;
+    box-shadow: var(--shadow-paper);
+  }
+
+  .continue-researching__grid a:hover {
+    border-color: rgba(122, 63, 104, .35);
+    color: var(--color-ink);
+  }
+
+  .continue-researching__grid span {
+    color: var(--color-mulberry);
+    font: 600 .76rem/1.2 var(--font-system);
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .continue-researching__grid strong {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.18;
+  }
+
+  .continue-researching__grid b {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    color: var(--color-mulberry);
+    font-size: 1.25rem;
+  }
+</style>

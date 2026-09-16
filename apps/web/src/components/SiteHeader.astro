@@ -1,30 +1,40 @@
 ---
 import BrandLogo from './BrandLogo.astro';
+import { localizedPath, type Locale } from '../i18n/config';
+import { isRoutePublished } from '../i18n/routes';
+import { getUi } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
 
 const pathname = Astro.url.pathname;
+const { locale } = Astro.props;
+const ui = getUi(locale);
 
 const navigation = [
-  { href: '/library/', label: 'Library' },
-  { href: '/research-basics/', label: 'Research Basics' },
-  { href: '/calculator/', label: 'Calculator' },
-  { href: '/methodology/', label: 'Methodology' },
-  { href: '/about/', label: 'About' },
-];
+  { href: '/library/', label: ui.nav.library },
+  { href: '/research-basics/', label: ui.nav.researchBasics },
+  { href: '/calculator/', label: ui.nav.calculator },
+  { href: '/methodology/', label: ui.nav.methodology },
+  { href: '/about/', label: ui.nav.about },
+].filter((item) => isRoutePublished(item.href, locale));
 
-const isCurrent = (href: string) => pathname.startsWith(href);
+const localizedHome = localizedPath('/', locale);
+const isCurrent = (href: string) => pathname.startsWith(localizedPath(href, locale));
 ---
 
 <header class="site-header">
   <div class="site-frame site-header__inner">
-    <a class="brand" href="/" aria-label="PeptiBloom home">
+    <a class="brand" href={localizedHome} aria-label={ui.brandHome}>
       <BrandLogo class="brand-logo--header" />
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
+    <nav class="site-nav" aria-label={ui.primaryNavigation}>
       <ul>
         {navigation.map((item) => (
           <li>
-            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+            <a href={localizedPath(item.href, locale)} aria-current={isCurrent(item.href) ? 'page' : undefined}>
               {item.label}
             </a>
           </li>

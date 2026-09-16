@@ -1,7 +1,7 @@
 {
-  "name": "PeptiBloom Scientific Research Library",
+  "name": "Biblioteca de Investigación Científica PeptiBloom",
   "short_name": "PeptiBloom",
-  "description": "An evidence-first scientific research library for peptides and research compounds.",
+  "description": "Una biblioteca de investigación científica basada en evidencia sobre péptidos y compuestos de investigación.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FCFAFB",

@@ -53,4 +53,17 @@ The canonical logo asset is `public/brand/logo.png`. Shared interface surfaces m
 `src/components/BrandLogo.astro` so intrinsic dimensions, accessibility behavior and responsive treatment
 remain consistent. Do not recreate or substitute the logo in individual components.
 
-The current implementation copy is in English for this working branch. The primary public-launch language remains an open project decision and is not closed by WEB M1 implementation.
+## Localization foundation
+
+Spanish (`es`) is the primary/default locale and uses unprefixed routes. English uses `/en/` and French uses
+`/fr/`. Shared interface strings live in `src/i18n/ui.ts`; locale policy and URL helpers live in
+`src/i18n/config.ts`; the sitemap and shared navigation use the explicit publication inventory in
+`src/i18n/routes.ts`.
+
+No cross-language fallback is configured. Add a locale-prefixed route to the publication inventory only after its
+complete page exists and is editorially approved. Do not add a language switcher or `hreflang` for a route until a
+real equivalent destination exists.
+
+The legacy Home, About, Library, Methodology and Calculator page bodies remain English on unprefixed routes and
+require reviewed Spanish localization. Research Basics article bodies are Spanish and require scientific/editorial
+review before English or French publication.

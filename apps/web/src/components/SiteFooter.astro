@@ -1,30 +1,42 @@
 ---
 import BrandLogo from './BrandLogo.astro';
+import { localizedPath, type Locale } from '../i18n/config';
+import { getUi } from '../i18n/ui';
+import { isRoutePublished } from '../i18n/routes';
+
+interface Props {
+  locale: Locale;
+}
 
 const year = new Date().getFullYear();
+const { locale } = Astro.props;
+const ui = getUi(locale);
+const navigation = [
+  { href: '/library/', label: ui.footer.scientificLibrary },
+  { href: '/calculator/', label: ui.footer.concentrationCalculator },
+  { href: '/methodology/', label: ui.footer.methodology },
+  { href: '/about/', label: ui.footer.about },
+].filter((item) => isRoutePublished(item.href, locale));
 ---
 
 <footer class="site-footer">
   <div class="site-frame site-footer__grid">
     <div>
-      <a class="brand brand--footer" href="/" aria-label="PeptiBloom home">
+      <a class="brand brand--footer" href={localizedPath('/', locale)} aria-label={ui.brandHome}>
         <BrandLogo class="brand-logo--footer" />
       </a>
       <p class="site-footer__statement">
-        A scientific research library built around evidence, transparency and traceability.
+        {ui.footer.statement}
       </p>
     </div>
 
-    <nav class="site-footer__nav" aria-label="Footer navigation">
-      <a href="/library/">Scientific Library</a>
-      <a href="/calculator/">Concentration Calculator</a>
-      <a href="/methodology/">Methodology</a>
-      <a href="/about/">About &amp; transparency</a>
+    <nav class="site-footer__nav" aria-label={ui.footerNavigation}>
+      {navigation.map((item) => <a href={localizedPath(item.href, locale)}>{item.label}</a>)}
     </nav>
 
     <div class="site-footer__meta">
-      <p>The Scientific Library is a PeptiBloom initiative.</p>
-      <p>Evidence · Transparency · Traceability</p>
+      <p>{ui.footer.initiative}</p>
+      <p>{ui.footer.principles}</p>
       <p>© {year} PeptiBloom</p>
     </div>
   </div>

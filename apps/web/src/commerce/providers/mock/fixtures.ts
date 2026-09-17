@@ -1,0 +1,107 @@
+import type { CommerceProduct } from "../../domain/types.js";
+
+export const syntheticProducts: CommerceProduct[] = [
+  {
+    id: "mock-product-alpha",
+    slug: "mock-desk-token",
+    title: "Mock Desk Token",
+    description: "Synthetic commerce fixture. Not a real PeptiBloom product.",
+    listingState: "VISIBLE",
+    commercialEligibility: "ELIGIBLE",
+    images: [],
+    variants: [
+      {
+        id: "mock-variant-alpha-1",
+        sku: "MOCK-ALPHA-01",
+        title: "Standard",
+        attributes: { finish: "Synthetic A" },
+        price: { amountMinor: 1200, currency: "EUR" },
+        availability: "IN_STOCK",
+      },
+      {
+        id: "mock-variant-alpha-2",
+        sku: "MOCK-ALPHA-02",
+        title: "Large",
+        attributes: { finish: "Synthetic B" },
+        price: { amountMinor: 1500, currency: "EUR" },
+        availability: "LOW_STOCK",
+      },
+    ],
+  },
+  {
+    id: "mock-product-blocked",
+    slug: "mock-visible-blocked-object",
+    title: "Mock Visible Blocked Object",
+    description: "Synthetic negative-test fixture only.",
+    listingState: "VISIBLE",
+    commercialEligibility: "BLOCKED",
+    images: [],
+    variants: [
+      {
+        id: "mock-variant-blocked-1",
+        sku: "MOCK-BLOCKED-01",
+        title: "Default",
+        attributes: {},
+        price: { amountMinor: 1800, currency: "EUR" },
+        availability: "IN_STOCK",
+      },
+    ],
+  },
+  {
+    id: "mock-product-unknown",
+    slug: "mock-visible-unknown-object",
+    title: "Mock Visible Unknown Object",
+    description: "Synthetic negative-test fixture only.",
+    listingState: "VISIBLE",
+    commercialEligibility: "UNKNOWN",
+    images: [],
+    variants: [
+      {
+        id: "mock-variant-unknown-1",
+        sku: "MOCK-UNKNOWN-01",
+        title: "Default",
+        attributes: {},
+        price: { amountMinor: 2000, currency: "EUR" },
+        availability: "IN_STOCK",
+      },
+    ],
+  },
+  {
+    id: "mock-product-out-of-stock",
+    slug: "mock-eligible-out-of-stock",
+    title: "Mock Eligible Out-of-Stock Object",
+    description: "Synthetic negative-test fixture only.",
+    listingState: "VISIBLE",
+    commercialEligibility: "ELIGIBLE",
+    images: [],
+    variants: [
+      {
+        id: "mock-variant-oos-1",
+        sku: "MOCK-OOS-01",
+        title: "Default",
+        attributes: {},
+        price: { amountMinor: 900, currency: "EUR" },
+        availability: "OUT_OF_STOCK",
+      },
+    ],
+  },
+  {
+    id: "mock-product-hidden",
+    slug: "mock-hidden-object",
+    title: "Mock Hidden Object",
+    description: "Synthetic negative-test fixture only.",
+    listingState: "HIDDEN",
+    commercialEligibility: "ELIGIBLE",
+    images: [],
+    variants: [
+      {
+        id: "mock-variant-hidden-1",
+        sku: "MOCK-HIDDEN-01",
+        title: "Default",
+        attributes: {},
+        price: { amountMinor: 999, currency: "EUR" },
+        availability: "IN_STOCK",
+      },
+    ],
+  },
+];

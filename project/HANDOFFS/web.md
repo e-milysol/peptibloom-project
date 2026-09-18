@@ -86,13 +86,12 @@ The public web must support at minimum:
 - Spanish: `es`
 - French: `fr`
 
-This requirement is approved canon. PB-DEC-002 was Owner approved on 2026-08-28 and fixes the public locale/URL policy as follows:
+PB-DEC-002 is approved and resolved:
 - Spanish (`es`) is the primary/default locale and uses unprefixed routes;
 - English uses `/en/`;
 - French uses `/fr/`;
-- localized URLs must not silently serve another language when localized content is unavailable.
-
-PB-DEC-002 does not by itself define browser-language redirect behavior. Any future redirect behavior must preserve the approved URL/fallback semantics and must not silently substitute another locale.
+- silent cross-locale fallback is prohibited; and
+- localized content may be published only when reviewed content exists for that locale.
 
 All new public-web work must remain localization-ready. In practice:
 - do not introduce new shared navigation/UI copy in a way that requires duplicating component markup per language;
@@ -106,13 +105,13 @@ All new public-web work must remain localization-ready. In practice:
 - source titles/citations should preserve source provenance; translation of presentation text must not alter the underlying citation identity;
 - once localized routes exist, QA/build review must cover all supported locales and broken cross-locale links.
 
-Approved implementation direction after PB-DEC-002:
-1. configure Astro `i18n` with `locales: ["en", "es", "fr"]` and `defaultLocale: "es"`;
-2. implement unprefixed Spanish routes, `/en/` English routes and `/fr/` French routes, with no silent cross-locale fallback;
+Approved implementation sequence under PB-DEC-002:
+1. configure Astro `i18n` with `locales: ["en", "es", "fr"]` and the approved `defaultLocale`;
+2. explicitly choose `prefixDefaultLocale`/fallback behavior according to the approved URL policy;
 3. centralize shared UI strings and locale metadata;
 4. introduce locale-aware internal-link helpers and a language selector;
 5. add localized routes/content progressively without duplicating scientific entities;
-6. add canonical/hreflang metadata and per-locale QA before production activation of localized routes.
+6. add canonical/hreflang metadata and per-locale QA before production launch.
 
 ## Cloudflare deployment
 
@@ -155,12 +154,11 @@ WEB must not bypass this gate with manual scientific pages or invented data.
 - complete icon system;
 - final Compound-page layout;
 - final scientific dense-data/table patterns;
-- browser-language redirect behavior, if introduced later, provided it preserves PB-DEC-002 and does not create silent cross-locale fallback.
+- browser-language redirect behaviour;
 
 ## Launch hardening
 
-Before localized production rollout, resolve/review:
-- implementation and QA of the approved PB-DEC-002 locale/URL policy;
+Before production launch, resolve/review:
 - final brand/favicons;
 - CI for `npm run check` + `npm run build`;
 - current Google Fonts loading versus self-hosting for privacy/performance;

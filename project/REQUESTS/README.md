@@ -47,6 +47,15 @@ DECISION/OUTPUT: ...
 RESOLVED: YYYY-MM-DD
 ```
 
+## Durable identifier traceability
+
+Current historical mapping:
+- `PB-XD-001` — Evidence -> Scientific Content contract.
+- `PB-XD-002` — Release 1 Evidence / Public Content contract.
+- `PB-XD-003` — Public catalog label Legal/Regulatory review.
+
+The catalog-label request was historically normalized from a collided `PB-XD-001` identifier to `PB-XD-003` because `PB-XD-001` and `PB-XD-002` were already assigned. This note restores identifier traceability only; it does not reconstruct missing request bodies, change lifecycle state, or create approval/shared canon.
+
 ## Rules
 
 - `PB-XD request ≠ approval ≠ shared canon`.

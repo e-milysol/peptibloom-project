@@ -1,6 +1,6 @@
 project: PeptiBloom
 coordination_protocol: v1
-state_updated: 2026-09-11
+state_updated: 2026-09-21
 
 source_of_truth:
   implementation: github
@@ -9,7 +9,7 @@ source_of_truth:
 
 repository:
   default_branch: main
-  verified_main_sha: b12ec1a0f26f6d0ccea8b5a75963ef789fc53142
+  verified_main_sha: 0bb9c44a9876d8ad8dd1cef01b727f5753cdddc5
   main_policy: protected_required
   branch_protection_decision: PB-DEC-001
   branch_protection_owner_approval_date: 2026-09-03
@@ -86,6 +86,20 @@ milestones:
         status: MERGED
         merge_commit: b12ec1a0f26f6d0ccea8b5a75963ef789fc53142
         scope: HOME_LIBRARY_AND_ONE_RESEARCH_BASICS_VISUAL_PATTERN
+    september_16_reconciliation:
+      multilingual_foundation:
+        pr: 96
+        status: MERGED
+        merge_commit: 1642727aee414f6bc4b767f9ecc4a9c61e9cddb3
+      research_basics_scientific_graph:
+        pr: 97
+        status: MERGED
+        merge_commit: d33e323bd8508def2e70c11bde2c81e94da9e79c
+      scientific_publishing_standard_v1_1:
+        pr: 98
+        status: MERGED
+        merge_commit: 0bb9c44a9876d8ad8dd1cef01b727f5753cdddc5
+        decision: PB-DEC-600
     m2: BLOCKED
   app_core:
     owner_work: WORK_6
@@ -104,6 +118,17 @@ milestones:
     repository: e-milysol/peptibloom-private-master
     repository_visibility: private
     app_core_boundary: SEPARATE
+    execution_precedence: WORK_7_ONLY
+    mvp_implementation: COMPLETE
+    synthetic_testing: AUTHORIZED_WITHIN_PRIVATE_DOMAIN
+    real_private_data_import: BLOCKED
+    recovery_import_gate:
+      independent_external_backup: REQUIRED
+      sha256_integrity_verification: REQUIRED
+      successful_isolated_restore_test: REQUIRED
+      validation_recovery_log: REQUIRED
+      current_status: NOT_VERIFIED_PASSED
+    public_reporting: SANITIZED_ONLY
   operative_core:
     current: v1
     migration_contract: APPROVED
@@ -149,6 +174,8 @@ milestones:
     current: PUBLICATION_CONTRACTS_DRAFT_REVIEW
     publication_contracts_pr: 60
     publication_contracts_scope: CONTRACTS_ONLY
+    publication_contracts_exception: BOUNDED_EXISTING_PR_CORRECTIVE_CLEANUP
+    publication_contracts_cleanup_status: PENDING
     publication_contracts_merge_authorized: false
     public_web_contract: PROPOSED_NOT_APPROVED
   scientific_inventory:
@@ -200,6 +227,21 @@ dependencies:
   public_catalog_publication:
     - PB-XD-003
     - applicable_commercial_publication_gates
+
+cross_domain_request_traceability:
+  PB-XD-001: Evidence -> Scientific Content contract
+  PB-XD-002: Release 1 Evidence / Public Content contract
+  PB-XD-003: Public catalog label Legal/Regulatory review
+
+execution_control:
+  active_implementation_precedence: WORK_7_ONLY
+  deferred_foundations_reactivated: false
+  bounded_existing_pr_exceptions:
+    - pr: 60
+      scope: contracts-only corrective cleanup
+      implementation_reactivation: false
+      merge_authorized: false
+      publication_authorized: false
 
 cross_domain_rules:
   infer_missing_canon: false

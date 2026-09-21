@@ -1,18 +1,18 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-09-11.
+Last coordination baseline: 2026-09-21.
 
-Verified public `main` at this reconciliation: `b12ec1a0f26f6d0ccea8b5a75963ef789fc53142`.
+Verified public `main` at this reconciliation: `0bb9c44a9876d8ad8dd1cef01b727f5753cdddc5`.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
 | Web | M0/M1 complete and deployed on Cloudflare Workers at `https://peptibloomproject.com`; Research Basics traffic tranches #85 and #86 are merged; visual modernization #88 is merged; #87 remains a draft Web candidate | review #87 non-commercial continuation; implement approved locale policy as Web work proceeds; WEB M2 remains blocked by Evidence public contract + production-ready scientific content |
 | Research Basics / Public Content | Active public-content lane; tranche #85 added 12 articles and tranche #86 added 20 high-intent articles; CI runs `npm ci`, `npm run check`, `npm run build` | continue source-grounded fast/editorial lane and scientific/safety escalation by claim; no compound Evidence authority is created by this lane |
 | App Core / WORK 6 | Product Design v0.1 and Technical Design / UX IA v0.1 approved; MVP Architecture approved for contract/wireflow phase | continue non-production contracts/wireflows; production implementation remains blocked pending explicit authorization |
-| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost domain remains in `e-milysol/peptibloom-private-master`; intentionally separate from App Core/public repo | continue private operational implementation; only sanitized coordination facts cross to the public Control Plane |
+| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost MVP is recorded `COMPLETE`; execution precedence is `WORK_7_ONLY`; public reporting remains sanitized only | real private-data import remains `BLOCKED` until the recovery/import gate is verified passed |
 | Operative Core | v1 migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization |
 | Physical Products / Accessories | PB-DEC-501 remains governing authority; clean-sheet design pipeline approved; Bloom Caps remains PRE-G0 | collect/validate only required G0–G2 functional inputs and measurements before CAD/prototyping |
-| Evidence | PR #60 is open/draft, contracts-only, and not merge-authorized; public-read contract remains proposed, not approved | review the three publication contracts and resolve governance/public-read authority before WEB M2 |
+| Evidence | PR #60 is open/draft and not merge-authorized; its bounded contracts-only corrective cleanup is the sole existing-PR exception to `WORK_7_ONLY`, not a deferred-workstream reactivation | remove compound/pilot-specific contamination inside #60, reconcile to current `main`, run QA and return one checkpoint |
 | Scientific Inventory | source/review workflow active; handoff to Evidence still in progress | production-ready Evidence handoff |
 | Scientific Content Production | editorial transformation only; no independent scientific assessment, approval or publication authority | formalize required Evidence handoff and wait for production-ready qualified content |
 | Public Catalog / Legal | `PB-XD-003` is open for public catalog/label legal review; public pricing/catalog publication is not authorized | legal/commercial review + applicable publication gates before any public catalog surface |
@@ -24,6 +24,9 @@ Verified public `main` at this reconciliation: `b12ec1a0f26f6d0ccea8b5a75963ef78
 The public Web remains on the approved `Editorial Evidence / Warm Scientific` foundation and production origin `https://peptibloomproject.com`, hosted on Cloudflare Workers.
 
 The current public `main` includes:
+- PR #96 — safe multilingual Web foundation, merged as `1642727aee414f6bc4b767f9ecc4a9c61e9cddb3`;
+- PR #97 — HALO-002 Research Basics scientific graph, merged as `d33e323bd8508def2e70c11bde2c81e94da9e79c`;
+- PR #98 — PeptiBloom Scientific Publishing Standard v1.1 freeze record, merged as `0bb9c44a9876d8ad8dd1cef01b727f5753cdddc5`;
 - PR #85 — 12 Research Basics articles, merged as `878a7214df03a67f6c64b4273641d0ce5bcf8676`;
 - PR #86 — 20 additional high-intent Research Basics articles, merged as `2e4ac6615eb25ccef1e13cb7b95b2dc5235ca5f4`;
 - PR #89 — Control Plane reconciliation, later corrected by this decision-history follow-up;
@@ -112,9 +115,16 @@ Approved state is unchanged:
 
 ## Private Master / WORK 7
 
-WORK 7 remains the private Inventory / Procurement / Landed Cost application in `e-milysol/peptibloom-private-master`.
+WORK 7 remains the private Inventory / Procurement / Landed Cost application in `e-milysol/peptibloom-private-master` and is the only active implementation workstream under the controlling execution precedence `WORK_7_ONLY`.
 
-The public repository contains only sanitized coordination state. Supplier identities, acquisition prices, fees, landed costs, margins, logistics and other restricted operational data remain private.
+Sanitized recovery/import status:
+- Private Master MVP implementation: `COMPLETE`;
+- synthetic testing: `AUTHORIZED` within the private domain;
+- real private-data import: `BLOCKED`;
+- the recovery/import gate requires an independent external backup, SHA-256 integrity verification, a successful isolated restore test, and a validation/recovery log;
+- the public Control Plane does not currently record that this gate has passed.
+
+The public repository contains only sanitized coordination state. Restricted operational data remain private.
 
 ## Operative Core
 
@@ -125,6 +135,15 @@ Operative Core v1 data-layer implementation remains complete. No serializer/view
 PB-DEC-501 remains the governing authority. The clean-sheet physical-design model and Bambu Lab P1S + AMS fabrication capability remain the current baseline.
 
 Bloom Caps remains `PRE-G0`; CAD is not authorized and the common-core architecture remains hypothesis-only until the required functional inputs and measurements pass the relevant gates.
+
+## Cross-domain request traceability
+
+The durable identifier map is:
+- `PB-XD-001` — Evidence -> Scientific Content contract;
+- `PB-XD-002` — Release 1 Evidence / Public Content contract;
+- `PB-XD-003` — Public catalog label Legal/Regulatory review.
+
+The catalog-label request briefly collided with `PB-XD-001` historically and was normalized to `PB-XD-003`; this changes identifier traceability only and creates no approval or publication authority.
 
 ## Repository / Coordination
 

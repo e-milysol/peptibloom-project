@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompoundIndexShell from '../../components/compound/CompoundIndexShell.astro';
+import { getUi } from '../../i18n/ui';
+
+const ui = getUi('es');
+---
+
+<BaseLayout title={ui.compounds.title} description={ui.compounds.introduction} indexable={false}>
+  <CompoundIndexShell
+    eyebrow={ui.compounds.eyebrow}
+    title={ui.compounds.title}
+    introduction={ui.compounds.introduction}
+    entries={[]}
+    statusLabels={ui.compounds.statusLabels}
+    emptyTitle={ui.compounds.emptyTitle}
+    emptyDescription={ui.compounds.emptyDescription}
+    pendingTitle={ui.compounds.pendingTitle}
+    pendingDescription={ui.compounds.pendingDescription}
+    openLabel={ui.compounds.openLabel}
+  />
+</BaseLayout>

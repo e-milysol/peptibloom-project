@@ -1,0 +1,63 @@
+---
+import type { CompoundPresentationState } from '../../lib/compound-publication';
+
+interface Props {
+  state: CompoundPresentationState | string;
+  labels: Record<CompoundPresentationState, string>;
+}
+
+const { state, labels } = Astro.props;
+const knownStates: CompoundPresentationState[] = [
+  'UNAVAILABLE',
+  'PENDING_EVIDENCE',
+  'PENDING_SCIENTIFIC_CONTENT',
+  'READY_FOR_REVIEW',
+  'APPROVED_FOR_WEB',
+  'NOT_PUBLICATION_READY',
+];
+const safeState: CompoundPresentationState = knownStates.includes(state as CompoundPresentationState)
+  ? state as CompoundPresentationState
+  : 'NOT_PUBLICATION_READY';
+const isApproved = safeState === 'APPROVED_FOR_WEB';
+---
+
+<span class:list={['compound-status', { 'compound-status--approved': isApproved }]} data-state={safeState}>
+  <span class="compound-status__dot" aria-hidden="true"></span>
+  {labels[safeState]}
+</span>
+
+<style>
+  .compound-status {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.42rem 0.72rem;
+    border: 1px solid var(--color-hairline);
+    border-radius: 999px;
+    background: var(--color-soft-bloom);
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .compound-status__dot {
+    width: 0.48rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color-lavender);
+  }
+
+  .compound-status--approved {
+    border-color: rgba(122, 63, 104, 0.24);
+    background: var(--color-paper);
+    color: var(--color-mulberry);
+  }
+
+  .compound-status--approved .compound-status__dot {
+    background: var(--color-mulberry);
+  }
+</style>

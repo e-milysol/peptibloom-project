@@ -1,0 +1,211 @@
+---
+import CompoundStatus from './CompoundStatus.astro';
+import type { CompoundPresentationState, CompoundPublicationResult } from '../../lib/compound-publication';
+
+interface Props {
+  eyebrow: string;
+  result: CompoundPublicationResult;
+  statusLabels: Record<CompoundPresentationState, string>;
+  backHref: string;
+  backLabel: string;
+  pendingTitle: string;
+  pendingDescription: string;
+  provenanceLabel: string;
+}
+
+const {
+  eyebrow,
+  result,
+  statusLabels,
+  backHref,
+  backLabel,
+  pendingTitle,
+  pendingDescription,
+  provenanceLabel,
+} = Astro.props;
+
+const isApproved = result.ok && result.presentationState === 'APPROVED_FOR_WEB';
+const name = isApproved ? result.payload.identity.displayName : pendingTitle;
+const safeSections = isApproved ? result.payload.sections : [];
+const provenanceReferences = isApproved ? result.payload.provenance : [];
+const sectionId = (kind: string, index: number) => `compound-${kind}-${index + 1}`;
+---
+
+<article class="compound-detail">
+  <header class="compound-detail__hero section">
+    <div class="site-frame">
+      <a class="compound-detail__back" href={backHref}>← {backLabel}</a>
+      <div class="compound-detail__hero-grid">
+        <div>
+          <p class="eyebrow">{eyebrow}</p>
+          <h1>{name}</h1>
+        </div>
+        <CompoundStatus state={result.presentationState} labels={statusLabels} />
+      </div>
+    </div>
+  </header>
+
+  {isApproved && safeSections.length > 0 ? (
+    <div class="site-frame compound-detail__layout">
+      <nav class="compound-detail__nav" aria-label={name}>
+        <ol>
+          {safeSections.map((section, index) => (
+            <li><a href={`#${sectionId(section.kind, index)}`}><span>{String(index + 1).padStart(2, '0')}</span>{section.heading}</a></li>
+          ))}
+        </ol>
+      </nav>
+      <div class="compound-detail__content">
+        {safeSections.map((section, index) => (
+          <section id={sectionId(section.kind, index)} aria-labelledby={`${sectionId(section.kind, index)}-title`}>
+            <h2 id={`${sectionId(section.kind, index)}-title`}>{section.heading}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
+        <aside class="compound-detail__provenance" aria-labelledby="compound-provenance-title">
+          <p class="surface-kicker" id="compound-provenance-title">{provenanceLabel}</p>
+          {provenanceReferences.length > 0
+            ? <ul>{provenanceReferences.map((reference) => <li><span>{reference.kind}</span> — {reference.id}</li>)}</ul>
+            : <p>{pendingDescription}</p>}
+        </aside>
+      </div>
+    </div>
+  ) : (
+    <section class="section" aria-labelledby="compound-pending-title">
+      <div class="site-frame">
+        <div class="compound-detail__pending" role="status">
+          <p class="surface-kicker">{statusLabels.NOT_PUBLICATION_READY}</p>
+          <h2 id="compound-pending-title">{pendingTitle}</h2>
+          <p>{pendingDescription}</p>
+        </div>
+      </div>
+    </section>
+  )}
+</article>
+
+<style>
+  .compound-detail__hero {
+    border-bottom: 1px solid var(--color-hairline);
+    background:
+      radial-gradient(circle at 86% 20%, rgba(139, 123, 184, 0.12), transparent 24rem),
+      linear-gradient(180deg, var(--color-porcelain), var(--color-soft-bloom));
+  }
+
+  .compound-detail__back {
+    display: inline-block;
+    margin-bottom: var(--space-6);
+    font-family: var(--font-system);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .compound-detail__hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-5);
+    align-items: end;
+  }
+
+  .compound-detail__hero h1 {
+    margin-bottom: 0;
+  }
+
+  .compound-detail__layout {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.32fr) minmax(0, 1fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    padding-block: var(--space-8);
+  }
+
+  .compound-detail__nav {
+    position: sticky;
+    top: var(--space-4);
+    align-self: start;
+  }
+
+  .compound-detail__nav ol {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--color-hairline);
+    list-style: none;
+  }
+
+  .compound-detail__nav a {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.65rem;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--color-hairline);
+    color: var(--color-muted-ink);
+    font-family: var(--font-system);
+    font-size: 0.9rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .compound-detail__nav span {
+    color: var(--color-mulberry);
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .compound-detail__content {
+    max-width: var(--reading-width);
+  }
+
+  .compound-detail__content > section {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-hairline);
+    scroll-margin-top: var(--space-5);
+  }
+
+  .compound-detail__content > section:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .compound-detail__content p,
+  .compound-detail__content li {
+    color: var(--color-muted-ink);
+  }
+
+  .compound-detail__provenance,
+  .compound-detail__pending {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-large);
+    background: var(--color-paper);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .compound-detail__provenance ul {
+    margin-bottom: 0;
+  }
+
+  .compound-detail__pending {
+    max-width: 50rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .compound-detail__pending h2 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+  }
+
+  .compound-detail__pending p:last-child {
+    max-width: 42rem;
+    margin-inline: auto;
+    color: var(--color-muted-ink);
+  }
+
+  @media (max-width: 48rem) {
+    .compound-detail__hero-grid,
+    .compound-detail__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .compound-detail__nav {
+      position: static;
+    }
+  }
+</style>

@@ -7,6 +7,7 @@ interface UiStrings {
   footerNavigation: string;
   nav: {
     library: string;
+    compounds: string;
     researchBasics: string;
     calculator: string;
     methodology: string;
@@ -28,6 +29,27 @@ interface UiStrings {
     heading: string;
     relationLabels: Record<'PREREQUISITE' | 'DEEPER' | 'INTERPRETATION' | 'RELATED', string>;
   };
+  compounds: {
+    eyebrow: string;
+    title: string;
+    introduction: string;
+    emptyTitle: string;
+    emptyDescription: string;
+    pendingTitle: string;
+    pendingDescription: string;
+    openLabel: string;
+    backLabel: string;
+    provenanceLabel: string;
+    statusLabels: Record<
+      | 'UNAVAILABLE'
+      | 'PENDING_EVIDENCE'
+      | 'PENDING_SCIENTIFIC_CONTENT'
+      | 'READY_FOR_REVIEW'
+      | 'APPROVED_FOR_WEB'
+      | 'NOT_PUBLICATION_READY',
+      string
+    >;
+  };
 }
 
 const ui = {
@@ -38,6 +60,7 @@ const ui = {
     footerNavigation: 'Navegación del pie de página',
     nav: {
       library: 'Biblioteca',
+      compounds: 'Compuestos',
       researchBasics: 'Conceptos básicos de investigación',
       calculator: 'Calculadora',
       methodology: 'Metodología',
@@ -64,6 +87,26 @@ const ui = {
         RELATED: 'Concepto relacionado',
       },
     },
+    compounds: {
+      eyebrow: 'Biblioteca científica',
+      title: 'Compuestos',
+      introduction: 'Entradas disponibles únicamente cuando su contenido científico y procedencia han sido aprobados para la Web.',
+      emptyTitle: 'No hay entradas disponibles',
+      emptyDescription: 'Las entradas pendientes no se publican hasta completar las revisiones requeridas.',
+      pendingTitle: 'Entrada pendiente',
+      pendingDescription: 'Esta entrada no está disponible como publicación científica aprobada.',
+      openLabel: 'Abrir entrada',
+      backLabel: 'Volver a compuestos',
+      provenanceLabel: 'Procedencia',
+      statusLabels: {
+        UNAVAILABLE: 'No disponible',
+        PENDING_EVIDENCE: 'Evidencia pendiente',
+        PENDING_SCIENTIFIC_CONTENT: 'Contenido científico pendiente',
+        READY_FOR_REVIEW: 'Listo para revisión',
+        APPROVED_FOR_WEB: 'Aprobado para la Web',
+        NOT_PUBLICATION_READY: 'No listo para publicación',
+      },
+    },
   },
   en: {
     skipToContent: 'Skip to content',
@@ -72,6 +115,7 @@ const ui = {
     footerNavigation: 'Footer navigation',
     nav: {
       library: 'Library',
+      compounds: 'Compounds',
       researchBasics: 'Research Basics',
       calculator: 'Calculator',
       methodology: 'Methodology',
@@ -98,6 +142,26 @@ const ui = {
         RELATED: 'Related concept',
       },
     },
+    compounds: {
+      eyebrow: 'Scientific library',
+      title: 'Compounds',
+      introduction: 'Entries are available only when their scientific content and provenance have been approved for the Web.',
+      emptyTitle: 'No entries available',
+      emptyDescription: 'Pending entries are not published until the required reviews are complete.',
+      pendingTitle: 'Entry pending',
+      pendingDescription: 'This entry is unavailable as an approved scientific publication.',
+      openLabel: 'Open entry',
+      backLabel: 'Back to compounds',
+      provenanceLabel: 'Provenance',
+      statusLabels: {
+        UNAVAILABLE: 'Unavailable',
+        PENDING_EVIDENCE: 'Pending evidence',
+        PENDING_SCIENTIFIC_CONTENT: 'Pending scientific content',
+        READY_FOR_REVIEW: 'Ready for review',
+        APPROVED_FOR_WEB: 'Approved for Web',
+        NOT_PUBLICATION_READY: 'Not publication-ready',
+      },
+    },
   },
   fr: {
     skipToContent: 'Aller au contenu',
@@ -106,6 +170,7 @@ const ui = {
     footerNavigation: 'Navigation du pied de page',
     nav: {
       library: 'Bibliothèque',
+      compounds: 'Composés',
       researchBasics: 'Notions de recherche',
       calculator: 'Calculatrice',
       methodology: 'Méthodologie',
@@ -130,6 +195,26 @@ const ui = {
         DEEPER: 'Approfondir',
         INTERPRETATION: 'Interpréter les preuves',
         RELATED: 'Notion associée',
+      },
+    },
+    compounds: {
+      eyebrow: 'Bibliothèque scientifique',
+      title: 'Composés',
+      introduction: 'Les entrées ne sont disponibles que lorsque leur contenu scientifique et leur provenance ont été approuvés pour le Web.',
+      emptyTitle: 'Aucune entrée disponible',
+      emptyDescription: 'Les entrées en attente ne sont pas publiées avant la fin des examens requis.',
+      pendingTitle: 'Entrée en attente',
+      pendingDescription: 'Cette entrée est indisponible en tant que publication scientifique approuvée.',
+      openLabel: 'Ouvrir l’entrée',
+      backLabel: 'Retour aux composés',
+      provenanceLabel: 'Provenance',
+      statusLabels: {
+        UNAVAILABLE: 'Indisponible',
+        PENDING_EVIDENCE: 'Preuves en attente',
+        PENDING_SCIENTIFIC_CONTENT: 'Contenu scientifique en attente',
+        READY_FOR_REVIEW: 'Prêt pour examen',
+        APPROVED_FOR_WEB: 'Approuvé pour le Web',
+        NOT_PUBLICATION_READY: 'Non prêt pour publication',
       },
     },
   },

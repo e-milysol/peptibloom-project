@@ -27,5 +27,7 @@ jobs:
         run: npm ci
       - name: Astro check
         run: npm run check
+      - name: Compound platform fail-closed validation
+        run: npm run validate:compound-platform
       - name: Build
         run: npm run build

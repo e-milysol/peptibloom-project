@@ -1,0 +1,242 @@
+---
+import CompoundStatus from './CompoundStatus.astro';
+import type { CompoundPresentationState, CompoundPublicationResult } from '../../lib/compound-publication';
+
+export interface CompoundIndexItem {
+  id: string;
+  href?: string;
+  result: CompoundPublicationResult;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  introduction: string;
+  entries: CompoundIndexItem[];
+  statusLabels: Record<CompoundPresentationState, string>;
+  emptyTitle: string;
+  emptyDescription: string;
+  pendingTitle: string;
+  pendingDescription: string;
+  openLabel: string;
+}
+
+const {
+  eyebrow,
+  title,
+  introduction,
+  entries,
+  statusLabels,
+  emptyTitle,
+  emptyDescription,
+  pendingTitle,
+  pendingDescription,
+  openLabel,
+} = Astro.props;
+
+const safeEntries = entries.filter((entry) => entry.id);
+---
+
+<section class="compound-index section" aria-labelledby="compound-index-title">
+  <div class="site-frame">
+    <header class="compound-index__header">
+      <div class="reading-column">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1 id="compound-index-title">{title}</h1>
+        <p class="page-hero__lead">{introduction}</p>
+      </div>
+      <aside class="compound-index__boundary" aria-label={emptyTitle}>
+        <span aria-hidden="true">↳</span>
+        <p>{emptyDescription}</p>
+      </aside>
+    </header>
+
+    {safeEntries.length === 0 ? (
+      <div class="compound-index__empty" role="status">
+        <div aria-hidden="true" class="compound-index__empty-mark">∅</div>
+        <div>
+          <h2>{emptyTitle}</h2>
+          <p>{emptyDescription}</p>
+        </div>
+      </div>
+    ) : (
+      <ul class="compound-index__grid" aria-label={title}>
+        {safeEntries.map((entry) => {
+          const readyResult = entry.result.ok ? entry.result : null;
+          const isApproved = readyResult?.presentationState === 'APPROVED_FOR_WEB';
+          const canOpen = isApproved && Boolean(entry.href);
+          const name = readyResult ? readyResult.payload.identity.displayName : pendingTitle;
+          const summary = readyResult
+            ? readyResult.payload.sections.find(({ kind }) => kind === 'scientific-summary')?.body
+            : undefined;
+
+          return (
+            <li>
+              <article class:list={['compound-card', { 'compound-card--approved': isApproved }]}>
+                <CompoundStatus state={entry.result.presentationState} labels={statusLabels} />
+                <div class="compound-card__body">
+                  <h2>{name}</h2>
+                  <p>{summary ?? pendingDescription}</p>
+                </div>
+                {canOpen ? (
+                  <a href={entry.href} class="compound-card__link">
+                    {openLabel}<span aria-hidden="true"> →</span>
+                  </a>
+                ) : (
+                  <span class="compound-card__unavailable" aria-hidden="true">—</span>
+                )}
+              </article>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </div>
+</section>
+
+<style>
+  .compound-index {
+    min-height: 62vh;
+    background:
+      radial-gradient(circle at 92% 8%, rgba(200, 111, 154, 0.1), transparent 25rem),
+      var(--color-porcelain);
+  }
+
+  .compound-index__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.42fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    align-items: end;
+    margin-bottom: var(--space-7);
+  }
+
+  .compound-index__header h1 {
+    max-width: 11ch;
+  }
+
+  .compound-index__boundary {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--color-muted-ink);
+  }
+
+  .compound-index__boundary span {
+    color: var(--color-mulberry);
+    font-family: var(--font-system);
+    font-weight: 600;
+  }
+
+  .compound-index__boundary p {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .compound-index__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .compound-card {
+    display: flex;
+    min-height: 20rem;
+    flex-direction: column;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-large);
+    background: rgba(255, 255, 255, 0.74);
+  }
+
+  .compound-card--approved {
+    background: var(--color-paper);
+    box-shadow: var(--shadow-paper);
+  }
+
+  .compound-card__body {
+    margin-block: auto;
+    padding-block: var(--space-5);
+  }
+
+  .compound-card__body h2 {
+    margin-bottom: var(--space-2);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+  }
+
+  .compound-card__body p {
+    color: var(--color-muted-ink);
+    font-size: 1rem;
+  }
+
+  .compound-card__link {
+    width: fit-content;
+    font-family: var(--font-system);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .compound-card__unavailable {
+    color: var(--color-hairline);
+  }
+
+  .compound-index__empty {
+    display: grid;
+    grid-template-columns: auto minmax(0, 38rem);
+    gap: var(--space-5);
+    align-items: center;
+    padding: clamp(2rem, 6vw, 5rem);
+    border: 1px dashed var(--color-lavender);
+    border-radius: var(--radius-large);
+    background: var(--color-paper);
+  }
+
+  .compound-index__empty-mark {
+    display: grid;
+    width: 4rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-soft-bloom);
+    color: var(--color-mulberry);
+    font-family: var(--font-system);
+    font-size: 1.5rem;
+  }
+
+  .compound-index__empty h2 {
+    margin-bottom: var(--space-2);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+  }
+
+  .compound-index__empty p {
+    color: var(--color-muted-ink);
+  }
+
+  @media (max-width: 62rem) {
+    .compound-index__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 46rem) {
+    .compound-index__header,
+    .compound-index__empty {
+      grid-template-columns: 1fr;
+    }
+
+    .compound-index__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .compound-card {
+      min-height: 16rem;
+    }
+  }
+</style>

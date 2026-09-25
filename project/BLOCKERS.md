@@ -4,15 +4,18 @@ This file contains only dependencies that currently prevent defined work from pr
 
 ## Active blockers
 
-### WEB M2 Evidence gate
+### WEB M2 compound-publication Evidence gate
 
 Status: BLOCKED
 
-Compound Index/Detail backed by scientific data requires:
+The Owner-authorized generic WEB M2 Platform Foundation is not blocked by this gate when it remains fail-closed, synthetic-only and free of compound-specific scientific content. PR #100 is open/unmerged review state and is not canonical `main`.
+
+Rendering or publishing Compound Index/Detail pages backed by real scientific content requires:
 1. approved Evidence public read contract;
 2. production-ready scientific content.
+3. explicit publication authorization.
 
-Frontend must not bypass this gate with invented data or manual scientific pages.
+Frontend/platform work must not bypass this gate with invented data, manual scientific pages or a preview deployment. Platform readiness does not imply compound publication readiness.
 
 ### App Core production implementation gate — WORK 6
 

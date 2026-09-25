@@ -1,18 +1,18 @@
 # PeptiBloom Status Board
 
-Last coordination baseline: 2026-09-21.
+Last coordination baseline: 2026-09-25.
 
 Verified public `main` at this reconciliation: `0bb9c44a9876d8ad8dd1cef01b727f5753cdddc5`.
 
 | Workstream | Current state | Next gate |
 |---|---|---|
-| Web | M0/M1 complete and deployed on Cloudflare Workers at `https://peptibloomproject.com`; Research Basics traffic tranches #85 and #86 are merged; visual modernization #88 is merged; #87 remains a draft Web candidate | review #87 non-commercial continuation; implement approved locale policy as Web work proceeds; WEB M2 remains blocked by Evidence public contract + production-ready scientific content |
+| Web | M0/M1 complete on canonical `main`; the generic fail-closed WEB M2 Platform Foundation is Owner-authorized as a narrow parallel exception and is proposed in open/unmerged PR #100 at `8345f3b1626194151f40befdde78445fb7b4b6b2` | finish bounded review of #100; compound scientific publication remains blocked by approved Evidence, production-ready Scientific Content and explicit publication authorization |
 | Research Basics / Public Content | Active public-content lane; tranche #85 added 12 articles and tranche #86 added 20 high-intent articles; CI runs `npm ci`, `npm run check`, `npm run build` | continue source-grounded fast/editorial lane and scientific/safety escalation by claim; no compound Evidence authority is created by this lane |
 | App Core / WORK 6 | Product Design v0.1 and Technical Design / UX IA v0.1 approved; MVP Architecture approved for contract/wireflow phase | continue non-production contracts/wireflows; production implementation remains blocked pending explicit authorization |
-| Private Master / WORK 7 | Private Inventory / Procurement / Landed Cost MVP is recorded `COMPLETE`; execution precedence is `WORK_7_ONLY`; public reporting remains sanitized only | real private-data import remains `BLOCKED` until the recovery/import gate is verified passed |
+| Private Master / WORK 7 | MVP technical implementation was reported complete; its implementation commit is integrated into current private `main`, and the current synthetic suite was independently re-run successfully; operational readiness is not established by those facts alone | real private-data import remains `BLOCKED` until the recovery/import gate is objectively verified passed |
 | Operative Core | v1 migration contract and data-layer implementation complete | follow-on operational/API scope only after explicit authorization |
 | Physical Products / Accessories | PB-DEC-501 remains governing authority; clean-sheet design pipeline approved; Bloom Caps remains PRE-G0 | collect/validate only required G0–G2 functional inputs and measurements before CAD/prototyping |
-| Evidence | PR #60 is open/draft and not merge-authorized; its bounded contracts-only corrective cleanup is the sole existing-PR exception to `WORK_7_ONLY`, not a deferred-workstream reactivation | remove compound/pilot-specific contamination inside #60, reconcile to current `main`, run QA and return one checkpoint |
+| Evidence | PR #60 is open/draft/unmerged at `a0501c9669c7eac591ae04ce577ff6ddaf6e387c`; its generic contracts-only cleanup is complete but remains proposed, not approved or canonical `main` | review the cleaned contracts through the normal gate; no merge or publication is authorized |
 | Scientific Inventory | source/review workflow active; handoff to Evidence still in progress | production-ready Evidence handoff |
 | Scientific Content Production | editorial transformation only; no independent scientific assessment, approval or publication authority | formalize required Evidence handoff and wait for production-ready qualified content |
 | Public Catalog / Legal | `PB-XD-003` is open for public catalog/label legal review; public pricing/catalog publication is not authorized | legal/commercial review + applicable publication gates before any public catalog surface |
@@ -36,7 +36,11 @@ The Research Basics release workflow validates the Web with `npm ci`, `npm run c
 
 PR #87 remains a draft candidate for a non-commercial `/peptibloom/` continuation path. It does not add WhatsApp/email conversion, public product catalogue/pricing, Analytics event semantics or scientific endorsement.
 
-WEB M2 remains blocked. Research Basics publication does not satisfy compound-page Evidence requirements and must not be treated as an Evidence contract substitute.
+On 2026-09-22 the Owner authorized a narrow parallel execution exception for the generic WEB M2 Platform Foundation only (`AUTHORIZE WEB M2 PLATFORM FOUNDATION — NO SCIENTIFIC CONTENT / NO PUBLICATION`, Issue #13 comment `5779763439`). WORK 7 remains active, and other archived/deferred foundations remain deferred unless separately reactivated.
+
+PR #100 proposes that generic fail-closed platform foundation at HEAD `8345f3b1626194151f40befdde78445fb7b4b6b2`. It is `OPEN / UNMERGED`, has been validated and accepted for continued review, and is not canonical `main` state. Its preview deployment is review evidence only, not production publication. No merge or publication is authorized.
+
+The authorization and PR #100 do not unblock compound scientific publication. Approved Evidence representation, approved locale-specific Scientific Content with provenance, the applicable review state and explicit publication authorization remain required. Research Basics publication does not satisfy those compound-page requirements and must not be treated as an Evidence contract substitute.
 
 PB-DEC-002 was Owner approved on 2026-08-28. The public locale policy is now canonical:
 - Spanish (`es`) is the primary/default locale and uses unprefixed routes;
@@ -48,18 +52,19 @@ This locale decision authorizes localization-ready implementation within existin
 
 ## Evidence / Scientific Inventory / Scientific Content Production
 
-PR #60 (`Evidence: publication contracts foundation v1`) is currently open/draft and mergeable, but **not merge-authorized**. Its current diff is contracts-only:
+PR #60 (`Evidence: publication contracts foundation v1`) is currently open/draft/unmerged and mergeable at `a0501c9669c7eac591ae04ce577ff6ddaf6e387c`, but **not merge-authorized**. Its bounded cleanup is complete and its current diff is generic contracts-only:
 - `EVIDENCE_TO_SCIENTIFIC_CONTENT_V1.md`;
 - `SCIENTIFIC_CONTENT_TO_PUBLICATION_V1.md`;
 - `EVIDENCE_TO_WEB_PUBLIC_READ_V1.md`.
 
-Earlier Retatrutide pilot/editorial/Web work was separated from #60 and preserved as non-authoritative WIP. Historical comments asserting broader Retatrutide approval must not be used as current publication authority.
+The cleanup removed compound/pilot-specific contamination without creating approval or reactivating broader Evidence implementation. Historical comments asserting broader compound or pilot approval must not be used as current publication authority.
 
 Therefore:
 - Evidence public-read contract = `PROPOSED / NOT APPROVED`;
 - Scientific Content remains editorial transformation only;
 - production compound pages remain blocked;
-- WEB M2 remains blocked by the existing two dependencies: approved Evidence public contract + production-ready scientific content.
+- the generic WEB M2 Platform Foundation may proceed only inside the September 22 fail-closed authorization;
+- compound publication remains blocked by approved Evidence, production-ready Scientific Content and explicit publication authorization.
 
 ## Research Basics / Public Content
 
@@ -115,14 +120,16 @@ Approved state is unchanged:
 
 ## Private Master / WORK 7
 
-WORK 7 remains the private Inventory / Procurement / Landed Cost application in `e-milysol/peptibloom-private-master` and is the only active implementation workstream under the controlling execution precedence `WORK_7_ONLY`.
+WORK 7 remains the active private Inventory / Procurement / Landed Cost workstream in `e-milysol/peptibloom-private-master`. The September 22 WEB M2 Platform Foundation authorization is a narrow parallel execution exception; it does not displace WORK 7 or reactivate any other archived/deferred foundation.
 
-Sanitized recovery/import status:
-- Private Master MVP implementation: `COMPLETE`;
-- synthetic testing: `AUTHORIZED` within the private domain;
+Sanitized implementation and recovery/import disposition:
+- work was reported as Private Master MVP implementation `COMPLETE`;
+- the implementation commit exists and its ancestry into current private `main` was independently verified;
+- the current private `main` migrations and eight-test synthetic suite were independently re-run successfully on 2026-09-25;
+- these facts verify repository integration and the current synthetic baseline, not full operational-foundation readiness or the state of any external operational environment;
 - real private-data import: `BLOCKED`;
 - the recovery/import gate requires an independent external backup, SHA-256 integrity verification, a successful isolated restore test, and a validation/recovery log;
-- the public Control Plane does not currently record that this gate has passed.
+- no accessible authoritative evidence reviewed for this reconciliation proves that the full gate has passed.
 
 The public repository contains only sanitized coordination state. Restricted operational data remain private.
 

@@ -31,3 +31,5 @@ jobs:
         run: npm run validate:compound-platform
       - name: Build
         run: npm run build
+      - name: Compound platform browser, accessibility and viewport validation
+        run: npm run validate:compound-browser

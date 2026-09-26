@@ -72,6 +72,7 @@ export type CompoundPublicationBlockCode =
   | 'CONTENT_NOT_APPROVED'
   | 'WEB_REVIEW_PENDING'
   | 'PUBLICATION_NOT_AUTHORIZED'
+  | 'TRUSTED_AUTHORITY_UNAVAILABLE'
   | 'SYNTHETIC_FIXTURE_REJECTED';
 
 export interface CompoundPublicationBlocked {
@@ -244,7 +245,13 @@ export const adaptCompoundPublication = (
     && id === payload.publicationAuthorization?.authorizationId);
   if (!authorizationProvenance) return blocked('NOT_PUBLICATION_READY', 'MISSING_PROVENANCE');
 
-  return { ok: true, presentationState: 'APPROVED_FOR_WEB', payload };
+  // Shape, linkage, URI and GRANTED fields are caller-controlled assertions,
+  // not proof of review or publication authority. No trusted authority provider
+  // is integrated in WEB M2 yet. Keep this Web-owned production boundary closed
+  // until an approved integration verifies provenance and authorization against
+  // the exact content, compound identity and locale. Never accept a payload flag
+  // or caller-supplied verifier as a substitute for that integration.
+  return blocked('NOT_PUBLICATION_READY', 'TRUSTED_AUTHORITY_UNAVAILABLE');
 };
 
 export interface SyntheticCompoundPreview {

@@ -16,6 +16,8 @@ try {
   const expectBlocked = (name, payload, code, locale = 'es') => {
     const result = adapt(payload, locale);
     assert.equal(result.ok, false, `${name}: unsafe payload was accepted`);
+    assert.notEqual(result.presentationState, 'APPROVED_FOR_WEB', `${name}: approval state leaked`);
+    assert.equal('payload' in result, false, `${name}: renderable payload leaked`);
     assert.equal(result.code, code, `${name}: expected ${code}, got ${JSON.stringify(result)}`);
     console.log(`PASS ${name}`);
   };
@@ -90,8 +92,8 @@ try {
   });
   expectBlocked('missing publication authorization', missingAuthorization, 'PUBLICATION_NOT_AUTHORIZED');
 
-  // Ephemeral neutral data proves the production-approved path. It is never
-  // exported into route inventory and makes no real scientific assertion.
+  // Regression: a complete approved-looking shape is still self-asserted.
+  // Removing the fixture marker must never turn test data into trusted authority.
   const approved = clone();
   delete approved.syntheticFixture;
   approved.publicationAuthorization = {
@@ -109,12 +111,32 @@ try {
     kind: 'PUBLICATION_AUTHORIZATION',
     uri: 'test-only://publication-authorization',
   });
-  const approvedResult = adapt(approved);
-  assert.equal(approvedResult.ok, true, JSON.stringify(approvedResult));
-  assert.equal(approvedResult.presentationState, 'APPROVED_FOR_WEB');
-  console.log('PASS valid neutral approved production-adapter shape');
+  expectBlocked('complete self-asserted approval records', approved, 'TRUSTED_AUTHORITY_UNAVAILABLE');
 
-  console.log('Compound platform validation: 14/14 fail-closed and adapter scenarios passed.');
+  const untrusted = structuredClone(approved);
+  untrusted.provenance = untrusted.provenance.map((reference) => ({
+    ...reference, uri: `unverified://${reference.id}`,
+  }));
+  untrusted.publicationAuthorization.grantedBy = 'self-asserted-authority';
+  expectBlocked('untrusted review/provenance/authorization records', untrusted, 'TRUSTED_AUTHORITY_UNAVAILABLE');
+
+  const plausibleReferences = structuredClone(untrusted);
+  plausibleReferences.provenance = plausibleReferences.provenance.map((reference) => ({
+    ...reference, uri: `https://authority.invalid/reviews/${reference.id}`,
+  }));
+  expectBlocked('HTTPS references do not establish authority', plausibleReferences, 'TRUSTED_AUTHORITY_UNAVAILABLE');
+
+  const changedContent = structuredClone(approved);
+  changedContent.sections[0].body = 'Texto neutro modificado para la prueba.';
+  changedContent.compoundId = 'test-only.changed-subject';
+  changedContent.locale = 'en';
+  expectBlocked('reused records cannot approve changed content/identity/locale', changedContent,
+    'TRUSTED_AUTHORITY_UNAVAILABLE', 'en');
+
+  const forgedTrust = { ...approved, trustedAuthority: true };
+  expectBlocked('payload cannot enable its own authority seam', forgedTrust, 'MALFORMED_PAYLOAD');
+
+  console.log('Compound platform validation: 18/18 fail-closed and adapter scenarios passed.');
 } finally {
   await server.close();
 }

@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "validate:graph": "node scripts/validate-research-graph.mjs"
+    "validate:graph": "node scripts/validate-research-graph.mjs",
+    "validate:compound-platform": "node scripts/validate-compound-platform.mjs",
+    "validate:compound-browser": "node scripts/validate-compound-browser.mjs"
   },
   "dependencies": {
     "astro": "^7.2.2"
